@@ -1,0 +1,8 @@
+**Permeability means ease of passing through**, for water it would measure ease of passing through the pipes, for electricity it measures ease of passing through certain materials and it's relative to permeability of vacuum
+## Relative Permeability $\mu_r=\mu \div \mu_0$
+- $\mu$ Material permeability
+- $\mu_0$ [[Vacuum Permeability]]
+How easily can $a$ flow through $b$ compared to how easily $a$ can flow through empty space
+> [!example] relative permeability of 2 means it's twice as hard to flow through given material than through empty space
+### [[Electricity]] $\mu=1/R$
+- $R$ [[Resistance]]

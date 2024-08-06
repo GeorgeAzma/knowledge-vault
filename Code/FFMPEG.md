@@ -1,0 +1,8 @@
+- **Video to Frames** `ffmpeg -i in.mp4 out-%%4d.webp`
+- **Enhance Video Quality** `ffmpeg -i in.mp4 -b:v 8192k -vf "scale=1920x1080,unsharp=5:5:1.0:5:5:1.0" out.mp4`
+- **Crop Image** `ffmpeg -i in.webp -filter "crop=iw-14:ih-54:7:32" out.webp` width will be 14 less, height will be 54 less, x is 7, y is 32 (top left is origin)
+- **Video to Audio** `ffmpeg -i Video.mp4 Audio.mp3`
+- **Stereo to Mono** `ffmpeg -i stereo.mp3 -ac 1 mono.mp3`
+- **Normalize Audio** `ffmpeg -i input.mp4 -af "loudnorm=I=-16:LRA=11" output.mp4`
+- **Lower Sample Rate** `ffmpeg -i input.mp3 -ar 44100 output.mp3`
+- **Video/Audio Bit Rate** `ffmpeg -i input.mp4 -b:v 2M -b:a 192k output.mp4`

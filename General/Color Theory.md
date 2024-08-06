@@ -1,0 +1,9 @@
+- ![[Color Harmony.webp|500]]
+- ![[Color Emotions.webp|500]]
+- Focal point is area of picture that catches attention
+- Contrast catches attention
+- Dark backgrounds accentuate depth of an object
+- More defined outlines catches attention
+- Less defined outlines = background
+- ![[Color Wheel.webp]] 
+- Use Color Wheel for shading, If you have a blue object and yellow light, then blue object becomes gray, because you are trying to go from blue part of the color wheel to orange `it also becomes slightly greenish`

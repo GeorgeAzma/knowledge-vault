@@ -1,0 +1,3 @@
+Probability that random variable is within some range
+It may never be a discrete value, since PDF is continous
+[[Probability Mass Function]] is for descrete values

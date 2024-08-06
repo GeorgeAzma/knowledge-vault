@@ -1,0 +1,7 @@
+[[Circle]]
+[[Sphere]]
+[[Line]]
+[[Pyramid]]
+[[Cone]]
+[[Trigonometry]]
+[[Euclidian Geometry]]
