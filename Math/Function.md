@@ -22,7 +22,7 @@ maps input to output
 - **Bijective** injective + surjective
   $(\forall x_1,x_2\in X,f(x_1)=f(x_2)\implies x_1=x_2)\land(\forall y\in Y,\exists x\in X:f(x)=y)$
   `(user_id, user_name): (1, Alice), (2, Bob), (3, Charlie)`
-![[Injective, Surjective, Bijective.png]]
+![[Injective, Surjective, Bijective.webp]]
 ``` python
 def is_injective(func):
     values_seen = set()
