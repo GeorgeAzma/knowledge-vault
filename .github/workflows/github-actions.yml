@@ -17,10 +17,7 @@ jobs:
           Invoke-WebRequest -Uri "https://ffmpeg.org/releases/ffmpeg-7.0.2.tar.xz" -OutFile "ffmpeg.tar.xz"
           7z x ffmpeg.tar.xz  # Extract the .tar.xz file
           7z x ffmpeg.tar  # Extract the .tar file to get FFmpeg
-          if (Test-Path "C:\ffmpeg") {
-              Remove-Item "C:\ffmpeg\*" -Recurse -Force
-          }
-          Move-Item -Path "ffmpeg-7.0.2\*.*" -Destination "C:\ffmpeg"  # Move files to the target directory
+          Move-Item -Path "ffmpeg-7.0.2\*.*" -Destination "C:\ffmpeg" -Force  # Move files to the target directory
           $env:PATH += ";C:\ffmpeg\bin"  # Update the PATH variable
           # Verify installation
           ffmpeg -version
