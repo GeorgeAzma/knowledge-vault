@@ -2,7 +2,7 @@ name: GitHub Actions
 run-name: png2webp/link_shorten
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Post-Process-Notes:
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -17,7 +17,7 @@ jobs:
           Invoke-WebRequest -Uri "https://ffmpeg.org/releases/ffmpeg-7.0.2.tar.xz" -OutFile "ffmpeg.tar.xz"
           7z x ffmpeg.tar.xz  # Extract the .tar.xz file
           7z x ffmpeg.tar  # Extract the .tar file to get FFmpeg
-          Move-Item -Path "ffmpeg\*.*" -Destination "C:\ffmpeg"  # Move files to the target directory
+          Move-Item -Path "ffmpeg-7.0.2\*.*" -Destination "C:\ffmpeg"  # Move files to the target directory
           $env:PATH += ";C:\ffmpeg\bin"  # Update the PATH variable
           # Verify installation
           ffmpeg -version
