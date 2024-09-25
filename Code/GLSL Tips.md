@@ -33,36 +33,10 @@ float luma(vec3 c) {
   return dot(c, vec3(0.299, 0.587, 0.114));
 }
 ```
-- Rotate 2D
-``` c
-vec2 rot2d(vec2 v, float a) {
-	return cos(a) * v + sin(a) * vec2(-v.y, v.x);
-}
-```
-- Rotate 3D
-``` c
-// Euler
-vec3 rot3d(vec3 v, vec3 a) {
-	v.xy = v.xy * cos(a.z) + vec2(-v.y, v.x) * sin(a.z);
-	v.yz = v.yz * cos(a.x) + vec2(-v.z, v.y) * sin(a.x);
-	v.zx = v.zx * cos(a.y) + vec2(-v.x, v.z) * sin(a.y);
-    return v;
-}
-// Quaternion ('q' must be normalized)
-vec3 rot3d(vec3 v, vec4 q) {
-	return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);
-}
-
-// 'axis' must be normalized
-vec3 rot3d_axis(vec3 v, vec3 axis, float angle) {
-	float c = cos(angle);
-	return c * v + sin(angle) * cross(axis, v) + (1.0 - c) * dot(v, axis) * axis;
-}
-```
 - sRGB-LinearRGB conversions
 ``` c
-vec3 lrgb2srgb(vec3 linear) { return  mix(12.92 * linear, 1.055 * pow(linear, 1.0 / 2.4) - 0.055, step(0.0031308, linear)); }
-vec3 srgb2lrgb(vec3 srgb) { return mix(srgb / 12.92, pow((srgb + 0.055) / 1.055, 2.4), step(0.04045, srgb)); }
+vec3 lrgb2srgb(vec3 lrgb) { return mix(12.92 * lrgb, 1.055 * pow(lrgb, vec3(1.0 / 2.4)) - 0.055, step(0.0031308, lrgb)); }
+vec3 srgb2lrgb(vec3 srgb) { return mix(srgb / 12.92, pow((srgb + 0.055) / 1.055, vec3(2.4)), step(0.04045, srgb)); }
 ```
 - Diffuse `max(dot(norm, lightDir), 0.0)`
 - Specular `pow(max(dot(normal, normalize(lightDir + viewDir)), 0.0), p)`
@@ -72,7 +46,7 @@ vec3 srgb2lrgb(vec3 srgb) { return mix(srgb / 12.92, pow((srgb + 0.055) / 1.055,
 - Direction from [[Focal Length|Diopter]] `normalize(vec3(uv * diopter, 1))`
 - HSV but only Hue
 ``` c
-vec3 hue_shift(vec3 col, float hue) {
+vec3 hue(vec3 col, float hue) {
     return mix(vec3(dot(vec3(0.333), col)), col, cos(hue)) + cross(vec3(0.577), col) * sin(hue);
 }
 ```
@@ -81,6 +55,31 @@ vec3 hue_shift(vec3 col, float hue) {
 float smin(float a, float b, float k) {
 	float h = clamp(0.5 + 0.5 * (a - b) / k, 0.0, 1.0);
 	return mix(a, b, h) - k * h * (1.0 - h);
+}
+```
+- Rotate 2D
+``` c
+vec2 rot(vec2 v, float a) {
+	return cos(a) * v + sin(a) * vec2(-v.y, v.x);
+}
+```
+- Rotate 3D
+``` c
+// Euler
+vec3 rot(vec3 v, vec3 a) {
+	v.xy = v.xy * cos(a.z) + vec2(-v.y, v.x) * sin(a.z);
+	v.yz = v.yz * cos(a.x) + vec2(-v.z, v.y) * sin(a.x);
+	v.zx = v.zx * cos(a.y) + vec2(-v.x, v.z) * sin(a.y);
+    return v;
+}
+// Quaternion ('q' must be normalized)
+vec3 rot(vec3 v, vec4 q) {
+	return v + 2.0 * cross(q.xyz, cross(q.xyz, v) + q.w * v);
+}
+
+// 'axis' must be normalized
+vec3 rot_axis(vec3 v, vec3 axis, float angle) {
+	return mix(dot(v, axis) * axis, v, cos(angle)) + sin(angle) * cross(axis, v);
 }
 ```
 - Get normal from 2D sdf
@@ -93,8 +92,8 @@ vec3 get_normal(vec2 uv) {
     return n;
 }
 ```
-- Tilable UV angle `2. * abs(fract(angle * freq + off) - .5)`
-- Fire Color: `vec3(smoothstep(0.0, 0.6, t), smoothstep(0.0, 1.1, t), smoothstep(0.65, 0.9, t) * .8)`
+- Tilable UV angle `2.0 * abs(fract(angle * freq + off) - 0.5)`
+- Fire Color `vec3(smoothstep(0.0, 0.6, t), smoothstep(0.0, 1.1, t), smoothstep(0.65, 0.9, t) * .8)`
 - Simple Palette
 ``` c
 vec3 pal(float t, vec3 a, vec3 b, vec3 c, vec3 d) {
@@ -201,5 +200,39 @@ vec3 lookat(vec3 eye, vec3 v) {
     vec3 f = normalize(eye);
     vec3 s = normalize(vec3(-f.z, 0, f.x));
     return v * mat3(s, cross(s, f), -f);
+}
+```
+- My simple color maps
+```    
+float x4 = x * x * x * x;
+vec3(x * sqrt(x), x4, x4 * x4 * x4 + x * max(0.0, cos(x * x * 2.0))); // inferno
+```
+- Infinyzoom
+``` c
+float zoom = exp2(-t) * 1.0;
+float l2 = dot(uv, uv);
+float d = 0.0;
+float s = 0.0;
+const float L = 8.0;
+const float F = 1.0;
+for (float i = 0.0; i < L; ++i) { 
+    float k = fract((i - t) / L);
+    float f = exp2(k * L) * F;
+    float a = (1.0 - cos(k * TAU)) / f;
+    d += fbm(uv / (0.3 + sqrt(1.0 - l2 * zoom * zoom)) * f, 3) * a;
+    s += a;
+    uv = cos(i) * uv + sin(i) * vec2(-uv.y, uv.x);
+}
+d /= s;
+```
+- ShaderToy Pack
+``` c
+float pack3(vec3 v) {
+    v = clamp(v, vec3(0), vec3(0.998));
+    return v.x + floor(v.y * 256.0) + floor(v.z * 256.0) * 256.0;
+}
+
+vec3 unpack3(float f) {
+    return vec3(fract(f), fract(floor(f) / 256.0), fract(floor(f / 256.0) / 256.0));
 }
 ```

@@ -2,12 +2,54 @@
 aliases:
   - Hash
 ---
-Hash Funcs shadertoy.com/view/4djSRW
-Simplex 3D shadertoy.com/view/XsX3zB
->[!todo] Find better hash functions
-
-> [!note] Everything is MIT licensed or simple enough to not require a license
 ```c
+/////////////// 2D //////////////
+float hash12(vec2 p) {
+	vec3 p3 = fract(p.xyx * 0.1031);
+    p3 += dot(p3, p3.yzx + 33.33);
+    return fract((p3.x + p3.y) * p3.z);
+}
+
+float noise(vec2 p) {
+	vec2 i = floor(p);
+	vec2 f = p - i;
+	f *= f * (3.0 - 2.0 * f);
+	float res = mix(
+		mix(hash12(i), hash12(i + vec2(1, 0)), f.x),
+		mix(hash12(i + vec2(0, 1)), hash12(i + vec2(1)), f.x), f.y);
+	return res;	
+}
+/////////////// FBM ///////////////
+float fbm(vec2 p, int octaves) {
+	float s = 0.0, m = 0.0, a = 1.0;
+	for(int i = 0; i < octaves; i++) {
+		s += a * noise(p);
+		m += a;
+		a *= 0.5;
+		p *= mat2(1.6, 1.2, -1.2, 1.6);
+	}
+	return s / m;
+}
+/////////////// 1D ///////////////
+float hash11(float p) {
+    p = fract(p * 0.1031);
+    p *= p + 33.33;
+    return fract(p * p * 2.0);
+}
+
+float noise(float p) {
+	float i = floor(p);
+	return mix(hash11(i), hash11(i + 1.0), p - i);
+}
+// "f *= f * (3.0 - 2.0 * f)" is smoothstep(0, 1, f)
+// Remove for slight performance and linear look
+// Rotate fbm noise for no grid bias: 
+// p *= mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.5));
+// p *= mat2(.877, .479, -.479, .877);
+// Make it swirly
+// p += vec2(cos(s * 6.0));
+
+/////////////// Hashes ///////////////
 // Hash without sine
 float hash11(float p) {
     p = fract(p * 0.1031);
@@ -18,21 +60,6 @@ float hash12(vec2 p) {
 	vec3 p3 = fract(p.xyx * 0.1031);
     p3 += dot(p3, p3.yzx + 33.33);
     return fract((p3.x + p3.y) * p3.z);
-}
-vec2 hash22(vec2 p) {
-	vec3 p3 = fract(p.xyx * vec3(0.1031, 0.1030, 0.0973));
-    p3 += dot(p3, p3.yzx + 33.33);
-    return fract((p3.xx + p3.yz) * p3.zy);
-}
-vec3 hash32(vec2 p) {
-	vec3 p3 = fract(p.xyx * vec3(0.1031, 0.1030, 0.0973));
-    p3 += dot(p3, p3.yxz + 33.33);
-    return fract((p3.xxy + p3.yzz) * p3.zyx);
-}
-vec3 hash33(vec3 p3) {
-	p3 = fract(p3 * vec3(.1031, .1030, .0973));
-    p3 += dot(p3, p3.yxz + 33.33);
-    return fract((p3.xxy + p3.yxx) * p3.zyx) - 0.5;
 }
 
 // Sin Hash (x1.5-x2 speed) but unreliable
@@ -45,27 +72,14 @@ float hash12(vec2 p) {
 vec2 hash22(vec2 p) {
 	return fract(sin(p) * 43758.5453);
 }
-/////////////// 1D ///////////////
-float noise(float p) {
-	float i = floor(p);
-	float f = fract(p);
-	return mix(hash11(i), hash11(i + 1.0), f);
-}
-
-/////////////// 2D //////////////
-float noise(vec2 p) {
-	vec2 i = floor(p);
-	vec2 f = fract(p);
-	f *= f * (3.0 - 2.0 * f);
-	float res = mix(
-		mix(hash12(i), hash12(i + vec2(1, 0)), f.x),
-		mix(hash12(i + vec2(0, 1)), hash12(i + vec2(1)), f.x), f.y);
-	return res * res;	
-}
-// "f *= f * (3.0 - 2.0 * f)" is smoothstep(0, 1, f)
-// Remove for slight performance and linear look
 
 //////// Simplex 2D ////////
+vec2 hash22(vec2 p) {
+	vec3 p3 = fract(p.xyx * vec3(0.1031, 0.1030, 0.0973));
+    p3 += dot(p3, p3.yzx + 33.33);
+    return fract((p3.xx + p3.yz) * p3.zy);
+}
+
 float noise(vec2 p) {
 	vec2 i = floor(p + (p.x + p.y) * 0.366025);
     vec2 a = p - i + (i.x + i.y) * 0.211324;
@@ -81,18 +95,43 @@ float noise(vec2 p) {
     return dot(n, vec3(70)) + 0.5;
 }
 
+//////// Worley 2D ////////
+vec2 hash22(vec2 p) {
+	vec3 p3 = fract(p.xyx * vec3(0.1031, 0.1030, 0.0973));
+    p3 += dot(p3, p3.yzx + 33.33);
+    return fract((p3.xx + p3.yz) * p3.zy);
+}
+
+float worley(vec2 x) {
+    vec2 p = floor(x);
+    vec2 f = x - p;
+	float va = 1.0;
+    for(int j = -1; j <= 1; j++) 
+    for(int i = -1; i <= 1; i++) {
+        vec2 g = vec2(i, j);
+		vec2 r = g - f + hash22(p + g);
+		va = min(dot(r, r), va);
+    }
+    return va;
+}
 
 //////// Voronoi 2D ////////
 // s is edge smoothness 
 // Note: if using low s, you can decrease for loop range
+vec3 hash32(vec2 p) {
+	vec3 p3 = fract(p.xyx * vec3(0.1031, 0.1030, 0.0973));
+    p3 += dot(p3, p3.yxz + 33.33);
+    return fract((p3.xxy + p3.yzz) * p3.zyx);
+}
+
 float voronoise(vec2 x, float s) {
     vec2 p = floor(x);
-    vec2 f = fract(x);
+    vec2 f = x - p;
 	float k = 1.0 + 63.0 * pow(1.0 - s, 4.0);
 	float va = 0.0;
 	float wt = 0.0;
-    for(int j= -2; j <= 2; j++)
-    for(int i= -2; i <= 2; i++) {
+    for(int j = -2; j <= 2; j++)
+    for(int i = -2; i <= 2; i++) {
         vec2 g = vec2(i, j);
 		vec3 o = hash32(p + g);
 		vec2 r = g - f + o.xy;
@@ -104,20 +143,6 @@ float voronoise(vec2 x, float s) {
     return va / wt;
 }
 
-//////// Worley 2D ////////
-float worley(vec2 x) {
-    vec2 p = floor(x);
-    vec2 f = fract(x);
-	float va = 1.0;
-    for(int j = -1; j <= 1; j++) 
-    for(int i = -1; i <= 1; i++) {
-        vec2 g = vec2(i, j);
-		vec2 r = g - f + hash22(p + g);
-		va = min(dot(r, r), va);
-    }
-    return va;
-}
-
 //////// Blue 2D ////////
 float bluenoise(vec2 p) {
     float v = 0.0;
@@ -127,23 +152,29 @@ float bluenoise(vec2 p) {
 }
 
 /////////////// 3D /////////////////
-vec4 perm(vec4 x) { x = ((x * 34.0) + 1.0) * x; return x - floor(x * (1.0 / 289.0)) * 289.0; }
+vec4 perm(vec4 x) { x *= x * 34.0 + 1.0; return x - floor(x / 289.0) * 289.0; }
 
 float noise(vec3 p) {
     vec3 a = floor(p);
     vec3 d = p - a;
-    d = d * d * (3.0 - 2.0 * d);
+    d *= d * (3.0 - 2.0 * d);
     vec4 b = a.xxyy + vec4(0, 1, 0, 1);
     vec4 k1 = perm(b.xyxy);
-    vec4 k2 = perm(k1.xyxy + b.zzww);
-    vec4 c = k2 + a.zzzz;
-    vec4 k3 = perm(c);
-    vec4 k4 = perm(c + 1.0);
+    vec4 k2 = perm(k1.xyxy + b.zzww) + a.zzzz;
+    vec4 k3 = perm(k2);
+    vec4 k4 = perm(k2 + 1.0);
     vec4 o1 = fract(k3 * 0.02439024);
     vec4 o2 = fract(k4 * 0.02439024);
-    vec4 o3 = o2 * d.z + o1 * (1.0 - d.z);
-    vec2 o4 = o3.yw * d.x + o3.xz * (1.0 - d.x);
-    return o4.y * d.y + o4.x * (1.0 - d.y);
+    vec4 o3 = mix(o1, o2, d.z);
+    vec2 o4 = mix(o3.xz, o3.yw, d.x);
+    return mix(o4.x, o4.y, d.y);
+}
+
+
+vec3 hash33(vec3 p) {
+	p = fract(p * vec3(.1031, .1030, .0973));
+    p += dot(p, p.yxz + 33.33);
+    return fract((p.xxy + p.yxx) * p.zyx) - 0.5;
 }
 
 float simplex3d(vec3 p) {
@@ -171,25 +202,6 @@ float simplex3d(vec3 p) {
 	 return dot(d, vec4(52));
 }
 ```
-#### FBM Function
-``` C
-float fbm(vec2 p, int octaves) {
-	float s = 0.0, m = 0.0, a = 1.0;
-	for(int i = 0; i < octaves; i++) {
-		s += a * noise(p);
-		m += a;
-		a *= 0.5;
-		p *= 2.0;
-	}
-	return s / m;
-}
-// Rotate fbm noise for no grid bias: 
-// p *= mat2(1.6, 1.2, -1.2, 1.6);
-// p *= mat2(cos(.5), sin(.5), -sin(.5), cos(.5));
-// p *= mat2(.877, .479, -.479, .877);
-// Make it swirly
-// p += vec2(cos(s * 6.), sin(s * 6.));
-```
 ### Extra
 ``` c
 //// Worm Like 2D
@@ -198,7 +210,7 @@ float fbm(vec2 p, int octaves) {
 float worm_noise(vec2 p) {
     const float kF = 12.0;
     vec2 i = floor(p);
-	vec2 f = fract(p);
+	vec2 f = p - i;
     f *= f * (3.0 - 2.0 * f);
     return mix(mix(sin(kF * dot(p, hash22(i + vec2(0, 0)))),
                	   sin(kF * dot(p, hash22(i + vec2(1, 0)))), f.x),
@@ -247,7 +259,7 @@ float noise(vec2 p, float scale) {
 //// Crater 3D
 float crater_noise(vec3 x) {
     vec3 p = floor(x);
-    vec3 f = fract(x);
+    vec3 f = x - p;
     float va = 0.;
     float wt = 0.;
     for (int i = -2; i <= 2; i++) 
@@ -290,7 +302,7 @@ float crater_fbm(vec3 x) {
 // Fuzz / Scratch Map 
 float scratch(vec2 uv, float f) {
     vec2 seed = floor(uv);
-    uv = fract(uv);
+    uv -= seed;
     seed.x = floor(sin(seed.x * 51024.0) * 3104.0);
     seed.y = floor(sin(seed.y * 1324.0) * 554.0);
  

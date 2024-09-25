@@ -1,8 +1,8 @@
 ![[Lens.webp]]
-### Lens Strength: $F^{-1}\space dpt$
+### Lens Strength: $F^{-1}\ dpt$
 - $F$ [[Focal Length]]
 - $dpt$ Diopter measurement unit $Meter^{-1}$
-### Lens strength $(\eta-1)(r_1^{-1}-r_2^{-1})\space dpt$
+### Lens strength $(\eta-1)(r_1^{-1}-r_2^{-1})\ dpt$
 - $r_1,r_2$ Radius of green/blue circle
 - $\eta$ Refraction index
 > [!tip] [[Focal Length]]$=diopter^{-1}$

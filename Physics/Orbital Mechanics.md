@@ -20,7 +20,7 @@
 - **Semi-major/minor axes** half of longest/shortest diameter of an ellipse
   semi-major is also average distance from central body
 - [[Eccentricity]] orbit deviation from circle
-  $0=\text{circle},\space\space0<e<1=\text{ellipse},\space\space1=\text{parabola},\space\space e>1=\text{hyperbola}$
+  $0=\text{circle},\ \ 0<e<1=\text{ellipse},\ \ 1=\text{parabola},\ \  e>1=\text{hyperbola}$
 - **Inclination (i)** tilt of orbit plane relative to equatorial plane
 - **Apoapsis** orbit point farthest from central body $r_a$
 - **Periapsis** orbit point closest to central body $r_p$

@@ -32,7 +32,7 @@
 
 ### Sound Wave Types
 - **Triangle** $$\frac{8}{\pi^{2}}\sum_{n=0}^\infty\frac{1}{(2n+1)^{2}}\cos(2\pi x\left(2n+1\right))$$
-	- **Real** $4abs(frac(x)-0.5)-1$
+	- **Real** $4|frac(x)-0.5|-1$ `(x / tau - 0.25) for sin`
 - **Sawtooth** $$\frac{2}{\pi}\sum_{n=1}^\infty(\frac{(-1)^{n}}{n}\sin(2\pi nx))$$
 	- **Real** $2(x-floor(x+0.5))$
 - **Square** $$\frac{4}{\pi}\sum_{n=0}^{100}(\frac{1}{2n+1}\sin(2\pi x(2n+1)))$$
@@ -40,7 +40,7 @@
 	- **Smoothed**: $\frac{1}{\arctan(\frac{1}{d})}\arctan(\frac{\sin(2\pi x)}{d})$
 
 ### Speed of Sound
-Speed of Sound in dry air at $20\space C\degree$: $343m/s$
+Speed of Sound in dry air at $20\ C\degree$: $343m/s$
 #### Formula $c=\sqrt{\frac{K_s}{\rho}}$
 - $K_s$ Coefficient of stiffness
 - $\rho$ [[Density]]

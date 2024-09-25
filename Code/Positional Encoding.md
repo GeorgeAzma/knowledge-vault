@@ -1,5 +1,5 @@
 It's a way to add position to the inputs of the [[Neural Network]]
-There are many ways to do Positional Encoding, most popular is by using [[Sine and Cosine]]:
+There are many ways to do Positional Encoding, most popular is by using [[Sine and Cosine]]
 ```Rust
 fn encode_position(position: usize, n: usize) -> Vec<f32> {
     let mut encoding = vec![0f32; n];
@@ -9,7 +9,7 @@ fn encode_position(position: usize, n: usize) -> Vec<f32> {
         encoding[i + 0] = cos;
         encoding[i + 1] = sin;
     }
-    return encoding;
+    encoding
 }
 ```
 You can also train a [[Neural Network]] to generate positional encodings

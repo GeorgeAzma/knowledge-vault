@@ -1,7 +1,7 @@
 Similar to dot product
 Positive covariance means both data are high or low together
 Negative covariance means one is high if the other is low or vice-versa
-### Formula: $cov(x,y)=\frac{(x-\micro_x)\cdot(y-\micro_y)}{N}$
+### Formula $cov(x,y)=\frac{(x-\micro_x)\cdot(y-\micro_y)}{N}$
 - $\micro_x$ [[Mean]] of $x$
 - $\micro_y$ [[Mean]] of $y$
 - $N$ Array size

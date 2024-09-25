@@ -1,7 +1,6 @@
 Amount of electrons flowing per second
-
-Like velocity of ball rolling down a hill
-### Formula $I=V/R=Q/t$
+like velocity of ball rolling down a hill
+### Formula $I=\frac{V}{R}=\frac{Q}{t}$
 - $V$ [[Voltage]]
 - $R$ [[Resistance]]
 - $Q$ [[Charge]]

@@ -1,4 +1,6 @@
 ## Command Prompt Windows
+#### Network
+- **Display [[Network]] connections** `netstat`, `-an for active connections` 
 - **Show all Wi-Fi names you have ever connected to** `netsh wlan show profile`
 - **Wi-Fi Password** `netsh wlan show profile "WifiName" key=clear`
 - **Trace Route** `tracert google.com`

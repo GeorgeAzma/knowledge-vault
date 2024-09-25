@@ -46,9 +46,6 @@
 ### [[Quadratic Equation]]
 - $ax^2+bx+c = a(x+(b \div 2a))^2+(c-b^2 \div 4a)$ `Completing the square`
 - $ax^2+bx+c=a(x-x_1)(x-x_2)$
-### Roots
-- $\sqrt{f(x)}<g(x) \Rightarrow \left\{ \begin{array} \\ f(x)>0 \\ g(x)>0 \\ f(x) < g^2(x) \end{array} \right.$
-- $\sqrt{f(x)}>g(x) \Rightarrow \begin{cases} f(x)>0 \\ g(x)<0 \end{cases} \quad \begin{cases} f(x)>0 \\ g(x)>0 \\ f(x)>g^2(x) \end{cases}$
 ### [[Arithmetic Series]]
 ### Vectors
 > [!tip] $a\cdot b=\cos\theta$ and $a\times b=\sin\theta$, where $\theta$ is angle between $a,b$
@@ -73,3 +70,6 @@
 ### [[Dot Product]]
 ### [[Derivative]][[s]]
 ### [[Integral]][[s]]
+### [[Set]]
+- $C\textbackslash(A\cup B)=(C\textbackslash A)\cap(C\textbackslash B)$ `De morgan's law`
+- $C\textbackslash(A\cap B)=(C\textbackslash A)\cup(C\textbackslash B)$ `De morgan's law`

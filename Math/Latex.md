@@ -15,14 +15,14 @@ $\begin{vmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \end{vmatrix}$
 $\left|\begin{array}{r} 1 & -22 & 333 \\ 4 & 5 & 6 \end{array}\right|$
 $\matrix{3&2\\1&4}$
 $\bra{111} \quad \ket{111}$
-$S_{paced} \space E_{quation} \quad T_{abbed} \space E_{quation}$
+$S_{paced}\ E_{quation}\quad T_{abbed}\ E_{quation}$
 $\scriptstyle \text{Script style text} \quad \scriptscriptstyle \text{Script script style text}$
 $\alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \omicron \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega \Gamma \Delta \nabla \Theta \Lambda \Xi \Pi \Sigma \Upsilon \Phi \Psi \Omega \digamma$
 $\leqslant \geqslant < \leq \geq > \preceq \prec \succ \succeq \ll \lll \gg \ggg \nleqslant \ngeqslant \nless \nleq \ngeq \not > \npreceq \nprec \nsucc \nsucceq \neq$
 $\subset \subseteq \supseteq \supset \cup \in \ni \neg \not \subset \nsubseteq \nsupseteq \not \supset \notin \not \cup \sqsubset \sqsubseteq \sqsupseteq \sqsupset \sqcup$
 $a \mid b$
-$\mathbb{N Z Q A R C H}$
-$\sin(\theta) \cos(\theta) \cosh(\theta) \sinh(\theta) \space etc.$
+$\mathbb{N Z Q ARCH}$
+$\sin(\theta)\cos(\theta)\cosh(\theta)\sinh(\theta)\ etc.$
 $\to \longrightarrow \Rightarrow$
 $\approx \sim$
 $\propto \text{Proportional to Sign}$
@@ -34,8 +34,8 @@ $$
     \end{cases}
     \quad \quad
     \begin{array}{rcl}
-    right \space aligned & center \space aligned & left \space aligned \\
-    array  & array & array \\
+    right\ aligned & center\ aligned & left\ aligned \\
+    array & array & array \\
     first & second & third \\
     \end{array}
 $$

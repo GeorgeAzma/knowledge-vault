@@ -3,15 +3,13 @@
 - $\vec\nabla\cdot\vec{B}=0$
 - $\vec\nabla\times\vec{E}=-\huge\frac{\delta\vec{B}}{\delta t}$
 - $\vec\nabla\times\vec{B}=\mu_0(\vec{J}+\epsilon_0\large\frac{\delta\vec{E}}{\delta t})$
-> [!note] This is differential form, 
-> There also are Integral, [[Geometric Algebra]] Forms
 
 > [!note]
 > $\vec\nabla\cdot\vec{E}$ is divergence of $\vec{E}$
-> a.k.a how much it flows in/out of the point
+> how much it flows in/out of the point
 > 
 > $\vec\nabla\times\vec{E}$ is curl of $\vec{E}$
-> a.k.a how much it rotates around the point
+> how much it rotates around the point
 ### Definitions
 - $\vec\nabla=\huge(\frac{\delta}{\delta x}, \frac{\delta}{\delta y}, \frac{\delta}{\delta z})$
 - $\vec{E}$ Electric field

@@ -9,7 +9,6 @@ probability of $k$ events in the same interval is poisson distribution
 > $k=1\to4$ has $0.15+0.22+0.22+0.17=0.77=77\%$ chance
 > which is same formula done 4 times and summed
 > > [!note] we are not integrating since $1.5$ cars can't pass by
- 
 ### Poisson distribution related to programming
 Random distribution where samples are evenly spaced
 #### Cem Yuksel Poisson Distribution Algorithm

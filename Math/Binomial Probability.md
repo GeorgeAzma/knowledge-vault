@@ -2,7 +2,7 @@
 - $n$ flips
 - $r$ heads
 - $p$ chance of flipping a head `chance of success`
-- $C(n,r)$ [[Sets|Combinations]] $\large\frac{n!}{(n-r)!r!}$
+- $C(n,r)$ [[Set|Combinations]] $\large\frac{n!}{(n-r)!r!}$
 - $F(n,r,p)$ probability of flipping $r$ heads
 > [!example] $p=n^{-1}$
 > Chance of success after $n$ tries and success probability $p=n^{-1}$ 

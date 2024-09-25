@@ -1,6 +1,6 @@
 Similar to 2D vectors
 ### Operations
-- $i=\sqrt{-1}\space|\space i^2=1$
+- $i=\sqrt{-1}$ or $i^2=1$
 - $c_1\pm c_2=x_1\pm x_2+i(y_1\pm y_2)$
 - $c_1c_2=(x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1)$
 - $c^2=(x^2-y^2)+i(2xy)$

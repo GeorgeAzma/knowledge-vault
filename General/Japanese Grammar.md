@@ -100,6 +100,8 @@ If sentence does not have a subject, **subject defaults to I / it**
 		  `Ichidan o-ki-ru -> o-ki-re`
 		- **Hypothetical / Conditional** `no-mu -> no-me-ba` is `drink -> if drink`
 		  `Ichidan -> re-ba`
+		    -  **Obligatory** `no-mu -> no-ma-nai-kere-ba` `negation + conditional`
+		      `kereba -> if/when`
 		- **Potential** `no-mu -> no-me-ru` `drink -> drinkable / can drink`
 		  `Ichidan -> ra-re-ru/re-ru` (`e.g. ta-be-ru -> ta-be-re-ru`)
 	- **お**

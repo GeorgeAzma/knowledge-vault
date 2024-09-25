@@ -2,7 +2,7 @@ Connects [[Data Link]][[s]] together
 exists so that each [[Data Link]] doesn't have to connect to every 
 other [[Data Link]] and they can just connect to a single switch
 ### [[Media Access Control (MAC) Address|MAC Address]] Table
-Contains mapping of each ethernet port index 
+Contains mapping of each ethernet [[Port]] index 
 to connected [[Data Link]] [[Media Access Control (MAC) Address|MAC Address]] for efficiency
 it starts empty and as packets flow through it
 with [[Media Access Control (MAC) Address|MAC Address]] layers it uses those to populate the table

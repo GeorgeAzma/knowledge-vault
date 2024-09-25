@@ -9,7 +9,8 @@ being $\leq$ to other random sample $x$
 > So CDF function is
 > $\left\{\begin{array}{rl}0&x<0\\ x&0\leq x\leq1\\1&x>1\end{array}\right.$
 ### Formula $F_X(x)=P(X\leq x)$
-Other CDFs: en.wikipedia.org/wiki/Cumulative_distribution_function
+Other CDFs en.wikipedia.org/wiki/Cumulative_distribution_function
+[[Derivative]] of CDF is [[Probability Density Function (PDF)]]
 ### Inverse CDF $F^{-1}(p),p\in[0,1]$
 `also called quantile`
 Outputs a random value $x$ for which probability of randomly sampling 

@@ -1,4 +1,4 @@
-### Formula: $f(s)=\int_0^\infty x(t)e^{-s}dt$
+### Formula $f(s)=\int_0^\infty x(t)e^{-s}dt$
 - $\large s=\alpha+i\omega$
 Like [[Fourier Transform|Fourier Transform]], but FFT only shows frequency composition
 this also tells how exponential function is

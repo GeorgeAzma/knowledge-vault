@@ -7,7 +7,7 @@ Generative Pre-trained Transformer
 	- [[Positional Encoding]]
 	- Normalize outputs (Using [[Layer Normalization]] or [[Batch Normalization]])
 	- [[Multi Head Self Attention]] (For Decoder use [[Masked Multi Head Self Attention]]) with $h$ Heads
-	- Use [[Residual Connection]], for self attention output and (word embedding + positional encoding) output
+	- Use [[Residual Connection]], for [[Self Attention]] output and (word embedding + positional encoding) output
 	- Normalize outputs (Using [[Layer Normalization]] or [[Batch Normalization]])
 - Grab the outputs of the encoder
 - Pass these outputs to [[Neural Network]], with input/output size of $d_{model}$ and inner layer  dimensionality of $d_{ff}$
@@ -36,7 +36,7 @@ Generative Pre-trained Transformer
 >	- $d_{ff}$=2048
 >	- $h=8$
 >	- Meaning each head has $d_{model} \div h=64$ query size
->	- [[Activation Function]]: RELU or GELU (Not sure)
+>	- [[Activation Function]] RELU or GELU (Not sure)
 >	- GPT uses Adam Optimizer with $\beta_1=0.9,\beta_2=0.98,\epsilon=10^{-9}$
 >	- $lrate=d_{model}^{-0.5}\min{(step^{-0.5},step*WarmupSteps^{-1.5})}$
 >	- $WarmupSteps=4000$
@@ -47,4 +47,4 @@ Generative Pre-trained Transformer
 ![[GPT Architecture.webp]]
 ![[GPT Translator Architecture.webp]]
 ![[Self Attention.webp]]
-See: [[GPT Code]]
+See [[GPT Code]]

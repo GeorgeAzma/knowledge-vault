@@ -1,0 +1,9 @@
+name: GitHub Actions
+run-name: png2webp/link_shorten
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: windows-latest
+    steps:
+      - name: run png2webp/link_shorten powershell script
+      - run: pwsh -ExecutionPolicy Bypass -File "./png2webp.ps1"

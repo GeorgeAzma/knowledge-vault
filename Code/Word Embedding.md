@@ -2,7 +2,7 @@ Converts words/tokens into vectors with meaning called word embeddings
 > [!example] $\vec{King}-\vec{Man}+\vec{Woman}=\vec{Queen}$
 ### How it works
 - Do [[Tokenization]] to create vocabulary of tokens
-- Create a Linear embedding layer with $d_{vocab}$ and $d_{model}$
+- Create a Linear embedding layer with $d_{vocab}$ inputs and $d_{model}$ outputs
 > [!note] $d_{model}$ is embedding vector length 
 - Forward embedding layer with [[One Hot Encoding|One Hot Encoded]] token index as an input
 > [!tip] Since word is [[One Hot Encoding|One Hot Encoded]] effectively only single neuron of embedding layer is active and set to 1, so it's trained weights are the embeddings of the word

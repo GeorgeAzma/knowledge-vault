@@ -4,26 +4,30 @@ aliases:
   - speech
   - voice box
   - vocal coords
+  - IPA
+  - international phonetic alphabet
+  - vowel
 ---
+www.ipachart.com
 ### Where Sound Is Blocked
-- **Bilabial** both lips `b,p,m,ph`
-- **Alveolar** bony ridge above tongue `c,d,dz,n,t,s,z`
-- **Velar** soft palate above tongue `g,hiひ,k`
+- **Bilabial** both lips
+- **Alveolar** bony ridge above tongue
+- **Velar** soft palate above tongue
 - **Nasal/Oral** nose/mouth
 - **Palato-Alveolar** where palate and ridge meet `sh`
-- **Glottal** glottis `h` `opening between vocal cords`
-- **Uvular** uvula `dangly bit`
+- **Glottal** glottis
+- **Uvular** uvula
 - **Labio-Dental** bottom lip and teeth
 ### How Sound Is Blocked
-- **Stops** air completly blocked `b,c,d,g,n,m,t,p,ph`
-- **Fricatives** air forced through narrow opening `h,s,z`
-- **Affricates** air is blocked for a bit and released narrowly `c,ch,dz,j`
-- **Liquids** fricative, but less friction `らりるれろ`
-- **Glides** vowels, but you move tongue to make them `わやゆよ`
-
-- **Vowel** sound made with mostly open mouth
-- **Consonant** sound made with mostly closed mouth
+- **Plosive / Stop** block air
+- **Fricative** force air through narrow opening
+- **Affricate** block air and narrowly release
+- **Liquid** less fricative
+- **Glide** vowel + move tongue
+- **Vowel** continious airflow
+- **Consonant** varying airflow
 	- **Voiced** vibrates vocal cords
-	- **Unvoiced** does not vibrate vocal cords `h`
+	- **Unvoiced** does not vibrate vocal cords
 ### Terminology
 - **Formants** are frequency peaks in voice spectrogram
+- **Pulmonic** heavy airflow from lungs

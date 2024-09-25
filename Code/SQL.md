@@ -153,7 +153,7 @@ INNER JOIN Rooms ON Rooms.owner_id = Users.id
   if there is no match returns NULL
 - **FULL OUTER JOIN** returns all rows where there is a match in either left or right table
   on the table where there is no match returns NULL `not supported in mysql`
-- **CROSS JOIN** returns all [[Sets#Combination $ huge frac{n!}{(n-r)!r!}$|Combinations]]
+- **CROSS JOIN** returns all [[Set#Combination $ huge frac{n!}{(n-r)!r!}$|Combinations]]
 ### Delete Tables
 ``` mysql
 DROP TABLE Users;

@@ -1,4 +1,4 @@
-## How it works:
+## How it works
 - Do [[Word Embedding]] + [[Positional Encoding]] to get $d_{model}$ sized input vector for a token
 - Do that for all tokens to get input matrix with size of $d_{vocab}$
 - Have Matrices $k_w,q_w,v_w$, which contain Weights for Keys, Queries, Values for each input
