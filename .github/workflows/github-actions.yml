@@ -19,8 +19,6 @@ jobs:
           7z x ffmpeg.tar  # Extract the .tar file to get FFmpeg
           Move-Item -Path "ffmpeg-7.0.2\*.*" -Destination "C:\ffmpeg" -Force  # Move files to the target directory
           $env:PATH += ";C:\ffmpeg\bin"  # Update the PATH variable
-          # Verify installation
-          ffmpeg -version
 
       - name: Run png2webp/link_shorten PowerShell script
         run: pwsh -ExecutionPolicy Bypass -File "./png2webp.ps1"
