@@ -1,6 +1,6 @@
 Generative Pre-trained Transformer
 
-## How it works (Translator GPT)
+## How It Works `Translator GPT`
 - ### Encoder/Decoder
 	- [[Tokenization]]
 	- [[Word Embedding]]

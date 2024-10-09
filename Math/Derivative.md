@@ -24,3 +24,6 @@
 - $\frac{d}{dx}\log_b{x}=\large\frac{1}{\ln(b)x}\normalsize=\large\frac{\log_b(e)}{x}$
 - $\frac{d}{dx}\sinh{x}=\cosh x$
 - $\frac{d}{dx}\cosh{x}=\sinh{x}$
+### Computational Methods
+- [[Numerical Integrator#Euler]]
+- [[Numerical Integrator]]

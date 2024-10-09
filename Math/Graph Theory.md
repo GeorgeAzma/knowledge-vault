@@ -8,6 +8,13 @@
 - **Connectivity** vertices are connected if path exists between them
   `so you can arrive from any vertex to another`
 - **Connected Component** graph vertices subset that are connected
+- **Directed Acyclic Graph (DAG)**
+- **Source** vertex with no inputs `first vertex in DAG`
+- **Sink** vertex with no outputs `last vertex in DAG'
+- **Depth** length of longest path from source to some vertex
+  `depth of DAG is max depth of it's nodes`
+- **Node** vertex that is not a source `AND gate with constant input`
+- **Cost** number of nodes `vertices - sources`
 ### Types
 - **Connected** all vertices are connected
 - **Undirected** $(u,v)\implies(v,u)$

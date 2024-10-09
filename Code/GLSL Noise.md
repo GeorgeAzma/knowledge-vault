@@ -1,6 +1,9 @@
 ---
 aliases:
   - Hash
+  - FBM
+  - Voronoi
+  - Worley
 ---
 ```c
 /////////////// 2D //////////////
@@ -48,6 +51,8 @@ float noise(float p) {
 // p *= mat2(.877, .479, -.479, .877);
 // Make it swirly
 // p += vec2(cos(s * 6.0));
+// 3D rot
+// mat3(0, 1.6, 1.2, -1.6, 0.72,-0.96, -1.2,-0.96, 1.28)
 
 /////////////// Hashes ///////////////
 // Hash without sine

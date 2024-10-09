@@ -70,3 +70,4 @@ $\forall y\in Y\set{x\in X\mid f(x)=y}$
 ### Preimage
 $f:X\rightarrow Y\land y\in Y$ then preimage of $y$ are elements $x\in X$ such that $f(x)=y$
 > [!example] $f(x)=x^2$, then preimage of $4$ is $\pm2$ because $(\pm2)^2=4$
+### Composition $(f\circ g)(x)=f(g(x))$

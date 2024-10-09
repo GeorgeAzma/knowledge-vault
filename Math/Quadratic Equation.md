@@ -1,3 +1,7 @@
+---
+aliases:
+  - discriminant
+---
 ### $ax^2 + bx + c$
 
 ### Discriminant $D=b^2 - 4ac$    
@@ -8,8 +12,9 @@
 ### Valley Point
 - $\large x_0=-\huge\frac{b}{2a}$ 
 - $\large y_0=-\huge\frac{D}{4a}$
-### Simplification
-- $\large ax^2+bx+c=a(x-x_1)(x-x_2)$
+### [[Simplifications]]
+- $ax^2+bx+c=a(x-x_1)(x-x_2)$
+- $ax^2+bx+c = a(x+\frac{b}{2a})^2+(c-\frac{b^2}{4a})$ `completing the square`
 ##### Find $x_1$ and $x_2$ without calculating $D$
 - Find 2 numbers that multiply to $c$ and add up to $-b$
 > [!example] $x^2-7x+10$

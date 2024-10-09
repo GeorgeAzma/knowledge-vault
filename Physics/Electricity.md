@@ -3,7 +3,7 @@ youtu.be/X_crwFuPht4
 - [[Current]]
 - [[Resistance]]
 - [[Voltage]]
-- [[Power]]
+- [[Physics/Power]]
 - [[Inductance]]
 - [[Capacitance]]
 
@@ -14,7 +14,7 @@ Imagine electricity as water in 2D-ish container
   tighter the container slower the flow so $I=V/R$
 - [[Voltage]] is slope of water, like [[Derivative]] of water height
   higher the slope faster the flow so $I=V/R$
-- [[Power]] is how much water would push you back if it hit you
+- [[Physics/Power]] is how much water would push you back if it hit you
   water with high pressure/velocity or [[Voltage]]/[[Current]]
   would push you back a lot so $P=IV$
 - [[Inductance]] paddle wheel spin rate determines water velocity
