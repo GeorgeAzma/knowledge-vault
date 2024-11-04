@@ -1,7 +1,6 @@
-### Formula $I=\int_0^M r^2dm$
+### Formula $I=\int_0^M r^2dm$   `kg m^2`
 - $r$ radius/distance from pivot point
 - $dm$ mass
-### Unit $kg\cdot m^2$
 ### Inertia of Common Objects
 - Cylinder $\large\frac{mr^2}{2}$ `parallel to spin axis`
 - Hollow Cylinder $mr^2$ `parallel to spin axis`

@@ -6,7 +6,7 @@ allowing you to fine tune the general shape
 Stop when it gets cold or shape is good enough
 
 Closer you are to your desired shape lower the energy $E$ is
-So you want to minimize $E$ to do that:
+So you want to minimize $E$:
 - Start with high temperature $T$
 - Hammer the metal (modify the data)
 - If energy goes lower ($\Delta E<0$), keep the modification

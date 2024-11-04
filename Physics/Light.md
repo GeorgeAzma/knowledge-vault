@@ -2,7 +2,7 @@
 ### Speed of Light $c=f\lambda=299,792,458m/s$
 - $f$ Wave frequency
 ### Photon Energy $E=hf=hc/λ$
-- $h$ [[Constants|Planck's Constant]]
+- $h$ [[Physics/Constants|Planck's Constant]]
 - $\lambda$ Wavelength
 ### 2 Ways to Measure Light
 1. **Raw**

@@ -1,7 +1,7 @@
-### Terms:
+### Terms
 - **Container**: Application package with everything it needs (assets, code etc.)
 - **Image**: Set of instructions defined by `Dockerfile` that builds/executes code inside a docker container, like a template 
-### Commands:
+### Commands
 - `docker run` Create a new docker container from an image
 - `docker compose` Launch containers using `compose.yaml` file
 

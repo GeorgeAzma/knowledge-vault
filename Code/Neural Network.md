@@ -1,12 +1,14 @@
-## How it works
-- #### Forward Propagation
+- [[Convolutional Neural Network]]
+- [[Recurrent Neural Network]]
+### How it works
+- ##### Forward Propagation
 	- Define topology (e.g. size of inputs, hidden neurons, outputs)
 	- inputs are N numbers from -1 to 1
 	- They get forwarded to the next layer by multiplying them by weights connecting to all the next neurons and adding bias
 	- Do forwarding for all the layers, until you get the output
 	- Neurons can have [[Activation Function]], which maps their output
 	- That will make sure that outputs can be non-linear
-- #### Back Propagation
+- ##### Back Propagation
 	- Get difference of outputs and expected outputs (targets)
 	- Map that difference using a [[Loss Function]] to get loss
 	- Calculate gradient by backpropagating loss using [[Chain Rule]] 

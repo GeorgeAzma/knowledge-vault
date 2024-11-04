@@ -47,15 +47,15 @@ youtu.be/KkOkx0FiHDA
       }
 	  ```
 	- Calculate `f0`, which is surface [[Reflection#Reflectance and Transmittance|reflectance]] when looking directly at it
-	  typically 0.04 for non-metal dielectrics
+	  typically $0.04$ for non-metal dielectrics
 	``` c
 		vec3 f0 = mix(vec3(0.04), albedo, metallic); 
 		vec3 f = fresnel_schlick(dot(halfway, view_dir), f0);
 	```
-- Calculate lighting $f_r=k_df_{lambert}+k_sf_{cook-torrance}$
+- Calculate lighting $f_r=k_df_\text{lambert}+k_sf_\text{cook-torrance}$
 - $k_d,k_s$ [[Refraction|Refractance]]/[[Reflection|Reflectance]] $k_d=1-k_s$
 - Diffuse lighting $f_{lambert}=\frac{c}\pi$ `c is albedo`
-- Specular lighting $f_{cook-torrance}=\huge\frac{DFG}{4(\omega_0\cdot n)(\omega_i\cdot n)}$
+- Specular lighting $f_{cook-torrance}=\huge\frac{DFG}{4(\omega_o\cdot n)(\omega_i\cdot n)}$
 ### Code
 ``` c
 void main() {
@@ -100,18 +100,18 @@ void main() {
 }  
 ```
 > [!warning] Make sure to convert albedo from `sRGB` to `linear`
-> but don't convert metallic/roughness maps, and usually don't for AO maps
+> don't convert metallic/roughness maps (and usually AO maps)
 
 ### Disney PBR
 - Calculate Diffuse
 ``` c
-float f90 = 0.5 + 2.0 * (roughness * cos^2\theta_d)
+float f90 = 0.5 + 2.0 * (roughness * cos^2(theta_d))
 float fdiffuse = mix(1.0, f90, dot(normal, light_dir)) * mix(1.0, f90, view_dir)
 fdiffuse = fdiffuse / PI * albedo
 ```
 - Calculate Sub-Surface Scattering
 ``` c
-float ss90 = roughness * cos^2\theta_d;
+float ss90 = roughness * cos^2(theta_d);
 float ndl = dot(normal, light_dir);
 float ndv = dot(normal, view_dir);
 float ss = mix(1.0, ss90, pow(1.0 - ndl, 5.0));
@@ -164,13 +164,13 @@ float3 brdf(vec3 light_dir, vec3 view_dir, vec3 normal, vec3 tangent, vec3 binor
 	float ldh = max(dot(light_dir, halfway), 0.0);
 
 	vec3 cdlin = pow(base_color, vec3(2.2));
-	float cdlum = 0.3 * cdlin.r + 0.6 * cdlin.g + 0.1 * cdlin.b; // luminance approx.
+	float cdlum = 0.3 * cdlin.r + 0.6 * cdlin.g + 0.1 * cdlin.b;
 
-	vec3 ctint = cdlum > 0.0 ? cdlin / cdlum : vec3(1); // normalize lum. to isolate hue+sat
-	vec3 cspec0 = mix(specular * .08 * mix(vec3(1), ctint, specular_tint), cdlin, metallic);
+	vec3 ctint = cdlum > 0.0 ? cdlin / cdlum : vec3(1); // normalize lum to isolate hue+sat
+	vec3 cspec0 = mix(specular * 0.08 * mix(vec3(1), ctint, specular_tint), cdlin, metallic);
 	vec3 csheen = mix(vec3(1), ctint, sheen_tint);
 
-	// Diffuse fresnel - go from 1 at normal incidence to .5 at grazing
+	// Diffuse fresnel - go from 1 at normal incidence to 0.5 at grazing
 	// and lerp in diffuse retro-reflection based on roughness
 	float fl = fresnel_schlick(ndl), fv = fresnel_schlick(ndv);
 	float fd90 = 0.5 + 2.0 * ldh * ldh * roughness;
@@ -193,7 +193,7 @@ float3 brdf(vec3 light_dir, vec3 view_dir, vec3 normal, vec3 tangent, vec3 binor
 	gs *= smithg_ggx_aniso(ndv, dot(view_dir, tangent), dot(view_dir, binormal), ax, ay);
 
 	// sheen
-	float3 fsheen = fh * sheen * csheen;
+	vec3 fsheen = fh * sheen * csheen;
 
 	// clearcoat (ior = 1.5 -> F0 = 0.04)
 	float dr = distribution_ggx1(ndh, mix(0.1, 0.001, clearcoat_gloss));

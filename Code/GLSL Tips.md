@@ -20,6 +20,8 @@ mix(vec3(dot(col, vec3(0.299, 0.587, 0.114))), col, 1.0 + saturation)
 (1.0 + exposure) * col
 // Gamma
 pow(col, gamma)
+// Levels
+pow((col - in_black) / (in_white - in_black), gamma) * (out_white - out_black) + out_black
 ```
 - Blend Colors `mix(dst, vec4(src.rgb, 1), src.a)`
 - Use thebookofshaders.com/edit.php To visualize code line by line and see the slow lines
@@ -101,7 +103,7 @@ vec3 pal(float t, vec3 a, vec3 b, vec3 c, vec3 d) {
 }
 ```
 - Trigonometry is cheap on the GPU
-- [[Useful Functions]]
+- [[Anti-Smoothstep]]
 - Quickly format glsl code evanw.github.io/glslx/
 - Sphere Normals `vec3(uv, -sqrt(1.0 - dot(uv, uv)))`
 - Glossy Sphere Effect

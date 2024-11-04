@@ -43,14 +43,6 @@ impl RectPacker {
     }
 }
 ```
-
-
-
-
-
-
-
-
 ### Faster Version
 ``` rust
 pub struct RectPacker {

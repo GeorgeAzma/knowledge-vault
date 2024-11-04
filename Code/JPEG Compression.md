@@ -12,4 +12,4 @@ Compresses color data and high frequency data, because human eye can't perceive 
 		- Quantization table has higher values at higher frequencies
 - [[Run Length Encoding]] + [[Huffman Encoding]] ![[JPEG Run Length and Huffman Encoding.webp]]
 
-##### Resource: youtu.be/Kv1Hiv3ox8I
+##### Resource youtu.be/Kv1Hiv3ox8I
