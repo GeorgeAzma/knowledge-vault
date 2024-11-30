@@ -29,7 +29,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
+along with this program. If not, see <gnu.org/licenses/>.
 */
 ```
 ### UNLICENSE
@@ -43,7 +43,7 @@ In jurisdictions that recognize copyright laws, the author or authors of this so
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <http://unlicense.org/>
+For more information, please refer to <unlicense.org/>
 */
 ```
 ### CC0
@@ -56,6 +56,6 @@ The person who associated a work with this deed has dedicated the work to the pu
 
 You can copy, modify, distribute, and perform the work, even for commercial purposes, all without asking permission.
 
-For more information, see https://creativecommons.org/publicdomain/zero/1.0/
+For more information, see creativecommons.org/publicdomain/zero/1.0/
 */
 ```

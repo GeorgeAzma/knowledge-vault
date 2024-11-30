@@ -7,7 +7,7 @@ vscode-mylang/
 |- syntaxes/mylang.tmLanguage.json
 |- language-configuration.json
 |- extension.js
-|- icon.png
+|- icon.webp
 |- install.bat
 |- LICENSE.md
 |- package.json
@@ -29,9 +29,9 @@ vsce package --allow-missing-repository && code --install-extension mylang-0.0.1
     "description": "Syntax highlighting for Shaz",
     "version": "0.0.1",    
     "publisher": "Giorgi Azmaiparashvili",
-    "icon": "icon.png",
+    "icon": "icon.webp",
     "license": "MIT", // add LICENSE in root folder
-    "repository": { "type": "git", "url": "https://github.com/GeorgeAzma/vscode-mylang" },
+    "repository": { "type": "git", "url": "github.com/GeorgeAzma/vscode-mylang" },
     "engines": {
       "vscode": "^1.80.0"
     },
