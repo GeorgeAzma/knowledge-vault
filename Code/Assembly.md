@@ -1,1 +1,0 @@
-![[Assembly Registers.webp]]

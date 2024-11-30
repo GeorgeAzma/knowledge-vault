@@ -3,7 +3,6 @@
 ### [[Math/Algebra/Power]]
 ### [[Quadratic Equation]]
 ### [[Arithmetic Series]]
-### [[Vector]]
 
 ### [[Cross Product]]
 ### [[Dot Product]]
@@ -13,3 +12,4 @@
 ### [[Boolean Algebra]]
 ### [[Binomial Theorem]]
 ### [[Taylor Series]]
+### [[Sum]]

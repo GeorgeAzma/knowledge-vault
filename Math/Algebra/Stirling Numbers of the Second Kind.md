@@ -2,7 +2,6 @@
 aliases:
   - Bell Numbers
 ---
-
 Number of ways to partition set of $n$ objects into $k$ subsets `non-empty`
 ### Formula $S(m,n)=n\cdot S(m-1,n)+S(m-1,n-1)$
 $S(m,n)=\sum_{i=0}^n(-1)^{n-k}\huge\frac{i^m}{(n-i)!i!}$

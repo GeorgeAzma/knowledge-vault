@@ -1,2 +1,2 @@
-Connected [[Graph Theory|Graph]] where nodes are states and 
+Connected [[Graph|Graph]] where nodes are states and 
 links are probability of moving from one state to another

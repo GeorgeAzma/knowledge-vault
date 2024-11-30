@@ -1,7 +1,0 @@
-- [[Neural Network]]
-- [[Classification]]
-- [[Regression]]
-- [[GAN]]
-- [[GPT]]
-- [[Activation Function]]
-- [[Loss Function]]
