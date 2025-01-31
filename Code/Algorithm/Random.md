@@ -23,18 +23,16 @@ uint64_t rand64(uint64_t x) {
 // splitmix32 with better constants
 fn rand32() -> u32 {
 	seed = seed.wrapping_add(0x9E3779B9);
-    let mut x = seed;        
-    x ^= x >> 16;
-	x = x.wrapping_mul(0x21F0AAAD);
-	x ^= x >> 15;
-	x = x.wrapping_mul(0x735A2D97);
+    let mut x = seed;
+    x = (x ^ (x >> 16)).wrapping_mul(0x21F0AAAD);
+    x = (x ^ (x >> 15)).wrapping_mul(0x735A2D97);
 	x ^= x >> 15;
     x
 }
 
 fn rand64() -> u64 {
   seed = seed.wrapping_add(0x9E3779B97F4A7C15);
-  let mut x = seed;  
+  let mut x = seed;
   x = (x ^ (x >> 30)).wrapping_mul(0xBF58476D1CE4E5B9);
   x = (x ^ (x >> 27)).wrapping_mul(0x94D049BB133111EB);
   x ^ (x >> 31)
@@ -65,5 +63,25 @@ fn rand_circle() -> (f32, f32) {
 		r = 2.0 - r;
 	}
 	return (r * theta.cos(), r * theta.sin())
+}
+```
+### Others
+``` rust
+fn rand8() -> Self {
+    seed = seed.wrapping_add(0x5D);
+    let mut x = seed;
+    x = (x ^ (x >> 4)).wrapping_mul(0x1D);
+    x = (x ^ (x >> 3)).wrapping_mul(0x3B);
+    x ^= x >> 3;
+    x
+}
+
+fn rand() -> Self {
+    seed = seed.wrapping_add(0x9E3D);
+    let mut x = seed;
+    x = (x ^ (x >> 8)).wrapping_mul(0x2F1D);
+    x = (x ^ (x >> 7)).wrapping_mul(0x623B);
+    x ^= x >> 7;
+    x
 }
 ```

@@ -6,8 +6,8 @@ aliases:
 ### Symmetric Encryption
 Alice and Bob have the shared public key, which they use to encrypt and decrypt information they are sending to each other
 > [!warning] 
-> This means alice has to share his key with bob (or vice versa) 
-> at some point through the network, which can be intercepted by a hacker
+> This means alice has to share his key with bob through the network which can be intercepted by a hacker
+> so key sharing is typically done through secure [[#Asymmetric Encryption]] first
 - AES `128,192,256 bit key`
 - ChaCha20 `128,256 bit key`
 - 3DES `168 bit key`
@@ -18,9 +18,9 @@ Information encrypted by public key can only be decrypted with private key
 > [!warning] [[RSA Encryption]] is valnurable to quantum computers
 - [[RSA Encryption|RSA]] `recommended key size 2048 bits`
 - [[Diffie-Hellman]]
-- [[Digital Signature Algorithm (DSA)]]
-- Elliptic Curve DSA (ECDSA)
-- Elliptic Curve Diffie-Hellman (ECDH)
+- [[Digital Signature Algorithm]]
+- Elliptic Curve [[Digital Signature Algorithm|DSA]] `ECDSA`
+- Elliptic Curve Diffie-Hellman `ECDH`
 > [!tip] 
 > Asymmetric encryption can be used for [[Transport Layer Security (TLS)#Purpose|Authentication And Integrity]]
 > See [[Signature]] for more info

@@ -15,7 +15,7 @@ aliases:
 - **Cycle** path that starts/ends on same vertex
 - **Connectivity** vertices are connected if path exists between them
   `so you can arrive from any vertex to another`
-- **Connected Component** graph vertices subset that are connected
+- **Connected Component** graph's connected subgraphs
 - **Directed Acyclic Graph (DAG)**
 - **Source** vertex with no inputs `first vertex in DAG`
 - **Sink** vertex with no outputs `last vertex in DAG'
@@ -23,6 +23,8 @@ aliases:
   `depth of DAG is max depth of it's nodes`
 - **Node** vertex that is not a source `AND gate with constant input`
 - **Cost** number of nodes `vertices - sources`
+- **Non-Incident** edge does not connect to said `vertex`
+- **Maximum Cardinality** largest size `like most verts/edges`
 ### Types
 - **Connected** all vertices are connected
 - **Undirected** $(u,v)\implies(v,u)$

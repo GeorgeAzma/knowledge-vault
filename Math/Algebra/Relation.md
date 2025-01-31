@@ -14,7 +14,7 @@ relation is subset of $A$ [[Set#Operators|Cartesian Product]] with $B$
 ### Equivalence Relations
 - **Reflexive** $\forall a\in A, aRa$ `1 = 1`
 - **Symmetric** $\forall a,b\in A,aRb\implies bRa$ 
-  `if alice is sibling of bob, bob is sibling of alice`
+  `alice.is_sibling(bob) = bob.is_sibling(alice)`
 - **Transitive** $\forall a,b,c\in A,aRb\land bRc\implies aRc$
   `if a > b and b > c, then a > c`
 - **Antisymmetric** $\forall a,b\in A,aRb\land bRa\implies a=b$

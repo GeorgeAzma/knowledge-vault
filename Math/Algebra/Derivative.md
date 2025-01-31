@@ -1,5 +1,5 @@
 > [!note] Notations $\large \frac{\delta f}{\delta x}=\frac{d}{dx} f(x)=f'(x)$ 
-### Finite Difference Method $f(x+h)-f(x-h) \over 2h$ or $f((x+h)-f(h)) \over h$
+### Finite Difference Method $f(x+h)-f(x-h) \over 2h$ or $f(x+h)-f(h) \over h$
 [[Partial Derivative]]
 ### Formulas
 - $\large c=0$

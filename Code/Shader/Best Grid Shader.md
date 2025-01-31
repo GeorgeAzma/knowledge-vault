@@ -3,7 +3,7 @@ bgolus.medium.com/the-best-darn-grid-shader-yet-727f9278b9d8#93b2
 float line_width = 0.1;
 vec4 uv_ddxy = vec4(dFdx(uv), dFdy(uv));
 vec2 uv_deriv = vec2(length(uv_ddxy.xz), length(uv_ddxy.yw));  
-float draw_width = max(vec2(line_width), uv_deriv);  
+float draw_width = clamp(vec2(line_width), uv_deriv, vec2(0.5));
 vec2 grid_uv = abs(fract(uv) * 2.0 - 1.0);  
 vec2 grid2 = smoothstep(draw_width + uv_deriv * 1.5, draw_width - uv_deriv * 1.5, grid_uv);  
 grid2 *= min(line_width / draw_width, 1.0);  

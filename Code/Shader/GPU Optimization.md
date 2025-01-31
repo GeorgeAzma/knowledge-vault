@@ -33,6 +33,4 @@ total_idxs = total_vert + cache_hits + cache_miss = 9 + 12 + 3 = 24
 total_calc = total_vert + cache_miss = 9 + 3 = 12
 optim_calc = total_vert = 9
 efficiency = optim_calc / total_calc = 9 / 12 = 3 / 4 = 0.75
-
-
 ```

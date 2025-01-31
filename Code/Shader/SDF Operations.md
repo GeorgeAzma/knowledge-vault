@@ -99,7 +99,7 @@ float extrusion(vec3 p, float h) {
 
 float elongate(vec3 p, vec3 h) { 
 	vec3 q = abs(p) - h; 
-	return sdf(sign(p) * max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0); 
+	return sdf(sign(p) * max(q, vec3(0))) + min(max(q.x, max(q.y, q.z)), 0.0); 
 }
 
 float onion(float sdf, float thickness) { 

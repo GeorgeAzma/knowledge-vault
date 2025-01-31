@@ -1,5 +1,7 @@
+- [[RISC-V]]
+- [[MIPS]]
 
-|    reg    |      name      |             usage              | preserved <br>across <br>fn calls |
+|    reg    |      name      |              use               | preserved <br>across <br>fn calls |
 | :-------: | :------------: | :----------------------------: | :-------------------------------: |
 |   `rax`   |  accumulator   |   arithm op, I/O, return val   |                No                 |
 |   `rbx`   |      base      |        general-purpose         |              Yes<br>              |
@@ -16,6 +18,58 @@
 | `ymm0-15` |  `f256` SIMD   |              AVX               |                No                 |
 | `zmm0-31` |  `f512` SIMD   |            AVX-512             |                No                 |
 | `rflags`  |     flags      |          saves flags           |                No                 |
+### Instructions
+
+|  Instruction  |            Operation            |
+| :-----------: | :-----------------------------: |
+|  `MOV r1 r2`  |             `r1=r2`             |
+| `LEA r1 ptr`  |            `r1=ptr`             |
+| `JE/JZ label` |            `if ZF=0`            |
+|  `JNE label`  |           `if ZF!=0`            |
+|     `JA`      |        `if ZF=0 & CF=0`         |
+|  `CMP r1 r2`  |          `CF/ZF=r1-r2`          |
+|     `RET`     | `rax=ret_val` <br>`pc=ret_addr` |
+- `JA` used after `CMP` where `u32(r1) > u32(r2)`
+- `JG` used after `CMP` where `i32(r1) > i32(r2)`
+### SIMD
+
+|  Instruction  |
+| :-----------: |
+|     `MOV`     |
+| `ADD/SUB/MUL` |
+| `AND/OR/XOR`  |
+|    `SQRT`     |
+|     `CMP`     |
+|    `SHUF`     |
+|    `BLEND`    |
+|     `CVT`     |
+##### Suffix
+- `B 1 byte`
+- `W 2 byte` word
+- `D/S 4 byte` `u32/f32` or double-word/scalar
+- `Q/D 8 byte` `u64/f64` or quad-word/double
+- `DQ` double-quadword `u128/f128`
+
+- `P` packed `like 4xf32`
+- `S` scalar `MOVSD xmm0,` would move single double `f64` into `xmm0[0]`
+- `A/U` aligned/unaligned `stored at addr that is multiple of data size`
+- `H/L` high/low, for example if operating `2xf32` of `f128` 
+  `L` would operate on lower half and leave upper half as is
+##### Prefix
+- `V 256 bit` AVX
+- `P` packed
+##### Examples
+- `VADDPS` add `8xf32`
+- `MULPD` multiply `2xf64`
+- `SHUFPS xmm0, xmm1, imm8` where `xmm0 = 0123` `xmm1 = 4567`
+    - `imm8 = 11_10_01_00` 
+      `xmm0 = [xmm1[imm8[8:6]], xmm1[imm8[6:4]], xmm0[imm8[4:2]], xmm0[imm8[2:0]]]`
+      `xmm0 = 4523 (lsb)`
+- `SHUFPS xmm0, xmm0, 00_01_10_11` reverse `xmm0` 
+- `PSHUFLW xmm0, xmm1, 11_00_01_01` 
+  `xmm0 = [xmm1[8:4], xmm1[imm8[8:6]], xmm1[imm8[6:4]], xmm1[imm8[4:2]], xmm1[imm8[2:0]]]`
+  `xmm0 = 01234766` if `xmm1 = 01234567`
+- `HADDPD xmm0, xmm0` `xmm0 = xmm0[128:64] + xmm0[64:0]`
 ##### Accessing lower bits of regs
 - `32 bit = eax, ebx, r8d, r14d...`
 - `16 bit = ax,bx,r8w...`
@@ -35,7 +89,7 @@
 - **Control Registers** `cr0-4` `controls memory protection, paging...`
 - **Debug Registers** `dr0-DR7` `breakpoints, watchpoints...`
 ### Windows
-```
+``` bash
 # compile .asm into .obj, plus debuginfo and warnings 
 nasm -f win64 hello.asm -g -wall -o hello.obj
 # link via ld
@@ -46,7 +100,8 @@ gcc hello.obj -lkernel32 -nostartfiles
 
 # via msvc
 link hello.obj /subsystem:windows /entry:WinMain /nodefaultlib /libpath:"C:\Program Files (x86)\Windows Kits\10\Lib\10.0.26100.0\um\x64" user32.lib kernel32.lib /largeaddressaware:no
-
+```
+```
 note: 
 - make sure windows sdk bin/lib is in path
 - download gcc/ld via msys2 + winget and delete it later
@@ -55,6 +110,41 @@ note:
     libwinpthread-1.dll, libintl-8.dll, libiconv-2.dll
     (optionals from winapi) kernel32.lib, user32.lib
 ```
+##### Using Rust
+`run.bat`
+```
+rustc main.rs --emit=asm ^
+  -C opt-level=3 ^
+  -C target-cpu=native ^
+  -C panic=abort ^
+  -C debuginfo=0 ^
+  -C strip=symbols ^
+  -C codegen-units=1 ^
+  -C relocation-model=static ^
+  -C llvm-args="--x86-asm-syntax=intel"
+
+REM Find the last occurrence of "my_func:" and get its line number
+for /f "tokens=1,* delims=:" %%a in ('findstr /n /r "^my_func:" main.s') do (
+  set lastLine=%%a
+)
+  
+REM Extract everything from the last occurrence of "my_func:" to the end of the file
+(for /f "tokens=1,* delims=:" %%a in ('findstr /n "^" main.s') do (
+  if %%a geq %lastLine% echo(%%b
+)) > main_stripped.s
+  
+move /y main_stripped.s main.s
+```
+`main.rs`
+``` rust
+#![no_main]
+
+#[no_mangle]
+fn my_func(x: f32) -> f32 {
+    x * 2.0
+}
+```
+### Example
 `hello.asm`
 ``` c
 default rel         ; Use RIP-relative addressing like [rel msg] by default

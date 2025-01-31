@@ -1,9 +1,10 @@
 ---
 aliases:
+  - Power Shell
   - Command Prompt
-  - Bash Linux
 ---
 ### Command Prompt `Windows`
+- `taskkill /IM task.exe`
 ##### Files
 - `cd.>file.txt` create file
 - `dir` list files
@@ -16,10 +17,6 @@ aliases:
 - `tracert google.com` trace route that your request took to get to `google.com`
 - `nslookup google.com` see local [[Domain Name System (DNS)|DNS]] info
 ### Power Shell
+- `Stop-Process -Name task.exe`
 ##### Files
 - `cd >file.txt`
-#### Bash `Linux`
-- `cat file.txt` print file (or `less` for bigger files)
-- `ls` list files
-    - `-a` list hidden dot files too
-- **Goto Directory** `cd dir` or `cd "spaced dir"` or `cd "./-dashed dir"`

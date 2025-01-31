@@ -1,4 +1,3 @@
-
 ### [[Simplifications]]
 - [[Karnaugh Map]]
 - $(ab+bc+ac)=b(a+c)+ac$ `distributive law`

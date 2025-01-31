@@ -1,4 +1,4 @@
-[[Encryption#Symmetric Encryption|Symmetric Encryption]] algorithm `RSA means Rivest–Shamir–Adleman`
+[[Encryption#Symmetric Encryption|Symmetric Encryption]] algorithm `Rivest–Shamir–Adleman`
 ### How It Works
 - Select 2 primes $(P,Q)$ `(7,19)`
 - Calculate product $N=PQ$ `133`

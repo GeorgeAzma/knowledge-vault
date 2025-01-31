@@ -1,15 +1,14 @@
 youtu.be/rSKMYc1CQHE?t=1445
 ### Steps
 - Split space into a grid
-> [!note] Grid size should be average size of an object (radius for circle)
-- Hash grid coordinates
+> [!tip] grid size should be average size of an object `radius for circle`
+- `hash()` grid coordinates
 - Mod the Hash with `objects.len()`
 - That will be the key of the Cell
 - Have a list where you assign each object with its cell's key `(object_id, cell_key)`
 - Sort that list by key, call this list `keys`
 - Have `cells` list which tells you where start of each cell group in `keys` is
 - Populate `cells` by looping over `keys` and checking where key is different
-> [!note] Same cell `keys` are groupped together because list is sorted
 #### Finding Nearby Objects
 - Get `keys` of current and neighboring cells
 - Lookup `keys` start index for that cell in `cells` using a cell key
@@ -104,6 +103,5 @@ impl HashGrid {
 }
 
 ```
-> [!tip] `HashGrid` should be rebuilt everyframe
-> Don't bother with updating it, this is probably faster anyways 
-> > [!note] It doesn't need to store the objects and it only stores 3 `u32` for each object 
+- rebuild hash grid every frame
+- 12 bytes overhead per object

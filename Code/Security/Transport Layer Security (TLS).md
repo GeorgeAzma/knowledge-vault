@@ -8,17 +8,16 @@ youtu.be/aCDgFH1i2B0?list=PLIFyRwBY_4bTwRX__Zn4-letrtpSj1mzY
 
 Protocol for safe communication over the network
 ### Purpose
-- **Confidentiality** data is only accessible by server and client
-- **Integrity** data is guaranteed to be unmodified by middleman
-- **Authentication** ensure server`and rarely client` is actually who it says it is
-- **Non-Repudiation** prevents client lying about never sending the message
-	- Already works if `Integrity` and `Authentication` work
-- **Anti-Replay** prevents message duplication, using **Sequence Numbers**
+- [[Confidentiality]]
+- [[Integrity]]
+- [[Authentication]]
+- [[Non-Repudiation]]
+- [[Anti-Replay]]
 ### How It Works
 - At first uses [[Encryption#Asymmetric Encryption|Asymmetric Encryption]] 
-  with limited message length and slow encryption, which does
-	- **Confidentiality** using [[Encryption#Asymmetric Encryption|Asymmetric Encryption]] algorithms
-	- **Integrity/Authentication/Non-Repudiation** using [[Signature]][[s]]
+  with limited message length and slow encryption, which handles
+	- [[Confidentiality]] using [[Encryption#Asymmetric Encryption|Asymmetric Encryption]] algorithms
+	- [[Integrity]]/[[Authentication]]/[[Non-Repudiation]] using [[Signature]][[s]]
 	- [[Encryption#Symmetric Encryption|Symmetric Key Exchange]]
 > [!note] Anyone can generate asymmetric keys
 > to know for sure that asymmetric keys belong to server
@@ -26,8 +25,8 @@ Protocol for safe communication over the network
 > that links them to the server of interest to be trusted
 - When symmetric keys are exchanged it uses
   [[Encryption#Symmetric Encryption|Symmetric Encryption]] for bulk messages and faster encryption, which does
-	- **Confidentiality** using [[Encryption#Symmetric Encryption|Symmetric Encryption]]
-	- **Integrity/Authentication/Non-Repudiation** 
+	- [[Confidentiality]] using [[Encryption#Symmetric Encryption|Symmetric Encryption]]
+	- [[Integrity]]/[[Authentication]]/[[Non-Repudiation]] 
 	  using [[Message Authentication Code (MAC)]]
 ### TLS Handshake
 - Client sends **Client Hello** message to the server with
@@ -73,9 +72,9 @@ Protocol for safe communication over the network
 	- Client Random
 	- Server Random
 - Minimum 2 session keys are created for Server/Client each
-	- [[Encryption#Symmetric Encryption|Symmetric Encryption]] key for **Confidentiality**
+	- [[Encryption#Symmetric Encryption|Symmetric Encryption]] key for [[Confidentiality]]
 	- [[Message Authentication Code (MAC)]] for 
-	  **Integrity/Authentication/Non-Repudiation**
+	  [[Integrity]]/[[Authentication]]/[[Non-Repudiation]]
 	1st pair of session keys are used for server -> client communication
 	2nd pair of session keys are used for client -> server communication
 	So if server and client send same data, they are gonna look different

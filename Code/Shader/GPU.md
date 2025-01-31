@@ -75,9 +75,9 @@ Units/Cores:
 Power: 450W
 Architecture: Ada Lovelace (AD102)
 ```
-### Useful GTX 1060 Vulkan Properties/Features/Extensions
-```
-// Image
+### GTX 1060 Vulkan
+``` python
+# Image
 max_image_dimension1_d: 32768,
 max_image_dimension2_d: 32768,
 max_image_dimension3_d: 16384,
@@ -85,25 +85,35 @@ max_image_dimension_cube: 32768,
 max_image_array_layers: 2048,
 max_texel_buffer_elements: 134217728 (128 Mega Pixels (1024)),
 
-// Buffer
+# Buffer
 max_uniform_buffer_range: 65536,
 max_push_constants_size: 256,
 max_bound_descriptor_sets: 32,
 max_fragment_output_attachments: 8,
 
-// Compute
+# Compute
 max_compute_shared_memory_size: 49152, (48 kB)
 max_compute_work_group_count: [2147483647, 65535, 65535],
 max_compute_work_group_invocations: 1536,
 max_compute_work_group_size: [1536, 1024, 64],
 
-// Alignment
+# Alignment
 buffer_image_granularity: 1024,
 min_memory_map_alignment: 64,
 min_uniform_buffer_offset_alignment: 256,
-min_storage_buffer_offset_alignment: 16,	
+min_storage_buffer_offset_alignment: 16,
 
-// Features
+# Memory
+Heap[0]: 2965 MiB # GPU only
+Heap[1]: 4056 MiB # CPU
+Heap[2]: 214  MiB # CPU/GPU shared
+MemType[0..6]: heap_idx: 1, prop_flags: None
+MemType[7]:    heap_idx: 0, prop_flags: DEVICE_LOCAL
+MemType[8]:    heap_idx: 1, prop_flags: HOST_[VISIBLE/COHERENT]
+MemType[9]:    heap_idx: 1, prop_flags: HOST_[VISIBLE/COHERENT/CACHED]
+MemType[10]:   heap_idx: 2, prop_flags: DEVICE_LOCAL | HOST_[VISIBLE/COHERENT]
+
+# Features
 image_cube_array
 geometry_shader
 tessellation_shader
@@ -123,7 +133,7 @@ shader_resource_residency
 sparse_binding
 multi_viewport
 
-// Extensions
+# Extensions
 VK_KHR_swapchain
 VK_KHR_draw_indirect_count
 VK_KHR_multiview
