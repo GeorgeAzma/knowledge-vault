@@ -3,7 +3,7 @@ Image
 Resized Images
 ![[Law of Cosines.webp|200x100]]
 ![[Law of Cosines.webp|200]]
-![External Image](https://www.history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
+![External Image](history-computer.com/ModernComputer/Basis/images/Engelbart.webp)
 Embed Note 
 ![[Test Note]]
 Embed Note Heading
@@ -14,7 +14,7 @@ Embed Note Heading
 </ul>
 Embed pdf page `![[Document.pdf#page=3]]`
 Embed website iframe
-<iframe width="320" height="180" frameborder="0" src="https://www.shadertoy.com/embed/dscBDn?gui=false&t=0&paused=false&muted=true"></iframe>
+<iframe width="320" height="180" frameborder="0" src="shadertoy.com/embed/dscBDn?gui=false&t=0&paused=false&muted=true"></iframe>
 - [x] Checked - [ x ]
 - [ ] Unchecked - [ ]
 

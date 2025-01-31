@@ -77,7 +77,7 @@ fn cross2(a: vec2f, b: vec2f) -> f32 {
     return a.x * b.y - a.y * b.x;
 }
 
-// https://www.shadertoy.com/view/ftdGDB
+// shadertoy.com/view/ftdGDB
 fn bezier_sdf(p: vec2f, A: vec2f, B: vec2f, C: vec2f) -> f32 {
     let EPS = 1e-6;
     let a = B - A;

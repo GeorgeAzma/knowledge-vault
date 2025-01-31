@@ -14,11 +14,11 @@ specialized in creating mesmerizing shader visuals
 ### Employement History
 - **Freelance** at Fiverr `February 2021-2025`
   I overexceeded many clients expectations there 
-  [See my Fiverr Works](https://www.fiverr.com/lumiey)
+  [See my Fiverr Works](fiverr.com/lumiey)
 ### Links
-- [Shader Works](https://www.shadertoy.com/user/Peace)
-- [Portfolio Website](https://georgeazma.github.io/)
-- [GitHub](https://github.com/GeorgeAzma)
+- [Shader Works](shadertoy.com/user/Peace)
+- [Portfolio Website](georgeazma.github.io/)
+- [GitHub](github.com/GeorgeAzma)
 ### Details
 - **Email** lumi.main.mail@gmail.com
 - **Phone** (+995)  511 16 72 36
