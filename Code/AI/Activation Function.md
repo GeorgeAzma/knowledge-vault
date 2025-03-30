@@ -1,0 +1,24 @@
+- **GELU** $0.5x(1+\tanh(x(0.03x^2+0.8)))$
+- **RELU** $\{x>0:x,0\}$
+- **LRELU** $\{x>0:x,-0.01x\}$
+- **Sigmoid** $1 \over 1+e^{-x}$ 
+- **Tanh**
+- **Atan**
+- **Step** $\operatorname{sign}(x)$
+- **Linear**
+- **ELU** $\{x\ge0:x,0.1(e^x-1)\}$
+- **Swish** $x \over 1+e^{-x}$
+- **Softplus** $\ln(1+e^x)$
+### [[Derivative]]
+- **GELU** $0.5\tanh a+x\operatorname{sech}^2(a)(0.045x^2+0.4)+0.5$ and $a=x(0.035x^2+0.8)$
+> [!note] If $\operatorname{sech}$ not supported use $0.5\tanh a+\frac{x(0.045x^2+0.4)}{\cosh^2(a)}+0.5$
+- **RELU** $\{x\ge0:1,0\}$
+- **LRELU** $\{x\geq0:1,0.01\}$
+- **Sigmoid** $\frac{1}{1+e^{-x}}(1-\frac{1}{1+e^{-x}})$
+- **Tanh** $1-\tanh^2x$
+- **Atan** $1\over x^2+1$
+- **Step** $1$
+- **Linear** $1$
+- **ELU** $x\ge0:1,0.1e^x$
+- **Swish** $e^x(e^x+1)/(e^x+1)^2$
+- **Softplus** $1 \over 1+e^{-x}$

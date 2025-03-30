@@ -1,0 +1,2 @@
+- `7z x a.zip` extract here
+- `7z x a.zip -o"dir"` extract to `dir`

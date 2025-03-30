@@ -1,0 +1,8 @@
+- [[Rust Macro]]
+- [[Rust Print Format]]
+- `std::mem::forget(obj)` don't drop when out of scope
+- `core::hint::unreachable_unchecked()` guarantees compiler that code is unreachable
+- `core::hint::assert_unchecked(cond)` guarantees compiler that `cond` will always be true
+    - `assert!/unreachable!` causes extra panic assembly code
+- extract enum tag `std::mem::discriminant()`
+- rust to exe `rustc main.rs -o main.exe -C opt-level=3`

@@ -1,0 +1,9 @@
+- [[HTTP]]
+- [[TCP]]
+- **RTP** live video
+- **IRC** internet relay chat
+- **SFTP** secure file transfer
+- **NTP** network time
+- **SNMP** simple network managment`
+- **DHCP** dynamic host configuration
+- **IMAP** internet message access

@@ -1,0 +1,6 @@
+> [!example] `aaabbc` (48 bits)
+> - [[Run Length Encoding]] `a3b2c` (40 bits)
+> - [[Huffman Encoding]] `a=0;b=10;c=11; 000101011` (9 bits)
+> - **LZSS** `a3,1 b2,1 c` (Offset, Length) (56 bits)
+> - **Indexing** a00b1c (48 bits, profitable for bigger data)
+> - **Difference** `a00101` (48 bits, profitable for bigger data)
