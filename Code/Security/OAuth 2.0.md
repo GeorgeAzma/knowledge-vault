@@ -33,7 +33,7 @@ sequenceDiagram
     - private key `secret`
 - base64 encode `client_id:secret`
 ``` http
-POST https://test-api.tbcbank.ge/oauth/token
+POST test-api.tbcbank.ge/oauth/token
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic <base64-encoded-auth>
 

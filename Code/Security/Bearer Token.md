@@ -1,6 +1,6 @@
 > [!example] [[Json Web Token (JWT)]]
 ``` http
-GET http://api.example.com/ HTTP 1.1
+GET api.example.com/ HTTP 1.1
 Authorization: Bearer <token>
 ```
 

@@ -1,8 +1,8 @@
 ### TBC Bank API Usage Example
 ``` powershell
 {base-url}/{api-version}/{product}/{sub-product}
-# base-url = https://test-api.tbcbank.ge = 
-#            https://api.tbcbank.ge
+# base-url = test-api.tbcbank.ge = 
+#            api.tbcbank.ge
 # api-version = v1
 
 # USD to GEL

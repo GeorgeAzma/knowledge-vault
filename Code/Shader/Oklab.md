@@ -33,7 +33,7 @@ vec3 oklch2oklab(vec3 lch) {
 }
 
 // optimized oklab mix by Inigo Quilez, MIT licensed
-// https://www.shadertoy.com/view/ttcyRS
+// shadertoy.com/view/ttcyRS
 vec3 oklab_mix(vec3 lin1, vec3 lin2, float a) {
     const mat3 cone2lms = mat3(                
          0.4121656120,  0.2118591070,  0.0883097947,
@@ -50,7 +50,7 @@ vec3 oklab_mix(vec3 lin1, vec3 lin2, float a) {
 }
 
 // okhsv and okhsl (super long)
-// https://www.shadertoy.com/view/7sK3D1
+// shadertoy.com/view/7sK3D1
 ```
 > [!tip] Distance between colors `distance(ok1, ok2)`
 
