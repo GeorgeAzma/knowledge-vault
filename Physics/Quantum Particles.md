@@ -1,0 +1,32 @@
+![[Quantum Particles.webp]]
+## Quarks
+- Up
+- Charm
+- Top
+- Anticharm
+- Antitop
+- Gluon
+- Higgs
+- Down
+- Strange
+- Bottom
+- Antidown
+- Antistrange
+- Antibottom
+- [[Light|Photon]]
+## Leptons
+- [[Electron]]
+- Muon
+- Tau
+- Positron
+- Antimuon
+- Antitau
+- Electron Neutrino
+- Muon Neutrino
+- Tau Neutrino
+- Electron Neutrino
+- Muon Antineutrino
+- Tau Antineutrino
+- $Z\degree Boson$
+- $W^+ \text{ Boson}$
+- $W^- \text{ Boson}$

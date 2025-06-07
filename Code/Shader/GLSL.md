@@ -1,0 +1,16 @@
+### Functions
+- `bitCount, bitfieldExtract, findLSB, findMSB, bitfieldInsert, bitfieldReverse, intBitsToFloat, uintBitsToFloat, floatBitsToInt, floatBitsToUint`
+- `imulExtended, uaddCarry, umulExtended, usubBorrow`
+- `all, any, select`
+- `determinant, transpose, matrixCompMult`
+- `acos, acosh, sin, sinh, asin, asinh, tan, tanh, atan, atanh, ceil, clamp, cos, cosh`
+- `abs, degrees, exp, exp2, faceforward, floor, fma, fract, frexp, inverseSqrt, ldexp, log, log2, max, min, mod, modf, pow, quantizeToF16, radians, round, roundEven, sign, smoothstep, sqrt, step, trunc, isinf, isnan`
+- `dot, dot4U8Packed, dot4I8Packed, cross, length, normalize, reflect, refract, distance, equal, greaterThan, greaterThanEqual, lessThen, lessThanEqual, not, notEqual, outerProduct`
+- `dFdx, dFdxCoarse, dFdxFine, dFdy, dFdyCoarse, fwidth, fwidthCoarse, fwidthFine`
+- `noise, noise1, noise2, noise3, noise4`
+- `textureGather, textureGatherOffset, textureGatherOffsets, textureGrad, textureGradOffset, textureLod, textureLodOffset, textureOffset, textureProj, textureProjGrad, textureProjGradOffset, textureProjLod, textureProjLodOffset, textureProjOffset, textureQueryLevels, textureQueryLod, textureSamples, textureSize, textureGatherCompare, textureNumLayers, textureNumSamples, texelFetch, texelFetchOffset`
+- `atomicLoad, atomicStore, atomicAdd, atomicSub, atomicMax, atomicMin, atomicAnd, atomicOr, atomicXor, atomicExchange, atomicCounter, atomicCounterDecrement, atomicCounterIncrement, atomicCompSwap`
+- `imageAtomicAdd, imageAtomicAnd, imageAtomicCompSwap, imageAtomicMax, imageAtomicMin, imageAtomicOr, imageAtomicXor, imageLoad, imageSamples, imageSize, imageStore`
+- `packDouble2x32, packHalf2x16, packSnorm2x16, packSnorm4x8, packUnorm, packUnorm2x16, packUnorm4x8` They all have `unpack<X>`
+- `barrier, memoryBarrier, memoryBarrierAtomicCounter, memoryBarrierBuffer, memoryBarrierImage, memoryBarrierShared, groupMemoryBarrier`
+- `interpolateAtCentroid, interpolateAtOffset, interpolateAtSample`

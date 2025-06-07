@@ -1,0 +1,11 @@
+- buy cloudflare domain `lumiey.uk`
+- create a DNS record from dashboard
+    - `Type: A`
+    - `IPv4: <public-ip-address>`
+    - `Name: mc (subdomain name: mc.lumiey.uk)`
+    - `DNS only (not proxied)`
+- create a DNS record `optional if IP is dedicated`
+    - `Type: SRV`
+    - `Priority/Weight: 5 (arbitrary)`
+    - `Name: mc`
+    - `Port: 25565`

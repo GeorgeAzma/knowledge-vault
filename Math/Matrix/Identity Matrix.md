@@ -1,0 +1,2 @@
+- Matrix with everything 0 except [[Principal Diagonal]]
+- Matrix containing [[Standard Basis Vector]][[s]]

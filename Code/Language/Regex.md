@@ -1,0 +1,26 @@
+- **d** digit
+- **D** not digit
+- **w** word
+- **W** not word
+- **s** whitespace
+- **S** not whitespace
+- **(abc)** group
+- **\[abc\]** a or b or c
+- **a|b** a or b
+- **\[A-B\]** any from A to B
+- **+** one more
+- **{n}** n times
+- **{n,}** n+ times
+- *  0+ times
+- **?** once or none
+- **.**  any character except line break
+- **(ab)(cd)\\N** contents of group N (if N = 1 (ab) if N = 2 (cd))
+- **t** tab
+- **n** new line
+- **\\r\\n** CRLF line separator on windows
+- **R** one line break
+- **h** horizontal whitespace
+- **H** not horizontal whitespace
+- **\\xN** hexadecimal N
+- **^** starts with
+- **$** ends with

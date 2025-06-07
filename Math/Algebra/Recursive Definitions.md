@@ -1,0 +1,3 @@
+- **Factorial** $0!=1,\quad(n+1)!=n!(n+1)$
+- **Sum** $\sum_{k=1}^1a_k=a_1,\quad\sum_{k=1}^{n+1}a_k:=a_{n+1}+\sum_{k=1}^na_k$
+- **Product** $\prod_{k=1}^1a_k=a_1,\quad\prod_{k=1}^{n+1}a_k:=a_{n+1}\cdot\prod_{k=1}^na_k$
