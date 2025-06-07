@@ -13,7 +13,6 @@ if (!(Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
 
 if (!(Get-Command svgo -ErrorAction SilentlyContinue)) {
     Write-Error "SVGO is not installed or not in PATH, try 'npm i -g svgo'"
-    Write-Error "If you have npm try running 'npm i -g svgo'"
     exit 1
 }
 
@@ -53,7 +52,6 @@ Get-ChildItem -Recurse -Filter *.md | ForEach-Object {
         -replace '\.(?:png|jpg|jpeg)', '.webp' `
         -replace '\.(?:PNG|JPG|JPEG)', '.webp' `
         -replace 'youtube\.com/watch\?v=', 'youtu.be/' `
-        -replace 'https?://(www\.)?', '' |
     Set-Content $_.FullName
 }
 

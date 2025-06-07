@@ -109,7 +109,7 @@ while ($true) { Start-Sleep 1 }
 ### Connect OWUI To [[Local TTS]]
 - `admin panel > settings > audio`
 - `TTS engine: OpenAI`
-- `API Base URL: localhost:5000/v1`
+- `API Base URL: http://localhost:5000/v1`
 - `API Key: unused (0)`
 - `TTS Voice: elise`
 - `TTS Model: unused (chatterbox)`
@@ -372,8 +372,8 @@ services:
     volumes:
       - ./open-webui:/app/backend/data
     environment:
-      - OLLAMA_API_BASE_URL=ollama:11434
-      - COMFYUI_BASE_URL=comfyui-boot:8188
+      - OLLAMA_API_BASE_URL=http://ollama:11434
+      - COMFYUI_BASE_URL=http://comfyui-boot:8188
     deploy:
       resources:
         reservations:
@@ -420,5 +420,5 @@ WEBUI_SECRET_KEY="iyzoEEqQPSPAkWws"
 - `docker compose up`
 - open `localhost:8080` and import settings/models
 - change comfyui and ollama url from `127.0.0.1:11434` 
-  to `<ollama-docker-service-name>:11434`
+  to `http://<ollama-docker-service-name>:11434`
 - 

@@ -10,7 +10,7 @@ credentials-file: C:\Users\User\.cloudflared\<some-hash>.json
 
 ingress:
   - hostname: <domain-url>
-    service: 127.0.0.1:8080
+    service: http://127.0.0.1:8080
   - service: http_status:404
 ```
 - `cloudflared tunnel route dns <tunnel-name> <domain-url>`
@@ -26,15 +26,15 @@ credentials-file: C:\Users\User\.cloudflared\<some-hash>.json
 
 ingress:
   - hostname: <domain-url>
-    service: 127.0.0.1:8080
+    service: http://127.0.0.1:8080
   - hostname: chat.<domain-url>
-    service: 127.0.0.1:8080
+    service: http://127.0.0.1:8080
   - hostname: image.<domain-url>
-    service: 127.0.0.1:8188
+    service: http://127.0.0.1:8188
   - hostname: tts.<domain-url>
-    service: 127.0.0.1:5000
+    service: http://127.0.0.1:5000
   - hostname: stt.<domain-url>
-    service: 127.0.0.1:5001
+    service: http://127.0.0.1:5001
     
   - service: http_status:404
 ```
