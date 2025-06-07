@@ -51,7 +51,7 @@ Get-ChildItem -Recurse -Filter *.md | ForEach-Object {
     (Get-Content $_.FullName) `
         -replace '\.(?:png|jpg|jpeg)', '.webp' `
         -replace '\.(?:PNG|JPG|JPEG)', '.webp' `
-        -replace 'youtube\.com/watch\?v=', 'youtu.be/' `
+        -replace 'youtube\.com/watch\?v=', 'youtu.be/' |
     Set-Content $_.FullName
 }
 
