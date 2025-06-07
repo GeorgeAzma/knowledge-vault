@@ -5,7 +5,7 @@
 ### Connect OWUI To ComfyUI
 open `admin panel > settings > images`
 - turn on image generation
-- set comfyUI base url to `http://127.0.0.1:8188`
+- set comfyUI base url to `127.0.0.1:8188`
 - export desired workflow as API `developer settings must be on`
 - load that json as ComfyUI workflow
 - see which node_id holds prompt, which holds checkpoint name etc
@@ -16,7 +16,7 @@ open `admin panel > settings > images`
 > [!tip] 
 > by default open-webui hosts on `0.0.0.0:8080` 
 > meaning phones on same network also have access
-> access by going to `http://<pc-ipv4>:8080`
+> access by going to `<pc-ipv4>:8080`
 ### Host OWUI
 - [[Tunnel Localhost To Domain via Cloudflare]]
 - write script that does everything for you
@@ -109,7 +109,7 @@ while ($true) { Start-Sleep 1 }
 ### Connect OWUI To [[Local TTS]]
 - `admin panel > settings > audio`
 - `TTS engine: OpenAI`
-- `API Base URL: http://localhost:5000/v1`
+- `API Base URL: localhost:5000/v1`
 - `API Key: unused (0)`
 - `TTS Voice: elise`
 - `TTS Model: unused (chatterbox)`
@@ -372,8 +372,8 @@ services:
     volumes:
       - ./open-webui:/app/backend/data
     environment:
-      - OLLAMA_API_BASE_URL=http://ollama:11434
-      - COMFYUI_BASE_URL=http://comfyui-boot:8188
+      - OLLAMA_API_BASE_URL=ollama:11434
+      - COMFYUI_BASE_URL=comfyui-boot:8188
     deploy:
       resources:
         reservations:
@@ -419,6 +419,6 @@ WEBUI_SECRET_KEY="iyzoEEqQPSPAkWws"
 ```
 - `docker compose up`
 - open `localhost:8080` and import settings/models
-- change comfyui and ollama url from `http://127.0.0.1:11434` 
-  to `http://<ollama-docker-service-name>:11434`
+- change comfyui and ollama url from `127.0.0.1:11434` 
+  to `<ollama-docker-service-name>:11434`
 - 

@@ -9,7 +9,7 @@ class CustomImageDataset(Dataset):
         self.image_paths = [
             os.path.join(folder, fname)
             for fname in os.listdir(folder)
-            if fname.lower().endswith((".png", ".jpg", ".jpeg"))
+            if fname.lower().endswith((".webp", ".webp", ".webp"))
         ]        
         channels = 3
         mean = 0.5

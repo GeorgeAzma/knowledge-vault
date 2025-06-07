@@ -1,7 +1,7 @@
 Chinese alphabet of words which is used in [[Japanese]] 
 - **On-yomi** chinese reading `borrowed` 
 - **Kun-yomi** japanese reading, kanjis with hiragana attached are almost always Kun-yomi
-- https://jlptsensei.com/learn-japanese/top-100-most-frequent-kanji-characters/
+- jlptsensei.com/learn-japanese/top-100-most-frequent-kanji-characters/
 
 | 部首            | 意味                | 訓読み             | 音読み         |
 | ------------- | ----------------- | --------------- | ----------- |
