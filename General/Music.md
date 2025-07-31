@@ -3,7 +3,7 @@ musictheory.net/lessons
 > [!tip] Treble clef is same but shift all notes down by 2
 
 ![[Letter to Piano Mapping.webp]]
-- ![[Natural Sharp Flat.webp]] Accidentals: 
+- ![[Natural Sharp Flat.webp]] Accidentals
 	- **Natural** cancel currently applied accidental
 	- **Sharp** next higher pitch key
 	- **Flat** next lower pitch key

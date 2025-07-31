@@ -1,0 +1,2 @@
+- **Discrete** most frequent value
+- **Continuous** function's peak

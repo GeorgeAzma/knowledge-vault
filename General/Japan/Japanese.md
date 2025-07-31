@@ -2,9 +2,9 @@ tofugu.com/learn-japanese
 ### [[Hiragana]]
 ### [[Katakana]]
 ### [[Kanji]]
-### [[Japanese Grammar]]
-### [[Japanese Vocabulary]]
-### Other
+### [[Grammar]]
+
+### Terms
 - **Furigana** [[Kanji]] readings using [[Hiragana]]
 - **Kana** [[Hiragana]] and [[Katakana]]
 - **Mora** like syllable but `Moo` is 2 Moras

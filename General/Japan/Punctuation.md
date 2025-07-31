@@ -1,0 +1,10 @@
+- 。period
+- 、comma
+- っ `small tsu` extends next vowel in [[Hiragana]]
+- ー extends previous vowel in [[Katakana]]
+- 〜 indicates prolonged sound
+- 「」qoutation
+- 『』qoutation within qoutation
+- （ ）parantheses
+- ［ ］for comments
+- 【】Lenticular brackets, used for emphasis `like in titles`

@@ -2,10 +2,9 @@
 which needs to be transmitted over network to share
 but anyone can listen to the network and steal sent key
 
-**Diffie-Hellman** exchanges the shared secret securely
-without directly exchanging, that secret can be used
-as a seed to generate [[Encryption#Symmetric Encryption|Symmetric Key]]
-or can be used directly as a [[Encryption#Symmetric Encryption|Symmetric Key]]
+**Diffie-Hellman** exchanges the shared secret securely without directly exchanging. 
+that secret can be used as a seed to generate [[Encryption#Symmetric Encryption|Symmetric Key]]
+or it can be used directly as a [[Encryption#Symmetric Encryption|Symmetric Key]]
 
 **Diffie-Hellman** exchange is typically done each session
 so if secret key gets leaked, only one session is compromised

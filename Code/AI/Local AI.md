@@ -51,7 +51,7 @@ $handler = [CtrlC+Handler]{
 $commands = @(
     @("open-webui", "serve --host 0.0.0.0 --port 8080"),
     @("ollama", "serve"),
-    @("comfy", "launch -- --lowvram --disable-smart-memory --preview-method taesd --fast"),
+    @("comfy", "launch -- --lowvram --disable-smart-memory --preview-size 256 --fast"),
     @("cloudflared", "tunnel run --protocol http2 lumiey")
 )
 

@@ -1,4 +1,4 @@
-### Most Useful `except obvious`
+### Useful
 - `o,O` insert to next/prev line
 - `vib,viB,vit` select everything inside block `()`/`{}`/`<>`
 - `vab,vaB,vat` select whole block `()`/`{}`/`<>, including braces`

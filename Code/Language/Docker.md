@@ -1,11 +1,16 @@
+[[Docker Compose]]
 ### Terms
-- **Container**: Application package with everything it needs (assets, code etc.)
-- **Image**: Set of instructions defined by `Dockerfile` that builds/executes code inside a docker container, like a template 
+- **Container** Application package with everything it needs `assets, code etc.`
+- **Image** Set of instructions defined by `Dockerfile` that builds/execs code inside a docker container, like a template 
 ### Commands
 - `docker run` Create a new docker container from an image
 - `docker compose` Launch containers using `compose.yaml` file
+- `docker system df -v` Storage usage info
+- `docker exec -ai <container>` Open terminal inside stopped container
+- `docker exec -it <container> bash` Open terminal inside running container
+- `docker run -it --entrypoint bash <image>` Open terminal inside non-running image
 
-`.dockerignore`: Contains stuff to ignore when copying code to a container
+`.dockerignore` contains stuff to ignore when copying code to a container
 > [!example] `compose.yaml`
 > ``` r
 > services:
@@ -41,38 +46,4 @@
 > EXPOSE 8000
 > CMD ["node", "server.js"]
 > ```
-
-> [!example] `.dockerignore`
-> ``` r
-> **/.classpath
-> **/.dockerignore
-> **/.env
-> **/.git
-> **/.gitignore
-> **/.project
-> **/.settings
-> **/.toolstarget
-> **/.vs
-> **/.vscode
-> **/.next
-> **/.cache
-> **/*.*proj.user
-> **/*.dbmdl
-> **/*.jfm
-> **/charts
-> **/docker-compose*
-> **/compose*
-> **/Dockerfile*
-> **/node_modules
-> **/npm-debug.log
-> **/obj
-> **/secrets.dev.yaml
-> **/values.dev.yaml
-> **/build
-> **/dist
-> LICENSE
-> README.md
-> ```
-
-You can also define .env file for things like API Keys:
-`.env`: `API_KEY=<key>`
+- `.env` file with env vars like `API_KEY=<key>`

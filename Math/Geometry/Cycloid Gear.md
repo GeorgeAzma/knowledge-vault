@@ -1,5 +1,4 @@
 ### Formula $(\cos(t)-\frac{\cos((n+1)t)}{n+1},\sin(t)-\frac{\sin((n+1)t)}{n+1})$
-
 - $t=[0,2\pi]$
 - $n$ teeth count
 > [!tip] 

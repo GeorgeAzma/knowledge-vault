@@ -1,0 +1,13 @@
+- **は** topic
+- **が** subject
+- **に** actor / time / direction / purpose / recipient
+- **を** object
+- **で** location / means / reason / time
+- **の** combine nouns
+	- `私の車 = me+car = my car` "me" is made a label and attached to car
+	- `USAへのバス => bus to USA` USA is made destination label and attached to bus
+- **へ** Destination `destination something travels towards`
+- **から** From / Because
+    - `jap: reason+kara+result, eng: result+because+reason`
+     `so から is like eng: reason+thats why+result`
+- **まで** From `place something goes to`

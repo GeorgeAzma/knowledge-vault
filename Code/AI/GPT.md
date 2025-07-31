@@ -109,7 +109,7 @@ According to `torch.nn.TranformerDecoderLayer`
 ```python
 d_model = 512 # word embedding size
 nhead = 8
-dim_feedforward = 2048
+dim_feedforward = 2048 # d_model * 4
 seq_len = 64 # context size
 num_layers = 6
 activation = 'relu' # or 'gelu'

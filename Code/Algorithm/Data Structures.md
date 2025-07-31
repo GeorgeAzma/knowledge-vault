@@ -10,7 +10,7 @@
 |          LinkedList           |  $n$   |  $1$   |  $1$   |  $n$   |  $1$   | ~$2$-$4n$ |   No   |   No    |        **Add/Del** via ptr         |
 |             Heap              |  $1$   | $\log$ | $\log$ |  $n$   |  $1$   |   ~$2n$   |  Yes   |   No    | **Get** min/max<br>$>1$ nodes/vals |
 |           SkipList            | $\log$ | $\log$ | $\log$ | $\log$ |  $1$   | $n\log n$ |  Yes   |   No    |                                    |
-| Binary Heap<br>Priority Queue |  $1$   |  $1$   | $\log$ | $\log$ |  $1$   |    $n$    |  Yes   |   No    |          **Get** min/max           |
+| Binary Heap<br>Priority Queue |  $1$   | $\log$ | $\log$ | $\log$ |  $1$   |    $n$    |  Yes   |   No    |          **Get** min/max           |
 ### Last Index
 | Structure  | Get | Add | Del |
 | :--------: | :-: | :-: | :-: |

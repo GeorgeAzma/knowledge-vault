@@ -11,6 +11,9 @@ Eigen values tell you how much vector is scaled in each dimension.
 - $\lambda=1$ same length vector `identity`
 - $\lambda=-1$ reflection/flip, but same length
 - $\lambda$ is [[Complex Number|Complex]] when rotation
+- if $\lambda=0$ matrix is non-invertible (singular)
+- if all $\lambda>0$ matrix is [[Positive Definite Matrix|positive definite]] or [[Positive Definite Matrix|positive semi-definite]]
+- if all $\lambda<1$ in discrete system, system converges
 ### Property Formula $\det(M - \lambda I)=0$
 - $M$ [[Matrix]]
 - $I$ [[Identity Matrix]]

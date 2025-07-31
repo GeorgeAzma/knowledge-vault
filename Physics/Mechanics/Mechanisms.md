@@ -1,0 +1,6 @@
+- [[Mechanical Links]]
+- [[Mechanical Joints]]
+- [[Physics/Mechanics/Degrees of Freedom]]
+- [[Mechanical Constraints]]
+- [[4 Bar Linkage]]
+- **Inversion of mechanism** is when you fixate one link at a time in a mechanism. $\text{Inversion count}=\text{Link count}$

@@ -13,7 +13,7 @@ Compares [[Mean]][[s]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] test
 > $s=\large\sqrt\frac{(0.5-0.1)^2+(0.1-0.1)^2+(-0.3-0.1)^2+(0.9-0.1)^2+(-0.7-0.1)^2}{5-1}$ 
 > $s=\large\sqrt{\frac{0.4^2+0.4^2+0.8^2+0.8^2}{4}}=\sqrt{\frac{1.6}{4}}=\sqrt{0.4}\approx0.632$
 > $\large t\approx\frac{\sqrt5(0.1-0)}{0.632}\approx\frac{0.224}{0.632}\approx0.354$ 
-> $p=2(1-CDF)\approx0.741$ [[p-value]] using [[#t-distribution $f(t,v)= frac{ Gamma( frac{v+1}{2})}{ sqrt{ pi v} Gamma( frac{v}{2})}(1+ frac{t {2}}{v}) {- frac{(v+1)}{2}}$|t_distribution]] [[Cumulative Distribution Function|CDF]] with $5-1$ [[Physics/Degrees of Freedom|Degrees of Freedom]]
+> $p=2(1-CDF)\approx0.741$ [[p-value]] using [[#t-distribution $f(t,v)= frac{ Gamma( frac{v+1}{2})}{ sqrt{ pi v} Gamma( frac{v}{2})}(1+ frac{t {2}}{v}) {- frac{(v+1)}{2}}$|t_distribution]] [[Cumulative Distribution Function|CDF]] with $5-1$ [[Physics/Mechanics/Degrees of Freedom|Degrees of Freedom]]
 ### Two-sample/Independent $t=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{n_1^{-1}+n_2^{-1}}}=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{\frac{2}{n}}}$
 > [!note] Assumes variances are equal between groups
 - $\bar{x}_1,\bar{x}_2$ sample [[Mean]][[s]] for each group

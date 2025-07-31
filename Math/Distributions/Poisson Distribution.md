@@ -1,9 +1,10 @@
 With expectation of $\lambda$ events in a given interval
 probability of $k$ events in the same interval is poisson distribution
 ### Formula $\huge\frac{\lambda^{k}e^{-\lambda}}{k!}$
+- $\mu=\sigma^2=\lambda$
 > [!example] $\lambda=3$ cars pass by in a minute on average 
-> `which is constant, also cars are independent`
-> $k=2$ cars passing by in a minute has 
+> `lambda stays constant, cars are independent`
+> $k=2$ cars/minute 
 > $\frac{3^2e^{-3}}{2!}\approx9*0.05/2\approx0.225=22.5\%$ chance
 > 
 > $k=1\to4$ has $0.15+0.22+0.22+0.17=0.77=77\%$ chance
