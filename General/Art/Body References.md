@@ -1,2 +1,2 @@
-![[Body.png|200]]![[Body 2.png|200]]
-![[Bodies.png]]
+![[Body.webp|200]]![[Body 2.webp|200]]
+![[Bodies.webp]]

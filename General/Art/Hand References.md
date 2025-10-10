@@ -1,4 +1,4 @@
-![[Hand.png|250]]![[Hand Stretched.png|350]]
-![[Fist.png|200]]![[Fist Sides.png|300]]
-![[Hand Angled.png|200]]![[Hand Angled Line Art.png|144]]
+![[Hand.webp|250]]![[Hand Stretched.webp|350]]
+![[Fist.webp|200]]![[Fist Sides.webp|300]]
+![[Hand Angled.webp|200]]![[Hand Angled Line Art.webp|144]]
 ###
