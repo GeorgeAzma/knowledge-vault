@@ -1,4 +1,6 @@
 [[Arch Linux]]
+[[Linux Commands]]
+[[Windows Subsystem for Linux (WSL)]]
 ### Directories
 ``` bash
 /                  # root
@@ -13,7 +15,7 @@
 /var               # variable data (logs, spool, cache, mail)
 /home              # user home directories
 /root              # home directory for root user
-/tmp               # temp files (cleared on reboot)
+/tmp               # temp files (cleared on reboot, typically stored in ram-disk)
 /var/tmp           # temp files (less often cleared)
 /dev               # device files (hardware interfaces)
 /proc              # virtual filesystem for process and kernel info
@@ -26,9 +28,10 @@
 /boot              # boot loader files
 ```
 ### User Directories
-```
-~/.bashrc
-~/.config      
-~/.local/share
-~/.cache
+``` bash
+~/.bashrc          # bash script which is ran before terminal opens       
+~/.bash_profile    # bash script which is ran at login
+~/.config          # user config
+~/.local/share     # architecture-independent user data (docs, icons)
+~/.cache           # temporary cached data
 ```

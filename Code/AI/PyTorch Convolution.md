@@ -6,7 +6,7 @@ torch.nn.Conv2d(in_channels, out_chanels, kernel_size, stride, padding,
 'out_channels' C_o
 'kernel_size' N_k # usually 3
 'stride' S=1 # bigger = smaller output
-'padding' P=0 # adds 0 at input edges
+'padding' P=0 # adds 0 at input edges, if set to "same" adds enough padding to keep image dimensions the same
 'padding_mode' zeros/reflect/replicate/circular
 'dilation' D=1 # adds space between kernel values, spreading it out
 'bias' b=False

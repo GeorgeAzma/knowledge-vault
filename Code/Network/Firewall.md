@@ -1,5 +1,5 @@
 ### Types
-- **Packet Filtering** blocks [[Network]] traffic based on src/dst [[Internet Protocol (IP) Address|IP Address]]/[[Port]]
+- **Packet Filtering** blocks [[Network]] traffic based on src/dst [[IP|IP Address]]/[[Port]]
 - **Stateful Inspection** `dynamic packet filtering` 
   only allows responses from established connections
 - **Application Layer** inspects data inside [[HTTP]] requests for example

@@ -1,6 +1,6 @@
 ### [[Log]]
 ### [[Trigonometry]]
-### [[Math/Algebra/Power]]
+### [[Power]]
 ### [[Quadratic Equation]]
 ### [[Arithmetic Series]]
 

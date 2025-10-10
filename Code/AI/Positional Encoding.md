@@ -12,4 +12,4 @@ fn encode_position(pos: usize, n: usize) -> Vec<f32> {
     encoding
 }
 ```
-You can also train a [[Neural Network]] to generate positional encodings
+You can also train a [[Neural Network]] to generate positional encodings `learned embeddings`

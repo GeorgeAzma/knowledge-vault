@@ -24,7 +24,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-image = Image.open('img2.png')
+image = Image.open('img2.webp')
 image_tensor = transform(image)
 
 def render_splats(splats: torch.Tensor, image_size: torch.Tensor):

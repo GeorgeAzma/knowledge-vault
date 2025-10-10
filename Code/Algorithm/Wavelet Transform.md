@@ -11,7 +11,7 @@
 > - $k_\sigma<10^{-5}$ so $k_\sigma$ is often set to $0$ and skipped
 > - $\omega_\Psi\approx\sigma$
 > So simplified formulas are
-> - $\Psi_\sigma(t)=\large\pi^{-\frac{1}{4}}e^{-\frac{t^{2}}{2}}(\cos(\sigma t)-e^{-\frac{\sigma^{2}}{2}})$
+> - $\Psi_\sigma(t)={\large\pi^{-\frac{1}{4}}e^{-\frac{t^{2}}{2}}}(\cos(\sigma t)-{\large e^{-\frac{\sigma^{2}}{2}}})$
 > - $\hat{\Psi}_\sigma(t)=\large\pi^{-\frac{1}{4}}e^{-\frac{(t-\sigma)^2}2}$
 > [[Complex Number|complex]] wavelet is often considered Gabor wavelet `2D, used in images`
 > 
@@ -19,9 +19,9 @@
 
 ``` rust
 fn morlet_wavelet(t: f32, scale: f32, frequency: f32) -> f32 {
-    let norm_factor = 1.0 / (scale * std::f32::consts::TAU.sqrt());
+    let norm_factor = 1.0 / (scale * TAU.sqrt());
     let exponential = (-t * t / (2.0 * scale * scale)).exp();
-    let sinusoidal = (std::f32::consts::TAU * frequency * t).cos();
+    let sinusoidal = (TAU * frequency * t).cos();
     norm_factor * exponential * sinusoidal
 }
 ```

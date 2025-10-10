@@ -1,8 +1,8 @@
 ### [[Simplifications]]
 #### $\sin$ & $\cos$
-- $\sin x\cos y=0.5(\sin(x-y)+\sin(x+y))$
-- $\cos x\cos y=0.5(\cos(x-y)+\cos(x+y))$
-- $\sin x\sin y=0.5(\cos(x-y)-\cos(x+y))$
+- $\sin x\cos y=(\sin(x-y)+\sin(x+y))/2$
+- $\cos x\cos y=(\cos(x-y)+\cos(x+y))/2$
+- $\sin x\sin y=(\cos(x-y)-\cos(x+y))/2$
 - $\sin(A \pm B)=\sin{A}\cos{B}\pm\cos{A}\sin{B}$ [[#Intuition]]
 - $\cos(A \pm B)=\cos{A}\cos{B}\mp\sin{A}\sin{B}$ [[#Intuition]]
 - **easily derivable**
@@ -14,7 +14,7 @@
     - $\cos{2x}=\cos^2{x}-\sin^2{x}$ `from cos(x+y)`
     - $\sin^2{\frac{x}{2}}=\frac{1-\cos{x}}{2}$ `from sin(x)sin(y)`
     - $\cos^2{\frac{x}{2}}=\frac{1+\cos{x}}{2}$ `from cos(x)cos(y)`
-- **simple** `to remember`
+- **easy** `to remember`
     - $\sin^2{x}+\cos^2{x}=1$
     - $\sin(-x)=-\sin{x}$
     - $\cos(-x)=\cos{x}$

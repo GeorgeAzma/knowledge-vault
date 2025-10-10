@@ -27,12 +27,12 @@
 - **DPM++ 2S Ancestral** 2nd order DPM, fast and good quality
 - **DPM++ 2M** 2nd order multi-step sampler, high quality, bit slower
 - **DPM++ SDE Variations** stochastic differential equations, faster on GPUI
-- [[Denoising Diffusion Probabilistic Models|DDPM]] high quality
+- [[DDPM|DDPM]] high quality
 - **LCM** reduces steps by ensuring latent space consistency
 - **IPNDM** improved pseudo numerical diffusion model, 4th order, good for small resolutions
 - **IPNDM Variable Step** flexible resolutions
 - **DEIS** diffusion exponential integrator sampler, fast, high quality
-- [[DDIM]] efficient [[Denoising Diffusion Probabilistic Models|DDPM]]
+- [[DDIM]] efficient [[DDPM|DDPM]]
 - **UniPC** unidirectional predictor, combines prediction/correction steps, fast, high quality
 ### Schedulers
 - **Normal** gaussian distribution noise

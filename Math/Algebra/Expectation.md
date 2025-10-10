@@ -1,4 +1,5 @@
-Expected values for random variables, or their long-run average
+Weighted average over probability distribution.
+expected value for random samples from probability distribution, or their long-run average.
 ### Formula $\mathbb{E}(X)=\sum xp(x)$
 - $p(x)$ [[Probability Mass Function]] of $X$
 - $\mathbb{E}(X)=\mu_X$ [[Mean]]

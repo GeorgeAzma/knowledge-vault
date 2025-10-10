@@ -1,5 +1,8 @@
-- [[HTTP]]
-- [[TCP]]
+- [[HTTP]] hypertext transfer
+- [[TCP]] transmission control
+- [[IP]] internet
+- [[Address Resolution Protocol|ARP]] address resolution
+- [[Border Gateway Protocol|BGP]] border gateway
 - **RTP** live video
 - **IRC** internet relay chat
 - **SFTP** secure file transfer

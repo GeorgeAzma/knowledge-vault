@@ -19,7 +19,6 @@ How much $\omega$ frequency is present in signal
 | [[Convolution]] `freq`          | $2\pi f_1(t)f_2(t)$                | $F_1(\omega)*F_2(\omega)$                          |
 | Reversal                        | $f(-t)$                            | $F(-\omega)=F^*(\omega)$                           |
 | [[Integral\|Integration]]       | $\int_{-\infty}^{t}f(\tau)\ d\tau$ | $\frac{F(\omega)}{i\omega}+\pi F(0)\delta(\omega)$ |
-|                                 |                                    |                                                    |
 ### Tips
 - `time(narrow) = freq(wide)`
 - `periodic = sharp freq`

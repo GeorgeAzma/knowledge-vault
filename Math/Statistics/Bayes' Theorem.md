@@ -1,6 +1,6 @@
 Describes how to update a belief, given some evidence
 youtu.be/HZGCoVF3YvM
-### Formula $P(A\mid B) = P(B\mid A)\large\frac{P(A)}{P(B)}$
+### Formula $P(A\mid B)={\large\frac{P(B\mid A)P(A)}{P(B)}}={\large\frac{P(B,A)}{P(B)}}$
 - $P(A\mid B)$ posterior `probability of A given B`
 - $P(B\mid A)$ likelihood `probability of B given A`
 - $P(A)$ prior

@@ -55,11 +55,12 @@ Get-ChildItem -Recurse -Filter *.md | ForEach-Object {
     Set-Content $_.FullName
 }
 
-Get-ChildItem -Path Attachments -Filter *.svg -File | ForEach-Object {
-    try {
-        npm i -g svgo
-        svgo $_.FullName -o $_.FullName
-    } catch {
-        Write-Error "Error compressing SVG file $inputFile : $_"
-    }
-}
+# Compress .svg
+# Get-ChildItem -Path Attachments -Filter *.svg -File | ForEach-Object {
+#     try {
+#         npm i -g svgo
+#         svgo $_.FullName -o $_.FullName
+#     } catch {
+#         Write-Error "Error compressing SVG file $inputFile : $_"
+#     }
+# }

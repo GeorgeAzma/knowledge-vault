@@ -7,8 +7,11 @@
 Percentage of light to reflect and [[Refraction|Refract]]
 - Perpendicular (s-polarized) light $R_s=\large|\frac{n_1\cos\theta_i-n_2\cos\theta_t}{n_1\cos\theta_i+n_2\cos\theta_t}|^2$
 - Parallel (p-polarized) light $R_p=\large|\frac{n_2\cos\theta_i-n_1\cos\theta_t}{n_2\cos\theta_i+n_1\cos\theta_t}|^2$
+- $\theta_i$ light-normal angle
+- $\theta_t$ refracted-normal angle
 - Non-polarized light $R=\frac{R_s+R_p}{2}$
 - Transmittance $T=1-R$ `refraction`
+- $\cos\theta_t​=\sqrt{1−({\large\frac{n_2}{​n_1}​​})^2(1−\cos^2\theta_i)​}$ [[Snell's Law]]
 > [!tip] When looking straight at the surface formula simplifies to $\huge|\frac{n_1-n_2}{n_1+n_2}|^2$
 > > [!example] Air to Glass $|\frac{1-1.5}{1+1.5}|^2=|\frac{-0.5}{2.5}|^2=0.2^2=0.04=4\%$ reflection
 
@@ -17,13 +20,13 @@ Percentage of light to reflect and [[Refraction|Refract]]
 > [!tip] Use Fresnel-Schlick approximation for efficiency
 >> ``` c
 >> vec3 fresnel_schlick(vec3 f0, float hdv) { 
->> 	return f0 + (1.0 - f0) * pow(clamp(1.0 - hdv, 0.0, 1.0), 5.0); 
+>> 	return f0 + (1.0 - f0) * pow(1.0 - hdv, 5.0); 
 >> }
 >> ```
 >> $f_0=\huge|\frac{n_1-n_2}{n_1+n_2}|^2$ reflectivity when looking straight at the surface
 >> > [!warning] This formula only works for dielectrics/non-metals for metals 
 >> > use values from the database like this one
->> > > [!note] $F_0$ is RGB `linear`, since reflectance varies based on wavelength
+>> > > [!note] $F_0$ is `RGB (linear)`, since reflectance varies based on wavelength
 >> > - **Water** $(0.02,0.02,0.02)$
 >> > - **Plastic / Glass (Low)** $(0.03,0.03,0.03)$
 >> > - **Plastic High** $(0.05,0.05,0.05)$
@@ -34,14 +37,5 @@ Percentage of light to reflect and [[Refraction|Refract]]
 >> > - **Gold** $(1.0,0.71,0.29)$
 >> > - **Aluminium** $(0.91,0.92,0.92)$
 >> > - **Silver** $(0.95,0.93,0.88)$
-### Fresnel Code
-> [!tip] $f_0$ to refractive index $n_2=\huge\frac{(\sqrt{f_0}+1)^2}{1-f_0}$
-``` c
-vec3 fresnel(vec3 n1, vec3 n2, float hdv) {
-	vec3 ior = n2 / n1;
-    vec3 t = sqrt(ior * ior + hdv * hdv - 1.0);
-    vec3 rs = (hdv - ior * t) / (hdv + ior * t);
-    vec3 rp = (t - ior * hdv) / (t + ior * hdv);
-	return mix(rs * rs, rp * rp, 0.5);
-}
-```
+### [[Fresnel Code]]
+> [!tip] $f_0$ to refractive index $n=\large\frac{(\sqrt{f_0}+1)^2}{1-f_0}$, refractive index to $f_0=({\large\frac{n-1}{n+1}})^{2}$ `rewrite 1st formula and solve quadratic`

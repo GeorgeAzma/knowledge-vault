@@ -1,11 +1,29 @@
-[[Opponent Colorspace]]
-- Predicts lightness, chroma and hue well
-  `changing one of them does not change others`
-- Blends 2 colors evenly `warm + cool = neutral`
-- Has **D65** white point `same as srgb`
-- Does not take into account view conditions
-  `eye adjusts to brightness and overall color, oklab can't`
-> [!tip] Useful for grayscale conversion and increasing saturation without hue shifts etc. 
+### Parameters
+
+|  Param  |        Description        |      sRGB Range      | Visible Range |
+| :-----: | :-----------------------: | :------------------: | :-----------: |
+| **`L`** |        luminosity         |       `0 → 1`        |    `0 → 1`    |
+| **`a`** |      green ↔ magenta      | `-0.23392 → 0.27463` | `-0.5 → 0.5`  |
+| **`b`** |       blue ↔ yellow       | `-0.31161 → 0.19849` | `-0.6 → 0.6`  |
+|   `c`   | chromaticity `length(ab)` |     `0 → 0.3226`     |   `0 → 0.6`   |
+|   `h`   |      hue `angle(ab)`      |       `0 → 1`        |    `0 → 1`    |
+### Properties
+- `lightness/chroma/hue` are very orthogonal `changing one of them does not change others`
+- distance between colors are perceptually linear `distance(ok1, ok2)`
+- takes in `linear RGB` for `oklab` conversion
+- blends 2 colors evenly `warm + cool = neutral`
+- has **D65** white point `same as srgb`
+- does not take into account view conditions `eye adjusts to brightness/color, oklab can't`
+### Experiments `sRGB`
+- www.oklch.com/
+- below is hue wheel with linear luminosity that is as chromatic as possible 
+  `without sRGB clipping. L = 0.75, C = 0.127`
+![[Oklab.webp|500]]
+- most chromatic color is magenta `Lch = 0.7, 0.3226, 0.912`
+- most light and chromatic color is green `Lch = 0.865, 0.2933, 0.396`
+- luma values according to oklab are `0.252, 0.652, 0.096`
+  `calculated by bining similar luminosity colors and lsq fitting coefficients`
+  `such that dot(col, coeffs) ~= dot(similar_L_col, coeffs)`
 ``` c
 // oklab = (lightness, red_greenness, blue_yelowness)
 vec3 oklab2rgb(vec3 ok) {
@@ -28,13 +46,13 @@ vec3 rgb2oklab(vec3 rgb) {
                                             0.0259040371,  0.7827717662, -0.8086757660);
 }
 
-// lch = (lightness, chromaticity, hue)
+// lch = (lightness, chromaticity, hue), sRGB ranges [0-1; 0-0.72?; 0-1]
 vec3 oklch2oklab(vec3 lch) {
-  return vec3(lch.x, lch.y * cos(lch.z * TAU), lch.y * sin(lch.z * TAU));
+  return vec3(lch.x, lch.y * cos(lch.z * 6.2831), lch.y * sin(lch.z * 6.2831));
 }
 
 vec3 oklab2oklch(vec3 ok) {
-  return vec3(oklab.x length(ok.yz), fract(atan(ok.z, ok.y) / TAU + 0.5));
+  return vec3(ok.x, length(ok.yz), fract(atan(ok.z, ok.y) / 6.2831));
 }
 
 // optimized oklab mix by Inigo Quilez, MIT licensed
@@ -53,12 +71,9 @@ vec3 oklab_mix(vec3 lin1, vec3 lin2, float a) {
     vec3 lms = mix(lms1, lms2, a);
     return lms2cone * (lms * lms * lms);
 }
-
 // okhsv and okhsl (super long)
 // shadertoy.com/view/7sK3D1
 ```
-> [!tip] Distance between colors `distance(ok1, ok2)`
-
 > [!tip] Convert oklab output to srgb for displaying
 ``` c
 vec3 lrgb2srgb(vec3 lrgb) { 
@@ -87,3 +102,4 @@ col = oklab2lrgb(col);
 // convert to srgb for displaying
 col = lrgb2srgb(col);
 ```
+[[Opponent Colorspace]]

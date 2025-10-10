@@ -13,4 +13,4 @@ with [[Media Access Control (MAC) Address|MAC Address]] layers it uses those to 
   Send data to all connected devices except one sending the data
 - **Forward** If [[Media Access Control (MAC) Address|MAC Address]] Table contains recipients [[Media Access Control (MAC) Address|MAC Address]]
   send data to only that recipient
-> [!note] For [[Address Resolution Protocol (ARP)|ARP]] requests switch is flooded
+> [!note] For [[Address Resolution Protocol|ARP]] requests switch is flooded

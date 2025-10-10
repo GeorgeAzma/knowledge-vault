@@ -1,5 +1,5 @@
 Denoising Diffusion Implicit Models
-[[Denoising Diffusion Probabilistic Models|DDPM]] trained on 1000 steps needs to diffuse 1000 steps 
+[[DDPM]] trained on 1000 steps needs to diffuse 1000 steps 
 [[DDIM]] can do it in 50 steps
 ### Forward Noise
 ### Reverse Noise $p(x^{t-1}\mid x_t)=\sqrt{\bar\alpha_t-1}\cdot x_0+\sqrt{1-\bar\alpha_{t-1}-\sigma_t^2}\cdot\epsilon_\theta+\sigma_t\cdot z$

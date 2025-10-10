@@ -22,4 +22,9 @@ vec3 rot(vec3 v, vec4 q) {
 vec3 rot_axis(vec3 v, vec3 axis, float angle) {
 	return mix(dot(v, axis) * axis, v, cos(angle)) + sin(angle) * cross(axis, v);
 }
+
+
+vec3 rot90_axis(vec3 v, vec3 axis) {
+	return dot(v, axis) * axis + cross(axis, v);
+}
 ```

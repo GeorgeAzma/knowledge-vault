@@ -4,10 +4,6 @@ aliases:
   - Console Clear Line
   - Console Background Color
 ---
-### Clearing
-- `\x1b[K` clear cursor to EoL
-- `\x1b[1K` clear SoL to cursor
-- `\x1b[2K` clear line
 ### Color + Style
 ``` powershell
 # colors

@@ -1,0 +1,5 @@
+- [[Group Normalization]] over `(C/G, H, W)` per sample per group
+- [[Batch Normalization]] over `(N,H,W)` per channel
+- [[Layer Normalization]] over `(C,H,W)` per sample
+- [[Instance Normalization]] over `(H,W)` per channel per sample
+- [[Spectral Normalization]] `layer.weights /= max(layer.weights)`

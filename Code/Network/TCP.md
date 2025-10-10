@@ -36,3 +36,13 @@ Connection established
 - Negotiate parameters like message encryption method etc
 - Ensure that identity of parties involved is legitimate and secure
 - Ensure that communication packets are received correctly
+### TCP Slow Start
+There is no way to know how much TCP can send without packets being dropped
+so it starts by sending [[MTU|10 Segments]]  `which is a safe bet` 
+without waiting for acknowledgement, everytime sent segments get acknowledged
+TCP sends more unacknowledged segments `typically doubles each time`
+when packets start getting dropped, is when it stops doubling
+[[MTU|MSS]] is `1460 bytes` and 10 segments are sent initially, that is `14.6KB` sent at once
+after that it has to wait for acknowledgement adding more latency
+so good practice is to have your data be under `14.6 KB` for minimum latency
+

@@ -1,38 +1,47 @@
-$C^1$ continuous $3x^2-2x^3$
-``` Rust
-fn sstep(e0: f32, e1: f32, mut x: f32) -> f32 {
-	x = ((x - e0) / (e1 - e0)).clamp(0.0, 1.0);
-	x * x * (3.0 - 2.0 * x)
-}
-```
-##### Quintic Smoothstep `smootherstep`
-$C^2$ continuous $6x^5-15x^4+10x^3$
-``` Rust
-fn sstep(e0: f32, e1: f32, mut x: f32) -> f32 {
-	x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
-	x * x * x * (x * (6.0 * x - 15.0) + 10.0)
-}
-```
-##### Septic Smoothstep
-$C^3$ continuous $-20x^7+70x^6-84x^5+35x^4$
-``` rust
-fn sstep(e0: f32, e1: f32, mut x: f32) -> f32 {
-	x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
-	x * x * x * x * (x * (x * (70.0 - 20.0 * x) - 84.0) + 35.0)
-}
-```
-##### Cosine Smoothstep
-$C^\infty$ continuous
-``` rust
-fn sstep(e0: f32, e1: f32, mut x: f32) -> f32 {
-	x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
-	0.5 - 0.5 * cos(PI * x)
-}
-```
-##### Inverse Smoothstep
-``` rust
-fn inv_sstep(e0: f32, e1: f32, mut x: f32) -> f32 {
+``` c
+// C^1 continuous (3x^2 - 2x^3)
+float sstep(float e0, float e1, float x) {
     x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
-    2.0 * x - x * x * (3.0 - 2.0 * x)
+    return x * x * (3.0 - 2.0 * x);
 }
+
+// Linear step
+float lstep(float e0, float e1, float x) {
+    return clamp((x - e0) / (e1 - e0), 0.0, 1.0);
+}
+
+// Linear step, e0 = 0
+float lstep(float e0, float x) {
+    return clamp(1.0 - x / e0, 0.0, 1.0);
+}
+
+// Linear step, e0 = 0
+float lstep(float e1, float x) {
+    return clamp(x / e1, 0.0, 1.0);
+}
+
+// Quintic smoothstep (C^2 continuous)
+float sstep_quintic(float e0, float e1, float x) {
+    x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
+    return x * x * x * (x * (6.0 * x - 15.0) + 10.0);
+}
+
+// Septic smoothstep (C^3 continuous)
+float sstep_septic(float e0, float e1, float x) {
+    x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
+    return x * x * x * x * (x * (x * (70.0 - 20.0 * x) - 84.0) + 35.0);
+}
+
+// Cosine smoothstep (C^∞ continuous)
+float sstep_cosine(float e0, float e1, float x) {
+    x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
+    return 0.5 - 0.5 * cos(3.141592653589793 * x);
+}
+
+// Inverse smoothstep
+float inv_sstep(float e0, float e1, float x) {
+    x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
+    return 2.0 * x - x * x * (3.0 - 2.0 * x);
+}
+
 ```

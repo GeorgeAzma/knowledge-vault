@@ -1,0 +1,13 @@
+- Prestissimo $(>200)$
+- Presto $(168-200)$
+- Allegro Vivace $(172-176)$
+- Vivace $(156-176)$
+- Allegro $(120-156)$
+- Allegro Moderato $(116-120)$
+- Allegretto $(112-120)$
+- Moderato $(108-120)$
+- Andante $(76-108)$
+- Adagio $(66-76)$
+- Lento $(45-60)$
+- Largo $(40-60)$
+- Grave $(25-45)$

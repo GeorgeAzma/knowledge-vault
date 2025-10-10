@@ -1,3 +1,6 @@
+``` bash
+ssh user@<ipv-4>
+```
 ### Windows
 ``` powershell
 # install ssh server (run as admin)

@@ -1,0 +1,5 @@
+- **® registered trademark** 
+    - approved by USPTO in US, costly`
+- **™ unregistered trademark** 
+    - protects brand identity from clear misuse in similar context
+    - must prove prior use to enforce it

@@ -1,6 +1,5 @@
-Amount of [[Joule]][[s]] absorbed per $kg$ when temperature increases by $1\degree K$
-Lower = Easier to heat up or cool down
-### Formula $C=\frac{Q}{m\Delta T}J/g\degree K$
+how many [[Joule]][[s]] it takes to heat up `1kg` air by `1C`
+### Formula $C=\large\frac{Q}{m\Delta T}\ \small J\cdot kg^{-1}\cdot K^{-1}$
 ### $C$ For Materials
 - **Water** $4.186$
 - **Air** $1.0035$

@@ -1,0 +1,14 @@
+tiktok.com/@3_minute_music_theory/video/7354141537871088939
+- **Staccatto `·`** short notes `usually x2 shorter`
+- **Staccatissimo `▾`** even shorter notes
+- **Legato `⏜`** connected or overlapped notes `no audible gap`
+- **Tenuto `-`** disconnected but not short notes
+- **Accent `>`** play louder, more emphasis or velocity
+- **Mercato `^`** stronger, sharper accent `shorter than tenuto`
+- **Portamento / Glide** smoothly glide pitch between notes
+- **Trill** fast alternation between adjacent notes
+- **Mordent / Turn** quickly play note → note above → note
+- **Fermata `𝄐`** hold note longer than normal
+- **Sforzando `sf`** very strong/short `stronger than mercato`
+- **Ghost Note** almost inaudible and soft, low velocity
+- **Glissando** smoothly and quickly slide between notes

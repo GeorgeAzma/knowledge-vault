@@ -23,3 +23,4 @@ for epoch in range(epochs):
         scaler.step(opt)
         scaler.update()
 ```
+### Loss Extrapolation $\frac{a}{\log(x+b)+c}$
