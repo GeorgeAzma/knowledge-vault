@@ -34,7 +34,7 @@ firefox.launch(slow_mo=200)
 ### Page Functions
 ``` python  
 page.goto("https://playwright.dev/")
-page.screenshot(path="example.png")
+page.screenshot(path="example.webp")
 page.title()
 page.click()
 page.wait_for_timeout(1000) # instead of time.sleep(1)

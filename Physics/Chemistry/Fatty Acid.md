@@ -1,1 +1,1 @@
-![[Fatty Acid.png]]
+![[Fatty Acid.webp]]

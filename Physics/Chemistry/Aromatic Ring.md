@@ -5,7 +5,7 @@
 ### Examples 
 benzene `C₆H₆`, written as `Ph`
         phenyl `C₆H₅-`, similar principle as [[Alkyl]][[s]] but for benzene instead of carbon
-![[Aromatic Rings.png|600]]
+![[Aromatic Rings.webp|600]]
 ### Hückel’s Aromaticity rules
 1. **Cyclic** molecule must form a ring
 2. **Planar** atoms in the ring must lie roughly in the same plane

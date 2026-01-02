@@ -78,4 +78,4 @@ vec3 slerp(vec3 p0, vec3 p1, float t) {
 - $k=\text{zx}$
 - $i^2=\text{xyxy}=-\text{xxyy}=-1$ `same for j,k`
 - $ijk=xyyzzx=-\text{xyyzxz}=\text{xyyxzz}=\text{xyxyzz}=-\text{xxyyzz}=-1$ `shift x to left to get xx=1`
-![[Quaternion Operations.png|900]]
+![[Quaternion Operations.webp|900]]

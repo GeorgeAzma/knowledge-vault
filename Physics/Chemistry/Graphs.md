@@ -1,23 +1,23 @@
-![[Valence Electrons vs Atomic Number.png]]
+![[Valence Electrons vs Atomic Number.webp]]
 
-![[Atomic Radius vs Atomic Number.png]]
+![[Atomic Radius vs Atomic Number.webp]]
 
-![[Boiling Point vs Atomic Number.png]]
+![[Boiling Point vs Atomic Number.webp]]
 
-![[Boiling Point vs Density.png]]
+![[Boiling Point vs Density.webp]]
 
-![[Boiling Point vs Melting Point.png]]
+![[Boiling Point vs Melting Point.webp]]
 
-![[Density vs Atomic Number.png]]
+![[Density vs Atomic Number.webp]]
 
-![[Electronegativity vs Atomic Number.png]]
+![[Electronegativity vs Atomic Number.webp]]
 
-![[Electronegativity vs Atomic Radius.png]]
+![[Electronegativity vs Atomic Radius.webp]]
 
-![[First Ionization Energy vs Atomic Number.png]]
+![[First Ionization Energy vs Atomic Number.webp]]
 
-![[First Ionization Energy vs Atomic Radius.png]]
+![[First Ionization Energy vs Atomic Radius.webp]]
 
-![[First Ionization Energy vs Electronegativity.png]]
+![[First Ionization Energy vs Electronegativity.webp]]
 
-![[Specific Heat vs Atomic Number.png]]
+![[Specific Heat vs Atomic Number.webp]]

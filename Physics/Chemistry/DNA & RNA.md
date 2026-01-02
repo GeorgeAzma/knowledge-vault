@@ -1,1 +1,1 @@
-![[Ribose.png]]
+![[Ribose.webp]]

@@ -28,7 +28,7 @@
 | Luminous Efficacy `radiation` | $K$        | $lm/W$                    |
 | Luminous Efficacy `source`    | $\eta$     | $lm/W$                    |
 | [[Luminous Efficiency]]       | $V$        | $1$ `normalized efficacy` |
-![[Light Units.png]]
+![[Light Units.webp]]
 ##### Visible Spectrum Approximation
 ``` c
 // w = 400-700nm (0-1)
