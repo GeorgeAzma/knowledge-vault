@@ -1,3 +1,5 @@
+- **Entropy** colah.github.io/posts/2015-09-Visual-Information
+- **Visual Science** https://javalab.org/en
 ### Shaders
 - https://sebh.github.io/publications/
 ### AI

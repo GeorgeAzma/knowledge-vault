@@ -1,6 +1,5 @@
-Normalized [[Symmetric Matrix]]
-So visually it's like a rotated [[Identity Matrix]]
-Multiplying vector with this rotates it
-### Formula $AA^T=A^{-1}$
-- [[Matrix Transpose|Transpose]] of an orthogonal matrix equals its [[Matrix Inverse|Inverse]]
-- [[Matrix Transpose|Transposing/Inversing]] aligns orthogonal matrix to [[Standard Basis Vector|Standard Basis]]
+Normalized [[Symmetric Matrix]], so visually it's like a rotated [[Identity Matrix]]
+multiplying vector with orthogonal matrix rotates it, so $\det(Q)=\pm1$
+### Formula $QQ^T=Q^TQ=Q^{-1}Q=I$
+- [[Transpose|Transpose]] of an orthogonal matrix equals its [[Inverse|Inverse]]
+- [[Transpose|Transposing/Inversing]] aligns orthogonal matrix to [[Standard Basis Vector|Standard Basis]]

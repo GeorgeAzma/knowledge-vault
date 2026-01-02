@@ -16,3 +16,8 @@ float blackbody(float w) {
 - $V$ volume
 - $T$ temperature
 - $N$ molecules
+### Inverse $T(\lambda)=\dfrac{hc}{\lambda k_B \ln(\dfrac{2hc}{\lambda^5L(\lambda)}+1)}$
+- $L(\lambda)$ radiance at $\lambda$ wavelength
+### Wien's Displacement Law $\lambda_{max}\approx\dfrac{0.002897}{T}$
+- $\lambda_{max}$ peak emissive wavelength
+- $\text{Sun}(~5778K)\approx501\text{nm}$ [[Wavelength To Color]] `negligible variation over time/surface`

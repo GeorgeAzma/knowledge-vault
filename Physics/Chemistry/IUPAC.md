@@ -1,32 +1,57 @@
 scientific naming scheme for chemical compounds
 used along with common names 
 `prefixes + infix + root word + suffixes`
-### Naming
-``` python
-prefixes = {
-    1:"meth",
-    2:"eth", 
-    3:"prop",
-    4:"but", 
-    5:"pent",
-    6:"hex", 
-    7:"hept",
-    8:"oct",
-    9:"non",
-    10:"dec"
-}
+# Organic Naming
 
+| Priority |    Fn Group     |     Prefix     |  Suffix  |    Pattern     |           Note           |
+| :------: | :-------------: | :------------: | :------: | :------------: | :----------------------: |
+|    1     | carboxylic acid |    carboxy     | oic acid |  `R-C(=O)OH`   |                          |
+|    2     |      ester      | alkoxycarbonyl |   oate   | `R-C(=O)-O-R'` |                          |
+|    3     |      amide      |     amido      |  amide   | `R-C(=O)-NH2`  |                          |
+|    4     |     nitrile     |    nitrile     |  cyano   |    `R-C≡N`     |                          |
+|    5     |    aldehyde     |    formyle     |    al    |   `R-C(=O)H`   |                          |
+|    6     |     ketone      |      oxo       |   one    |  `R-C(=O)-R'`  |                          |
+|    7     |     alcohol     |    hydroxy     |    ol    |     `R-OH`     |                          |
+|    8     |      amine      |     amino      |  amine   |    `R-NH2`     |                          |
+|    9     |     alkene      |                |   ene    |   `R-C=C-R'`   |                          |
+|    10    |     alkyne      |                |   yne    |   `R-C≡C-R'`   |                          |
+|    11    |   [[alkane]]    |                |   ane    |   `R-CH2-R'`   | default functional group |
+|    12    |    [[alkyl]]    |                |    yl    | `R–(CH2)ₙ–CH3` |        [[alkyl]]         |
+|    12    |     fluoro      |     fluoro     |          |     `R-F`      |       [[halogen]]        |
+|    12    |     chloro      |     chloro     |          |     `R-C`      |       [[halogen]]        |
+|    12    |      bromo      |     bromo      |          |     `R-B`      |       [[halogen]]        |
+|    12    |      iodo       |      iodo      |          |     `R-I`      |                          |
+
+| Prefixes | Carbons |
+| -------- | ------- |
+| meth     | 1       |
+| eth      | 2       |
+| prop     | 3       |
+| but      | 4       |
+| pent     | 5       |
+| hex      | 6       |
+| hept     | 7       |
+| oct      | 8       |
+| non      | 9       |
+| dec      | 10      |
+1. find longest carbon chain
+- if tied, one with most substituents
+2. `prefix = prefixes[carbon_count]`
+3. add `bonds[max_C_to_C_bonds] suffix`
+4. `suffix = highest priority functional group`
+
+``` python
 # suffix used when it's main group (highest priority functional group)
-# example: [CH3-CH2-OH -> ethanol]
+# > Example: [CH3-CH2-OH -> ethanol]
 # * "eth-" C-C (2 carbon chain)
 # * "-an-" C-C (single bonds)
 # * "-ol " -OH (alcohol)
 
 # prefix used when it's not main group 
 # meaning it's substituent or not the highest priority functional group
-# example: OH
-#          |
-#      CH3-C-COOH
+# > Example: OH
+#            |
+#        CH3-C-COOH
 # * "2-hydroxy-" OH- (OH attached to 2nd carbon on main chain)
 #                    (from left or right, whichever's smaller)
 #                    (OH isn't on main group/chain, since
@@ -37,98 +62,105 @@ prefixes = {
 # * "-oic acid " -COOH (carboxilic acid is main group 
 #                       because it has highest priority)
 
-functional_groups = {
-    "carboxylic_acid": {
-        "suffix": "oic acid",
-        "prefix": "carboxy",
-        "priority": 1,
-        "pattern": ["COOH"]
-    },
-    "ester": {
-        "suffix": "oate",
-        "prefix": "alkoxycarbonyl",
-        "priority": 2,
-        "pattern": ["COOR"]
-    },
-    "amide": {
-        "suffix": "amide",
-        "prefix": "amido",
-        "priority": 3,
-        "pattern": ["CONH2"]
-    },
-    "nitrile": {
-        "suffix": "nitrile",
-        "prefix": "cyano",
-        "priority": 4,
-        "pattern": ["C≡N"]
-    },
-    "aldehyde": {
-        "suffix": "al",
-        "prefix": "formyl",
-        "priority": 5,
-        "pattern": ["CHO"]
-    },
-    "ketone": {
-        "suffix": "one",
-        "prefix": "oxo",
-        "priority": 6,
-        "pattern": ["C=O"]
-    },
-    "alcohol": {
-        "suffix": "ol",
-        "prefix": "hydroxy",
-        "priority": 7,
-        "pattern": ["OH"]
-    },
-    "amine": {
-        "suffix": "amine",
-        "prefix": "amino",
-        "priority": 8,
-        "pattern": ["NH2"]
-    },
-    "alkene": {
-        "suffix": "ene",
-        "prefix": None,
-        "priority": 9,
-        "pattern": ["C=C"]
-    },
-    "alkyne": {
-        "suffix": "yne",
-        "prefix": None,
-        "priority": 10,
-        "pattern": ["C≡C"]
-    },
-    "alkane": {
-        "suffix": "ane",
-        "prefix": None,
-        "priority": 11,
-        "pattern": []  # default if no other functional group
-    },
-    # Common substituents (always prefixes)
-    "methyl": {"suffix": None, "prefix": "methyl", "priority": 12},
-    "ethyl": {"suffix": None, "prefix": "ethyl", "priority": 12},
-    "propyl": {"suffix": None, "prefix": "propyl", "priority": 12},
-    "fluoro": {"suffix": None, "prefix": "fluoro", "priority": 12},
-    "chloro": {"suffix": None, "prefix": "chloro", "priority": 12},
-    "bromo": {"suffix": None, "prefix": "bromo", "priority": 12},
-    "iodo": {"suffix": None, "prefix": "iodo", "priority": 12},
-    "hydroxy": {"suffix": None, "prefix": "hydroxy", "priority": 12},
-    "oxo": {"suffix": None, "prefix": "oxo", "priority": 12},
-    "amino": {"suffix": None, "prefix": "amino", "priority": 12},
+```
+# Inorganic Naming
+``` python
+numerical_prefix = {
+     1: "mono",  # rarely used in first element
+     2: "di",
+     3: "tri",
+     4: "tetra",
+     5: "penta",
+     6: "hexa",
+     7: "hepta",
+     8: "octa",
+     9: "nona",
+    10: "deca"
 }
 
-bonds = {1:"ane",2:"ene",3:"yne"}
+# Oxidation state (Roman numerals)
+# Example: FeCl2 → iron(II) chloride
+oxidation_state = {
+    "+1": "I",
+    "+2": "II",
+    "+3": "III",
+    "+4": "IV",
+    "+5": "V",
+    "+6": "VI",
+    "+7": "VII"
+}
 
-def iupac_name():
-    if functional_groups:
-    else if 
+# Common anions (binary)
+binary_anions = {
+     "H": "hydride",
+     "F": "fluoride",
+    "Cl": "chloride",
+    "Br": "bromide",
+     "I": "iodide",
+     "O": "oxide",
+     "S": "sulfide",
+     "N": "nitride",
+     "P": "phosphide",
+     "C": "carbide"
+}
 
-# 1. find longest carbon chain
-# 1.1 if tied, one with most substituents
-# 2. prefix = prefixes[carbon_count]
-# 3. add bonds[max_carbon2carbon_bonds] suffix
-# 4. suffix = highest priority functional group
-# 5. 
+# Common polyatomic ions
+polyatomic_ions = {
+     "OH": "hydroxide",
+     "CN": "cyanide",
+    "NO3": "nitrate",
+    "NO2": "nitrite",
+    "SO4": "sulfate",
+    "SO3": "sulfite",
+    "CO3": "carbonate",
+    "PO4": "phosphate",
+    "NH4": "ammonium",
+}
+
+# Hydrates
+# Example: CuSO4·5H2O → copper(II) sulfate pentahydrate
+hydrate_suffix = "hydrate"
+
+# Ligands (alphabetical order in naming, anionic ligands end with -o)
+ligands = {
+    "H2O": "aqua",
+    "NH3": "ammine",
+    "CO": "carbonyl",
+    "NO": "nitrosyl",
+    "OH-": "hydroxo",
+    "CN-": "cyano",
+    "Cl-": "chloro",
+    "Br-": "bromo",
+    "I-": "iodo",
+    "O2-": "oxo",
+    "SO4^2-": "sulfato",
+    "NO2-": "nitrito"
+}
+
+# Coordination complex naming:
+# [ligands][metal(oxidation)][anion/cation]
+# Example: [Cu(NH3)4]SO4 → tetraamminecopper(II) sulfate
+
+# Binary ionic compound
+# [metal] [nonmetal-ide]
+# NaCl -> sodium chloride
+
+# Binary covalent (nonmetals)
+# [prefix+first element] [prefix+second element-ide]
+# CO2 -> carbon dioxide
+
+# Polyatomic ionic
+# [cation] [polyatomic anion]
+# CaCO3 -> calcium carbonate
+
+# Acids (aqueous binary)
+# hydro + [anion stem] + ic acid
+# HCl(aq) -> hydrochloric acid
+
+# Oxoacids
+# ate → ic acid, ite → ous acid
+# H2SO4 -> sulfuric acid
+# H2SO3 -> sulfurous acid
 ```
 ### Rules
 - `TODO:` https://en.wikipedia.org/wiki/IUPAC_nomenclature_of_chemistry

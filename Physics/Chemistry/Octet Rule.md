@@ -1,0 +1,3 @@
+- Octet rule = oversimplification: "atoms like 8 electrons in their outermost shell"
+- Mostly works for 2nd-period elements (C, N, O, F)
+- Better general idea: "atoms tend to fill their outermost shell"

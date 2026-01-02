@@ -1,5 +1,5 @@
+### Files
 ``` bash
-### FILES ###
 ls
 cat
 cd
@@ -15,18 +15,22 @@ gzip file.txt # compress to file.txt.gz
 gunzip file.txt.gz # decompress to file.txt
 7z x archive.zip # `a` create archive
 pwd # print working dir
-
-### FIND ###
+```
+### Find
+``` bash
 find
 grep
-
-### LINUX ###
+```
+### Linux
+``` bash
 ps # -e/A all procs, -r running only, aux all procs with info
 kill # -9 force
 killall # kill all procs
 watch -n 1 ls # ls every 1s
 
-### USER/PERMS ###
+```
+### User Permissions
+``` bash
 sudo -u <user> google-chrome # run as user
 su <username> # switch user
 useradd -m newuser
@@ -35,17 +39,18 @@ chmod # +x, -x, =x add/rm/set exec perm, -R recurse
       # 1=e 2=w 4=r 7=rwx, 777=rwx for owner|group|others
       # u=rw g=r o=r | u=owner, g=group, o=others
 chown # change owner, -R recurse
-
-
-### NET ###
+```
+### Network
+``` bash
 wget example.com/file.txt # -r recurse
 curl -X POST -d "name=foo" example.com/api # -O download file
 ssh user@remote_host # remote login, cmd exec
 scp file.txt user@host:/path/dir user@host:/path/file.txt ./dir # secure remote file copy
 grep # -r recurse, -i case-insensitive
 find -name *.txt -type f -size +10M # -iname case-insensitive
-
-### PROFILING ###
+```
+### Profiling
+``` bash
 top/htop/nvtop/atop
 perf cpu/clocks/memory/cache
 gprof functions
@@ -58,6 +63,9 @@ flamegraph
 ### [[Bash]]
 ### Tips
 ``` bash
+# get public ip address
+curl ifconfig.me
+
 # remove .desktop apps containing 'fl'
 find ~/.local/share/applications /usr/share/applications -iname '*fl*.desktop' -exec rm -i {} \;
 ```

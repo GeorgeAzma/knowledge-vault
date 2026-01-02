@@ -1,5 +1,4 @@
-Has orientation and area
-written as capital case vector
+Has orientation and area. written as capital case vector $\vec{A}$
 > [!tip] Bivectors in 2D are same as [[Complex Number]][[s]]
 > Deriving with [[Geometric Product#Properties|Geometric Product Properties]]
 > $i=\hat{x}\hat{y}$

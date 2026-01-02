@@ -2,7 +2,7 @@ Way to rotate space using 4 components
 
 $q=w+xi+yj+zk$
 Can also be represented as:
-$q=\cos\theta+\sin\theta(xi+yj+zk)$
+$q=\cos\theta+\sin\theta(xi+yj+zk)$ `(x,y,z) = rotation axis`
 $\sqrt{w^2+x^2+y^2+z^2}=1$ `So quaternions are always normalized`
 ### Formulas
 - Scalar $/,*,-,+$ is component wise
@@ -72,3 +72,10 @@ vec3 slerp(vec3 p0, vec3 p1, float t) {
 ```
 > [!note] 
 > **Slerp** means **Spherical Linear Interpolation** or **Smooth Linear Interpolation**
+### [[Geometric Algebra]]
+- $i=\text{xy}$
+- $j=\text{yz}$
+- $k=\text{zx}$
+- $i^2=\text{xyxy}=-\text{xxyy}=-1$ `same for j,k`
+- $ijk=xyyzzx=-\text{xyyzxz}=\text{xyyxzz}=\text{xyxyzz}=-\text{xxyyzz}=-1$ `shift x to left to get xx=1`
+![[Quaternion Operations.png|900]]

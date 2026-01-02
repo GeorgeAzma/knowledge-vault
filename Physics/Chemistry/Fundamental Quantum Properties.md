@@ -1,4 +1,4 @@
-- $s$ Spin ($(-\frac{1}{2},\frac{1}{2})$ for [[Electron]])
+- $s$ Spin $(-\frac{1}{2},\frac{1}{2})$ for [[Electron]]
 - $n$ Principal Quantum Number ([[Shell]] energy level)
 - $l$ Azimuthal Quantum Number ([[Subshell]] type/shape)
 - $m$ Magnetic Quantum Number ([[Orbital]] orientation)

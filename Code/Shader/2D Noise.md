@@ -35,7 +35,7 @@ vec2 hash22(vec2 p) {
     return fract((p3.xx + p3.yz) * p3.zy);
 }
 
-float simplex(vec2 p) {
+float noise(vec2 p) {
 	vec2 i = floor(p + (p.x + p.y) * 0.366025);
     vec2 a = p - i + (i.x + i.y) * 0.211324;
     float m = step(a.y, a.x); 
@@ -58,7 +58,7 @@ vec2 hash22(vec2 p) {
     return fract((p3.xx + p3.yz) * p3.zy);
 }
 
-float perlin(vec2 p) {
+float noise(vec2 p) {
     vec2 i = floor(p);
     vec2 f = p - i; 
     vec2 u = f * f * f * (10.0 + f * (6.0 * f - 15.0));

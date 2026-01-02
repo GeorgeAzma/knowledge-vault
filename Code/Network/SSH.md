@@ -1,5 +1,6 @@
 ``` bash
 ssh user@<ipv-4>
+ssh-keygen -t ed25519 # saved ~/.ssh/id_ed25519
 ```
 ### Windows
 ``` powershell

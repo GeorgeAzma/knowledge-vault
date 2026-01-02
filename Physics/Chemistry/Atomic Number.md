@@ -1,0 +1,1 @@
+number of [[proton]][[s]] `= number of electrons for neutral atoms`

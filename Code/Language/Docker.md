@@ -4,7 +4,7 @@
 - **Image** Set of instructions defined by `Dockerfile` that builds/execs code inside a docker container, like a template 
 ### Commands
 - `docker run` Create a new docker container from an image
-- `docker compose` Launch containers using `compose.yaml` file
+- `docker compose` Launch containers using `docker-compose.yaml` file
 - `docker system df -v` Storage usage info
 - `docker exec -ai <container>` Open terminal inside stopped container
 - `docker exec -it <container> bash` Open terminal inside running container

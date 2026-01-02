@@ -1,6 +1,6 @@
-[[Geometric Product]]
-[[Bivector]]
-[[Wedge Product]]
-
-youtu.be/htYh-Tq7ZBI
-youtu.be/60z_hpEAtD8
+- [[Geometric Product]]
+- [[Bivector]]
+- [[Wedge Product]]
+### Resources
+- youtu.be/htYh-Tq7ZBI
+- youtu.be/60z_hpEAtD8

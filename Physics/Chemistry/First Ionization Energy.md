@@ -1,0 +1,1 @@
+energy required to remove the **outermost electron** from a neutral atom

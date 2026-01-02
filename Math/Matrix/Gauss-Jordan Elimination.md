@@ -1,65 +1,51 @@
 [[Matrix Decomposition]] method
-Tries to make lower triangle of coefficient [[Matrix]] all $0$
-**Using 3 basic row operations**
-- Subtract row from another
-- Swapping rows
-- Multiplying a row by nonzero scalar
-> [!note] These operations are also applied to row's answer
+[[Gaussian Elemination]], but directly gives solution without back-substitution
 
-> [!example] 
-> $$
-> \begin{array}{l}
-> x+y+3z=6 \\
-> 2x+3y-4z=-2 \\
-> 3x-2y+5z=7 \\
-> \end{array}
-> $$
-> Coefficient [[Matrix]]
-> $$
-> \begin{vmatrix}
-> 1 & 1 & 3 \\
-> 2 & 3 & -4 \\
-> 3 & -2 & 5
-> \end{vmatrix}=\begin{vmatrix}6\\-2\\7\end{vmatrix}
-> $$
-> - $R_2=R_2-2R_1$ and $R_3=R_3-3R_1$
-> $$
-> \begin{vmatrix}
-> 1 & 1 & 3 \\
-> 2 & 3 & -4 \\
-> 3 & -2 & 5
-> \end{vmatrix}
-> \begin{vmatrix}
-> 1 & 0 & 0 \\
-> -2 & 1 & 0 \\
-> -3 & 0 & 1
-> \end{vmatrix}=
-> \begin{vmatrix}
-> 1 & 1 & 3 \\
-> 0 & 1 & -10 \\
-> 0 & -5 & -4
-> \end{vmatrix}=\begin{vmatrix}6\\-14\\-11\end{vmatrix}
-> $$
-> - $R_3=R_3+5R_2$
-> $$
-> \begin{vmatrix}
-> 1 & 1 & 3 \\
-> 0 & 1 & -10 \\
-> 0 & -5 & -4
-> \end{vmatrix}
-> \begin{vmatrix}
-> 1 & 0 & 0 \\
-> 0 & 1 & 0 \\
-> 0 & 5 & 1
-> \end{vmatrix}=
-> \begin{vmatrix}
-> 1 & 1 & 3 \\
-> 0 & 1 & -10 \\
-> 0 & 0 & -54
-> \end{vmatrix}=\begin{vmatrix}6\\-14\\-81\end{vmatrix}
-> $$
-> - **Solve**
-> 	- $-54z=-81$ so $z=81/54=\frac32$
-> 	- $y-10z=y-15=-14$ so $y=1$
-> 	- $x+y+3z=x+1+4.5=x+5.5=6$ so $x=0.5$
-> - Final solution $(x,y,z)=(\frac{1}{2},1,\frac{3}{2})$
+1. do [[Gaussian Elemination]]
+2. make pivots $1$ by scaling rows by constant
+3. eliminate columns above pivot by subtracting the row's multiple
+``` python
+ 2x +  y +  z = 5
+ 4x + 3y +  z = 11
+-2x +  y + 2z = 1
+
+# augmented matrix
+[  2  1  1 |  5 ]
+[  4  3  1 | 11 ]
+[ -2  1  2 |  1 ]
+
+# make 1st pivot = 1
+R1 = R1 / 2
+[  1  0.5  0.5 | 2.5 ]
+[  4  3    1   | 11  ]
+[ -2  1    2   | 1   ]
+
+# eliminate 1st column below pivot
+R2 = R2 - 4 * R1
+R3 = R3 + 2 * R1
+[ 1  0.5  0.5 | 2.5 ]
+[ 0    1   -1 |   1 ]
+[ 0    2    3 |   6 ]
+
+# eliminate 2nd column above & below pivot
+R1 = R1 - 0.5 * R2
+R3 = R3 -   2 * R2
+[ 1  0   1 | 2 ]
+[ 0  1  -1 | 1 ]
+[ 0  0   5 | 4 ]
+
+# make 3rd pivot = 1
+R3 = R3 / 5
+[ 1  0   1 |   2 ]
+[ 0  1  -1 |   1 ]
+[ 0  0   1 | 0.8 ]
+
+# eliminate above 3rd pivot
+R1 = R1 - 1 * R3
+R2 = R2 + 1 * R3
+[ 1 0 0 | 1.2 ]
+[ 0 1 0 | 1.8 ]
+[ 0 0 1 | 0.8 ]
+
+(x, y, z) = (1.2, 1.8, 0.8)
+```

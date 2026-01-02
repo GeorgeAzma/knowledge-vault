@@ -3,7 +3,7 @@
 # This script
 # - converts images to webp
 # - shortens links
-# - compresses svg files
+# - compresses svg files (optional)
 
 # Check if ffmpeg is installed
 if (!(Get-Command ffmpeg -ErrorAction SilentlyContinue)) {

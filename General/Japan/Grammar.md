@@ -5,10 +5,10 @@
 
 #### [[Sentences]]
 #### [[Markers]]
-### [[Particles]]
-### [[Godan and Ichidan]]
-### [[て Form]]
-### [[Punctuation]]
+#### [[Particles]]
+#### [[Godan and Ichidan]]
+#### [[て Form]]
+#### [[Punctuation]]
 ### Examples
 - 花が綺麗だ `hana ga kirei da` => flower is pretty
 	- Add `and the smell, it is very good too`

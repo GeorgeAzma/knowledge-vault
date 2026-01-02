@@ -1,0 +1,82 @@
+$$
+\newcommand{\col}[1]{\text{\color{#1}{#1}}}
+\begin{array}{l}
+% Basic colors
+\col{white} \\
+\col{black} \\
+\col{red} \\
+\col{green} \\
+\col{blue} \\
+\col{cyan} \\
+\col{magenta} \\
+\col{yellow} \\
+\col{gray} \\
+\col{darkgray} \\
+\col{lightgray} \\
+\col{brown} \\
+\col{lime} \\
+\col{olive} \\
+\col{orange} \\
+\col{pink} \\
+\col{purple} \\
+\col{teal} \\
+\col{violet} \\
+% dvipsnames colors
+\col{Apricot} \\
+\col{Aquamarine} \\
+\col{Bittersweet} \\
+\col{BlueGreen} \\
+\col{BlueViolet} \\
+\col{BrickRed} \\
+\col{BurntOrange} \\
+\col{CadetBlue} \\
+\col{CarnationPink} \\
+\col{Cerulean} \\
+\col{CornflowerBlue} \\
+\col{Dandelion} \\
+\col{DarkOrchid} \\
+\col{Emerald} \\
+\col{ForestGreen} \\
+\col{Fuchsia} \\
+\col{Goldenrod} \\
+\col{GreenYellow} \\
+\col{JungleGreen} \\
+\col{Lavender} \\
+\col{LimeGreen} \\
+\col{Mahogany} \\
+\col{Maroon} \\
+\col{Melon} \\
+\col{MidnightBlue} \\
+\col{Mulberry} \\
+\col{NavyBlue} \\
+\col{OliveGreen} \\
+\col{OrangeRed} \\
+\col{Orchid} \\
+\col{Peach} \\
+\col{Periwinkle} \\
+\col{PineGreen} \\
+\col{Plum} \\
+\col{ProcessBlue} \\
+\col{Purple} \\
+\col{RawSienna} \\
+\col{RedOrange} \\
+\col{RedViolet} \\
+\col{Rhodamine} \\
+\col{RoyalBlue} \\
+\col{RoyalPurple} \\
+\col{RubineRed} \\
+\col{Salmon} \\
+\col{SeaGreen} \\
+\col{Sepia} \\
+\col{SkyBlue} \\
+\col{SpringGreen} \\
+\col{Tan} \\
+\col{TealBlue} \\
+\col{Thistle} \\
+\col{Turquoise} \\
+\col{VioletRed} \\
+\col{WildStrawberry} \\
+\col{YellowGreen} \\
+\col{YellowOrange} \\
+\end{array}
+$$

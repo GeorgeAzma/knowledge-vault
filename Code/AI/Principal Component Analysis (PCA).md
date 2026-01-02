@@ -2,9 +2,9 @@ Lowers dimensionality of data
 ### How to Calculate
 - Standardize data `subtract mean, divide by standard deviation`
 - Calculate [[Covariance Matrix]]
-- Compute [[Eigen Vector]][[s]] and [[Eigen Value]][[s]]
-- Rank Principal Components by importance a.k.a [[Eigen Value]][[s]]
-- Retain only Top $N$ (usually 2D-3D) most important PCs
+- Compute [[Eigenvector]][[s]] and [[Eigenvalue]][[s]]
+- Rank Principal Components by importance a.k.a [[Eigenvalue]][[s]]
+- Retain only Top $N$ most important PCs
 - Project data onto Principal Components
 ```python
 # Step 1: Standardize the data
@@ -48,7 +48,7 @@ projected_data = project_onto_components(standardized_data, principal_comps)
 
 ```
 ### Resource youtu.be/FgakZw6K1QQ
-This also gives better intuition for [[Eigen Vector]][[s]] at 12:30
+This also gives better intuition for [[Eigenvector]][[s]] at 12:30
 #### Related [[Singular Value Decomposition (SVD)]]
 
 > [!example] Can be used in machine learning, to reduce dimensionality of input data, e.g. if it has 2D points as an input,

@@ -1,0 +1,9 @@
+- **—** bond, **=** double bond **≡** triple bond
+- **▲** `triangular/thicker line` bond closer to viewer
+- **▱** `triangular/thicker dashed line` bond further from viewer
+- **δ⁺ / δ⁻** [[Partial Charge]]
+- **vertex/corner = carbon**
+- **line from vertex = hydrogen bond** unless specified otherwise `(C-O)`
+- **Resonance arrows (↔)** structures that differ only in electron placement `benzene resonance`
+- **Reaction arrow (→)** chemical transformation`CH4 + Cl2 → CH3Cl + HCl`
+- **Equilibrium arrow (⇌)** reversible reaction `NH3 + H2O ⇌ NH4⁺ + OH⁻`

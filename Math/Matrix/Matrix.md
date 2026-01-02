@@ -7,9 +7,9 @@ space will get scaled and/or rotated
 ![[Matrix Multiplication.webp]]
 ![[Vector Matrix Multiplication.webp]]
 ### Operations
-- [[Matrix Transpose]]
+- [[Transpose]]
 - [[Determinant]]
-- [[Matrix Inverse]]
+- [[Inverse]]
 - [[Kronecker Product]]
 - [[Hadamard Product]]
 - [[Matrix Decomposition]]
@@ -24,11 +24,11 @@ space will get scaled and/or rotated
 - [[Jacobian Matrix]]
 - [[Hessian Matrix]]
 - [[Positive Definite Matrix]]
-- **Upper/Lower Triangular Matrix**
+- [[Triangular Matrix|Upper/Lower Triangular Matrix]]
 - **Skew-Symmetric** `diag=0` and tris are equal but negated
 - [[Adjacency Matrix]]
 - [[Incidence Matrix]]
-- **Stochastic Matrix** rows are [[Probability]] [[Distribution]][[s]]
+- **Stochastic Matrix** rows are [[Probability]] distributions
 - **Diagonal Dominant Matrix** abs(sum(diag)) > sum(abs(non-diag))
 - **Banded Matrix** non-zero values reasamble thick diagonal
 ### Rank $M_{rank}=MaxDimensionCount(Mx)$

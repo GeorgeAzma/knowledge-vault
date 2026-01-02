@@ -2,8 +2,8 @@
 1. planets move in elliptical orbits with sun at one focus
 2. line connecting planet to sun sweeps out equal areas in equal times,
    meaning planet moves faster closer to the sun
-3. planet's orbital period `365.25 for earth` squared is proportional to
-   semi-major axis cubed `distance earth to sun`
+3. planet's orbital period `365.25 for earth` squared `133,407.56`
+   is proportional to semi-major axis cubed `earth to sun distance`
 ### Orbital Manuevers
 - **Gravity Assist** using planet's gravity for velocity increase or trajectory change
 - **Elliptical Transfer** extend orbit ellipse until it touches target orbit

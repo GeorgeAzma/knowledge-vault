@@ -5,4 +5,4 @@ $$\begin{bmatrix}
 3i & 1+i & 1
 \end{bmatrix}$$
 ### Formula $H=H^*$ 
-Hermitian [[Matrix]] is equal to it's [[Conjugate]] [[Matrix Transpose|Transpose]]
+Hermitian [[Matrix]] is equal to it's [[Conjugate]] [[Transpose|Transpose]]

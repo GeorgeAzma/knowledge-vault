@@ -13,7 +13,7 @@ Divides networking into 7 layers
 4. **Transport**
 	- [[Port]]
 	- [[TCP]]
-	- [[User Datagram Prodocol (UDP)]]
+	- [[UDP]]
 5. **Session**
 6. **Presentation**
 7. **Application**

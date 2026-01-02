@@ -17,16 +17,16 @@ payload = {
   "role": "USER",
   "exp": 1634814400, # expiration time
   "iat": 1634810800 # issue time
-  # can also add your own fields called "unregistered fields"
+  # add your own "unregistered fields"
 }
 
-encoded_header = jwt.encode(header, secret, algorithm="HS256") 
-encoded_payload = jwt.encode(payload, secret, algorithm="HS256")
+header_b64 = base64.encode(header) 
+payload_b64 = base64.encode(payload)
 
 # signature part, also called JWS (Json Web Signature)
-signature = hmac.new(secret.encode(), encoded_header + "." + encoded_payload, hashlib.sha256).hexdigest()
+signature = hmac.sha256(secret.bytes(), header_b64 + "." + payload_b64)
 
-jwt = encoded_header + "." + encoded_payload + "." + signature
+jwt = header_b64 + "." + payload_b64 + "." + signature
 ```
 ### Login via JWT
 - **Log In**

@@ -1,4 +1,5 @@
 ``` python
+# a: painted | b: painter
         'alpha' mix(dst, vec4(src.rgb, 1), src.a)
        'darken' min(a, b)
       'lighten' max(a, b)
