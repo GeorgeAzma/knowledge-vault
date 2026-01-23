@@ -4,4 +4,4 @@
   only allows responses from established connections
 - **Application Layer** inspects data inside [[HTTP]] requests for example
   to block malicious requests `like SQL injection attempts`
-- [[Proxy]] network traffic flows through proxy server which filters the traffic
+- [[Code/Network/Proxy]] network traffic flows through proxy server which filters the traffic

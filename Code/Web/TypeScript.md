@@ -32,14 +32,3 @@ tsx main.ts
     "include": ["main.ts"]
 }
 ```
-### For HTML
-uses `vite` for fast hot reloading
-``` bash
-npm create vite@latest <project-name>
-cd <project-name>
-npm i
-touch index.html
-npm run dev
-```
-- Add `<script type="module" src="/src/main.ts"></script>` to `index.html`
-- Clean `App.ts` and delete other files in `src/`

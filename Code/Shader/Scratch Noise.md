@@ -1,3 +1,4 @@
+![[Scratch.png|500]]
 ``` c
 float scratch(vec2 uv, float f) {
     vec2 seed = floor(uv);

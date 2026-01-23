@@ -1,4 +1,5 @@
 github.com/Calinou/free-blue-noise-textures
+![[Blue.png|250]]
 ### 2D
 ``` c
 float hash12(vec2 p) {

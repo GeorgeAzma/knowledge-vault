@@ -3,7 +3,7 @@
 - $\lambda$ [[Eigenvalue]]
 - $\vec x$ [[Eigenvector]]
 When vector is multiplied by [[matrix]] it maybe scaled/rotated
-Eigen values tell you how much vector is scaled in each dimension.
+Eigen values tell you how much vector is scaled in each dimension
 ### Effects
 - $\lambda=(-1;1)$ shrinks vector
 - $\lambda=(-\infty;-1)\cup(1;\infty)$ grows vector

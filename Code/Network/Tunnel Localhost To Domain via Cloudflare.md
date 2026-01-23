@@ -14,10 +14,10 @@ ingress:
   - service: http_status:404
 ```
 - `cloudflared tunnel route dns <tunnel-name> <domain-url>`
-  (or manually add record from cloudflare dashboard)
+      (or manually add record from cloudflare dashboard)
 - `cloudflared tunnel run <tunnel-name>`
 
-`lumiey.uk` effectively acts as reverse proxy redirecting to `localhost:8080`
+`lumiey.uk` acts as reverse proxy redirecting to `localhost:8080`
 ### Host Subdomains
 - `cloudflared tunnel route dns <tunnel-name> <subdomain>.<domain-url>`
 ``` yaml

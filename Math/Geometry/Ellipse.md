@@ -1,2 +1,10 @@
+### $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$
+- $a$ semi-major axis `longest radius`
+- $b$ semi-minor axis `shortest radius`
+- **Foci** $(\pm c,0)$, where $c=\sqrt{a^2-b^2}$
+**Intuition** fix 2 pins and wrap string around them, tracing with a pencil gives ellipse
+
 ![[Ellipse.webp|400]]
-- semi-latus rectum and semi-major/minor axis are half
+### Properties
+- Ray from one focus reflects towards another focus, for circle it reflects back
+![[Ellipse Reflection.png]]

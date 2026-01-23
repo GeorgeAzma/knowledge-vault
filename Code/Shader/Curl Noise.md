@@ -42,5 +42,5 @@ vec2 fbm(vec2 p, int octaves) {
 	return s / m;
 }
 ```
-Curl FBM Noise
+`curl fbm`
 ![[Curl FBM.webp]]

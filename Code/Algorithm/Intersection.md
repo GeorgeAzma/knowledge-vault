@@ -37,11 +37,6 @@ def intersects(l1, l2):
     
     return p
 ```
-
-### [[Point]] to [[Circle]]
-- Find a distance from the point and center of the circle
-- If distance is equal to radius, point intersects
-
 ### [[Line]] to [[Circle]]
 - $p=\text{Circle's center point}$
 - $(x,y)=\text{Point on a line}$

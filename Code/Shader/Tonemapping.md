@@ -14,7 +14,7 @@ vec3 reinhard_extended_luma(vec3 x, float max_l) {
 }
 
 vec3 uncharted2(vec3 x) {
-    float A = 0.15f, B = 0.50f, C = 0.10f, D = 0.20f, E = 0.02f, F = 0.30f;
+    float A = 0.15, B = 0.50, C = 0.10, D = 0.20, E = 0.02, F = 0.30;
     return ((x * (A * x + C * B) + D * E) / (x * (A * x + B) + D * F)) - E / F;
 }
 

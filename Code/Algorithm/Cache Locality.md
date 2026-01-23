@@ -15,8 +15,6 @@ struct Good {
 }
 ```
 ### Cache Warmth
-``` rust
-```
 ### Separate Cold Fields
 ``` rust
 struct ParticleHot { pos: Vec3, vel: Vec3 }

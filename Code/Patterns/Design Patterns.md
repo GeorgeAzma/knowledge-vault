@@ -1,0 +1,25 @@
+youtu.be/tv-_1er1mWI
+### Creational
+- [[Abstract Factory]]
+- [[Builder]]
+- [[Prototype]]
+- [[Singleton]]
+### Structural
+- [[Adapter]]
+- [[Bridge]]
+- [[Composite]]
+- [[Decorator]]
+- [[Facade]]
+- [[Flyweight]]
+- [[Code/Patterns/Proxy|Proxy]]
+### Behavioral
+- [[Chain of Responsibility]]
+- [[Iterator]]
+- [[Memento]]
+- [[State]]
+- [[Template Method]]
+- [[Command]]
+- [[Mediator]]
+- [[Observer]]
+- [[Strategy]]
+- [[Visitor]]
