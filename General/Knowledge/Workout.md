@@ -1,1 +1,1 @@
-![[Workout Muscle Groups.png]]
+![[Workout Muscle Groups.webp]]

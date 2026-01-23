@@ -7,4 +7,4 @@
 ![[Ellipse.webp|400]]
 ### Properties
 - Ray from one focus reflects towards another focus, for circle it reflects back
-![[Ellipse Reflection.png]]
+![[Ellipse Reflection.webp]]

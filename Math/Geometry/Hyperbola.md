@@ -9,4 +9,4 @@
 ### Properties
 - If you send a ray toward one focus, after bouncing off the curve, it will pass through the other focus
 - $|d_1-d_2|=2a$ where $d_1,d_2$ are distance to right/left focus
-![[Hyperbola Reflections.png]]
+![[Hyperbola Reflections.webp]]

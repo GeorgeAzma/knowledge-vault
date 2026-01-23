@@ -1,4 +1,4 @@
-![[Voronoi.png|400]]
+![[Voronoi.webp|400]]
 ``` c
 vec3 hash32(vec2 p) {
 	vec3 p3 = fract(p.xyx / vec3(0.1031, 0.1030, 0.0973));

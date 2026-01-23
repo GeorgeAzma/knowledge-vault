@@ -11,6 +11,6 @@
 <!-- Open Graph metadata for social sharing -->
 <meta property="og:title" content="Page Title">
 <meta property="og:description" content="Description for social media">
-<meta property="og:image" content="https://example.com/image.jpg">
+<meta property="og:image" content="https://example.com/image.webp">
 <meta property="og:url" content="https://example.com">
 ```

@@ -1,5 +1,5 @@
 ### Value
-![[Value.png|400]]
+![[Value.webp|400]]
 ``` c
 float hash12(vec2 p) {
 	vec3 p3 = fract(p.xyx / 0.1031);
@@ -29,7 +29,7 @@ float fbm(vec2 p, int octaves) {
 }
 ```
 ### Simplex
-![[Simplex.png|400]]
+![[Simplex.webp|400]]
 ``` c
 vec2 hash22(vec2 p) {
 	vec3 p3 = fract(p.xyx / vec3(0.1031, 0.1030, 0.0973));
@@ -53,7 +53,7 @@ float noise(vec2 p) {
 }
 ```
 ### Perlin
-![[Perlin.png|400]]
+![[Perlin.webp|400]]
 ``` c
 vec2 hash22(vec2 p) {
 	vec3 p3 = fract(p.xyx / vec3(0.1031, 0.1030, 0.0973));

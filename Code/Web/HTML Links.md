@@ -1,6 +1,6 @@
 ``` html
 <a href="www.example.com/home" target=_blank>Absolute Link</a>
-<a href="/home/example.png" target=_blank>Relative Link</a>
+<a href="/home/example.webp" target=_blank>Relative Link</a>
 <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
 <a href="#my_element_id" target="_top">
 

@@ -1,5 +1,5 @@
 `gabor(uv)*0.5+0.5; kF=6`
-![[Gabor.png|400]]
+![[Gabor.webp|400]]
 ### Approximation
 ``` c
 vec2 hash22(vec2 p) {

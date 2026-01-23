@@ -1,4 +1,4 @@
-![[Worley.png|400]]
+![[Worley.webp|400]]
 ### 2D
 ``` c
 float hash12(vec2 p) {
