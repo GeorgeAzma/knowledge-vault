@@ -2,7 +2,7 @@
 - similar to [[Determinant]], outputs area and orientation of parallelogram made with 2 vectors
 - unlike [[Determinant]] output is not a single number, it has it's own unit [[Bivector]]
 - wedge product is multiplying unit vectors
-### Example
+### Example `2 vector area`
 - $\vec{x}=\begin{bmatrix}1\\0\end{bmatrix},\quad\vec{y}=\begin{bmatrix}0\\1\end{bmatrix}$
 - $v_1=\begin{bmatrix}x_1\\ y_1\end{bmatrix}=x_1\vec{x}+y_1\vec{y}$
 - $v_2=\begin{bmatrix}x_2\\ y_2\end{bmatrix}=x_2\vec{x}+y_2\vec{y}$
@@ -24,10 +24,10 @@ same output, but with [[Bivector]] unit ${\color{WildStrawberry}\vec{x}}\wedge{\
 ### Properties
 - Anticommutative $\vec{a}\wedge\vec{b}=-\vec{b}\wedge\vec{a}$
 ##### $|a\wedge b|^2=|a|^2|b|^2-|a\cdot b|^2$ `geometric identity`
+- $a\wedge b=\dfrac{1}{2}(ab-ba)$`dot product cancels out`
 - $ab=a\cdot b+a\wedge b$
 - $ba=a\cdot b-a\wedge b$
 - $abba=(a\cdot b+a\wedge b)(a\cdot b-a\wedge b)=(a\cdot b)^2-(a\wedge b)^2$ `difference of squares`
-- $abba=a(|b|^2)a=|a|^2|b|^2$
 - $|a|^2|b|^2=(a\cdot b)^2-(a\wedge b)^2$
-- $|a\wedge b|^2=|a\cdot b|^2-|a|^2|b|^2$
+- $|a\wedge b|^2=|a|^2|b|^2-|a\cdot b|^2$
 ##### Resource youtu.be/htYh-Tq7ZBI

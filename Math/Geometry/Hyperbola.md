@@ -3,7 +3,7 @@
 - **Foci** $(\pm c,0)$
 - $c=\sqrt{a^2+b^2}$
 - **Vertices** $(\pm a,0)$
-- [[Eccentricity]] $e=\dfrac{c}{e}>1$
+- [[Eccentricity]] $e=\dfrac{c}{a}\in(1,\infty)$
 - [[Directrix|Directrices]] $x=\pm\dfrac{a}{e}=a^2/c$
 - **Tangent Slope** at point $(x,y)$ on hyperbola $y'=\dfrac{b^2x}{a^2y}$
 ### Properties

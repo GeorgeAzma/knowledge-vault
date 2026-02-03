@@ -1,4 +1,4 @@
-### Formula: $t(t(C-2B+A)+2(B-A))+A$
+### Formula $t(t(C-2B+A)+2(B-A))+A$
 `t * (t * (c - 2.0 * b + a) + 2.0 * (b - a)) + a`
 - **origin** $t(t(C-2B)+2B)$
 - **derivative** $2t(C+A-2B)+2(B-A)$

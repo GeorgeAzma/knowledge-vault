@@ -31,7 +31,10 @@ Tho $\frac{f(x+h)-f(x-h)}{2h}$ is more accurate
 - $\large \arctan(x)=\large\frac1{1+x^2}$
 - $\large \sinh{x}=\cosh x$
 - $\large \cosh{x}=\sinh{x}$
-### Notations $\frac{\delta f}{\delta x}=\frac{df}{dx}=f'(x)=\lim_{h\to0}\frac{f(x+h)-f(h)}{h}$
+### Notations
+- $\dfrac{d}{dx}$ **Total Derivative** change with respect to $x$ `variable`
+- $\dfrac{\partial f}{\partial x}=\dfrac{f(x+h)-f(h)}{h}$ **Partial Derivative** `of f(x) w.r.t. x`
+- $\delta S$ change of an entire function
 > [!example] $x^2+y^2=1$
 > - $\frac{d}{dx}(x^2+y^2)=\frac{d}{dx}(1)$
 > - $2x+2y\frac{dy}{dx}=0$

@@ -1,1 +1,0 @@
-[[Transpose]] of [[Cofactor]], written as $A^*$

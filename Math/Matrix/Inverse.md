@@ -1,5 +1,5 @@
 ### Formula $M^{-1}=\frac{adj(M)}{\det(M)}$
-- Calculate [[Adjoint (Adjugate)]] `transposed cofactor matrix`
+- Calculate [[Adjugate]] `transposed cofactor matrix`
 - Divide result by [[Determinant]] `if det=0, then no inverse`
 ### Properties
 - $AA^{-1}=I$ [[Identity Matrix]]

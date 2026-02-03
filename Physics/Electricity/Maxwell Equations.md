@@ -1,17 +1,10 @@
 ### Equations
-- $\vec\nabla\cdot\vec{E}=\huge\frac{\rho}{\epsilon_0}$
+- $\vec\nabla\cdot\vec{E}=\huge\frac{\rho}{\epsilon_0}$ `divergence of E, how much it flows in/out from the point`
 - $\vec\nabla\cdot\vec{B}=0$
-- $\vec\nabla\times\vec{E}=-\huge\frac{\delta\vec{B}}{\delta t}$
-- $\vec\nabla\times\vec{B}=\mu_0(\vec{J}+\epsilon_0\large\frac{\delta\vec{E}}{\delta t})$
-
-> [!note]
-> $\vec\nabla\cdot\vec{E}$ is divergence of $\vec{E}$
-> how much it flows in/out of the point
-> 
-> $\vec\nabla\times\vec{E}$ is curl of $\vec{E}$
-> how much it rotates around the point
+- $\vec\nabla\times\vec{E}=-\dfrac{\partial\vec{B}}{\partial t}$ `curl of E, how much it rotates around the point`
+- $\vec\nabla\times\vec{B}=\mu_0(\vec{J}+\epsilon_0\dfrac{\partial\vec{E}}{\partial t})$
 ### Definitions
-- $\vec\nabla=\huge(\frac{\delta}{\delta x}, \frac{\delta}{\delta y}, \frac{\delta}{\delta z})$
+- $\vec\nabla=\huge(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z})$ `partial derivative for each spacial axis`
 - $\vec{E}$ Electric field
 - $\vec{B}$ Magnetic field
 - $\rho$ [[Charge]] density
@@ -24,18 +17,18 @@
 - Changing magnetic field creates a rotating electric field and vice versa
 - Electric currents at changing electric field generate a magnetic field
 ### [[Geometric Algebra]] Formula $\nabla F=\frac{J}{c\epsilon_0}$
-- $\nabla=\frac{1}{c}\frac{\delta}{\delta t}+\frac{\delta}{\delta x}\hat{x}+\frac{\delta}{\delta y}\hat{y}+\frac{\delta}{\delta z}\hat{z}$
+- $\nabla=\dfrac{1}{c}\dfrac{\partial}{\partial t}+\dfrac{\partial}{\partial x}\hat{x}+\dfrac{\partial}{\partial y}\hat{y}+\dfrac{\partial}{\partial z}\hat{z}$
 - $J=c\rho-\vec{J}$
 - $F=\vec{E}+ic\vec{B}$ `i is unit trivector`
 - $c$ [[Light#Speed of Light $c=f lambda=299,792,458m/s$|Speed of Light]]
-###### Expanding 
+##### Expanding
 $$
 \large
 \begin{array}{}
-\nabla F=\frac{J}{c\epsilon_0}\\
-(\frac{1}{c}\frac{\delta}{\delta t}+\vec\nabla)(\vec{E}+ic\vec{B})=\frac{c\rho-\vec{J}}{c\epsilon_0}\\
-\frac{1}{c}\frac{\delta\vec{E}}{\delta t}+\vec\nabla\vec{E}+i\frac{\delta\vec{B}}{\delta t}+ic\nabla\vec{B}=\frac{c\rho-\vec{J}}{c\epsilon_0}\\
-\frac{1}{c}\frac{\delta\vec{E}}{\delta t}+\vec\nabla\vec{E}+\vec\nabla\wedge\vec{E}+i\frac{\delta\vec{B}}{\delta t}+ic\vec\nabla\cdot\vec{B}+ic\vec\nabla\wedge\vec{B}=\frac{c\rho-\vec{J}}{c\epsilon_0}
+\nabla F=\dfrac{J}{c\epsilon_0}\\
+\left(\dfrac{1}{c}\dfrac{\partial}{\partial t}+\vec\nabla\right)\left(\vec{E}+ic\vec{B}\right)=\dfrac{c\rho-\vec{J}}{c\epsilon_0}\\
+\dfrac{1}{c}\dfrac{\partial\vec{E}}{\partial t}+\vec\nabla\vec{E}+i\dfrac{\partial\vec{B}}{\partial t}+ic\vec\nabla\vec{B}=\dfrac{c\rho-\vec{J}}{c\epsilon_0}\\
+\dfrac{1}{c}\dfrac{\partial\vec{E}}{\partial t}+\vec\nabla\vec{E}+\vec\nabla\wedge\vec{E}+i\dfrac{\partial\vec{B}}{\partial t}+ic\vec\nabla\cdot\vec{B}+ic\vec\nabla\wedge\vec{B}=\dfrac{c\rho-\vec{J}}{c\epsilon_0}
 \end{array}
 $$
 ##### Resource youtu.be/hJD8ywGrXks

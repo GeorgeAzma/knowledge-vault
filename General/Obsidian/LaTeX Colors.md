@@ -1,3 +1,12 @@
+### Good Colors
+- $\color{WildStrawberry}\text{WildStrawberry}$
+- $\color{forestgreen}\text{forestgreen}$
+- $\color{cornflowerblue}\text{cornflowerblue}$
+- $\color{orange}\text{orange}$
+- $\color{violet}\text{violet}$
+- $\color{gray}\text{gray}$
+- $\color{CadetBlue}\text{CadetBlue}$
+### All Colors
 $$
 \newcommand{\col}[1]{\text{\color{#1}{#1}}}
 \begin{array}{l}

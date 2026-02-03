@@ -43,12 +43,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     auto hwnd = CreateWindowExW(0, L"MyWindowClass", L"MyWindow", WS_OVERLAPPEDWINDOW | WS_VISIBLE, x, y, width, height, NULL, NULL, hInstance, NULL);
 
     MSG msg;
-    while (GetMessageW(&msg, NULL, 0, 0))
-    {
+    while (GetMessageW(&msg, NULL, 0, 0)) {
         TranslateMessage(&msg); // generates WM_CHAR from WM_KEYDOWN
         DispatchMessageW(&msg);
     }
 
     return 0;
 }
+```
+### Useful
+- https://microsoft.github.io/windows-rs/features/#/0.62.0
+``` rust
+// repaint
+unsafe { InvalidateRect(hwnd, None, false) };
+
+// avoid DPI scaling (blurrier text, non-physical pixel sizes)
+unsafe { SetProcessDPIAware() };
 ```

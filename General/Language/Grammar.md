@@ -6,6 +6,7 @@
 #### [[Sentences]]
 #### [[Markers]]
 #### [[Particles]]
+#### [[Stems]]
 #### [[Godan and Ichidan]]
 #### [[て Form]]
 #### [[Punctuation]]

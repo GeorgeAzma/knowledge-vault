@@ -2,6 +2,7 @@
 - $k_\sigma=\large e^{-\frac12\sigma^2}$
 - $c_\sigma=\large(1+e^{-\sigma^2}-2e^{-\frac34\sigma^2})^{-\frac12}$
 ### Morlet [[Fourier Transform]] $\hat{\Psi}_\sigma(\omega)=c_\sigma\pi^{-\frac14}(e^{-\frac12(\sigma-\omega)^2}-k_\sigma e^{-\frac12\omega^2})$
+- used for efficient convolution by multiplying in frequency domain
 > [!tip] 
 > $\sigma=[5;6]$, for decent time/frequency resolution
 > ${\large\sigma}\ \propto\ \text{Frequency resolution}$

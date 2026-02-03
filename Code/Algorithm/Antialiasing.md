@@ -1,13 +1,15 @@
 ``` python
-# sharper antialiasing
-max(abs(dpdx(sdf)), abs(dpdy(sdf)))
+   ### Most accurate antialiasing
+1. length(vec2(length(dFdx(uv)), length(dFdy(uv)))); # max_len = 1.414
+    1.1 vec4 dd = vec4(dFdx(uv), dFdy(uv));              # optimized
+    1.1 sqrt(max(dot(dd.xy, dd.xy), dot(dd.zw, dd.zw))); # optimized
+   ### Sharper antialiasing
+2. max(length(dFdx(uv)), length(dFdy(uv))) # max_len = 1
+   ### SDF
+3. max(abs(dFdx(sdf)), abs(dFdy(sdf)))
+
 # AA Pixel Sampling
 floor(p) + min(fract(p) / fwidth(p), 1.0) - 0.5
-# accurate antialiasing (instead of fwidth)
-vec2(length(dFdx(uv)), length(dFdy(uv)))
-# or
-vec4 dd = vec4(dFdx(uv), dFdy(uv));
-float f = sqrt(max(dot(dd.xy, dd.xy), dot(dd.zw, dd.zw)));
 
 # use derivative for constant line thickness
 float l = fract(4.0 * length(uv * uv)); # local space x4 smaller

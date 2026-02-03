@@ -71,6 +71,16 @@ a_1a_2{\color{gray}+}b_1b_2{\color{gray}+}c_1c_2{\color{gray}+}
 
 \end{array}
 $$
-
-
-
+### Simplification $a\wedge b$
+- $a=\sum_ia_ie_i,\quad b=\sum_jb_je_j$
+- $a\wedge b=\sum_{i,j}a_ib_j(e_i\wedge e_j)$
+- $e_i\wedge e_i=0$ and $e_i\wedge e_j=-e_j\wedge e_i$
+- so only lower triangle $e_{i<j}$ and upper triangle $e_{i>j}$ with same basis but flipped sign is left
+- $a\wedge b=\sum_{i<j}(a_ib_j-a_jb_i)e_i\wedge e_j$ or $a\wedge b\implies ab^T-ba^T$
+- $(a_x\quad a_y\quad a_z)\begin{bmatrix}x\wedge x & x\wedge y & x\wedge z \\ y\wedge x & y\wedge y & y\wedge z\\ z\wedge x & z\wedge y & z\wedge z\end{bmatrix}\begin{pmatrix}b_x\\ b_y\\ b_z\end{pmatrix}$
+- $(a_x\quad a_y\quad a_z)\begin{bmatrix}0 & x\wedge y & x\wedge z \\ -x\wedge y & 0 & y\wedge z\\ -x\wedge z & -z\wedge y & 0\end{bmatrix}\begin{pmatrix}b_x\\ b_y\\ b_z\end{pmatrix}$
+- $\begin{array}{l} a\wedge b&=&(a_xb_y-a_yb_x)&x\wedge y\\&+&(a_xb_z-a_zb_x)&x\wedge z\\&+&(a_yb_z-a_zb_y)&y\wedge z\end{array}$
+- **Cross Product**
+    - $a\times b=-I(a\wedge b)$ where $I=x\wedge y\wedge z$ `pseudo scalar`
+    - $\begin{array}{l}-I(x\wedge y)=z\\ -I(x\wedge z)=-y\\ -I(y\wedge z)=x\end{array}$ `perpendicular vectors (right handed)`
+    - $\begin{array}{l} a\times b&=&(a_xb_y-a_yb_x)&z\\&+&(a_zb_x-a_xb_z)&y\\&+&(a_yb_z-a_zb_y)&x\end{array}$

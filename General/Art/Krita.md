@@ -25,6 +25,7 @@
 - Angel Gradients
 - Size Flow Gang
 - Metalics by Draneria
+- **Test** Moji Liao's Pencil
 ### Improvements I Want
 - changing colorize mask palette color changes all strokes with same color
 - rename dockers `to avoid very long names taking up tab space (Wide Gamut Selector)`

@@ -7,16 +7,16 @@
 | `.class` | `.my-class` | `class=my-class` |
 ### Selectors
 
-| Selector       | Example           | Selects All Elements With                            |
-| -------------- | ----------------- | ---------------------------------------------------- |
-| `attr`         | `[title]`         | `title` attribute                                    |
-| `attr=val`     | `[title="hello"]` | `title="hello"`                                      |
-| `attr~=val`    | `[title~="hel"]`  | `title` containing `hel`                             |
-| `attr`\|`=val` | `[title="he"]`    | `title` starting with `he`                           |
-| `attr^=val`    | `[title^="he"]`   | `title` starting with `he`<br>but not `title=he`     |
-| `attr$=val`    | `[title$=lo]`     | `title` ending with `lo`                             |
-| `attr*=val`    | `[title*=ell]`    | `title` containing `ell`                             |
-| `&`            | `& div`           | style `div` inside base<br>style, avoids duplication |
+| Selector       | Example           | Selects All Elements With              |
+| -------------- | ----------------- | -------------------------------------- |
+| `attr`         | `[title]`         | `title` attribute                      |
+| `attr=val`     | `[title="hello"]` | `title == hello`                       |
+| `attr~=val`    | `[title~="hel"]`  | `title.split().contains(hel)`          |
+| `attr`\|`=val` | `[title="he"]`    | `title.starts_with(he)`                |
+| `attr^=val`    | `[title^="he"]`   | `title != he && title.starts_with(he)` |
+| `attr$=val`    | `[title$=lo]`     | `title.ends_with(lo)`                  |
+| `attr*=val`    | `[title*=hello]`  | `title.contains(hello)`                |
+| `&`            | `& div`           | style `div` inside base class          |
 
 ### Combinators
 | Selector | Example   | Selects                    |

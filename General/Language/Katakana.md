@@ -11,3 +11,5 @@ sometimes used like *italic* emphasis in english
 > [!tip] ン N, シ Shi, チ Chi, ツ Tsu, フ Hu/Fu
 
 > [!note] Katakana has same murky sounds and combinations as [[Hiragana]]
+
+![[Katakana Stroke Order.png|700]]
