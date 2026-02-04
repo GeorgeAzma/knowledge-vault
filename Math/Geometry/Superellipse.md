@@ -7,7 +7,7 @@ used in CSS `superellipse(k)`
 - `k = 1` rounded corners
 - `k = 2` squircle
 - `k = ∞` square
-![[Super Ellipse.png|500]]
+![[Super Ellipse.webp|500]]
 ### SDF
 ``` c
 float superellipse_corner(vec2 p, float r, float n) {

@@ -12,4 +12,4 @@ sometimes used like *italic* emphasis in english
 
 > [!note] Katakana has same murky sounds and combinations as [[Hiragana]]
 
-![[Katakana Stroke Order.png|700]]
+![[Katakana Stroke Order.webp|700]]

@@ -9,4 +9,4 @@ youtu.be/ttuKNuEuRwk?t=800
 - $k_3=f(x_n+\dfrac{h}{2},~y_n+\dfrac{h}{2}k_2)$ `k3 = half-step using k2 and see dy/dx`
 - $k_4=f(x_n+h,y_n+hk_3)$ `k4 = step using k3 and see dy/dx`
 - $y_{n+1}=y_n+\dfrac{h}{6}(k_1+2k_2+2k_3+k_4)$  `half-steps are more valuable predictions`
-![[RK4.png|500]]
+![[RK4.webp|500]]
