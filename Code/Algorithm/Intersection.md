@@ -58,8 +58,8 @@ $(p_x-x)^2+(p_y-y)^2=r^2$
 - $b=2(ab-p_x-p_ya)$
 - $c=p_x^2+p_y^2-2p_yb+b^2-r^2$
 $D=b^2-4ac=4((ab-p_x-p_ya)^2-(1+a^2)(p_x^2+p_y^2-2p_yb+b^2-r^2))$
-$x\huge=\frac{-b\pm\sqrt{D}}{2a}=\frac{-2(ab-p_x-p_ya)\pm\sqrt{4((ab-p_x-p_ya)^2-(1+a^2)(p_x^2+p_y^2-2p_yb+b^2-r^2))}}{2(1+a^2)}$
-$x=\huge\frac{p_x+a(p_y-b)\pm\sqrt{a^2(r^2-p_x^2)+(p_y-b)(2p_xa-p_y+b)+r^2}}{1+a^2}$
+$x=\dfrac{-b\pm\sqrt{D}}{2a}=\dfrac{-2(ab-p_x-p_ya)\pm\sqrt{4((ab-p_x-p_ya)^2-(1+a^2)(p_x^2+p_y^2-2p_yb+b^2-r^2))}}{2(1+a^2)}$
+$x=\dfrac{p_x+a(p_y-b)\pm\sqrt{a^2(r^2-p_x^2)+(p_y-b)(2p_xa-p_y+b)+r^2}}{1+a^2}$
 **Final intersection points**
 - $(x_1, ax_1+b)$
 - $(x_2, ax_2+b)$
@@ -123,7 +123,7 @@ If we know radar positions
 - $r_1,r_2$ Radiuses
 - $d=p_2-p_1$
 - $d_n=d|d|^{-1}$
-- $a=\frac{r_1^2-r_2^2+|d|^2}{2|d|}$
+- $a=\dfrac{r_1^2-r_2^2+|d|^2}{2|d|}$
 ### Ray to [[Sphere]]
 calculate by solving `length(ray_pos + ray_dir * dist) = radius`
 ``` c

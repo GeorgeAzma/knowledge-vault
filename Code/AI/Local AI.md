@@ -421,4 +421,3 @@ WEBUI_SECRET_KEY="iyzoEEqQPSPAkWws"
 - open `localhost:8080` and import settings/models
 - change comfyui and ollama url from `127.0.0.1:11434` 
   to `http://<ollama-docker-service-name>:11434`
-- 

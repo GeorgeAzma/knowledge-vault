@@ -17,8 +17,8 @@ $\lambda$ Lagrangian
 > $\left\{\begin{array}{l}x^2=2y^2\\x^2+y^2=1\end{array}\right.$
 > $2y^2+y^2=1$
 > $3y^2=1$
-> $y^2=\frac{1}{3}$
-> $y=\pm\frac{1}{\sqrt{3}}$
+> $y^2=\dfrac{1}{3}$
+> $y=\pm\dfrac{1}{\sqrt{3}}$
 > $x=\pm\sqrt{\frac{2}{3}}$
 ### Resources 
 - youtu.be/aep6lwPqm6I

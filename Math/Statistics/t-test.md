@@ -9,11 +9,12 @@ Compares [[Mean]][[s]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] test
 > [!note] Here [[Null Hypothesis]] is that $\mu=\mu_0$
 
 > [!example] Testing that RNG mean is $\mu_0=0$
-> $r=[0.5,0.1,-0.3,0.9,-0.7]$ `-1 to 1` $\mu=0.1$
-> $s=\large\sqrt\frac{(0.5-0.1)^2+(0.1-0.1)^2+(-0.3-0.1)^2+(0.9-0.1)^2+(-0.7-0.1)^2}{5-1}$ 
-> $s=\large\sqrt{\frac{0.4^2+0.4^2+0.8^2+0.8^2}{4}}=\sqrt{\frac{1.6}{4}}=\sqrt{0.4}\approx0.632$
-> $\large t\approx\frac{\sqrt5(0.1-0)}{0.632}\approx\frac{0.224}{0.632}\approx0.354$ 
-> $p=2(1-CDF)\approx0.741$ [[p-value]] using [[#t-distribution $f(t,v)= frac{ Gamma( frac{v+1}{2})}{ sqrt{ pi v} Gamma( frac{v}{2})}(1+ frac{t {2}}{v}) {- frac{(v+1)}{2}}$|t_distribution]] [[Cumulative Distribution Function|CDF]] with $5-1$ [[Physics/Mechanics/Degrees of Freedom|Degrees of Freedom]]
+> $r=[0.5,0.1,-0.3,0.9,-0.7]$ `-1 to 1` 
+   $\mu=\dfrac{0.5+0.1-0.3+0.9-0.7}{5}=0.1$
+> $s=\sqrt{\dfrac{(0.5-0.1)^2+(0.1-0.1)^2+(-0.3-0.1)^2+(0.9-0.1)^2+(-0.7-0.1)^2}{5-1}}$ 
+> $s=\sqrt{\dfrac{0.4^2+0.4^2+0.8^2+0.8^2}{4}}=\sqrt{\dfrac{1.6}{4}}=\sqrt{0.4}\approx0.632$
+> $t\approx\dfrac{\sqrt5(0.1-0)}{0.632}\approx\dfrac{0.224}{0.632}\approx0.354$ 
+> $p=2(1-\text{CDF})\approx0.741$ [[p-value]] using [[#t-distribution $f(t,v)= frac{ Gamma( frac{v+1}{2})}{ sqrt{ pi v} Gamma( frac{v}{2})}(1+ frac{t {2}}{v}) {- frac{(v+1)}{2}}$|t_distribution]] [[Cumulative Distribution Function|CDF]] with $5-1$ [[Physics/Mechanics/Degrees of Freedom|Degrees of Freedom]]
 ### Two-sample/Independent $t=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{n_1^{-1}+n_2^{-1}}}=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{\frac{2}{n}}}$
 > [!note] Assumes variances are equal between groups
 - $\bar{x}_1,\bar{x}_2$ sample [[Mean]][[s]] for each group
@@ -41,11 +42,11 @@ Compares [[Mean]][[s]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] test
 - $\Gamma$ [[Gamma Function]] $(x-1)!$
 - $v$ [[Math/Statistics/Degrees of Freedom]]
 > [!tip] Use standard [[Normal Distribution]] for $v\geq30$
-### Get [[p-value]] $2\int_{|t_{value}|}^\infty f(t,v)dt$
-> [!note] Above is [[Cumulative Distribution Function|CDF]] of t-distribution 
+### [[Cumulative Distribution Function|CDF]] $2\int_{|t_{value}|}^\infty f(t,v)dt$
+Used to get [[p-value]]
 - **One-sample/Student's** $v=n-1$
 -  **Two-sample/Independent** $v=n_1+n_2-2$
-- **Welch's** $v\approx\huge\frac{(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2})^2}{\frac{(\frac{s_1^2}{n_1})^2}{n_1-1}+\frac{(\frac{s_2^2}{n_2})^2}{n_2-2}}$
+- **Welch's** $v\approx\dfrac{(\dfrac{s_1^2}{n_1}+\dfrac{s_2^2}{n_2})^2}{\dfrac{(\dfrac{s_1^2}{n_1})^2}{n_1-1}+\dfrac{(\dfrac{s_2^2}{n_2})^2}{n_2-2}}$
 - **Paired/Related** $v=n-1$
 > [!tip] Use standard [[Normal Distribution]] [[Cumulative Distribution Function|CDF]] for $v\geq30$
 - If $p<0.05$ samples are significantly similar, likely not random noise

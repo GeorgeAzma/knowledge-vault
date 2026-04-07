@@ -1,8 +1,9 @@
-### Formula $A\vec x=\lambda\vec x$
+### Formula $A\vec x=\lambda\vec x\implies\det(A-\lambda I)=0$
 - $A$ [[Matrix]]
+- $I$ [[Identity Matrix]]
 - $\lambda$ [[Eigenvalue]]
 - $\vec x$ [[Eigenvector]]
-When vector is multiplied by [[matrix]] it maybe scaled/rotated
+When vector is multiplied by [[Matrix]] it maybe scaled/rotated
 Eigen values tell you how much vector is scaled in each dimension
 ### Effects
 - $\lambda=(-1;1)$ shrinks vector
@@ -14,11 +15,6 @@ Eigen values tell you how much vector is scaled in each dimension
 - if $\lambda=0$ matrix is non-invertible (singular)
 - if all $\lambda>0$ matrix is [[Positive Definite Matrix|positive definite]] or [[Positive Definite Matrix|positive semi-definite]]
 - if all $\lambda<1$ in discrete system, system converges
-### Property Formula $\det(M - \lambda I)=0$
-- $M$ [[Matrix]]
-- $I$ [[Identity Matrix]]
-- $\lambda$ [[Eigenvalue]]
-- $\det$ [[Determinant]]
 > [!example] Find Eigen Values using [[Quadratic Equation]]
 > `Based on above property formula` 
 > $M=\begin{bmatrix}1&1\\4&1\end{bmatrix}$
@@ -28,5 +24,11 @@ Eigen values tell you how much vector is scaled in each dimension
 > $1-2\lambda+\lambda^2-4=0$
 > $\lambda^2-2\lambda-3=0$
 > $\lambda=3,-1$
-- [[Transpose|transposed matrices]] have same eigenvalues as original
-- $\sum\lambda_i=\sum\text{diag}_i$
+### Properties
+- [[Transpose|Transposed]] matrices have same eigenvalues as original
+- $\sum\lambda_i=\sum A_{ii}$
+- $\det=\prod \lambda_i$
+### $A=V^{-1}\Lambda V$
+- $\Lambda$ diagonal matrix of eigenvalues
+- $V$ matrix with eigenvector of $A$ as columns 
+- $A^n=V^{-1}\Lambda^n V$ 

@@ -35,7 +35,7 @@ float sstep_septic(float e0, float e1, float x) {
 // Cosine smoothstep (C^∞ continuous)
 float sstep_cosine(float e0, float e1, float x) {
     x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
-    return 0.5 - 0.5 * cos(3.141592653589793 * x);
+    return 0.5 - 0.5 * cos(3.1415926 * x);
 }
 
 // Inverse smoothstep
@@ -44,4 +44,9 @@ float inv_sstep(float e0, float e1, float x) {
     return 2.0 * x - x * x * (3.0 - 2.0 * x);
 }
 
+float integ_sstep(float e0, float e1, float x) {
+    float b = max(0.0, x - e1);
+    x = clamp((x - e0) / (e1 - e0), 0.0, 1.0);
+    return (e1 - e0) * (1.0 - x * 0.5) * x * x * x + b;
+}
 ```

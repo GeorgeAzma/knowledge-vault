@@ -1,4 +1,4 @@
-### Resistance Force $\frac{\rho v^2C_DA}{2}$
+### Resistance Force $\dfrac{\rho v^2C_DA}{2}$
 - $\rho$ Fluid density
 - $v$ Fluid relative object speed
 - $C_D$ Drag coefficient

@@ -1,2 +1,2 @@
-[[Matrix]] that tells if node is connected to link
-![[Incidence Matrix.webp]]
+[[Matrix]] that tells node is connected to link
+![[Incidence Matrix.webp#rounded-]]

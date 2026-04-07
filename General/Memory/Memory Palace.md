@@ -1,4 +1,4 @@
-Place filled with things like [[Person Action Object (PAO)]]
+Place filled with things like [[Person Action Object]]
 that you can walk and remember things in order as you walk
 ### Constructing Memory Palace
 - Imagine a familiar location

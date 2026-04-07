@@ -1,6 +1,9 @@
 ### Formula $M^{-1}=\frac{adj(M)}{\det(M)}$
 - Calculate [[Adjugate]] `transposed cofactor matrix`
 - Divide result by [[Determinant]] `if det=0, then no inverse`
+##### Another Method
+- [[Augmented Matrix|Augment Matrix]] using identity $[A\mid I]$
+- Do [[Gaussian Elemination]] until you get $[I\mid A^{-1}]$
 ### Properties
 - $AA^{-1}=I$ [[Identity Matrix]]
 - $(A^T)^{-1}=(A^{-1})^T$

@@ -13,3 +13,5 @@ Measures randomness, information gained from random variable `surprise`
 > Unfair `80/20%` coin flip gives 
 > $-0.8\log_2(0.8)-0.2\log_2(0.2)=0.72$ bits of information
 ### [[Perplexity]]
+
+colah.github.io/posts/2015-09-Visual-Information

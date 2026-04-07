@@ -1,3 +1,7 @@
+---
+aliases:
+  - Binomial Expansion
+---
 ### Formula $(x+y)^n=\sum_{k=0}^n\binom{n}{k}x^{n-k}y^{k}$
 - $\binom{n}{k}$ is [[Binomial Coefficient]]
 - [[Term]] count is $n+1$
@@ -8,7 +12,8 @@ youtu.be/s19dWIHficY
 ### Simplifications
 - $\large\binom{n}{k}=\binom{n}{n-k}$
 - $\large2^n=\sum_{k=0}^n\binom{n}{k}$
-- $\large\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}$ `pascal's identity`
+- $\large\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}$ `pascal's identity` 
+      Imagine [[Binomial Coefficient]] pyramid, we are summing 2 above row items 
 - $\large\sum_{k=0}^n\binom{n}{k}^2=\binom{2n}{n}$
 - $\large\sum_{k=0}^r\binom{m}{k}\binom{n}{r-k}=\binom{m+n}{r}$`vandermonde's identity`
 - $\sum_{k=0}^n\binom{n}{k}x^{n-k}y^{k}=\sum_{k=0}^n\binom{n}{k}x^{n}y^{k-k}$

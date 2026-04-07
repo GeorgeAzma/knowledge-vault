@@ -44,7 +44,7 @@ float repetition(vec3 p, vec3 spacing) {
 	return sdf(p - spacing * round(p / spacing));
 }
 
-float correct_repetition(vec2 p, float s) { 
+float repeat_correct(vec2 p, float s) { 
 	vec2 id = round(p / s); 
 	vec2 o = sign(p - s * id);
 	float d = 1e20; 
@@ -59,7 +59,7 @@ float correct_repetition(vec2 p, float s) {
 }
 
 // Note: this doesn't have any issues unlike repetition
-float mirrored_repetition( vec2 p, float s ) { 
+float repeat_mirrored( vec2 p, float s ) { 
 	vec2 id = round(p / s); 
 	vec2 r = p - s * id; 
 	vec2 m = vec2(((int(id.x) & 1) == 0) ? r.x : -r.x, 
@@ -68,7 +68,7 @@ float mirrored_repetition( vec2 p, float s ) {
 }
 
 // Note: this doesn't have any issues unlike repetition
-float repetition_rotational(vec2 p, int n) { 
+float repeat_rotation(vec2 p, int n) { 
 	float sp = 6.283185 / float(n); 
 	float an = atan(p.y,p.x); 
 	float id = floor(an / sp); 
@@ -87,7 +87,7 @@ float round(float r) {
 
 // Revolves 2D primitives with distance from the origin 'o'
 float revolution(vec3 p, float o) {
-	vec2 q = vec2( length(p.xz) - o, p.y ); 
+	vec2 q = vec2(length(p.xz) - o, p.y); 
 	return sdf(q)
 }
 

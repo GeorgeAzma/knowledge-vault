@@ -1,11 +1,11 @@
 Similar to [[Dot Product]]
 Positive covariance means both data are high or low together
 Negative covariance means one is high if the other is low or vice-versa
-### Formula $cov(x,y)=\frac{(x-\micro_x)\cdot(y-\micro_y)}{N}$
+### Formula $\operatorname{cov}(x,y)=\dfrac{(x-\micro_x)\cdot(y-\micro_y)}{N}$
 - $\micro_x$ [[Mean]] of $x$
 - $\micro_y$ [[Mean]] of $y$
 - $N$ Array size
-> [!tip] $cov(a,b)=cov(b,a)$
+> [!tip] $\operatorname{cov}(a,b)=\operatorname{cov}(b,a)$
 
 > [!note] 
 > If you trying to approximate covariance by randomly sampling the data portion

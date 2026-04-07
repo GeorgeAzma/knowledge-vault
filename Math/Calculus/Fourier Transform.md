@@ -20,12 +20,16 @@ How much $\omega$ frequency is present in signal
 | Reversal                        | $f(-t)$                            | $F(-\omega)=F^*(\omega)$                           |
 | [[Integral\|Integration]]       | $\int_{-\infty}^{t}f(\tau)\ d\tau$ | $\frac{F(\omega)}{i\omega}+\pi F(0)\delta(\omega)$ |
 ### Tips
-- `time(narrow) = freq(wide)`
-- `periodic = sharp freq`
-- `time(amp_change) = wider freq`
-- `time(phase change) = wider freq`
-- `time(conv) = freq(mul)`
-- `time(rect) = freq(sinc)`
-- `time(gaussian) = freq(gaussian)`
+
+| Time                               | Frequency                      |
+| ---------------------------------- | ------------------------------ |
+| narrow                             | wide                           |
+| periodic                           | narrow                         |
+| amp increase                       | amp increase                   |
+| convolve                           | multiply                       |
+| $\text{box}$                       | $\text{sinc}$                  |
+| $\text{box}*\text{box}=\text{tri}$ | $\text{sinc}^2$                |
+| $\text{box}^{*3}=\text{b-spline}$  | $\text{sinc}^3$                |
+| $\text{box}^{*n}\approx e^{-nx^2}$ | $\text{sinc}^n$                |
 ### Variants
 - [[Short Time Fourier Transform (STFT)]]

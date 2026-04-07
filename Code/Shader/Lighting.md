@@ -4,7 +4,7 @@ float diff = max(0.0, dot(normal, to_light));
 ```
 ### Phong Specular
 ``` python
-vec3 reflected = reflect(-to_light, norm);
+vec3 reflected = reflect(-to_light, normal);
 float spec = pow(max(0.0, dot(reflected, to_eye)), shine); # shine = 32
 ```
 **Gouraud** model is same as phong but done in vertex shader

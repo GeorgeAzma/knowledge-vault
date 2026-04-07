@@ -3,7 +3,7 @@ aliases:
   - Internet
   - OSI
 ---
-youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&si=X5VeT-UImBEcImdW
+https://youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&si=X5VeT-UImBEcImdW
 ### Open Systems Interconnection (OSI) Model
 Divides networking into 7 layers
 1. **Physical** optical fiber cables, EM waves
@@ -14,10 +14,9 @@ Divides networking into 7 layers
 	- [[Port]]
 	- [[TCP]]
 	- [[UDP]]
-5. **Session**
-6. **Presentation**
-7. **Application**
-> [!note] Only Layers 1,2,3,4 are mandatory
+5. **Session** `optional`
+6. **Presentation** `optional`
+7. **Application** `optional`
 ### Sending Info Using OSI
 Create a packet
 ``` 
@@ -51,7 +50,7 @@ Create a packet
 - Destination device sends the packet to correct app using destination port
 - App removes the [[Port]] layer and processes the data
 ### Extra Info
-- **Socket** Hook into operating system's network drivers, you can use it to connect to endpoints, which are [[IP|IP]] + [[Port]]
+- **Socket** Hook into OS's network drivers, you can use it to connect to endpoints, which are [[IP|IP]] + [[Port]]
 - [[Domain Name System (DNS)]] Converts URL to [[IP|IP]]
 - **Internet Service Provider (ISP)** `e.g. Magti`
 - All host devices must have [[IP|IP Address]], [[Subnet Mask]] and [[Default Gateway]]

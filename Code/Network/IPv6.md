@@ -1,0 +1,2 @@
+- `20f3:edfc:234a:765e:adfc:cdf9:ff10:ac31`
+- `128 bits (8x16 bits)`

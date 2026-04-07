@@ -10,20 +10,20 @@ used in CSS `superellipse(k)`
 ![[Super Ellipse.webp|500]]
 ### SDF
 ``` c
-float superellipse_corner(vec2 p, float r, float n) {
-    p = abs(p);
-    float v = pow(pow(p.x, n) + pow(p.y, n), 1.0 / n);
-    return v - r;
+float superellipse(vec2 p, vec2 size, float r, float n) {
+    vec2 q = abs(p) - size + r;
+    if(all(greaterThan(q, vec2(0))))
+        return pow(dot(pow(q, vec2(n)), vec2(1)), 1.0 / n) - r;
+    return max(q.x, q.y) - r;
 }
 
-float rounded_rect(vec2 p, vec2 center, vec2 size, float corner_radius, float n) {
-    p -= center;
-    vec2 d = abs(p) - size * 0.5;
-    if (d.x > -corner_radius && d.y > -corner_radius) {
-        vec2 corner_center = sign(p) * (size * 0.5 - vec2(corner_radius));
-        return superellipse_corner(p - corner_center, corner_radius, n);
-    } else {
-        return min(max(d.x, d.y), 0.0) + length(max(d, 0.0));
+vec2 superellipse_grad(vec2 p, vec2 size, float r, float n) {
+    vec2 q = abs(p) - size + r;
+    if(all(greaterThan(q, vec2(0)))) {
+        vec2 pw = pow(q, vec2(n));
+        return pw / (q + 0.005 * sign(q)) * pow(dot(pw, vec2(1)), 1.0 / n - 1.0) * sign(p);
     }
+    float g = step(q.y, q.x);
+    return vec2(g, 1.0 - g) * sign(p);
 }
 ```

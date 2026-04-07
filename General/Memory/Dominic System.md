@@ -1,5 +1,5 @@
 Converts numbers to letters (usually chunk of 2 numbers)
-Which can be used to generate [[Person Action Object (PAO)]]
+Which can be used to generate [[Person Action Object]]
 ### Mapping
 - 0 = O
 - 1 = A

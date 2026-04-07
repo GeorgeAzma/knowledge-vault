@@ -3,8 +3,8 @@
 - $I$ [[Moment of Inertia]] of object around pivot
 - $M$ mass
 - $h$ distance from center of mass to pivot
-> [!example] Uniform rod [[Pendulum]] $M=1,l=1,I=\large\frac{ml^2}{3}$
-> $\large d=\huge\frac{1^2}{3*0.5}\large=\huge\frac{2}{3}$
+> [!example] Uniform rod [[Pendulum]] $M=1,l=1,I=\dfrac{ml^2}{3}$
+> $d=\dfrac{1^2}{3*0.5}=\dfrac{2}{3}$
 > Strike the rod at $2/3$ length from pivot to feel least jerk
 
 If you hold a heavy metal rod with 2 fingers

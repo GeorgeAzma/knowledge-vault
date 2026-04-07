@@ -1,6 +1,5 @@
 ---
 aliases:
-  - Permutation
   - Power Set
   - Minimal
   - Maximal
@@ -42,6 +41,3 @@ aliases:
 - $C\textbackslash(A\cup B)=(C\textbackslash A)\cap(C\textbackslash B)$ `de morgan's law`
   `c && !(a || b) = c && ((c && !a) && (c && !b))`
 - $C\textbackslash(A\cap B)=(C\textbackslash A)\cup(C\textbackslash B)$ `de morgan's law`
-### Permutation $\huge\frac{n!}{(n-r)!}$ 
-How many ways to award 1st and 2nd place to 6 contestants
-where $r=2$ and $n=6$

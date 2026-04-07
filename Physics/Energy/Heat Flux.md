@@ -1,4 +1,4 @@
-### Formula $q=-k\nabla T=-k\frac{T_2-T_1}{L}$
+### Formula $q=-k\nabla T=-k\dfrac{T_2-T_1}{L}$
 - $k$ [[Thermal Conductivity]]
 - $T_1,T_2$ temperatures
 - $L$ distance between materials

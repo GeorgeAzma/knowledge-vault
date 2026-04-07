@@ -5,3 +5,8 @@ ign = frac(52.9829189 * frac(dot(uv, vec2(0.06711056, 0.00583715))))
 ### Awesome Property
 individual pixel values when scrolling the pattern linearly each frame is also low-discrepency
 so this pattern is **low-discrepency over space and time** `wow`
+### Higher Precision [[Golden Ratio]] Noise
+``` c
+// golden ratio integer IGN
+gri_ign = float(p.x * 3242174889u + p.y * 2447445413u) * exp2(-32.0);   
+```

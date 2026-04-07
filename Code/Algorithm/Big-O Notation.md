@@ -8,17 +8,17 @@ $$
 > find $c$ where $f(n)\leq c\cdot g(n)$
 > $3n^2$ dominates, so $c=4$ because $3n^2+5n+2\leq4n^2$
 > this is true when $n\geq n_0=2$
-### Master Theorem $T(n)=aT(\frac{n}{b})+f(n)$
+### Master Theorem $T(n)=aT(\dfrac{n}{b})+f(n)$
 - $a$ subproblems
 - $b$ subproblem size
 - $f(n)$ non-recursive part
 - $\huge c_{crit}=\large\log_ba$
 
-| $f(n)$ relation to $\large c_{crit}$ | Constraint          | $T(n)=O(?)$                         |            |
-| ------------------------------------ | ------------------- | ----------------------------------- | ---------- |
-| $\large f(n)=O(n^c)$                 | $\large c<c_{crit}$ | $\large O(n^{c_{crit}})$            | leaf-heavy |
-| $\large f(n)=O(n^{c_{crit}}\log^kn)$ | $\large k\geq0$     | $\large O(n^{c_{crit}}\log^{k+1}n)$ | balanced   |
-| $\large f(n)=\Omega(n^c)$            | $\large c>c_{crit}$ | $\large O(f(n))$                    | root-heavy |
+| $f(n)$ relation to $\large c_{crit}$ | Constraint   | $T(n)=O(?)$                  |            |
+| ------------------------------------ | ------------ | ---------------------------- | ---------- |
+| $f(n)=O(n^c)$                        | $c<c_{crit}$ | $O(n^{c_{crit}})$            | leaf-heavy |
+| $f(n)=O(n^{c_{crit}}\log^kn)$        | $k\geq0$     | $O(n^{c_{crit}}\log^{k+1}n)$ | balanced   |
+| $f(n)=\Omega(n^c)$                   | $c>c_{crit}$ | $O(f(n))$                    | root-heavy |
 3rd case assumes regularity condition holds $af(\frac{n}{b})\leq kf(n)$ for $k<1$ and large $n$
 > [!example] $a=2,b=4,f(n)=0$
 >$f_1(1)=1$ and $f_1(n)=2f_1(n/4)$

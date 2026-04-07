@@ -1,3 +1,8 @@
+---
+aliases:
+  - Hue Shift
+---
+
 ``` c
 // range 0-1, works for sRGB/RGB
 vec3 rgb2hsv(vec3 c) {

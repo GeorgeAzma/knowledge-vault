@@ -1,1 +1,4 @@
-[[Row-Echelon Form]] with [[Principal Diagonal]] filled with $1$
+[[Row-Echelon Form]] with 
+- [[Principal Diagonal]] = $1$ 
+- [[Triangular Matrix|Upper/Lower Triangular]] = $0$
+

@@ -6,7 +6,7 @@
 - $\vec{a}\wedge\vec{a}=0$
 - $\vec{a}^{-1}=\huge\frac{\vec{a}}{|a|^2}$
 - $\vec{b}\vec{a}=\vec{a}\cdot\vec{b}-\vec{a}\wedge\vec{b}$
-- $\vec{a}\cdot\vec{b}=\huge\frac{\vec{a}\vec{b}+\vec{b}\vec{a}}{2}$
+- $\vec{a}\cdot\vec{b}=\dfrac{\vec{a}\vec{b}+\vec{b}\vec{a}}{2}$
 - $\vec{a}\wedge\vec{b}=\huge\frac{\vec{a}\vec{b}-\vec{b}\vec{a}}{2}$
 ##### For [[Standard Basis Vector]]
 - $\hat{a}^2=1$

@@ -9,7 +9,7 @@ depending on if it is traveling towards/away from you
 - $L_v$ listener velocity
 - $S_v$ source velocity
 **In 2D we need to account for velocity alignment**
-##### $D_{f_{2D}}=F\huge\frac{c-v_{ls}}{c-v_{ss}}$
+##### $D_{f_{2D}}=F\dfrac{c-v_{ls}}{c-v_{ss}}$
 - $S_l=\text{Source to listener vector (not normalized)}$
-- $v_{ls}=\min({\large\frac{S_l \cdot L_v}{||S_l||}},c)$
+- $v_{ls}=\min({\dfrac{S_l \cdot L_v}{||S_l||}},c)$
 - $v_{ss}=\min({\large\frac{S_l \cdot S_v}{||S_l||}},c)$

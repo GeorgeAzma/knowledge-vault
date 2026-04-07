@@ -1,4 +1,4 @@
-**Theory** musictheory.net/lessons
+**Theory** https://musictheory.net/lessons
 **Write Notes** www.soundslice.com
 ### Tips
 - freqs should't mix, so reduce `bass` component from `main` and `secondary

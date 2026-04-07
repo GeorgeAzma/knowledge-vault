@@ -16,3 +16,5 @@
 - [[Crater Noise]]
 - [[Scratch Noise]]
 - [[Curl Noise]]
+- [[Stone Noise]]
+- [[Erosion Noise]]

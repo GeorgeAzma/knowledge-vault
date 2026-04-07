@@ -2,7 +2,7 @@
 - advances.realtimerendering.com/s2015/The%20Real-time%20Volumetric%20Cloudscapes%20of%20Horizon%20-%20Zero%20Dawn%20-%20ARTR.pdf
 - media.contentapi.ea.com/content/dam/eacom/frostbite/files/s2016-pbs-frostbite-sky-clouds-new.pdf
 - Trace subdivided ray through cloud
-- For each point trace it towards light 
+- For each point trace it towards light
 ``` c
 // describes probability of how light scatters along the ray
 // g: asymmetry factor (1 = forward, -1 = backward, 0 = isotropic scattering), good value 0.85

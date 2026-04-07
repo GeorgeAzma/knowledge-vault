@@ -29,6 +29,7 @@ index = range(1, infinity)
 # 1D
 phi = solve(x^2 == x + 1) = 1.6180339887
 fract(phi ** 2 * index) 
+# note: whole part cancels out 1.618 => 0.618
 
 # 2D
 phi2 = solve(x^3 == x + 1) = 1.32471795724

@@ -1,4 +1,4 @@
-$m\geq1$, higher the multiplicity, slower the [[Newton's Method|root finding]] algorithms get near root
+$m\geq1$, higher the multiplicity, slower the [[Root Finding]] algorithms get near root
 - measures how flat function is near root
 ### Definition
 $r\in\mathbb{R}\text{ or }\mathbb{C}$ is a root of multiplicity $m\geq1$ of $f(x)$ **if**

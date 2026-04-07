@@ -1,5 +1,8 @@
 - **Fract Dither** `fract(dot(gl_FragCoord.xy, vec2(3.5557133, 0.30926924)))`
-- **Bayer**
+- [[Interleaved Gradient Noise]]
+- [[Blue Noise]]
+- [[Random]] **Noise**
+- **Floyd-Steinberg** `iterative`
 ``` c
 float bayer2(vec2 uv) {
     int m[4] = int[](0, 2, 3, 1);
@@ -14,6 +17,3 @@ float bayer4(vec2 p, int lvl) {
     return float((x + y * 4) * lvl % 16) / 16.0;
 }
 ```
-- [[Blue Noise]]
-- [[Random]] **Noise**
-- **Floyd-Steinberg** `iterative`

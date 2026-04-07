@@ -3,3 +3,4 @@ Mirrored along [[Principal Diagonal]]
 Normalizing [[Eigenvector]][[s]] gets you [[Orthogonal Matrix]]
 ### Formula $A^T=A$ 
 `transposing does nothing because it's symmetric`
+- $AB=BA$

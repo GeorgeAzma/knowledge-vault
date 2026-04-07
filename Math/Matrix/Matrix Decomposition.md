@@ -1,4 +1,4 @@
-method for converting [[Matrix]] into [[Row-Echelon Form]]
+Method for converting [[Matrix]] into [[Row-Echelon Form]]
 > [!example] If we only have 1 unknown term we can find it
 > In the [[Coefficient Matrix]] where lower triangle is all $0$
 > there is 1 unknown term at the last row

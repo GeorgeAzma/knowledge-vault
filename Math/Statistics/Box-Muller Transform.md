@@ -1,3 +1,8 @@
+---
+aliases:
+  - Random Gaussian
+---
+
 Generates standard [[Normal Distribution|normally distributed]] random numbers 
 from 2 uniformly $[0,1]$ distributed random numbers
 ### Formula $Z_0=R\cos(\Theta)=\sqrt{-2\ln U_1}\cos(2\pi U_2)$

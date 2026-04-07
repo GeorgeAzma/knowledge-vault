@@ -13,6 +13,6 @@
 > - $\infty$ all exponent bits 1, all mantissa bits 0 `sign 0 or 1`
 > - $NaN$ all exponent bits 1 `and not infinity`
 
-> [!example] $0.5=(-1)^0(1+0)2^{126-127}=\frac{1}{2}=0\ 0111 1110\ 000 0000 0000 0000 0000 0000$
+> [!example] $0.5=(-1)^0(1+0)2^{126-127}=\dfrac{1}{2}=0\ 0111 1110\ 000 0000 0000 0000 0000 0000$
 
 > [!note] Values between -1 to 1 start with `S01` `S for sign`

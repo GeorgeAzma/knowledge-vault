@@ -1,11 +1,11 @@
 ---
 aliases: ["Binomial Distribution"]
 ---
-### Formula $F(n,r,p)=\binom{n}{r}p^r(1-p)^{n-r}$
+### Formula $F(n,r,p)=\dbinom{n}{r}p^r(1-p)^{n-r}$
 - $n$ flips `bernoulli trials (yes/no experiments)`
 - $r$ heads `successes (yes)`
 - $p$ chance of flipping a head `chance of success`
-- $\large\binom{n}{r}=\frac{n!}{(n-r)!r!}$ [[Binomial Coefficient]] 
+- $\dbinom{n}{r}=\dfrac{n!}{(n-r)!r!}$ [[Binomial Coefficient]] 
   `number of ways to choose r successes out of n trials`
 - $F(n,r,p)$ probability of flipping $r$ heads
 chance of flipping heads $r$ times  and tails $n-r$ times (very low)

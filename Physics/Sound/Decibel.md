@@ -1,15 +1,28 @@
-### Formula $L=10\log_{10}{\frac{I}{I_0}}$ dB (SIL)
-- $I_0$ Reference intensity `in watts per meter^2`
-> [!note] There are different types of dB
-> - Sound pressure level (SPL) $20\log_{10}{\frac{p}{p_0}}$ `p is pressure`
-> - Sound intensity level (SIL) $10\log_{10}{\frac{I}{I_0}}$
-> - [[Voltage]] level $10\log_{10}{\frac{V}{V_0}}$
-> - Power level $10\log_{10}{\frac{P}{P_0}}$ `P is power`
-> - Gain $10\log_{10}{\frac{P_{out}}{P_{in}}}$ `P is power`
-> - Attenuation $10\log_{10}{\frac{P_{in}}{P_{out}}}$ `P is power, equals negative Gain dB`
-
-> [!note] Usually set to lowest human ear can hear (at $1000hz$) $10^{-12}W/m^2$
-> > [!tip] Equivalently $10\log_{10}(I)-120$
+``` rust
+// amp = sound pressure level (SPL)
+// amp_ref = can be lowest pressure difference human ear can hear at 1000 hz = ~2e-5
+// note: (amp / amp_ref).log10() = amp.log10() - amp_ref
+fn amp_to_db(amp: f32, amp_ref: f32):
+    20.0 * (amp / amp_ref).log10()
+    
+fn db_to_amp(db: f32):
+    10f32.pow(db / 20.0)
+    
+// amp = sound intensity level (SIL, W/m^2)
+// amp_ref = lowest intensity difference human ear can hear at 1000 hz = 10e-12
+fn amp_to_db(amp: f32):
+    20.0 * amp.max(1e-20).log10()
+    
+fn db_to_amp(db: f32):
+    10f32.pow(db / 20.0)
+```
+### dB Types
+- Sound pressure level (SPL) $20\log_{10}{\dfrac{p}{p_0}}$ `p is pressure`
+- Sound intensity level (SIL) $10\log_{10}{\dfrac{I}{I_0}}$
+- [[Voltage]] level $10\log_{10}{\dfrac{V}{V_0}}$
+- Power level $10\log_{10}{\dfrac{P}{P_0}}$ `P is power`
+- Gain $10\log_{10}{\dfrac{P_{out}}{P_{in}}}$ `P is power`
+- Attenuation $10\log_{10}{\dfrac{P_{in}}{P_{out}}}$ `P is power, equals negative Gain dB`
 ### Decibel Chart
 | dB | $W/m^2$ | Example |
 | ---- | ---- | ---- |

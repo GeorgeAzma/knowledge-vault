@@ -1,56 +1,56 @@
 learnopengl.com/PBR/Theory
 learnopengl.com/PBR/Lighting
 youtu.be/KkOkx0FiHDA
-- Average amount of light reflected from microfacets to camera
-  For that we need 3 functions
-	- **Normal Distribution Function** `NDF, D in DFG`
-	  Approximates percentage of microfacets facing halfway vector
-	  Trowbridge-Reitz GGX formula $NDF_{GGXTR}(n,h,\alpha)=\large\frac{\alpha^2}{\pi((n\cdot h)(\alpha^2-1)+1)^2}$
-	```c
-	  float distribution_ggx(float ndh, float roughness) { 
-		  ndh = max(ndh, 0.0); 
-		  float denom = ndh * ndh * (roughness * roughness - 1.0) + 1.0; 
-		  return roughness * roughness / (denom * denom * PI); 
-	  }
-	```
-	- **Geometry Function** `G in DFG`
-	  Some rough microfacets shadow others and some block path towards the camera
-	  this function approximates light percentage towards camera that is not blocked
-	  Schlick-GGX formula $G_{SchlickGGX}(n,v,k)=\large\frac{n\cdot v}{(n\cdot v)(1-k)+k}$
-	  - $k$ roughness mapping $k_{direct}=\frac{(\alpha+1)^2}{8}$, $k_{IBL}=\frac{\alpha^2}{2}$ 
-	  ``` c
-		float geometry_schlick_ggx(float ndv, float k) {
-			return ndv / (ndv * (1.0 - k) + k); 
-		}
-        // intuition
-        // ndv/(ndv*(1-0)+0) = ndv/ndv = 1 (k=0, no roughness, no shadowing)
-        // ndv/(ndv*(1-1)+1) = ndv (k=1, rough)
-		```
-	- Now combine geometry shadowing and geometry obstruction
-	  $G(n,v,l,k)=G_{SchlickGGX}(n,v,k)G_{SchlickGGX}(n,l,k)$
-	  ``` c
-	    float geometry_smith(float ndv, float ndl, float k) {
-			float ggx1 = geometry_schlick_ggx(max(ndv, 0.0), k); 
-			float ggx2 = geometry_schlick_ggx(max(ndl, 0.0), k);
-			return ggx1 * ggx2; 
-	    }
-		```
-	- **Fresnel Equation** `F in DFG`
-	  Percentage of [[Reflection|reflected]] vs [[Refraction|refracted]] [[Light]] at different angles
-	  using fresnel schlick approximation, see [[Reflection]] for more info
-	 ``` c
-      // for dielectric (note: RGB are same for dielectric)
-	  vec3 fresnel_schlick(vec3 f0, float hdv) { 
-	      return f0 + (1.0 - f0) * pow(1.0 - hdv, 5.0); 
-      }
-	  ```
-	- Calculate `f0`, which is surface [[Reflection#Reflectance and Transmittance|reflectance]] when looking directly at it
-	  typically $0.04$ for non-metal dielectrics
-	``` c
-        // note: this is approx, metallic fresnel term is complex
-		vec3 f0 = mix(vec3(0.04), albedo, metallic);
-		vec3 f = fresnel_schlick(dot(halfway, view_dir), f0);
-	```
+Average amount of light reflected from microfacets to camera
+For that we need 3 functions
+### Normal Distribution Function `NDF, D in DFG`
+  Approximates percentage of microfacets facing halfway vector `normalize(L + V)`
+  Trowbridge-Reitz GGX formula $NDF_{GGXTR}(n,h,\alpha)=\large\frac{\alpha^2}{\pi((n\cdot h)(\alpha^2-1)+1)^2}$
+```c
+  float distribution_ggx(float ndh, float roughness) { 
+      ndh = max(ndh, 0.0); 
+      float denom = ndh * ndh * (roughness * roughness - 1.0) + 1.0; 
+      return roughness * roughness / (denom * denom * PI); 
+  }
+```
+### Geometry Function `G in DFG`
+  Some rough microfacets shadow others and some block path towards the camera
+  this function approximates light percentage towards camera that is not blocked
+  Schlick-GGX formula $G_{SchlickGGX}(n,v,k)=\large\frac{n\cdot v}{(n\cdot v)(1-k)+k}$
+  - $k$ roughness mapping $k_{direct}=\frac{(\alpha+1)^2}{8}$, $k_{IBL}=\frac{\alpha^2}{2}$ 
+``` c
+float geometry_schlick_ggx(float ndv, float k) {
+    return ndv / (ndv * (1.0 - k) + k); 
+}
+// intuition
+// ndv / (ndv * (1 - 0) + 0) = ndv / ndv = 1 (k = 0, no roughness, no shadowing)
+// ndv / (ndv * (1 - 1) + 1) = ndv (k = 1, rough)
+```
+- Now combine geometry shadowing and geometry obstruction
+  $G(n,v,l,k)=G_{SchlickGGX}(n,v,k)G_{SchlickGGX}(n,l,k)$
+``` c
+  float geometry_smith(float ndv, float ndl, float k) {
+    float ggx1 = geometry_schlick_ggx(max(ndv, 0.0), k); 
+    float ggx2 = geometry_schlick_ggx(max(ndl, 0.0), k);
+    return ggx1 * ggx2; 
+  }
+```
+- **Fresnel Equation** `F in DFG`
+  Percentage of [[Reflection|reflected]] vs [[Refraction|refracted]] [[Light]] at different angles
+  using fresnel schlick approximation, see [[Reflection]] for more info
+``` c
+// for dielectric (note: RGB are same for dielectric)
+vec3 fresnel_schlick(vec3 f0, float hdv) { 
+    return f0 + (1.0 - f0) * pow(1.0 - hdv, 5.0); 
+}
+```
+- Calculate `f0`, which is surface [[Reflection#Reflectance and Transmittance|reflectance]] when looking directly at it
+  typically $0.04$ for non-metal dielectrics
+``` c
+    // note: this is approx, metallic fresnel term is complex
+    vec3 f0 = mix(vec3(0.04), albedo, metallic);
+    vec3 f = fresnel_schlick(dot(halfway, view_dir), f0);
+```
 - Calculate lighting $f_r=k_df_\text{lambert}+k_sf_\text{cook-torrance}$
 - $k_d,k_s$ [[Refraction|Refractance]]/[[Reflection|Reflectance]] $k_d=1-k_s$
 - Diffuse lighting $f_{lambert}=\frac{c}\pi$ `c is albedo`

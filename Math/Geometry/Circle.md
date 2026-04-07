@@ -6,16 +6,16 @@
 ![[Circle Parts.webp|400]]
 ### Formulas
 ![[Circle Formula.webp]]![[Circle Formulas 2.webp|200]]
-- Segment area $A=r^2\large\frac{\theta-\sin\theta}{2}$
+- Segment area $A=r^2\dfrac{\theta-\sin\theta}{2}$
 - Segment length $s=r\theta$
-- Segment height $d=2r(1-\cos\large\frac\theta2)$
-- Chord length $c=2r\sin\large\frac\theta2$
-- Chord distance $d=2r\cos\large\frac\theta2$
-- Triangle area $A=\large\frac{r^2\sin\theta}{2}$
+- Segment height $h=2r(1-\cos\dfrac\theta2)$
+- Chord length $c=2r\sin\dfrac{\theta}{2}$
+- Chord distance $d=2r\cos\dfrac{\theta}{2}$
+- Triangle area $A=\dfrac{r^2\sin\theta}{2}$
 ![[Circle Segment.webp]]
 - Distance from the center of 2 perpendicular chords that cross each other
 	- divide length of a chord by 2
 	- subtract smaller part of the chord from the result
-- Average efficiency for packing circles in a square: $\frac{​\pi}{2\sqrt{3}}=0.906899$ or $~90.69\%$
+- Average efficiency for packing circles in a square: $\dfrac{​\pi}{2\sqrt{3}}=0.906899$ or $~90.69\%$
 - Best arrangment for filling space is Hexagonal Close Packing (HCP)
 - Opposite angles of rectangle in circle add up to $180\degree$

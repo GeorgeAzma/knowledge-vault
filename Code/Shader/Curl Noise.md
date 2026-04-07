@@ -5,7 +5,7 @@ vec2 hash22(vec2 p) {
     return fract((p3.xx + p3.yz) * p3.zy);
 }
 
-float simplex(vec2 p) {
+float noise(vec2 p) {
 	vec2 i = floor(p + (p.x + p.y) * 0.366025);
     vec2 a = p - i + (i.x + i.y) * 0.211324;
     float m = step(a.y, a.x); 
@@ -22,10 +22,10 @@ float simplex(vec2 p) {
 
 vec2 curl(vec2 p) {
     vec2 e = vec2(0.001, 0);
-    float x0 = simplex(p + e.xy);
-    float x1 = simplex(p - e.xy);
-    float y0 = simplex(p + e.yx);
-    float y1 = simplex(p - e.yx);
+    float x0 = noise(p + e.xy);
+    float x1 = noise(p - e.xy);
+    float y0 = noise(p + e.yx);
+    float y1 = noise(p - e.yx);
     return vec2(y0 - y1, x1 - x0) / e.x * 0.08 + 0.5;
 }
 

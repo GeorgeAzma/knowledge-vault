@@ -42,7 +42,7 @@ class DDPM:
 - $q(x_t\mid x_0)$ calculates noisy image given original image
 - $\bar\alpha_t$ preserved image after $t$ timesteps
 - $\epsilon$ noise
-### Reverse Noise $p(x_{t-1}\mid x_t)=\frac{1}{\sqrt{\alpha_t}}(x_t-\frac{1-\alpha_t}{\sqrt{1-\bar\alpha_t}}\epsilon_\theta(x_t,t))+\sigma_tz$
+### Reverse Noise $p(x_{t-1}\mid x_t)=\dfrac{1}{\sqrt{\alpha_t}}(x_t-\dfrac{1-\alpha_t}{\sqrt{1-\bar\alpha_t}}\epsilon_\theta(x_t,t))+\sigma_tz$
 - $p(x_{t-1}\mid x_t)$ calculates one step denoised image given noisy image
 - $\alpha_t=1-\beta_t$ preserved image amount at timestep $t$
 - $\bar\alpha_t$ original image amount after $t$ timesteps
@@ -84,12 +84,12 @@ youtu.be/dSC9XOPJXK8?t=797
 ##### 3. Reverse Noise
 - $q(x_{t-1}\mid x_t)=\int_{x_0} q(x_{t-1},x_0\mid x_t)dx_0$ [[Joint, Marginal, Conditional Distribution|Marginalized]]
 - solving above integral is impossible
-- $q(x_{t-1}\mid x_t,x_0)=q(x_t\mid x_{t-1},x_0)\large\frac{q(x_{t-1}\mid x_0)}{q(x_t\mid x_0)}$ rewrite using [[Bayes' Theorem|Base Rule]]
+- $q(x_{t-1}\mid x_t,x_0)=q(x_t\mid x_{t-1},x_0)\dfrac{q(x_{t-1}\mid x_0)}{q(x_t\mid x_0)}$ rewrite using [[Bayes' Theorem|Base Rule]]
 - $q(x_t\mid x_0)=\mathcal{N}(x_0\sqrt{\bar{\alpha}_t},(1-\bar{\alpha}_t)I)$ using formula from $2.$
 - $q(x_{t-1}\mid x_0)=\mathcal{N}(x_0\sqrt{\bar{\alpha}_{t-1}},(1-\bar{\alpha}_{t-1})I)$ same here
 - $q(x_t\mid x_{t-1})=\mathcal{N}(x_{t-1}\sqrt{\alpha_t},\beta_t)$ using formula from $1.$
-- $q(x_t\mid x_{t-1})\large\frac{q(x_{t-1}\mid x_0)}{q(x_{t}\mid x_0)}={\normalsize\mathcal{N}(x_{t-1}\sqrt{\alpha_t},\beta_t)}\frac{\mathcal{N}(x_0\sqrt{\bar{\alpha}_{t-1}},(1-\bar{\alpha}_{t-1})I)}{\mathcal{N}(x_0\sqrt{\bar{\alpha}_{t}},(1-\bar{\alpha}_{t})I)}$
+- $q(x_t\mid x_{t-1})\dfrac{q(x_{t-1}\mid x_0)}{q(x_{t}\mid x_0)}=\mathcal{N}(x_{t-1}\sqrt{\alpha_t},\beta_t)\dfrac{\mathcal{N}(x_0\sqrt{\bar{\alpha}_{t-1}},(1-\bar{\alpha}_{t-1})I)}{\mathcal{N}(x_0\sqrt{\bar{\alpha}_{t}},(1-\bar{\alpha}_{t})I)}$
 - convert to [[Normal Distribution]] and simplify shit-ton
-- $q(x_{t-1}\mid x_t,x_0)=\mathcal{N}(\mu_t,\tilde{\beta}_t)=\mathcal{N}({\large\frac{1}{\sqrt{\alpha_t}}}[x_t-{\large\frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}}\epsilon],\ {\large\frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}}\beta_t)$
+- $q(x_{t-1}\mid x_t,x_0)=\mathcal{N}(\mu_t,\tilde{\beta}_t)=\mathcal{N}(\dfrac{1}{\sqrt{\alpha_t}}[x_t-\dfrac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon],\ \dfrac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\beta_t)$
 - $\epsilon=\epsilon_\theta(x_t,t)$ where $\epsilon_\theta$ is noise predictor model with parameters $\theta$
-- $x_{t-1}=\frac{1}{\sqrt{a_t}}(x_t-\frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(x_t,t))+\sigma_tz$ where $\sigma_t=\sqrt{\frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\beta_t}$ and $z\sim\mathcal{N}(0,1)$
+- $x_{t-1}=\dfrac{1}{\sqrt{a_t}}(x_t-\dfrac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(x_t,t))+\sigma_tz$ where $\sigma_t=\sqrt{\dfrac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t}\beta_t}$ and $z\sim\mathcal{N}(0,1)$

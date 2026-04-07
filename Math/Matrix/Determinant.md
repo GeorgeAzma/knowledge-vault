@@ -17,13 +17,12 @@ Measures volume scaling after linear transformation with a matrix
 - $\det(A^{-1})=1/\det(A)$
 - $\det(0,y,z)=\det(x,0,z)=0$
 - $\det(x,x,y)=\det(y,y,x)=0$
-- $\det(B)=\lambda\det(A)$ If $B=\lambda A$
 - $\det(\lambda A)=\lambda^n\det(A)$ `for n x n matrix`
 - $\det(A)\det(B)=\det(AB)$
 - $\det\begin{pmatrix}A&0\\0&B\end{pmatrix}=\det(A)\det(B)$
 - $\det(x,y,z)=\det(x+y,y,z)=\det(x,y,z+2x)$
-- $A_x\cdot A^*_x=\det(A)$ `dot product of any row/col and it's cofactor equals determinant`
-- $A_x\cdot A^*_y=0$ `dot product of any row/col and other row/col's cofactor equals determinant`
+- $A_x\cdot A^*_x=\det(A)$ `A* = Cofactor`
+- $A_x\cdot A^*_y=0$ 
 - determinant is length of [[Eigenvalue]][[s]] $\det(A)=\sqrt{\lambda_1^2+\lambda_2^2+\dots+\lambda_n^2}$
 ### Calculate Determinant
 ![[Determinant.webp|150]]![[Wedge vs Determinant.webp]]

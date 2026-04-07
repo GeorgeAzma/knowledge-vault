@@ -9,5 +9,5 @@ aliases:
 - $r$ radius/distance from the pivot point
 - Linear momentum $p=mv$
 	- $v$ Angular velocity `perpendicular to spinning beam`
-- Moment of inertia $I=mr=\large\frac{L}v$
+- Moment of inertia $I=mr=\dfrac{L}{v}$
 - Torque $\tau=r\times F$

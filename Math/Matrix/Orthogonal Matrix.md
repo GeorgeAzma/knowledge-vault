@@ -4,3 +4,4 @@ multiplying vector with orthogonal matrix rotates it, so $\det(Q)=\pm1$
 ### Formula $QQ^T=Q^TQ=Q^{-1}Q=I$
 - [[Transpose|Transpose]] of an orthogonal matrix equals its [[Inverse|Inverse]]
 - [[Transpose|Transposing/Inversing]] aligns orthogonal matrix to [[Standard Basis Vector|Standard Basis]]
+- $(Qx,Qy)=(x,y)$ `inner product`

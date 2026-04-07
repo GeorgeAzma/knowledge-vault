@@ -1,10 +1,9 @@
-### Formula $A\vec x=\lambda\vec x$
+### Formula $A\vec x=\lambda\vec x\implies(A-\lambda I)\vec x=0$
 - $A$ [[Matrix]]
+- $I$ [[Identity Matrix]]
 - $\lambda$ [[Eigenvalue]]
 - $\vec x$ [[Eigenvector]]
-When vector is multiplied by [[Matrix]] it maybe scaled/rotated
-When [[Eigenvector]][[s]] are multiplied by matrix they only scale
-### Property Formula
+When [[Eigenvector]][[s]] are multiplied by matrix they only scale `no rotation`
 > [!example] Find Eigen Vectors using [[Eigenvalue]][[s]]
 > $A=\begin{bmatrix}1&1\\4&1\end{bmatrix}$
 > $\lambda=3,-1$ `Eigen Values`

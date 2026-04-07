@@ -1,8 +1,7 @@
 [[Power Series]] with $a_n=\large\frac{f^{(n)}(a)}{n!}$
 ### Formula $f(x)=\sum_{n=0}^{\infty}{\frac{f^{(n)}(a)}{n!}(x-a)^n}$
 - $f^{(n)}$ $n$th derivative of $f$ at $a$
-- $a$ any real/complex number
-- **Note** it gives better approximation close to `a`
+- $a$ any real/complex number, better approximation close to $a$
 > [!example] $\ln(x)$
 > $\ln'(x)={\large\frac{1}{x}}=x^{-1}$
 > $\ln''(x)=(x^{-1})'=-x^{-2}$

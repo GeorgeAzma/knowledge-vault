@@ -1,5 +1,5 @@
+### Video
 ``` sh
-### Video ###
 -ss 30 -ss 00:01:30 # start pos
 -t 30 -t 00:01:30 # duration
 -b:v 2M # bit-rate
@@ -18,11 +18,13 @@
 -c copy # avoid re-encoding when not needed (e.g. trim)
 -an # remove audio
 -map a -q:a 0 # extract audio
-
-### Image ###
+```
+### Image
+``` sh
 -filter "crop=iw-14:ih-54:7:32" # crop (top left is origin)
-
-### Audio ###
+```
+### Audio
+``` sh
 -b:a 192k # bit-rate
 -ar 44100 # sample rate
 -ac 1 # mono
@@ -30,8 +32,9 @@
 -af "volume=2dB"
 -q:a # quality, 0 (best) to 9 (worst), (3 decent)
 -af areverse
- 
-### General ###
+```
+### General
+``` sh
 -y # overwrite files
 ```
 ### FFPlay

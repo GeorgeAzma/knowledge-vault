@@ -2,7 +2,7 @@ Similar to 2D vectors
 ### Simple Operations
 - $i=\sqrt{-1},\quad i^2=-1,\quad i^3=-i,\quad i^4=1,\quad i^5=i,\quad i^6=-1\dots$
 - $z=x+yi,\quad \bar{z}=x-yi$
-- $x=\large\frac{z+\bar{z}}{2},\quad y=\frac{z-\bar{z}}{2}$
+- $x=\dfrac{z+\bar{z}}{2},\quad y=\dfrac{z-\bar{z}}{2}$
 - $z_1\pm z_2=x_1\pm x_2+i(y_1\pm y_2)$
 - $z_1z_2=(x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1)$
 - $z^2=(x^2-y^2)+i(2xy)$
@@ -16,13 +16,13 @@ Similar to 2D vectors
 - $\overline{e^{i\theta}}=e^{-i\theta}$
 - $\ln(re^{i\theta})=\ln r+i\theta$
 - $z_1z_2=r_1e^{i\theta_1}r_2e^{i\theta_2}=r_1r_2e^{i(\theta_1+\theta_2)}$
-- $\large\frac{z_1}{z_2}=\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}$
+- $\dfrac{z_1}{z_2}=\dfrac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}=\dfrac{r_1}{r_2}e^{i(\theta_1-\theta_2)}$
 ### [[Trigonometry|Trigonometric]] Formulas
 
 - $z=|z|(\cos\theta+i\sin\theta)$
 - $z^n=|z|^n(\cos(n\theta)+i\sin(n\theta))$
 - $z_1z_2=|z_1||z_2|(\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2))$
-- ${\large\frac{z_1}{z_2}}={\large\frac{|z_1|}{|z_2|}}(\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2))$
+- $\dfrac{z_1}{z_2}=\dfrac{|z_1|}{|z_2|}(\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2))$
 $$\begin{array}{r}
 z_1z_2=\\
 {|z_1|}({\color{pink}\cos\theta_1}+{\color{skyblue}i\sin\theta_1})|z_2|({\color{palegreen}\cos\theta_2}+{\color{orange}i\sin\theta_2})=\\
@@ -37,7 +37,7 @@ z_1z_2=\\
 ### Properties
 - $|z|=0\iff z=0$
 - $|z_1+z_2|\leq z_1+z_2$
-- $|z_1z_2|=|z_1||z_2|,\quad{\large|\frac{z_1}{z_2}|=\frac{|z_1|}{|z_2|}}$
+- $|z_1z_2|=|z_1||z_2|,\quad{|\dfrac{z_1}{z_2}|=\dfrac{|z_1|}{|z_2|}}$
 - $\overline{z_1\pm z_2}=\bar{z_1}\pm\bar{z_2}$
 - $\overline{z_1z_2}=\bar{z_1}\bar{z_2}$
 - $\overline{\large\frac{z_1}{z_2}}=\large\frac{\bar{z_1}}{\bar{z_2}}$

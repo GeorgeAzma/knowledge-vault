@@ -22,7 +22,7 @@ return codes, recon, codebook_loss, commitment_loss
 recon_loss = F.mse_loss(recon, target) # / data_variance
 loss = recon_loss + codebook_loss + 0.25 * commitment_loss
 ```
-- VQ-VAE has no [[KL Divergence|KL Divergence]] loss, since it simplifies to a constant
+- VQ-VAE has no [[Kullback-Leibler Divergence|KL Divergence]] loss, since it simplifies to a constant
 
 youtu.be/1mi2MSvigcc
 

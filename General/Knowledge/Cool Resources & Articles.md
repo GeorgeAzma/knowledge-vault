@@ -1,8 +1,4 @@
-- **Entropy** colah.github.io/posts/2015-09-Visual-Information
-- **Visual Science** https://javalab.org/en
+- **Spherical Gaussians** https://therealmjp.github.io/posts/sg-series-part-2-spherical-gaussians-101/
+- **Graphics Frame Analysis** https://www.adriancourreges.com/blog/2020/12/29/graphics-studies-compilation/
 ### Shaders
 - https://sebh.github.io/publications/
-### AI
-- **Steering LLMs** https://freedium.cfd/https://ai.gopubby.com/understanding-steering-in-llms-96faf6e0bee7
-  **Abliteration** uses similar concept
-### [Chemistry](https://youtu.be/5iTOphGnCtg)

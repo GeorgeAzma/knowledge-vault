@@ -7,5 +7,5 @@
  - $e=1~~~~~~~$ [[Parabola]] `focal distance = major-axis / directrix`
  - $e>1~~~~~~~$ [[Hyperbola]] `focal distance > major axis`
  ![[Eccentricity.webp|200]]![[Conic Sections.webp|200]]![[Conics_anim.gif|200]]
-### Formula $e=\huge\frac{\sin\beta}{\sin\alpha}$
-- $\large r=\huge\frac{l}{1+e\cos\theta}$
+### Formula $e=\dfrac{\sin\beta}{\sin\alpha}$
+- $r=\dfrac{l}{1+e\cos\theta}$

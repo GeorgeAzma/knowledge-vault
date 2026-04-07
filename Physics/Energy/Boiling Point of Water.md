@@ -1,4 +1,4 @@
-### Approximation $\frac{1730.63}{8.07131-\log_{10}(\frac{P}{133.3224})}-233.426\degree C$
+### Approximation $\dfrac{1730.63}{8.07131-\log_{10}(\dfrac{P}{133.3224})}-233.426\degree C$
 - $P$ pressure `101325`
 ### Heat Up Energy $Q=mc\Delta T$
 - $m$ mass/liters

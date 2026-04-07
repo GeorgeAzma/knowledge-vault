@@ -10,3 +10,4 @@ x+y+3z=6 \\
 \end{array}\right]
 \end{array}
 $$
+- $\operatorname{rank}{\bar{A}}=\operatorname{rank}{A}$ Augmented [[Rank]] = [[Rank]] `if system is solvable`

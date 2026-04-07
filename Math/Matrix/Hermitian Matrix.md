@@ -6,7 +6,7 @@ $$\begin{bmatrix}
 3i & 1+i & 1
 \end{bmatrix}$$
 ### Property $H=H^*$ 
-- Hermitian [[Matrix]] is equal to its [[Adjoint]]
+- Hermitian [[Matrix]] is equal to its [[Adjoint]] `self-adjoint`
 - **Anti-Hermitian** $H=-H^*$ `eigen values are purely imaginary`
 - Hermitian is same as [[Adjoint|Self-Adjoint]]
 - [[Inner Product]] has property $(Ax,x)=(x,A^*x)$

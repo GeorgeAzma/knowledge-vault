@@ -24,5 +24,5 @@ simple [[matrix decomposition]] method for solving system of linear equations
 > \end{vmatrix}=-27
 > $$
 > - Do that for other 2 columns $\Delta_x=-27,\Delta_y=-54,\Delta_z=-81$
-> - Divide those by $\Delta$ $(\frac{-27}{-54},\frac{-54}{-54},\frac{-81}{-54})=(\frac{1}{2},1,\frac{3}{2})$
-> - Final solution $(x,y,z)=(\frac{1}{2},1,\frac{3}{2})$
+> - Divide those by $\Delta$ $(\dfrac{-27}{-54},\dfrac{-54}{-54},\dfrac{-81}{-54})=(\dfrac{1}{2},1,\dfrac{3}{2})$
+> - Final solution $(x,y,z)=(\dfrac{1}{2},1,\dfrac{3}{2})$

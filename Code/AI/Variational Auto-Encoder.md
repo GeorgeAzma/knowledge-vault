@@ -66,7 +66,7 @@ youtu.be/laaBLUxJUMY
   higher the probability $P_\theta(x\mid z)$, if we take $-2\ln(P_\theta(x\mid z))=||x-\mu_\theta(z)||^2$
   we get MSE loss. $\theta$ is decoder parameters
 - **Loss** $\mathcal{L}(\theta,\phi;x)=D_{KL}[P_\theta(x)||P(x)]+D_{KL}[q_\phi(z|x)||P(z)]$ how much image distribution and approximated image distribution differ
-  calculated using [[KL Divergence]] $D_{KL}[P(x)||P_\theta(x)]=\sum_x^\text{states}P(x)\log\frac{P(x)}{P_\theta(x)}$
+  calculated using [[Kullback-Leibler Divergence]] $D_{KL}[P(x)||P_\theta(x)]=\sum_x^\text{states}P(x)\log\frac{P(x)}{P_\theta(x)}$
   where $x$ is all possible pixel states. this is not computable
     - so lets simplify  $D_{KL}[P(x)||P_\theta(x)]=\sum_x^\text{states}P(x)\log P(x)-\sum_x^\text{states}P(x)\log P_\theta(x)$
     - $\sum_x^\text{states}P(x)\log P(x)$ is [[Entropy]], it does not depend on $P_\theta$
