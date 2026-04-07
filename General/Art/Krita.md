@@ -14,6 +14,7 @@
 - docs.krita.org/en/tutorials
 - Cleanup Lineart docs.krita.org/en/tutorials/common_workflows.html
 ### Brushes
+- **Rakurri Brush Set V2.1**
 - MB Advanced Brushes V5
 - MB Starter Pack V8
 - Angel Clouds

@@ -1,38 +1,37 @@
 ### Good Startup Script
 ``` c
 #Requires AutoHotkey v2.0
-#NoTrayIcon
 #SingleInstance
 
 ; Win+Space → Toggle Always on Top
 #Space:: {
-    static isOnTop := false
-    MouseGetPos ,, &win
-    isOnTop := !isOnTop
-    WinSetAlwaysOnTop isOnTop, win
+    MouseGetPos , , &win_id
+    ex_style := WinGetExStyle("ahk_id " win_id)
+    is_on_top := ex_style & 0x8
+    WinSetAlwaysOnTop(!is_on_top, "ahk_id " win_id)
 }
 
 ; Win+G → Launch Chrome
-#g:: Run "C:\Program Files\Google\Chrome\Application\chrome.exe"
+#g:: Run FindChrome()
 
 ; Win+O → Launch Obsidian
-#o:: Run "C:\Users\User\AppData\Local\Programs\Obsidian\Obsidian.exe"
+#o:: Run EnvGet("LOCALAPPDATA") "\Programs\Obsidian\Obsidian.exe"
 
 ; Win+C → Launch VSCode
-#c:: Run "C:\Users\User\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+#c:: Run EnvGet("LOCALAPPDATA") "\Programs\Microsoft VS Code\Code.exe"
 
 ; Win+T → Launch Terminal
-#t:: Run "wt.exe -d ~/"
+#t:: Run "wt.exe -d ~"
 
 ; Win+X → Close Active Window
 #x:: {
-    MouseGetPos ,, &win
+    MouseGetPos , , &win
     WinClose win
 }
 
 ; Win+F → Fullscreen/Restore
 #f:: {
-    MouseGetPos ,, &win
+    MouseGetPos , , &win
     if WinGetMinMax(win) = 1
         WinRestore win
     else
@@ -60,7 +59,7 @@
     }
 }
 
-; Win + Right Click 
+; Win + Right Click
 #RButton:: {
     CoordMode("Mouse", "Screen")
     MouseGetPos &prevMouseX, &prevMouseY, &winID
@@ -85,23 +84,21 @@
     Shutdown 1
 }
 
-; Vim like motions via RShift
-Move(wordKey, charKey) {
-    prefix := GetKeyState("LShift", "P") ? "+" : ""
-    Send(GetKeyState("Ctrl", "P") ? prefix wordKey : prefix charKey)
+FindChrome() {
+    paths := []
+
+    try paths.Push(RegRead("HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe"))
+    try paths.Push(RegRead("HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe"))
+
+    paths.Push(EnvGet("ProgramFiles") "\Google\Chrome\Application\chrome.exe")
+    paths.Push(EnvGet("ProgramFiles(x86)") "\Google\Chrome\Application\chrome.exe")
+
+    paths.Push("msedge.exe")
+
+    for p in paths
+        if FileExist(p)
+            return p
+
+    return "chrome.exe"
 }
-
-RShift::Return
-
-RShift & i::Move("{Up}", "{Up}")
-RShift & k::Move("{Down}", "{Down}")
-
-RShift & j::Move("^{Left}", "{Left}")
-RShift & l::Move("^{Right}", "{Right}")
-
-RShift & u::Move("{Home}", "{Home}")
-RShift & o::Move("{End}", "{End}")
-
-RShift & `;::Move("^{Backspace}", "{Backspace}")
-RShift & p::Move("^{Delete}", "{Delete}")
 ```
