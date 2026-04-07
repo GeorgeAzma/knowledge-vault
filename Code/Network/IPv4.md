@@ -1,4 +1,4 @@
-![[IPv4.png#rounded|620]]
+![[IPv4.webp#rounded|620]]
 
 | Class |    Start    |        End        | Subnet Mask     | Private Range   | Usage           |
 | :---: | :---------: | :---------------: | --------------- | --------------- | --------------- |

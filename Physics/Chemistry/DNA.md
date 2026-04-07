@@ -1,5 +1,5 @@
 Also See [[RNA]]
-![[DNA.png#rounded|1440]]
+![[DNA.webp#rounded|1440]]
 ![[Ribose.webp#rounded|500]]
 # Structure
 Human DNA is **~2 meters long**, crammed into a nucleus **~6 micrometers** across

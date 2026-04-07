@@ -39,4 +39,4 @@ float WaveletNoise(vec3 p, float z, float k) {
     return d/m;
 }
 ```
-![[Wavelet Noise.png#rounded|500]]
+![[Wavelet Noise.webp#rounded|500]]
