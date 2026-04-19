@@ -130,7 +130,7 @@ transformer = nn.TransformerDecoder(layer, num_layers)
 
 Apply Residual dropout to each sub layer before it is added to sub layer input and normalized, chance of dropout is $0.1$, also apply dropout to sums of embeddings + positional encodings in both encoder and decoder
 
-Apply [[Label Smoothing]] with value ${\large\epsilon_{ls}}=0.1$
+Apply [[Label Smoothing]] with value ${\epsilon_{ls}}=0.1$
 
 ![[GPT Architecture.webp|400]]
 ![[GPT Translator Architecture.webp|600]]
