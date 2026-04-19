@@ -52,3 +52,8 @@ git branch -D main # delete main
 git branch -m main # rename new-branch to main
 git push --force
 ```
+### Tips
+``` bash
+# git clone https://github.com/GeorgeAzma/silk-engine => git clone gh:GeorgeAzma/silk-engine
+git config --global url."https://github.com/".insteadOf gh:
+```

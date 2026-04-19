@@ -1,3 +1,4 @@
+![[Self Attention.webp]]
 ``` python
 # input token embeddings
 input = word_embed(word_idx) + pos_embed(pos_idx)
@@ -27,5 +28,4 @@ for i in range(ctx_len):
 attn_weights = torch.softmax(score / d_k ** 0.5, dim=1) # optional scaling
 out = attn_weights @ v # (ctx_len, ctx_len) @ (ctx_len, d_v) → (ctx_len, d_v)
 ```
-
-![[Self Attention.webp]]
+**Flash Attention** https://youtu.be/gBMO1JZav44

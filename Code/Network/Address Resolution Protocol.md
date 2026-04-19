@@ -1,3 +1,7 @@
+---
+aliases:
+- ARP
+---
 Request which asks anyone for destination [[IP|IP's]] [[Media Access Control (MAC) Address|MAC]]
 ARP request contains
   - Source [[IP|IP]]/[[Media Access Control (MAC) Address|MAC]] `to respond to with destination MAC address`

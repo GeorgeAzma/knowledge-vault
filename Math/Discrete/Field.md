@@ -1,1 +1,13 @@
-[[Ring]] with division
+[[Ring]] with division, meaning:
+- **4 Binary Operations** $+-*~/$
+- [[Group|Additive Abelian Group]] meaning $+-$ has:
+    - [[Closure]]
+    - [[Associativity]] `a+(b+c) = (a+b)+c`
+    - [[Identity Element]] `0`
+    - [[Inverse Element]] `-x`
+    - [[Commutativity]] `a+b = b+a`
+- [[Group|Multiplicative Monoid]] `might not be commutative` meaning $*$ has:
+    - [[Closure]]
+    - [[Associativity]] `a(bc) = (ab)c`
+    - [[Identity Element]] `1`
+- [[Distributivity]] `a(b+c) = ab+ac`

@@ -68,3 +68,15 @@ networks:
 - `host` use same network as host machine
 - `none` isolate container from network
 - `overlay, ipvlan, macvlan`
+### GPU
+```
+services:
+  my-service:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+```

@@ -1,6 +1,7 @@
-[[Arch Linux]]
-[[Linux Commands]]
-[[Windows Subsystem for Linux (WSL)]]
+- [[Arch Linux]]
+- [[Linux Commands]]
+- [[Windows Subsystem for Linux (WSL)]]
+- [[Package Manager]]
 ### Directories
 ``` bash
 /                  # root

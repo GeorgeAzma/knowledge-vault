@@ -9,7 +9,7 @@ mv
 touch
 du # dir size, -h human readable, -s total + folder, -c total, 
    # -a all (dirs+files), -x skip other fs dirs
-df # disk usage, -h human readable, -a all
+df / # disk usage, -h human readable, -a all
 tar -czvf archive.tar.gz folder/ # -cvf create (uncompressed), -xvf extract, -czvf gzip
 gzip file.txt # compress to file.txt.gz
 gunzip file.txt.gz # decompress to file.txt
@@ -18,16 +18,20 @@ pwd # print working dir
 ```
 ### Find
 ``` bash
-find
-grep
+grep # -r recurse, -i case-insensitive
+find -name *.txt -type f -size +10M # -iname case-insensitive
+# remove .desktop apps containing 'fl'
+find ~/.local/share/applications /usr/share/applications -iname '*fl*.desktop' -exec rm -i {} \;
 ```
-### Linux
+### Process
 ``` bash
 ps # -e/A all procs, -r running only, aux all procs with info
 kill # -9 force
 killall # kill all procs
 watch -n 1 ls # ls every 1s
+sudo fuser -k 11434/tcp # kill process occupying port
 
+systemctl list-units --type=service --state=running
 ```
 ### User Permissions
 ``` bash
@@ -40,15 +44,7 @@ chmod # +x, -x, =x add/rm/set exec perm, -R recurse
       # u=rw g=r o=r | u=owner, g=group, o=others
 chown # change owner, -R recurse
 ```
-### Network
-``` bash
-wget example.com/file.txt # -r recurse
-curl -X POST -d "name=foo" example.com/api # -O download file
-ssh user@remote_host # remote login, cmd exec
-scp file.txt user@host:/path/dir user@host:/path/file.txt ./dir # secure remote file copy
-grep # -r recurse, -i case-insensitive
-find -name *.txt -type f -size +10M # -iname case-insensitive
-```
+### [[Linux Network]]
 ### Profiling
 ``` bash
 top/htop/nvtop/atop
@@ -61,11 +57,3 @@ bpftrace
 flamegraph
 ```
 ### [[Bash]]
-### Tips
-``` bash
-# get public ip address
-curl ifconfig.me
-
-# remove .desktop apps containing 'fl'
-find ~/.local/share/applications /usr/share/applications -iname '*fl*.desktop' -exec rm -i {} \;
-```

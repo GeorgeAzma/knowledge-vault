@@ -45,3 +45,4 @@ there are different kinds of certificates
 - **GoDaddy** `6.9%`
 - **GlobalSign** `2.9%`
 - **Other**s `2%`
+### [[Self Signed Certificate]]

@@ -1,16 +1,11 @@
-### Group Properties
-- [[Closure]]
-- [[Associativity]]
-- [[Identity Element]]
-- [[Inverse Element]]
-### Group Examples
-- $\mathbb{Z}$ `unit = 0, inverse = -a`
-- $\mathbb{Q^\times}$ `unit = 1, inverse = 1/a`
-- $\mathbb{C}^\wedge$ `unit = 1, inverse = -1`
-- $\mathbb{Q}^+$ `unit = 0, inverse = -a`
-- $(G,+)$ `any additive group`
-### [[Subgroup]]
-### Groups
+---
+aliases:
+- Magma
+- Semigroup
+- Monoid
+- Commutative Monoid
+- Abelian Group
+---
 
 ``` mermaid
 graph TD
@@ -39,5 +34,16 @@ G --> AG
 
 R --> F
 ```
-
-- [[Commutativity]]
+### Group Properties
+- [[Closure]]
+- [[Associativity]]
+- [[Identity Element]]
+- [[Inverse Element]]
+- + [[Commutativity]] = Abelian Group
+### Group Examples
+- $\mathbb{Z}^+$ `identity = 0, inverse = -a`
+- $\mathbb{Q^\times}$ `identity = 1, inverse = 1/a`
+- $\mathbb{C}^\wedge$ `identity = 1, inverse = -1`
+- $\mathbb{Q}^+$ `identity = 0, inverse = -a`
+- $(G,+)$ `any additive group`
+### [[Subgroup]]

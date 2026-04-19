@@ -1,8 +1,15 @@
-- [[Abelian Group|Additive Abelian Group]]
-- [[Identity Element|Multiplicative Identity 1 Exists]] `may not be commutative`
-- [[Distributivity]]
-**simply put** has $+-*$ `closure satisfied for all 3`, and is distributive
-if you also have division then it's a [[Field]]
+- **3 Binary Operations** $+-*$ (if you also have division then it's a [[Field]])
+- [[Group|Additive Abelian Group]] meaning $+-$ has:
+    - [[Closure]]
+    - [[Associativity]] `a+(b+c) = (a+b)+c`
+    - [[Identity Element]] `0`
+    - [[Inverse Element]] `-x`
+    - [[Commutativity]] `a+b = b+a`
+- [[Group|Multiplicative Monoid]] `might not be commutative` meaning $*$ has:
+    - [[Closure]]
+    - [[Associativity]] `a(bc) = (ab)c`
+    - [[Identity Element]] `1`
+- [[Distributivity]] `a(b+c) = ab+ac`
 #### Polynomial Vanishing $\prod^n_{k=1}(x-a_k)$
 this polynomial vanishes `(=0)` at all elements of ring 
 > [!example]  $\mod 3$ `ints` $\mathbb{Z}_3=\set{0,1,2}$

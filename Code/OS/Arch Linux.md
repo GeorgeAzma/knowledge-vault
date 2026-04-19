@@ -54,10 +54,18 @@ EDITOR=nano visudo
 
 echo "nameserver 1.1.1.1" > /etc/resolv.conf
 ping archlinux.org # should work
+```
+### Install Packages
+``` bash
+# important utility
+sudo pacman -S sddm nvidia nvidia-utils hyprland wayland \
+    wlroots xdg-desktop-portal-hyprland \
+    networkmanager swaync hyprpaper wofi waybar \
+    cliphist wl-clipboard vulkan-icd-loader \
+    pipewire wireplumber pipewire-pulse \
+    playerctl pavucontrol
+systemctl enable sddm
 
-sudo pacman -S nvidia nvidia-utils hyprland wayland \
-    wlroots xdg-desktop-portal-hyprland alacritty tmux \
-    sddm wget git base-devel networkmanager
 # install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -65,13 +73,13 @@ makepkg -si
 cd ..
 rm -rf yay
 
+# apps
 sudo yay -S google-chrome nwg-look neofetch
-systemctl enable sddm
+sudo pacman -S htop btop tmux ranger obsidian spotify neovim alacritty
 
-sudo pacman -S swaync htop hyprpaper wofi waybar \
-    cliphist wl-clipboard vulkan-icd-loader \
-    pipewire wireplumber pipewire-pulse \
-    playerctl pavucontrol ranger obsidian spotify
+# development
+sudo pacman -S net-tools nmap curl wget git build-essential base-devel cmake 
+sudo pacman -S python3 python3-pip python3-venv python3-dev
 ```
 ### Reinstalling
 ``` bash

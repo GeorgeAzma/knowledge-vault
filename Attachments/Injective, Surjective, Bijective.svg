@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="440" style="width:600px;height:440px;background:0 0;fill:none">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g style="stroke:#fff;fill:none">
+    <text font-family="system-ui" font-size="16" font-weight="600" fill="#fff" stroke="none" x="142" y="22" text-anchor="middle">Injection</text>
+    <ellipse cx="75" cy="120" rx="46" ry="76" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+    <ellipse cx="205" cy="120" rx="46" ry="76" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+    <circle cx="75" cy="88" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="75" cy="116" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="75" cy="144" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="205" cy="82" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="205" cy="107" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="205" cy="132" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="205" cy="157" r="7" fill="#3DA85A" stroke="none"/>
+    <line x1="82" y1="88" x2="196" y2="84" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="82" y1="116" x2="196" y2="108" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="82" y1="144" x2="196" y2="133" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+
+    <text font-family="system-ui" font-size="16" font-weight="600" fill="#fff" stroke="none" x="432" y="22" text-anchor="middle">Surjection</text>
+    <ellipse cx="365" cy="120" rx="46" ry="76" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+    <ellipse cx="495" cy="120" rx="46" ry="76" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+    <circle cx="365" cy="82" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="365" cy="107" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="365" cy="132" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="365" cy="157" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="495" cy="90" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="495" cy="120" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="495" cy="150" r="7" fill="#3DA85A" stroke="none"/>
+    <line x1="372" y1="84" x2="486" y2="91" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="372" y1="108" x2="486" y2="118" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="372" y1="132" x2="486" y2="122" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="372" y1="157" x2="486" y2="148" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+
+    <text font-family="system-ui" font-size="16" font-weight="600" fill="#fff" stroke="none" x="287" y="245" text-anchor="middle">Bijection</text>
+    <ellipse cx="217" cy="340" rx="46" ry="76" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+    <ellipse cx="347" cy="340" rx="46" ry="76" stroke="#fff" stroke-width="1.5" stroke-opacity="0.7" fill="none"/>
+    <circle cx="217" cy="308" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="217" cy="340" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="217" cy="372" r="7" fill="#E8752A" stroke="none"/>
+    <circle cx="347" cy="308" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="347" cy="340" r="7" fill="#3DA85A" stroke="none"/>
+    <circle cx="347" cy="372" r="7" fill="#3DA85A" stroke="none"/>
+    <line x1="224" y1="308" x2="338" y2="308" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="224" y1="340" x2="338" y2="340" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+    <line x1="224" y1="372" x2="338" y2="372" stroke="#fff" stroke-width="1.5" marker-end="url(#a)"/>
+  </g>
+</svg>

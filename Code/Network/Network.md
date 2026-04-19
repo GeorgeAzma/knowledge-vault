@@ -51,6 +51,6 @@ Create a packet
 - App removes the [[Port]] layer and processes the data
 ### Extra Info
 - **Socket** Hook into OS's network drivers, you can use it to connect to endpoints, which are [[IP|IP]] + [[Port]]
-- [[Domain Name System (DNS)]] Converts URL to [[IP|IP]]
+- [[DNS]] Converts URL to [[IP|IP]]
 - **Internet Service Provider (ISP)** `e.g. Magti`
 - All host devices must have [[IP|IP Address]], [[Subnet Mask]] and [[Default Gateway]]

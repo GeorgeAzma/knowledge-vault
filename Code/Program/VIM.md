@@ -4,6 +4,7 @@
 - `vab,vaB,vat` select whole block `()`/`{}`/`<>, including braces`
 - `VaB` select whole function
 - `"+y` copy to clipboard `gg"+yG` copies entire file
+- `:set clipboard=unnamedplus` use system clipboard
 ### Global
 - `:h` Help
 - `:sav file` Save file as
