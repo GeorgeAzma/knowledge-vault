@@ -1,11 +1,14 @@
 ---
 aliases:
 - Systemctl
-- Linux Startup Tasks
+- Linux Startup Services
 ---
-for setting up linux startup tasks
+for setting up linux startup services/tasks
 ### Example
-`sudo nano /etc/systemd/system/llm-server.service`
+``` bash
+sudo nano /etc/systemd/system/llm-server.service
+```
+
 ``` toml
 [Unit]
 Description=LLM Server Startup Service
@@ -20,6 +23,10 @@ RestartSec=3
 [Install]
 WantedBy=multi-user.target
 ```
-`sudo systemctl daemon-reload`
-`sudo systemctl enable llm-server`
-`sudo systemctl start llm-server`
+
+``` bash
+sudo systemctl daemon-reload
+sudo systemctl enable llm-server
+sudo systemctl start llm-server
+sudo systemctl status llm-server
+```

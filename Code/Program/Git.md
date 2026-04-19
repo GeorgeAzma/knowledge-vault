@@ -56,4 +56,5 @@ git push --force
 ``` bash
 # git clone https://github.com/GeorgeAzma/silk-engine => git clone gh:GeorgeAzma/silk-engine
 git config --global url."https://github.com/".insteadOf gh:
+git config --global url."https://github.com/GeorgeAzma/".insteadOf g:
 ```
