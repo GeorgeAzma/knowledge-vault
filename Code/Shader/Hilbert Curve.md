@@ -1,4 +1,4 @@
-![[Hilbert Curve.png#rounded|640]]![[Hilbert Curve Grammar.png#rounded|202]]
+![[Hilbert Curve.webp#rounded|640]]![[Hilbert Curve Grammar.webp#rounded|202]]
 ``` c
 // n: side length (power of 2)
 ivec2 hilbert_decode(int n, int i) {

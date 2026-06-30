@@ -4,7 +4,7 @@ Image
 Resized Images
 ![[Law of Cosines.webp|200x100]]
 ![[Law of Cosines.webp|200]]
-![External Image](https://learnopengl.com/img/index_image2.png)
+![External Image](https://learnopengl.com/img/index_image2.webp)
 Embed Note 
 ![[Test Note]]
 Embed Note Heading

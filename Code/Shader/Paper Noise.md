@@ -1,5 +1,5 @@
 [[Curl Noise]] + [[FBM]]
-![[Pasted image 20260626233851.png#rounded|300]]
+![[Paper Noise.webp#rounded|300]]
 ``` c
 vec2 hash22(vec2 p) {
 	vec3 p3 = fract(p.xyx / vec3(0.1031, 0.1030, 0.0973));

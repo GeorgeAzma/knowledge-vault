@@ -136,7 +136,7 @@ DllCall("gdiplus\GdiplusStartup", "ptr*", &gdipToken, "ptr", gdipInput, "ptr", 0
     explorer_path := active_window.Document.Folder.Self.Path
 
     timestamp := FormatTime(, "yyyy-MM-dd_HH-mm-ss")
-    savePath := explorer_path . "\Screenshot_" . timestamp . ".png"
+    savePath := explorer_path . "\Screenshot_" . timestamp . ".webp"
 
     ; Save clipboard image via GDI+ (no PowerShell)
     DllCall("OpenClipboard", "ptr", 0)

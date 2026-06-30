@@ -10,7 +10,7 @@ aliases:
 ```c
 uv * sqrt(1.0 - uv.yx * uv.yx * 0.5) // uv: [-1; 1]
 ```
-![[Shirley-Chiu.png#rounded-xl|350]]
+![[Shirley-Chiu.webp#rounded-xl|350]]
 ### Vogel Spiral $r=\sqrt{n},~~\theta=n\alpha$
 - $\alpha=\pi(3-\sqrt5)=\tau\left(2-\phi\right)=2.3999632297286533222$ [[Golden Ratio|Golden Angle]]
 ``` c
@@ -19,4 +19,4 @@ vec2 p = sqrt(n / (u_resolution.x * u_resolution.y)) * vec2(cos(n * 2.3999632297
 
 // coil spiral: (cos(sqrt(n) * 2.4), sin(sqrt(n) * 2.4))
 ```
-![[Pasted image 20260616103125.png#rounded,invert|350]]
+![[Vogel Spiral.webp#rounded,invert|350]]
