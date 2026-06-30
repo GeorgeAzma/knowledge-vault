@@ -11,9 +11,9 @@ if (!(Get-Command ffmpeg -ErrorAction SilentlyContinue)) {
     exit 1
 }
 
-if (!(Get-Command svgo -ErrorAction SilentlyContinue)) {
-    Write-Warning "SVGO is not installed or not in PATH, try 'npm i -g svgo'"
-}
+# if (!(Get-Command svgo -ErrorAction SilentlyContinue)) {
+#     Write-Warning "SVGO is not installed or not in PATH, try 'npm i -g svgo'"
+# }
 
 function Convert-Images {
     param (
