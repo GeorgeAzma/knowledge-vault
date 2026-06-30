@@ -1,3 +1,7 @@
+---
+aliases:
+  - ERF 
+---
 [[Probability]] of [[Normal Distribution|Normally Distributed]] $\mu=0,\sigma^2=0.5$ being in range $[-x,x]$
 [[Cumulative Distribution Function|CDF]] of [[Normal Distribution]] $e^{-x^2}$, scaled by $\dfrac{2}{\sqrt\pi}$
 ### Formula $\operatorname{erf}(x)=\dfrac{2}{\sqrt{\pi}}\int_0^xe^{-t^2}dt$

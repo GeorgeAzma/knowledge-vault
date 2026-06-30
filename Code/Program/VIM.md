@@ -1,10 +1,34 @@
+https://vim.rtorr.com/
 ### Useful
-- `o,O` insert to next/prev line
-- `vib,viB,vit` select everything inside block `()`/`{}`/`<>`
-- `vab,vaB,vat` select whole block `()`/`{}`/`<>, including braces`
-- `VaB` select whole function
-- `"+y` copy to clipboard `gg"+yG` copies entire file
-- `:set clipboard=unnamedplus` use system clipboard
+``` python
+# Code Navigation
+"[m" prev fn start
+"]m" next fn start
+"[M" prev fn end
+"]M" next fn end
+"[[" prev section fn/class
+"]]" next section fn/class
+"[]" fn end
+"][" fn start
+"%"  matching brackets
+
+"gs" symbol map (current file)
+"gS" symbol map (whole project)
+
+# Line Navigation
+"o,O" insert to next/prev line
+":set clipboard=unnamedplus" use system clipboard
+
+# Selection
+"vib,viB,vit" everything inside block ()/{}/<>
+"vab,vaB,vat" block ()/{}/<> # including braces
+"vaf" fn
+"vac" class
+
+# Copy
+"+y" copy to clipboard 
+"ggyG" copy entire file
+```
 ### Global
 - `:h` Help
 - `:sav file` Save file as
@@ -215,3 +239,7 @@
 - `:diffthis` Make curr window part of diff
 - `:dif` Update differences
 - `:diffo` Switch off diff mode for curr window
+### Settings
+- `:set ai` auto indent
+- `:set ic` ignore case
+- `:set noic` no ignore case

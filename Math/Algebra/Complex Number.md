@@ -1,4 +1,7 @@
-Similar to 2D vectors
+---
+aliases:
+  - Imaginary Number
+---
 ### Simple Operations
 - $i=\sqrt{-1},\quad i^2=-1,\quad i^3=-i,\quad i^4=1,\quad i^5=i,\quad i^6=-1\dots$
 - $z=x+yi,\quad \bar{z}=x-yi$
@@ -8,7 +11,7 @@ Similar to 2D vectors
 - $z^2=(x^2-y^2)+i(2xy)$
 - $z\bar{z}=|z|^2=x^2+y^2$  where $\bar{c}$ is complex [[Conjugate]]
 - $\sqrt{c\bar{c}}=\sqrt{x^2+y^2}=r$ `complex number length`
-- $\large\frac{z_1}{z_2}=\frac{z_1\bar{z_2}}{|z_2|^2}$
+- $\dfrac{z_1}{z_2}=\dfrac{z_1\bar{z_2}}{|z_2|^2}$
 - $\operatorname{abs}(c)=|c|^2=x^2+y^2=r^2$
 ### Polar Formulas
 - $x+yi=e^{i\theta}\sqrt{x^2+y^2}=e^{i\theta}r$
@@ -33,20 +36,19 @@ z_1z_2=\\
 |z_1||z_2|({\color{plum}\cos(\theta_1+\theta_2)}+i{\color{coral}\sin(\theta_1+\theta_2)})\\
 \end{array}$$
 
-- $\cos y={\large\frac{e^{iy}+e^{-iy}}{2}},\quad\sin y={\large\frac{e^{iy}-e^{-iy}}{2i}}$
+- $\cos y=\dfrac{e^{iy}+e^{-iy}}{2},\quad\sin y=\dfrac{e^{iy}-e^{-iy}}{2i}$
 ### Properties
 - $|z|=0\iff z=0$
 - $|z_1+z_2|\leq z_1+z_2$
 - $|z_1z_2|=|z_1||z_2|,\quad{|\dfrac{z_1}{z_2}|=\dfrac{|z_1|}{|z_2|}}$
 - $\overline{z_1\pm z_2}=\bar{z_1}\pm\bar{z_2}$
 - $\overline{z_1z_2}=\bar{z_1}\bar{z_2}$
-- $\overline{\large\frac{z_1}{z_2}}=\large\frac{\bar{z_1}}{\bar{z_2}}$
-- 
+- $\overline{\dfrac{z_1}{z_2}}=\dfrac{\bar{z_1}}{\bar{z_2}}$
 ### Code
 ``` c
 #define ccjg(a) vec2((a).x, -(a).y)
 #define cmul(a, b) vec2(dot(a, ccjg(b)), dot(a, (b).yx))
-#define csqr(z) vec2(ccjg(z * z), 2.0 * (z).x * (z).y)
+#define csqr(z) vec2(dot(z, ccjg(z)), 2.0 * (z).x * (z).y)
 #define cdiv(a, b) (vec2(dot(a, b), dot(ccjg(a.yx), b)) / dot(b, b))
 #define cexp(z) (exp((z).x) * vec2(cos((z).y), sin((z).y)))
 #define clog(z) vec2(0.5 * log(dot(z, z)), atan((z).y, (z).x))
@@ -55,4 +57,3 @@ z_1z_2=\\
 **Intuition**
 - `cexp = spherical -> cartesian`
 - `clog = cartesian -> spherical`
-- `cdiv`

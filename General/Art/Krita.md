@@ -1,7 +1,8 @@
+### Config Folder
+`%APPDATA%\krita` copy this to tranfer krita settings
 ### Shortcuts
 - `X` swap `fg/bg` color
 - `Ctrl` color pick
-- `B/E` brush/eraser
 - `R+LClick` select clicked pixel's layer
 - `Ctrl+H` toggle selection display
 - `Ctrl+Shift+A` deselect
@@ -15,18 +16,6 @@
 - Cleanup Lineart docs.krita.org/en/tutorials/common_workflows.html
 ### Brushes
 - **Rakurri Brush Set V2.1**
-- MB Advanced Brushes V5
-- MB Starter Pack V8
-- Angel Clouds
-- JP Color Mixer
-- Konyachi Daily Brush Set
-- Miss Brush Pack V2 `backlight, pressureless line 2`
-- Ink Pen Texturized krita-artists.org/t/ink-pen-csp-like/47274
-- CLOUDS
-- Angel Gradients
-- Size Flow Gang
-- Metalics by Draneria
-- **Test** Moji Liao's Pencil
 ### Improvements I Want
 - changing colorize mask palette color changes all strokes with same color
 - rename dockers `to avoid very long names taking up tab space (Wide Gamut Selector)`
@@ -35,5 +24,6 @@
 - better color blend mode and filter UI + search 
   `too many dropdowns are hard to navigate, blend modes go outside screen`
 - transform tool should work for colorize mask
-- more modern UI design
-- theme browser
+- more modern UI/UX design
+- theme/brush/plugin/texture browser
+- better enclose and fill tool

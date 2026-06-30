@@ -2,5 +2,5 @@
 ### Contrapositive $P\implies Q\equiv \neg P\implies \neg Q$
 ### Contradiction
 ### [[Induction]]
-### Counterexample
+### Counter Example
 ### Proof by Cases

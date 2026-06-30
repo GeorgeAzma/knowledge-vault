@@ -1,0 +1,17 @@
+- [[Identity Matrix]]
+- [[Diagonal Matrix]]
+- [[Diagonal Matrix#Scalar Matrix|Scalar Matrix]]
+- [[Symmetric Matrix]]
+- [[Orthogonal Matrix]]
+- [[Hermitian Matrix]]
+- [[Jacobian Matrix]]
+- [[Hessian Matrix]]
+- [[Unitary Matrix]]
+- [[Positive Definite Matrix]]
+- [[Triangular Matrix|Upper/Lower Triangular Matrix]]
+- [[Skew-Symmetric Matrix]] `diag=0` and tris are equal but negated
+- [[Adjacency Matrix]]
+- [[Incidence Matrix]]
+- **Stochastic Matrix** rows are [[Probability]] distributions
+- **Diagonal Dominant Matrix** abs(sum(diag)) > sum(abs(non-diag))
+- **Banded Matrix** non-zero values reasamble thick diagonal

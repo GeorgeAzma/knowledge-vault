@@ -16,5 +16,5 @@ Method for converting [[Matrix]] into [[Row-Echelon Form]]
 - [[Gaussian Elemination]]
 - [[Gauss-Jordan Elimination]]
 - [[Creamer's Law]]
-- **Cholesky**
-- **LU Decomposition**
+- [[Cholesky Decomposition]]
+- [[LU Decomposition]]

@@ -1,11 +1,17 @@
+---
+aliases:
+  - Diffuse Lighting
+  - Specular Lighting
+  - Phong
+  - Blinn-Phong
+---
 ### Lambert Diffuse
 ``` python
 float diff = max(0.0, dot(normal, to_light));
 ```
 ### Phong Specular
 ``` python
-vec3 reflected = reflect(-to_light, normal);
-float spec = pow(max(0.0, dot(reflected, to_eye)), shine); # shine = 32
+float spec = pow(max(0.0, dot(reflect(-to_light, normal), to_eye)), shine); # shine = 32
 ```
 **Gouraud** model is same as phong but done in vertex shader
 ### Blinn-Phong `halfway`
@@ -16,11 +22,12 @@ float spec = pow(max(0.0, dot(normal, halfway)), shine); # shine = 16
 ### Other
 ``` python
 # Sphere Normals
-vec3(uv, -sqrt(1 - dot(uv, uv)))
+vec3(uv, -sqrt(1.0 - dot(uv, uv)))
 # AO (untested)
-albedo * exp2(2 - pow(max(0, 1 - mp(pos + norm * ao_radius).x / ao_radius), 2));
+albedo * exp2(2.0 - pow(max(0.0, 1.0 - mp(pos + norm * ao_radius).x / ao_radius), 2.0));
 # 2D Fresnel-like Halo
-smoothstep(1.02, 0.98, dot(uv, uv)) * pow(dot(uv, uv), 8) 
+exp(-(1.0 - l * l) * 16.0)
+smoothstep(1.02, 0.98, dot(uv, uv)) * pow(dot(uv, uv), 8.0) 
 # Emit Light (gamma correct)
 light = 0.01 / dist
 light = pow(max(0, 1 - dist * falloff), 2)

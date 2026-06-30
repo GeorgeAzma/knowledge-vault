@@ -6,6 +6,11 @@ Lowers dimensionality of data
 - Rank Principal Components by importance a.k.a [[Eigenvalue]][[s]]
 - Retain only Top $N$ most important PCs
 - Project data onto Principal Components
+### Intuition
+- [[Eigenvector]][[s]] of [[Covariance Matrix]] is just directions of data variance
+- More varying the directions, more they tell about the data, so keep most varying directions
+- Project data onto these most varying directions to reduce dimensionality
+### Code
 ```python
 # Step 1: Standardize the data
 def standardize_data(X):
@@ -49,7 +54,7 @@ projected_data = project_onto_components(standardized_data, principal_comps)
 ```
 ### Resource youtu.be/FgakZw6K1QQ
 This also gives better intuition for [[Eigenvector]][[s]] at 12:30
-#### Related [[Singular Value Decomposition (SVD)]]
+#### Related [[Singular Value Decomposition]]
 
 > [!example] Can be used in machine learning, to reduce dimensionality of input data, e.g. if it has 2D points as an input,
 > these points maybe correlated (e.g. $p=(x,y)=(x,2x+noise)$),

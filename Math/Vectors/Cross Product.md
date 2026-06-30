@@ -19,8 +19,16 @@ Length of that vector is area of parallelogram made with $a$ and $b$
 ### 3D Formula $a \times b=(a_yb_z-a_zb_y,\ a_zb_x-a_xb_z,\ a_xb_y-a_yb_x)$
 ### 2D Formula $\vec{a}\times\vec{b}=\vec{a}_x\vec{b}_y-\vec{b}_x\vec{a}_y$
 Area of parallelogram made by 2 vectors
-![[2D Cross Product.webp|256]]
+![[2D Cross Product.webp#rounded|200]]
 > [!note] 2D cross product is same as [[Determinant]]
 > So it's this yellow area and can be used to determine how much
 > space is shrunk/grown when transformed with 2D [[Orthogonal Matrix]]
 > ![[Determinant Scaling Space.webp|450]]
+### [[Geometric Algebra]] $a\times b=\star(a\wedge b)$
+- $\star$ [[Hodge Star Operator]]
+- **In 3D** $a\times b=-I(a\wedge b)$
+    - $I$ [[Pseudoscalar]]
+##### Derivation
+- $a\times b=-I(a\wedge b)$ where $I=x\wedge y\wedge z$ [[pseudoscalar]]
+- $\begin{array}{l}-I(x\wedge y)=z\\ -I(x\wedge z)=-y\\ -I(y\wedge z)=x\end{array}$ `perpendicular vectors (right handed)`
+- $\begin{array}{l} a\times b&=&(a_xb_y-a_yb_x)&z\\&+&(a_zb_x-a_xb_z)&y\\&+&(a_yb_z-a_zb_y)&x\end{array}$

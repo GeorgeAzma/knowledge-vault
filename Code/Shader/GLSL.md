@@ -11,6 +11,8 @@
 - `textureGather, textureGatherOffset, textureGatherOffsets, textureGrad, textureGradOffset, textureLod, textureLodOffset, textureOffset, textureProj, textureProjGrad, textureProjGradOffset, textureProjLod, textureProjLodOffset, textureProjOffset, textureQueryLevels, textureQueryLod, textureSamples, textureSize, textureGatherCompare, textureNumLayers, textureNumSamples, texelFetch, texelFetchOffset`
 - `atomicLoad, atomicStore, atomicAdd, atomicSub, atomicMax, atomicMin, atomicAnd, atomicOr, atomicXor, atomicExchange, atomicCounter, atomicCounterDecrement, atomicCounterIncrement, atomicCompSwap`
 - `imageAtomicAdd, imageAtomicAnd, imageAtomicCompSwap, imageAtomicMax, imageAtomicMin, imageAtomicOr, imageAtomicXor, imageLoad, imageSamples, imageSize, imageStore`
-- `packDouble2x32, packHalf2x16, packSnorm2x16, packSnorm4x8, packUnorm, packUnorm2x16, packUnorm4x8` They all have `unpack<X>`
+- `packDouble2x32, packHalf2x16, packSnorm2x16, packSnorm4x8, packUnorm2x16, packUnorm4x8` all have `unpack<X>`
 - `barrier, memoryBarrier, memoryBarrierAtomicCounter, memoryBarrierBuffer, memoryBarrierImage, memoryBarrierShared, groupMemoryBarrier`
 - `interpolateAtCentroid, interpolateAtOffset, interpolateAtSample`
+##### [[Packing]]
+##### [[Texture]]

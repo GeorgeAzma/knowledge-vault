@@ -3,7 +3,6 @@
 - $\epsilon_0$ [[Vacuum Permittivity]]
 - $r$ distance between particles
 
-This formula tells repulsion strength between 2 particles,
-so if $q_1$ is negative and $q_2$ is positive (electron, proton), repulsion strength would be negative, meaning they attract each other.
+Formula for repulsion strength between 2 particles, if $q_1$ is negative and $q_2$ is positive `electron, proton`, repulsion strength would be negative `attraction`
 ### Electric Field Formula $\vec E(\vec r)=\dfrac{q\vec r}{4\pi\epsilon_0|\vec r|^2}$
-$4\pi\epsilon_0=1.1126500564\times10^{−10}$
+- $4\pi\epsilon_0=1.1126500564\times10^{−10}$

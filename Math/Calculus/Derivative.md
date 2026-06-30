@@ -1,18 +1,17 @@
-### Finite Difference Method $\lim_{h\to0}\dfrac{f(x+h)-f(h)}{h}$
-Tho $\frac{f(x+h)-f(x-h)}{2h}$ is more accurate
-[[Partial Derivative]]
+#### [[Finite Difference]]
+#### [[Partial Derivative]]
 ### Formulas
 ##### Simple
-- $\large c=0$
-- $\large a+b=a'+b'$
-- $\large ab=ab'+ba'$
+- $c=0$
+- $a+b=a'+b'$
+- $ab=ab'+ba'$
 ##### Common
 - $\dfrac{a}{b}=\dfrac{a'b-ab'}{b^2}$
 - $\dfrac{1}{a}=-\dfrac{a'}{a^2}$
 - $c\cdot a=c\cdot a'$
 - $f(g(x))=f'(g(x))\cdot g'(x)$ [[Chain Rule]]
 - $\dfrac{f(x)}{g(x)}=\dfrac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}$
-##### power
+##### Power
 - $x^n=n\cdot x^{n-1}$
 - $y^x=\ln{y}\cdot e^{x\ln{y}}$
 - $a^u=a^u\ln a \dfrac{du}{dx}$

@@ -21,10 +21,10 @@ vec3 noised(vec2 p) {
         du * (u.yx * (va - vb - vc + vd) + vec2(vb, vc) - va));
 }
 
-vec3 fbm(vec2 p) {
+vec3 fbm(vec2 p, int octaves) {
     vec3 s = vec3(0);
     float a = 1.0;
-    for(float i = 0.0; i < 6.0; i++) {
+    for(int i = 0; i < 6; ++i) {
         s += a * noised(p);
         a *= 0.5;
         p *= 2.0;
@@ -32,12 +32,7 @@ vec3 fbm(vec2 p) {
     return s;
 }
 
-vec3 rocks(vec2 p) {
-    vec3 n = fbm(p);
-    p += n.yz * 0.4;
-    vec3 n2 = fbm(p);
-    n.yz += (n2.x - n.x) * n2.yz;
-    n.x += n2.x - n.x;
-    return n;
+float stone(vec2 p) {
+    return vec3(fbm(p + fbm(p, 6).yz * 0.4, 6).x * 0.5 + 0.5;
 }
 ```

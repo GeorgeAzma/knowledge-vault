@@ -9,7 +9,9 @@ cmd & # run in background
 (cd tmp && ls) # run cmds in subshell
 {cd tmp; ls; } # group cmds in curr shell
 
-Escape\ Space
+escape\ space
+'escape space'
+./'--escape dashes--'
 
 curr_date=$(date)
 echo "Today is $curr_date"

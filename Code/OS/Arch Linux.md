@@ -10,7 +10,7 @@ mount /dev/nvme1n1p1 /mnt/boot
 swapon /dev/nvme1n1p2
 
 pacstrap /mnt base linux linux-firmware
-genfstab -U /mnt > /mnt/etc/fstab
+genfstab -U /mnt > /etc/fstab
 arch-chroot /mnt
 
 ##### Time / Locale #####

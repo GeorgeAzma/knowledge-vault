@@ -9,4 +9,4 @@
 ### Area from Points $\dfrac{1}{2}||\vec{AB}\times\vec{AC}||$
 - can also be done using [[Determinant]] or [[Wedge Product]] or **Gram's Determinant**
 ### Properties
-![[Triangle Properties.webp]]
+![[Triangle Properties.webp#rounded,invert]]

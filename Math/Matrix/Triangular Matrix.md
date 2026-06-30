@@ -5,6 +5,6 @@
 - [[Eigenvalue]][[s]] are exactly diagonal elements
 - [[Inverse]] is also triangular
 - **Matrix Product** is also triangluar
-- [[Square Matrix]] can be reduced to triangular form using LU or [[QR Decomposition]]
+- [[Square Matrix]] can be reduced to triangular form using [[LU Decomposition]] or [[QR Decomposition]]
 - [[Transpose]] of upper triangular is lower triangular and vice-versa
 - **Trace** is sum of diagonal, like in any [[Square Matrix]]

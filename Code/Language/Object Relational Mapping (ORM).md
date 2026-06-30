@@ -59,4 +59,4 @@ sequelize.sync()
 ```
 > [!tip]
 > - Store database name, username, password, host in `.env` file
-> - Enable [[Transport Layer Security (TLS)|TLS]]/SSL encryption for secure connections in sequelize and db server
+> - Enable [[Transport Layer Security|TLS]]/SSL encryption for secure connections in sequelize and db server

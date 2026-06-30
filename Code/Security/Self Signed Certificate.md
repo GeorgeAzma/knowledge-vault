@@ -8,6 +8,11 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3
 # cert.pem: public key
 # -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
 # -addext: Subject Alternative Names (browsers require this)
+
+# manual demo:
+openssl genrsa -out server.key 2048
+openssl req -new -key server.key -out server.csr
+openssl x509 -req -in server.csr -signkey server.key -out server.crt -days 365
 ```
 ### Trust Certificate
 ``` bash

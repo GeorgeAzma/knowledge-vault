@@ -1,4 +1,4 @@
-- **3 Binary Operations** $+-*$ (if you also have division then it's a [[Field]])
+- **3 Binary Operations** $+-*$ (if you also have division then it's a [[Math/Discrete/Field]])
 - [[Group|Additive Abelian Group]] meaning $+-$ has:
     - [[Closure]]
     - [[Associativity]] `a+(b+c) = (a+b)+c`

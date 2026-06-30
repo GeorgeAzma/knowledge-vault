@@ -32,3 +32,4 @@ Eigen values tell you how much vector is scaled in each dimension
 - $\Lambda$ diagonal matrix of eigenvalues
 - $V$ matrix with eigenvector of $A$ as columns 
 - $A^n=V^{-1}\Lambda^n V$ 
+### [[Power Iteration]]

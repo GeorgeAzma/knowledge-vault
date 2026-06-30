@@ -1,35 +1,52 @@
 Allows you to send signals through USB to android phone
-## Commands
-- **Open camera** `adb shell am start -a android.media.action.IMAGE_CAPTURE`
-- **Play a song** `adb shell am start -a android.intent.action.VIEW -d "file:///sdcard/Music/song.mp3" -t "audio/*"`
-- **Launch google maps with location** `adb shell am start -a android.intent.action.VIEW -d "geo:37.7749,-122.4194"`
-- **Send and SMS** `adb shell am start -a android.intent.action.SENDTO -d "sms:1234567890" --es "sms_body" "Hello, world!"`
-- **Set wallpaper** `adb shell am start -a android.intent.action.ATTACH_DATA -c "image/*" -d "file:///sdcard/Pictures/wallpaper.webp"`
-- **Open a website (via default browser)** `adb shell am start -a android.intent.action.VIEW -d "example.com"`
-- **Take a screenshot** `adb shell screencap /sdcard/screenshot.webp`
-- **Download a file from your phone (to current cmd directory):** `adb pull /sdcard/screenshot.webp`
-- **Screen record (To stop the recording, press `Ctrl+C` in cmd)** `adb shell screenrecord /sdcard/video.mp4`
-- **Toggle flashlight** `adb shell am broadcast -a android.intent.action.FLASHLIGHT_TOGGLE`
-- **Show battery status** `adb shell dumpsys battery`
-- **Reboot** `adb reboot`
-- **Install APK** `adb install path/to/app.apk`
-- **Uninstall APK** `adb uninstall com.example.app`
-- **List installed apps** `adb shell pm list packages`
-- **Clear app data** `adb shell pm clear com.example.app`
-- **Start a service** `adb shell am startservice -n com.example.app/.MyService`
-- **Call** `adb shell am start -a android.intent.action.CALL -d tel:<phone_number>`
-- **SMS** `adb shell am start -a android.provider.Telephony.SMS_RECEIVED --es "pdus" "0001020304050607"`
-- **Set brightness** `adb shell settings put system screen_brightness <0-2000>`
-- **Switch Wi-Fi** `adb shell am start -a android.intent.action.MAIN -n com.android.settings/.wifi.WifiSettings`
-- **Turn on airplane mode** `adb shell settings put global airplane_mode_on <value>`
-- **Set orientation** `adb shell settings put system accelerometer_rotation <value>`
-- **Show location** `adb shell dumpsys location`
-- **Toggle mobile data** `adb shell svc data <value>`
-- **Show running services** `adb shell dumpsys activity services`
-- **Show running processes** `adb shell ps`
-- **Show running activities** `adb shell dumpsys activity activities`
-- **Kill process** `adb shell kill <pid>`
-- **Show network status** `adb shell dumpsys network`
-- **Show available sensors** `adb shell dumpsys sensorservice`
-- **Launch app** `adb shell monkey -p com.example.app -c android.intent.category.LAUNCHER 1`
-- **Show hardware** `adb shell cat /proc/cpuinfo`
+``` bash
+# phone link: settings > developer options > wireless debugging 
+adb pair <phone-ip>:<pair-port> # enter 6-digit code from 'wireless debugging'
+adb connect <phone-ip>:<connect-port> # connect port from 'wireless debugging'
+
+adb devices
+
+adb shell ps # processes
+adb shell kill <pid> # kill
+
+# files / data / packages
+adb pull /sdcard/screenshot.webp . # pull file
+adb install app.apk # install apk
+adb uninstall com.example.app # uninstall
+adb shell pm clear com.example.app # clear data
+adb shell screenrecord /sdcard/video.mp4 # record
+adb shell pm list packages # apps
+
+# actions
+adb shell am broadcast -a android.intent.action.FLASHLIGHT_TOGGLE # flashlight
+adb reboot # reboot
+adb shell settings put system screen_brightness 128 # set brightness
+adb shell settings put global airplane_mode_on 1 # airplane on
+adb shell settings put system accelerometer_rotation 1 # rotate on
+adb shell svc data enable # data on
+adb shell screencap /sdcard/screenshot.webp # screenshot
+
+# launch
+adb shell monkey -p com.example.app -c android.intent.category.LAUNCHER 1 # launch app
+adb shell am start -a android.intent.action.MAIN -n com.android.settings/.wifi.WifiSettings # wifi
+adb shell am startservice -n com.example.app/.MyService # service
+adb shell am start -a android.intent.action.VIEW -d "https://example.com" # website
+adb shell am start -a android.media.action.IMAGE_CAPTURE # open camera
+adb shell am start -a android.intent.action.VIEW -d "file:///sdcard/Music/song.mp3" -t "audio/*" # play song
+adb shell am start -a android.intent.action.VIEW -d "geo:37.7749,-122.4194" # maps
+adb shell am start -a android.intent.action.ATTACH_DATA -c "image/*" -d "file:///sdcard/Pictures/wallpaper.webp" # wallpaper
+
+# info
+adb shell cat /proc/cpuinfo # cpu
+adb shell dumpsys battery # battery
+adb shell dumpsys sensorservice # sensors
+adb shell dumpsys network # network
+adb shell dumpsys activity services # services
+adb shell dumpsys activity activities # activities
+adb shell dumpsys location # location
+
+# sms / call
+adb shell am broadcast -a android.provider.Telephony.SMS_RECEIVED --es pdus "0001020304050607" # fake sms
+adb shell am start -a android.intent.action.SENDTO -d "sms:1234567890" --es sms_body "Hello" # sms  
+adb shell am start -a android.intent.action.CALL -d "tel:1234567890" # call
+```

@@ -1,0 +1,14 @@
+- [[Multiplication]]
+- [[Transpose]]
+- [[Determinant]]
+- [[Inverse]]
+- [[Adjoint]]
+- [[Kronecker Product]]
+- [[Hadamard Product]]
+- [[Matrix Decomposition]]
+- [[Matrix Exponential]]
+- **Trace** sum of diagonal elements
+### Operation Intuition
+- $A^Tx$ [[Dot Product]]
+- $x^Tx=||x||^2$
+- $C^{-1}AC$ matrix $A$ written in the basis vectors of $C$

@@ -1,12 +1,12 @@
 - Calculate Diffuse
 ``` c
-float f90 = 0.5 + 2.0 * (roughness * cos^2(theta_d))
+float f90 = 0.5 + 2.0 * (roughness * cos(theta_d) * cos(theta_d))
 float fdiffuse = mix(1.0, f90, dot(normal, light_dir)) * mix(1.0, f90, view_dir)
 fdiffuse = fdiffuse / PI * albedo
 ```
 - Calculate Sub-Surface Scattering
 ``` c
-float ss90 = roughness * cos^2(theta_d);
+float ss90 = roughness * cos(theta_d) * cos(theta_d);
 float ndl = dot(normal, light_dir);
 float ndv = dot(normal, view_dir);
 float ss = mix(1.0, ss90, pow(1.0 - ndl, 5.0));
@@ -49,8 +49,7 @@ float smithg_ggx_aniso(float ndv, float vdx, float vdy, vec2 roughness) {
 	return 1.0 / (ndv + sqrt(sq(vdx * roughness.x) + sq(vdy * roughness.y) + sq(ndv)));
 }
 
-float3 brdf(vec3 light_dir, vec3 view_dir, vec3 normal, vec3 tangent, vec3 binormal)
-{
+float3 brdf(vec3 light_dir, vec3 view_dir, vec3 normal, vec3 tangent, vec3 binormal) {
 	float ndl = max(dot(normal, light_dir), 0.0);
 	float ndv = max(dot(normal, view_dir), 0.0);
 

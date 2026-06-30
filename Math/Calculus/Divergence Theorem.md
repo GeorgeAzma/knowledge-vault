@@ -1,8 +1,7 @@
 ---
 aliases: Gauss's Theorem
 ---
-
-divergence of entire volume = divergence of entire surface towards normal 
+[[divergence]] of entire volume = [[divergence]] of entire surface towards normal 
 ### $\int\int\int_V(\nabla\cdot F)dV=\int\int_{\delta V}F\cdot ndS$
 - $V$ solid volume
 - $\delta V$ surface boundry of volume

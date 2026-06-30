@@ -26,7 +26,13 @@ Get-ChildItem -Path "MyFolder" -Filter "*.webp" -File | ForEach-Object {
     -replace '\.(?:PNG|JPG|JPEG)', '.webp' ` |
 Set-Content $_.FullName
 ```
-### Count File Extensions
+### Useful
 ``` powershell
+# update environment
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+```
+### Examples
+``` powershell
+# count file extensions
 powershell -command "Get-ChildItem -Recurse -File | Group-Object Extension | Sort-Object Count -Descending"
 ```

@@ -77,5 +77,15 @@ uv.y = 0.5 - uv.y * 0.5;
 float d = 1.0 - normalize(uv).y * abs(1.0 - uv.y * uv.y + uv.y);
 float f = fwidth(d);
 color.a = smoothstep(f, -f, d);
+
+// Arc
+float w = 0.02; // width
+float c = 0.25; // curvature
+float h = 0.0; // hardness
+float a = 0.0; // rotation
+uv = uv * cos(a) + vec2(-uv.y, uv.x) * sin(a); // rotate the arc
+uv.x += 1.0; // center the arc
+vec2 sh = vec2(length(uv), atan(uv.y, uv.x));
+float arc = smoothstep(w, (w - fwidth(sh.x)) * h, distance(sh * vec2(1, w / c / 3.14), vec2(1, 0)));
 ```
 ### [[Quadratic Bezier]]

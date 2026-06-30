@@ -1,44 +1,10 @@
-![[Matrix.webp]]
-Each column of a matrix represents a [[Standard Basis Vector]]
-If you change matrix column from [[Standard Basis Vector]]
-space will get scaled and/or rotated
-![[Matrix Transformation.webp]]
-### Multiplication
-![[Matrix Multiplication.webp]]
-![[Vector Matrix Multiplication.webp]]
-### Operations
-- [[Transpose]]
-- [[Determinant]]
-- [[Inverse]]
-- [[Adjoint]]
-- [[Kronecker Product]]
-- [[Hadamard Product]]
-- [[Matrix Decomposition]]
-- **Trace** sum of diagonal elements
-### Types
-- [[Identity Matrix]]
-- [[Diagonal Matrix]]
-- [[Diagonal Matrix#Scalar Matrix|Scalar Matrix]]
-- [[Symmetric Matrix]]
-- [[Orthogonal Matrix]]
-- [[Hermitian Matrix]]
-- [[Jacobian Matrix]]
-- [[Hessian Matrix]]
-- [[Unitary Matrix]]
-- [[Positive Definite Matrix]]
-- [[Triangular Matrix|Upper/Lower Triangular Matrix]]
-- [[Skew-Symmetric Matrix]] `diag=0` and tris are equal but negated
-- [[Adjacency Matrix]]
-- [[Incidence Matrix]]
-- **Stochastic Matrix** rows are [[Probability]] distributions
-- **Diagonal Dominant Matrix** abs(sum(diag)) > sum(abs(non-diag))
-- **Banded Matrix** non-zero values reasamble thick diagonal
-### [[Rank]] $M_{rank}=MaxDimensionCount(Mx)$
-### Operation Intuition
-- $C^{-1}AC$ matrix $A$ written in the basis vectors of $C$
-- $A^Tx$ [[Dot Product]]
-- $x^TAy$ billinear form $x=\begin{bmatrix}x_1\\ x_2\\ x_3\end{bmatrix},\quad y=\begin{bmatrix}y_1\\ y_2\end{bmatrix},A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\\a_{31}&a_{32}\end{bmatrix}$
-  $x^TAy=a_{11}x_1y_1+a_{21}x_2y_1+a_{31}x_3y_1+a_{12}x_1y_2+a_{22}x_2y_2+a_{32}x_3y_2$
-- $x^TAx$ quadratic form `billinear form with x=y`
-  $x^TAx=a_{11}x_1^2+a_{21}x_1x_2+a_{31}x_1x_3+a_{12}x_1x_2+a_{22}x_2^2+a_{32}x_2x_3$
-- $J_n=\begin{bmatrix}1&1&\cdots &1\\1&1&\cdots&1\\ \vdots &\vdots &\ddots &\vdots\\1&1&\cdots &1\end{bmatrix}$ $J_nA$ is sum of columns of $A$, divide by $n$ to get [[Mean]]
+$\begin{array}{ccc}\begin{array}{ccc}\color{WildStrawberry}{x} & \color{LimeGreen}{y} & \color{cornflowerblue}{z} \\\end{array} \\\left|~\begin{array}{ccc}\color{WildStrawberry}{1} & \color{LimeGreen}{0} & \color{cornflowerblue}{0} \\\color{WildStrawberry}{0} & \color{LimeGreen}{1} & \color{cornflowerblue}{0} \\\color{WildStrawberry}{0} & \color{LimeGreen}{0} & \color{cornflowerblue}{1}\end{array} ~\right|\end{array}$
+Each column of a matrix represents a [[Standard Basis Vector]], If you change matrix column from [[Standard Basis Vector]], then space gets scaled and/or rotated, but grid lines remain parallel and evenly space
+### [[Operations]]
+### [[Types]]
+### [[Rank]] $M_{rank}=\text{MaxDimensionCount}(Mx)$
+### [[Derivative]]
+- $\nabla_x (a^Tx)=a$
+- $\nabla_x x^TAx=(A+A^T)x$ `2Ax for symmetric`
+- $\nabla(\dfrac{1}{2}x^TAx-b^Tx)=Ax-b$ setting to zero gives $Ax=b$
+- $\nabla(x^Tx)=2x$

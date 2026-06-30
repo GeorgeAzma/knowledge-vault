@@ -2,7 +2,7 @@
 like how [[Quadratic Equation|Discriminant]] is used for finding roots of $ax^2+bx+c$
 newton's method is used for finding root of any differentiable function
 ### Formula $x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}$
-![[Newton's Method.webp|500]]
+![[Newton's Method.webp#rounded|500]]
 ### Derivation $y\approx f(x_n)+f'(x_n)(x-x_n)$
 related to [[Taylor Series]] definition of a function
 - we want root $y=0\approx f(x_n)+f'(x_n)(x-x_n)$

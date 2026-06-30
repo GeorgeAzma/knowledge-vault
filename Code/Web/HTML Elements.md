@@ -35,6 +35,7 @@
 <pre> preserves new-lines and spaces (preformatted text)
 <span> generic inline container
 <div> generic block container
+<ruby>日本語<rt>にほんご</rt></ruby> displays small translation text on top
 ```
 ### Links / Media
 ``` html

@@ -4,11 +4,11 @@
 - $\vec\nabla\times\vec{E}=-\dfrac{\partial\vec{B}}{\partial t}$ `curl of E, how much it rotates around the point`
 - $\vec\nabla\times\vec{B}=\mu_0(\vec{J}+\epsilon_0\dfrac{\partial\vec{E}}{\partial t})$
 ### Definitions
-- $\vec\nabla=\huge(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z})$ `partial derivative for each spacial axis`
+- $\vec\nabla=\huge(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z})$ `partial derivative for each spatial axis`
 - $\vec{E}$ Electric field
 - $\vec{B}$ Magnetic field
 - $\rho$ [[Charge]] density
-- $J$ [[Current]]
+- $\vec{J}$ [[Current]]
 - $\mu_0$ [[Vacuum Permeability]]
 - $\epsilon_0$ [[Vacuum Permittivity]]
 ### What equations mean
@@ -16,10 +16,13 @@
 - Particles don't have magnetic charge by itself
 - Changing magnetic field creates a rotating electric field and vice versa
 - Electric currents at changing electric field generate a magnetic field
-### [[Geometric Algebra]] Formula $\nabla F=\frac{J}{c\epsilon_0}$
-- $\nabla=\dfrac{1}{c}\dfrac{\partial}{\partial t}+\dfrac{\partial}{\partial x}\hat{x}+\dfrac{\partial}{\partial y}\hat{y}+\dfrac{\partial}{\partial z}\hat{z}$
+### [[Geometric Algebra]] Formula $\nabla F=\dfrac{J}{c\epsilon_0}$
+- $\nabla F=\nabla\cdot F+\nabla\land F$ [[Geometric Product]]
+- $\nabla=\dfrac{1}{c}\partial t+\vec{\nabla}=\dfrac{1}{c}\dfrac{\partial}{\partial t}+\dfrac{\partial}{\partial x}\hat{x}+\dfrac{\partial}{\partial y}\hat{y}+\dfrac{\partial}{\partial z}\hat{z}$
 - $J=c\rho-\vec{J}$
-- $F=\vec{E}+ic\vec{B}$ `i is unit trivector`
+- $F=\vec{E}+Ic\vec{B}$ `
+- $I=e_xe_ye_z$ unit [[bivector|trivector]]
+- $I\vec{B}$ equivalent to [[Hodge Star Operator]] `converts vector to orthogonal bivector`
 - $c$ [[Light#Speed of Light $c=f lambda=299,792,458m/s$|Speed of Light]]
 ##### Expanding
 $$

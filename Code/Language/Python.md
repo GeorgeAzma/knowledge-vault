@@ -77,6 +77,9 @@ math.ulp(x) # unit in last place
 ``` python
 a = [1, "x", 3.14]
 
+"x" not in a # False
+any(v > 5 for v in arr)
+
 # add
 nums = [1, 2]
 nums.append(3)       # [1, 2, 3]

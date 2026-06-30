@@ -30,3 +30,23 @@ float blue(vec3 p) {
     return 0.9 * ((1.0 + 1.0 / 26.0) * hash13(p) - v / 26.0) + 0.5;
 }
 ```
+### [[Hilbert Curve]]
+best quality `512x512 tiles, bigger tiles = slower`
+``` c
+int hilbert_encode(int n, ivec2 p) {
+    int i = 0;
+    for (int s = n >> 1; s > 0; s >>= 1) {
+        int rx = int((p.x & s) != 0);
+        int ry = int((p.y & s) != 0);
+        i += s * s * ((rx << 1) | rx ^ ry);
+        p ^= (p.x ^ p.y) * (1 - ry) ^ (s - 1) * (rx & (1 - ry));
+    }
+    return i;
+}
+
+float hilbert_blue(vec2 p) {
+    return fract(0.6180339887498948482 * float(hilbert_encode(512, ivec2(p)) % 262144));
+}
+```
+- uses [[golden ratio sequence]]
+    - you can use 3D [[golden ratio sequence]] for RGB blue noise `vec3 hilbert_blue_noise(vec2 p)` 

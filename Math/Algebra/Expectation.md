@@ -9,8 +9,9 @@ expected value for random samples from probability distribution, or their long-r
 - $\mathbb{E}[X+Y]=\mathbb{E}[X]+\mathbb{E}[Y]$
 - $\mathbb{E}[f(x)]\geq f(\mathbb{E}(x))$ `jensen's inequality for convex function`
 - $\mathbb{E}[f(x)]\leq f(\mathbb{E}(x))$ `jensen's inequality for concave function`
-##### $\text{var}/\text{cov}$ Expectation Formulas
-- $V(a)=0$ `Variance of constant is 0`
-- $V(a\pm X)=V(X)$
-- $V(X)=\mathbb{E}[X^2]-\mathbb{E}[X]^2$
+- $\mathbb{E}[x^{2n}]=(2n-1)!!\sigma^{2n}$ where $x\sim\mathcal{N}(0,\sigma^2)$
+##### [[Variance]]/[[Covariance]] Expectation Formulas
+- $\text{Var}(c)=0$
+- $\text{Var}(c\pm X)=\text{Var}(X)$
+- $\text{Var}(X)=\mathbb{E}[X^2]-\mathbb{E}[X]^2$
 - $\text{cov}(X,Y)=\mathbb{E}(XY)-\mu_X\mu_Y$ [[Covariance]]

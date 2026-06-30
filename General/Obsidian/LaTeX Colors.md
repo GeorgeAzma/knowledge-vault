@@ -1,11 +1,19 @@
+
 ### Good Colors
-- $\color{WildStrawberry}\text{WildStrawberry}$
-- $\color{forestgreen}\text{forestgreen}$
-- $\color{cornflowerblue}\text{cornflowerblue}$
-- $\color{orange}\text{orange}$
-- $\color{violet}\text{violet}$
 - $\color{gray}\text{gray}$
 - $\color{CadetBlue}\text{CadetBlue}$
+- $\color{Periwinkle}\text{Periwinkle}$
+- $\color{BlueViolet}\text{BlueViolet}$
+- $\color{cornflowerblue}\text{cornflowerblue}$
+- $\color{Lavender}\text{Lavender}$
+- $\color{CarnationPink}\text{CarnationPink}$
+- $\color{violet}\text{violet}$
+- $\color{WildStrawberry}\text{WildStrawberry}$
+- $\color{orange}\text{orange}$
+- $\color{Dandelion}\text{Dandelion}$
+- $\color{Apricot}\text{Apricot}$
+- $\color{LimeGreen}\text{LimeGreen}$
+- $\color{forestgreen}\text{forestgreen}$
 ### All Colors
 $$
 \newcommand{\col}[1]{\text{\color{#1}{#1}}}

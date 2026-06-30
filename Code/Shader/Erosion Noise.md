@@ -1,7 +1,5 @@
 https://youtu.be/r4V21_uUK8Y
 ``` c
-#define PI 3.1415926
-
 vec2 hash22(vec2 p) {
     uvec2 u = floatBitsToUint(p * vec2(141421356, 2718281828));
     return vec2((u.x ^ u.y) * uvec2(3141592653, 1618033988)) / float(~0u);
@@ -27,19 +25,8 @@ vec3 noised(in vec2 p) {
     return vec3(0.5 + va + u.x * (vb - va) + u.y * (vc - va) + u.x * u.y * (va - vb - vc + vd), ga + u.x * (gb - ga) + u.y * (gc - ga) + u.x * u.y * (ga - gb - gc + gd) + du * (u.yx * (va - vb - vc + vd) + vec2(vb, vc) - va));
 }
 
-vec3 fbm(vec2 p) {
-    vec3 s = vec3(0);
-    float a = 1.0, f = 1.0;
-    for(int i = 0; i < 1; i++) {
-        s += a * vec3(1, f, f) * noised(p * f);
-        a *= 0.25;
-        f *= 2.0;
-    }
-    return s;
-}
-
 vec3 gullies(vec2 p, vec2 slope) {
-    vec2 side_dir = vec2(-slope.y, slope.x) * PI;
+    vec2 side_dir = vec2(-slope.y, slope.x) * 3.14159265;
     vec2 id = floor(p);
     p -= id;
     vec2 height_slope = vec2(0);
@@ -58,8 +45,8 @@ vec3 gullies(vec2 p, vec2 slope) {
     return vec3(height_slope.x, height_slope.y * side_dir) / w_sum;
 }
 
-vec3 erosion(vec2 p, vec3 nd) {
-    vec3 in_nd = nd;
+vec3 erosion(vec2 p) {
+    vec3 nd = noised(p);
     float strength = 0.25, freq = 8.0, total = 1.0;
     for(int i = 0; i < 4; i++) {
         float len2 = dot(nd.yz, nd.yz);
@@ -69,12 +56,5 @@ vec3 erosion(vec2 p, vec3 nd) {
         freq *= 2.0;
     }
     return nd / total;
-}
-
-void main() {
-    vec2 fragCoord = gl_FragCoord.xy;
-    vec2 uv = fragCoord / u_resolution.y * 4.0;
-    vec3 col = erosion(uv, fbm(uv)).xxx;
-    fragColor = vec4(col, 1);
 }
 ```

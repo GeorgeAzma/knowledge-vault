@@ -8,6 +8,7 @@
 ### [[SDF]]
 - [[Normal From SDF]]
 ### [[Antialiasing]]
+### [[Color Blending]]
 ### Pretty Shapes
 ``` c
 float l = length(uv);

@@ -1,4 +1,9 @@
-Translates random samples to percentiles `U ∈ [0; 1]`. vice-versa for inverse CDF
+---
+aliases:
+  - CDF
+---
+Translates random samples to percentiles `U ∈ [0; 1]`
+meaning it can transform any distribution into uniform distribution
 ### Formula $F_X(x)=P(X\leq x)$
 CDFs en.wikipedia.org/wiki/Cumulative_distribution_function
 [[Derivative]] of CDF is [[Probability Density Function]]

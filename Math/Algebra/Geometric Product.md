@@ -1,13 +1,19 @@
-### Formula $\vec{a}\vec{b}=\vec{a}\cdot\vec{b}+\vec{a}\wedge\vec{b}$
+### Formula $\mathbf{a}\mathbf{b}=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\wedge\mathbf{b}$
 - $\cdot$ [[Dot Product]]
 - $\wedge$ [[Wedge Product]]
 ### Properties
-- $\vec{a}^2=|a|^2$
-- $\vec{a}\wedge\vec{a}=0$
-- $\vec{a}^{-1}=\huge\frac{\vec{a}}{|a|^2}$
-- $\vec{b}\vec{a}=\vec{a}\cdot\vec{b}-\vec{a}\wedge\vec{b}$
-- $\vec{a}\cdot\vec{b}=\dfrac{\vec{a}\vec{b}+\vec{b}\vec{a}}{2}$
-- $\vec{a}\wedge\vec{b}=\huge\frac{\vec{a}\vec{b}-\vec{b}\vec{a}}{2}$
+- $\mathbf{a}^2=|\mathbf{a}|^2$
+- $\mathbf{a}\wedge\mathbf{a}=0$
+- $\mathbf{a}^{-1}=\dfrac{\mathbf{a}}{|a|^2}$
+- $\mathbf{b}\mathbf{a}=\mathbf{a}\cdot\mathbf{b}-\mathbf{a}\wedge\mathbf{b}$
+- $\mathbf{a}\cdot\mathbf{b}=\dfrac{\mathbf{a}\mathbf{b}+\mathbf{b}\mathbf{a}}{2}$
+- $\mathbf{a}\wedge\mathbf{b}=\dfrac{\mathbf{a}\mathbf{b}-\mathbf{b}\mathbf{a}}{2}$
+##### $|a\wedge b|^2=|a|^2|b|^2-|a\cdot b|^2$ `geometric identity`
+- $ab=a\cdot b+a\wedge b$
+- $ba=a\cdot b-a\wedge b$
+- $abba=(a\cdot b+a\wedge b)(a\cdot b-a\wedge b)=(a\cdot b)^2-(a\wedge b)^2$ `difference of squares`
+- $|a|^2|b|^2=(a\cdot b)^2-(a\wedge b)^2$
+- $|a\wedge b|^2=|a|^2|b|^2-|a\cdot b|^2$
 ##### For [[Standard Basis Vector]]
 - $\hat{a}^2=1$
 - $\hat{a}\hat{b}=-\hat{b}\hat{a}$
@@ -80,7 +86,4 @@ $$
 - $(a_x\quad a_y\quad a_z)\begin{bmatrix}x\wedge x & x\wedge y & x\wedge z \\ y\wedge x & y\wedge y & y\wedge z\\ z\wedge x & z\wedge y & z\wedge z\end{bmatrix}\begin{pmatrix}b_x\\ b_y\\ b_z\end{pmatrix}$
 - $(a_x\quad a_y\quad a_z)\begin{bmatrix}0 & x\wedge y & x\wedge z \\ -x\wedge y & 0 & y\wedge z\\ -x\wedge z & -z\wedge y & 0\end{bmatrix}\begin{pmatrix}b_x\\ b_y\\ b_z\end{pmatrix}$
 - $\begin{array}{l} a\wedge b&=&(a_xb_y-a_yb_x)&x\wedge y\\&+&(a_xb_z-a_zb_x)&x\wedge z\\&+&(a_yb_z-a_zb_y)&y\wedge z\end{array}$
-- **Cross Product**
-    - $a\times b=-I(a\wedge b)$ where $I=x\wedge y\wedge z$ `pseudo scalar`
-    - $\begin{array}{l}-I(x\wedge y)=z\\ -I(x\wedge z)=-y\\ -I(y\wedge z)=x\end{array}$ `perpendicular vectors (right handed)`
-    - $\begin{array}{l} a\times b&=&(a_xb_y-a_yb_x)&z\\&+&(a_zb_x-a_xb_z)&y\\&+&(a_yb_z-a_zb_y)&x\end{array}$
+- [[Cross Product]]

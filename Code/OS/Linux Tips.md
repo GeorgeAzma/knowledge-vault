@@ -5,6 +5,7 @@
 - [[Pi-Hole]]
 - [[Package Manager]]
 - [[Systemd]]
+- [[Bash]]
 ### File Manager `yazi
 ``` bash
 # install rust

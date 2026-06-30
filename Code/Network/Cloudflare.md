@@ -1,3 +1,3 @@
-### [[Tunnel Localhost To Domain via Cloudflare]]
+### [[Cloudflared Tunnel]]
 ### [[Cloudflare Workers]]
 ### [[Record Types]]

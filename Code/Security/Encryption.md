@@ -12,7 +12,7 @@ Alice and Bob have the shared public key, which they use to encrypt and decrypt 
 - ChaCha20 `128,256 bit key`
 - 3DES `168 bit key`
 ### Asymmetric Encryption
-Alice and Bob have the shared public key and separate private key.
+Alice and Bob have the shared public key and separate private key
 Information encrypted by private key can only be decrypted with public key
 Information encrypted by public key can only be decrypted with private key
 > [!warning] [[RSA Encryption]] is valnurable to quantum computers
@@ -22,7 +22,7 @@ Information encrypted by public key can only be decrypted with private key
 - Elliptic Curve [[Digital Signature Algorithm|DSA]] `ECDSA`
 - Elliptic Curve Diffie-Hellman `ECDH`
 > [!tip] 
-> Asymmetric encryption can be used for [[Transport Layer Security (TLS)#Purpose|Authentication And Integrity]]
+> Asymmetric encryption can be used for [[Transport Layer Security#Purpose|Authentication And Integrity]]
 > See [[Signature]] for more info
 
 > [!example] Messaging app
@@ -45,7 +45,7 @@ Information encrypted by public key can only be decrypted with private key
 Since symmetric is much faster but asymmetric is more secure
 Asymmetric encryption can be used to share symmetric key
 and symmetric encryption can be used from then on for fast communication
-> [!note] [[Transport Layer Security (TLS)]] and SSH do this
+> [!note] [[Transport Layer Security]] and SSH do this
 ### Simple Encryption
 Simple encryption uses encryption algorithm to encrypt sent message 
 this is insecure because if attacker knows your encryption algorithm

@@ -55,8 +55,8 @@ vec4 rot_between_safe(vec3 a, vec3 b) {
   - remember $q=\cos\theta+\sin\theta(xi+yj+zk)$
   - points on circle rotate by $\frac{\theta}{2}$
 ### Another way of thinking about it
-- Imagine $x,y,z,w$ are slerping between these orientations ![[Quaternion Interpretation.webp|400]]
-- ![[Quaternion Rotation Example.webp|400]] 
+- Imagine $x,y,z,w$ are slerping between these orientations 
+![[Quaternion Interpretation.webp#rounded|300]]![[Quaternion Rotation Example.webp#rounded|300]] 
   $w=\sqrt2,x=\sqrt2$
 > [!note] $\sqrt2$ instead of $0.5$, because quaternions are normalized
 ### Slerp

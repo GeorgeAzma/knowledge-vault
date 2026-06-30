@@ -1,4 +1,4 @@
-![[Worley.webp|400]]
+![[Worley.webp#rounded|400]]
 ### 2D
 ``` c
 vec2 hash22(vec2 p) {

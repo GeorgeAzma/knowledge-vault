@@ -1,3 +1,7 @@
+---
+aliases:
+  - Continuity
+---
 Transforms control points to curves https://youtu.be/jvPPXbo87ds
 # Uniform Cubic Splines
 

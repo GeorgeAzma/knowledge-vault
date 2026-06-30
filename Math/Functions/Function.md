@@ -40,7 +40,9 @@ Inverse functions are bijective $f^{-1}:\begin{cases}Y\rightarrow X\\ f(x)\mapst
 since function just maps input to output it can be written using a [[Set]]
 $\text{square}(x)=\set{(x,x^2)|x\in \mathbb{R}}$
 $\forall y\in Y\set{x\in X\mid f(x)=y}$
-### Preimage
-$f:X\rightarrow Y\land y\in Y$ then preimage of $y$ are elements $x\in X$ such that $f(x)=y$
+### Image / Range $\set{f(x)\mid x\in X}$
+set of all possible outputs function can produce
+### Preimage $f^{-1}(\set{y})=\set{x\in X\mid f(x)=y}$
+for multiple elements $f^{-1}(S)=\set{x\in X\mid f(x)\in S}$ where $S\subseteq Y$
 > [!example] $f(x)=x^2$, then preimage of $4$ is $\pm2$ because $(\pm2)^2=4$
 ### Composition $(f\circ g)(x)=f(g(x))$

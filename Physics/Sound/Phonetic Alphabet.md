@@ -1,12 +1,12 @@
 ---
 aliases:
-  - voice
-  - speech
-  - voice box
-  - vocal coords
+  - Voice
+  - Speech
+  - Voice Box
+  - Vocal Coords
   - IPA
-  - international phonetic alphabet
-  - vowel
+  - International Phonetic Alphabet
+  - Vowel
 ---
 www.ipachart.com
 ### Where Sound Is Blocked

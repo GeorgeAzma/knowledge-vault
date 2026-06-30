@@ -1,5 +1,8 @@
-Amount of electrons flowing per second
-like velocity of ball rolling down a hill
+---
+aliases:
+  - Ampere
+---
+Amount of electrons flowing per second, like velocity of ball rolling down a hill
 ### Formula $I=\dfrac{V}{R}=\dfrac{Q}{t}$
 - $V$ [[Voltage]]
 - $R$ [[Resistance]]

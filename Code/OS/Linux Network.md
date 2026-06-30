@@ -3,10 +3,12 @@
 - [[WGet]]
 - [[DNS]]
 ``` bash
+# Web / Downloads
 wget example.com/file.txt # -O save as -r recurse -c resume interrupted download --limit-rate=500k
 curl -X POST -d "name=foo" example.com/api # -O download file
 curl ifconfig.me # get public ip address
 
+# TCP/UDP listing
 ss -tulnp # -t tcp -u udp -l listening -n use numeric ports (ssh => 22) -p show processes
 netstat -tulnp # list listening ports with PID
 netstat -rn # show routing table
@@ -15,14 +17,17 @@ nmap -sn 192.168.100.0/24 # scan hosts
 hostname -I # get active ipv4
 lsof -i :1234 # -i search by ip:port
 
+# DNS
 dig +short google.com # DNS IP Address lookup
 nslookup google.com 1.1.1.1 # DNS IP Address lookup via Domain Server
 
-nc -lp 9000 # listen port (via netcat)
-nc 192.168.1.5 9000 < file.txt # send file contents
+# Listen Ports, Send & Receive
+nc -lp 9000 > received.txt # listen port (via netcat) -z don't send data -v verbose
+nc 192.168.1.5 9000 < sending.txt # send file contents
 
 socat TCP-LISTEN:11434,fork,reuseaddr TCP:127.0.0.1:11434 # expose 127.0.0.1:11434 => 0.0.0.0:11434
 
+# Network Manager
 nmcli con down "Floor 2"
 nmcli con up "Floor 2"
 nmcli con mod "Floor 2" \

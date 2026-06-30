@@ -37,6 +37,7 @@ cd ~/code/btu-classroom-dashboard
 ./run.sh --headless
 ```
 ### Startup
+`~/code/scripts/start-services.sh`
 ``` bash
 #!/bin/bash
 # ─────────────────────────────────────────────
@@ -56,15 +57,18 @@ tmux has-session -t "$SESSION_SVC" 2>/dev/null && tmux kill-session -t "$SESSION
 tmux new-session -d -s "$SESSION_AI" -n "ollama"
 
 # Window 1 — ollama
-tmux send-keys -t "$SESSION_AI:ollama" "OLLAMA_HOST=0.0.0.0:11434 ollama serve" Enter
+tmux send-keys -t "$SESSION_AI:ollama" \
+  "OLLAMA_HOST=0.0.0.0:11434 ollama serve" Enter
 
 # Window 2 — open-webui
 tmux new-window -t "$SESSION_AI" -n "owui"
-tmux send-keys -t "$SESSION_AI:owui" "open-webui serve --host 0.0.0.0 --port 8080" Enter
+tmux send-keys -t "$SESSION_AI:owui" \
+  "cd ~/code/owui/.venv/bin && ./open-webui serve --host 0.0.0.0 --port 8080" Enter
 
 # Window 3 — LM Studio
 tmux new-window -t "$SESSION_AI" -n "lmstudio"
-tmux send-keys -t "$SESSION_AI:lmstudio" "lms server start" Enter
+tmux send-keys -t "$SESSION_AI:lmstudio" \
+  "lms server start" Enter
 
 # Focus back to first window
 tmux select-window -t "$SESSION_AI:ollama"
@@ -72,12 +76,35 @@ tmux select-window -t "$SESSION_AI:ollama"
 # ════════════════════════════════════════════
 #  Session: services
 # ════════════════════════════════════════════
-tmux new-session -d -s "$SESSION_SVC" -n "btu"
+tmux new-session -d -s "$SESSION_SVC" -n "truck-bot"
 
-# Window 1 — BTU classroom dashboard
-tmux send-keys -t "$SESSION_SVC:btu" "cd ~/code/btu-classroom-dashboard && ./run.sh --headless" Enter
+# Window 1 — Truck Bot
+tmux send-keys -t "$SESSION_SVC:truck-bot" \
+  "cd ~/code/truck-bot && ./run.sh" Enter
+```
+`/etc/systemd/system/my-services.service`
+``` toml
+[Unit]
+Description=Start AI & Services tmux sessions
+After=network-online.target
+Wants=network-online.target
 
-echo "✓ tmux sessions started:"
-echo "  attach with:  tmux attach -t ai"
-echo "  attach with:  tmux attach -t services"
+[Service]
+Type=forking
+User=pi
+Environment="HOME=/home/pi"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/home/pi/code/scripts/start-services.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+### log2ram
+stores log files into ram to avoid constant small writes to SD card which degrades it
+``` bash
+git clone https://github.com/azlux/log2ram.git
+cd log2ram
+chmod +x install.sh
+sudo ./install.sh
 ```

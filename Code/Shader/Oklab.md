@@ -1,29 +1,8 @@
-### Parameters
-
-|  Param  |        Description        |      sRGB Range      | Visible Range |
-| :-----: | :-----------------------: | :------------------: | :-----------: |
-| **`L`** |        luminosity         |       `0 → 1`        |    `0 → 1`    |
-| **`a`** |      green ↔ magenta      | `-0.23392 → 0.27463` | `-0.5 → 0.5`  |
-| **`b`** |       blue ↔ yellow       | `-0.31161 → 0.19849` | `-0.6 → 0.6`  |
-|   `c`   | chromaticity `length(ab)` |     `0 → 0.3226`     |   `0 → 0.6`   |
-|   `h`   |      hue `angle(ab)`      |       `0 → 1`        |    `0 → 1`    |
-### Properties
-- `lightness/chroma/hue` are very orthogonal `changing one of them does not change others`
-- distance between colors are perceptually linear `distance(ok1, ok2)`
-- takes in `linear RGB` for `oklab` conversion
-- blends 2 colors evenly `warm + cool = neutral`
-- has **D65** white point `same as srgb`
-- does not take into account view conditions `eye adjusts to brightness/color, oklab can't`
-### Experiments `sRGB`
-- www.oklch.com/
-- below is hue wheel with linear luminosity that is as chromatic as possible 
-  `without sRGB clipping. L = 0.75, C = 0.127`
-![[Oklab.webp|500]]
-- most chromatic color is magenta `Lch = 0.7, 0.3226, 0.912`
-- most light and chromatic color is green `Lch = 0.865, 0.2933, 0.396`
-- luma values according to oklab are `0.252, 0.652, 0.096`
-  `calculated by bining similar luminosity colors and lsq fitting coefficients`
-  `such that dot(col, coeffs) ~= dot(similar_L_col, coeffs)`
+---
+aliases:
+  - Oklch
+---
+### OKLab
 ``` c
 // oklab = (lightness, red_greenness, blue_yelowness)
 vec3 oklab2rgb(vec3 ok) {
@@ -46,15 +25,6 @@ vec3 rgb2oklab(vec3 rgb) {
                                             0.0259040371,  0.7827717662, -0.8086757660);
 }
 
-// lch = (lightness, chromaticity, hue), sRGB ranges [0-1; 0-0.72?; 0-1]
-vec3 oklch2oklab(vec3 lch) {
-  return vec3(lch.x, lch.y * cos(lch.z * 6.2831), lch.y * sin(lch.z * 6.2831));
-}
-
-vec3 oklab2oklch(vec3 ok) {
-  return vec3(ok.x, length(ok.yz), fract(atan(ok.z, ok.y) / 6.2831));
-}
-
 // optimized oklab mix by Inigo Quilez, MIT licensed
 // shadertoy.com/view/ttcyRS
 vec3 oklab_mix(vec3 lin1, vec3 lin2, float a) {
@@ -71,35 +41,34 @@ vec3 oklab_mix(vec3 lin1, vec3 lin2, float a) {
     vec3 lms = mix(lms1, lms2, a);
     return lms2cone * (lms * lms * lms);
 }
-// okhsv and okhsl (super long)
-// shadertoy.com/view/7sK3D1
 ```
-> [!tip] Convert oklab output to srgb for displaying
+### [[Oklch]]
+### [[sRGB]]
 ``` c
-vec3 lrgb2srgb(vec3 lrgb) { 
+vec3 rgb2srgb(vec3 lrgb) { 
 	return mix(12.92 * lrgb, 1.055 * pow(lrgb, vec3(1.0 / 2.4)) - 0.055, 
 	       step(0.0031308, lrgb)); 
 }
-vec3 srgb2lrgb(vec3 srgb) { 
+
+vec3 srgb2rgb(vec3 srgb) { 
 	return mix(srgb / 12.92, pow((srgb + 0.055) / 1.055, vec3(2.4)), 
 	       step(0.04045, srgb)); 
 }
 ```
-### Example
-``` c
-vec3 col_a = vec3(0.3, 0.9, 0.1);
-vec3 col_b = vec3(0.6, 0.1, 0.5);
-// colors where choosen on srgb monitor by eye
-// so we need to convert it to linear rgb
-col_a = srgb2lrgb(col_a);
-col_b = srgb2lrgb(col_b);
-// convert to oklab for perceptually uniform mixing
-col_a = lrgb2oklab(col_a);
-col_b = lrgb2oklab(col_b);
-vec3 col = mix(col_a, col_b, uv.x);
-// convert back to lrgb
-col = oklab2lrgb(col);
-// convert to srgb for displaying
-col = lrgb2srgb(col);
-```
-[[Opponent Colorspace]]
+### Properties
+- `lightness/chroma/hue` are very orthogonal `changing one of them does not change others`
+- distance between colors are perceptually linear `distance(ok1, ok2)`
+- takes in `linear RGB` for `oklab` conversion
+- blends 2 colors evenly `warm + cool = neutral`
+- has **D65** white point `same as srgb`
+- does not take into account view conditions `eye adjusts to brightness/color, oklab can't`
+- [[opponent colorspace]]
+### Parameters
+|  Param  |        Description        |      sRGB Range      | Visible Range |
+| :-----: | :-----------------------: | :------------------: | :-----------: |
+| **`L`** |         lightness         |       `0 → 1`        |    `0 → 1`    |
+| **`a`** |      green ↔ magenta      | `-0.23392 → 0.27463` | `-0.5 → 0.5`  |
+| **`b`** |       blue ↔ yellow       | `-0.31161 → 0.19849` | `-0.6 → 0.6`  |
+|   `C`   | chromaticity `length(ab)` |     `0 → 0.3226`     |   `0 → 0.6`   |
+|   `H`   |     hue `atan2(b, a)`     |       `0 → 1`        |    `0 → 1`    |
+|   `S`   |    saturation `C / L`     |                      |               |

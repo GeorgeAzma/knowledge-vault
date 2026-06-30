@@ -24,8 +24,8 @@
 - $\int{\dfrac{1}{x^2+1}}=\arctan(x)+C$
 - [[Trigonometric Substitution]]
 ##### Other
-- $\int{\dfrac{f'(x)}{f(x)}}=\ln|f(x)|+C$ `substitution`
-- $\int_{-\infty}^\infty e^{-x}=\sqrt{\pi}$
+- $\displaystyle\int{\dfrac{f'(x)}{f(x)}}=\ln|f(x)|+C$ `substitution`
+- $\int e^{-x}=\sqrt{\pi}$
 ### Examples
 - **Improper Integral** evaluation using [[Limit]][[s]] $\int_1^\infty\dfrac{1}{x^2}dx$
     - compute definite antiderivative $-\large\frac{1}{x}$

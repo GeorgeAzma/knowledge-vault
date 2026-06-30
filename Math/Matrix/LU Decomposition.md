@@ -1,4 +1,6 @@
-Fast way to calculate [[Determinant]]
+Similar to [[Gaussian Elemination]] but you kinda save the steps you did
+which means you can solve system $Ax=b$ for multiple $b$ without recalculating. 
+It's also a fast way to calculate [[Determinant]]
 ### $A=LU$
 - $A$ [[Matrix]]
 - $L$ [[Triangular Matrix|Lower Triangular Matrix]] with $1$s on diagonal

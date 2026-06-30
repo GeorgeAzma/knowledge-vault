@@ -14,4 +14,3 @@ $$\begin{bmatrix}
      which implies [[Eigenvalue]][[s]] are real since $Ax=\lambda x$
      $(\lambda x,x)=(x,\lambda x)\implies(\lambda x,x)=\overline{\lambda}(x,x)\implies\lambda=\overline{\lambda}$ 
      so no imaginary part, assuming $x\neq0$ 
-    

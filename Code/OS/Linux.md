@@ -1,7 +1,10 @@
 - [[Arch Linux]]
 - [[Linux Commands]]
+- [[Linux Tips]]
+- [[Linux Network]]
 - [[Windows Subsystem for Linux (WSL)]]
 - [[Package Manager]]
+- [[Systemd|Linux Startup Services]]
 ### Directories
 ``` bash
 /                  # root

@@ -1,18 +1,24 @@
-``` rust
-for y in 0..RES {
-    for x in 0..RES {
-        x = (x | (x << 16)) & 0x0000FFFF0000FFFF;
-        x = (x | (x << 8)) & 0x00FF00FF00FF00FF;
-        x = (x | (x << 4)) & 0x0F0F0F0F0F0F0F0F;
-        x = (x | (x << 2)) & 0x3333333333333333;
-        x = (x | (x << 1)) & 0x5555555555555555;
-        y = (y | (y << 16)) & 0x0000FFFF0000FFFF;
-        y = (y | (y << 8)) & 0x00FF00FF00FF00FF;
-        y = (y | (y << 4)) & 0x0F0F0F0F0F0F0F0F;
-        y = (y | (y << 2)) & 0x3333333333333333;
-        y = (y | (y << 1)) & 0x5555555555555555;
-        let z = x | (y << 1); // morton index
-    }
+``` c
+ivec2 morton_decode(int code) {  
+    ivec2 p = ivec2(code, code >> 1);
+    p &= 0x55555555;  
+    p = (p | (p >> 1)) & 0x33333333;  
+    p = (p | (p >> 2)) & 0x0f0f0f0f;  
+    p = (p | (p >> 4)) & 0x00ff00ff;  
+    p = (p | (p >> 8)) & 0x0000ffff;  
+    return p;  
+}
+
+int morton_encode(ivec2 p) {
+    p &= 0x0000ffff;
+    p = (p ^ (p << 8)) & 0x00ff00ff;
+    p = (p ^ (p << 4)) & 0x0f0f0f0f;
+    p = (p ^ (p << 2)) & 0x33333333;
+    p = (p ^ (p << 1)) & 0x55555555;
+    return p.x | (p.y << 1);
 }
 ```
-> [!tip] remove `x << 16` lines for smaller morton indices
+- very fast
+- good average locality
+- has sudden jumps
+### [[Hilbert Curve]]

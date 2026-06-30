@@ -2,7 +2,6 @@
 aliases:
   - Hue Shift
 ---
-
 ``` c
 // range 0-1, works for sRGB/RGB
 vec3 rgb2hsv(vec3 c) {
@@ -23,4 +22,22 @@ vec3 hsv2rgb(vec3 c) {
 vec3 hue_shift(vec3 col, float hue) {
     return mix(vec3(dot(vec3(0.333), col)), col, cos(hue)) + cross(vec3(0.577), col) * sin(hue);
 }
+
+////////////// # How Hue Shift Works # ///////////////////
+
+// average/intensity, where along the gray diagonal is 'col'
+gray = vec3(dot(vec3(0.333), col)) // preserves col's intensity
+
+// perpendicular direction to chromatic part of the color (gray -> col)
+// direction we are rotating towards
+// with length = sin(theta) * |col| * |vec3(1 / sqrt(3))| = sin(theta) * |col|
+//               sin(theta) = col's perpendicularness to gray (chromaticity of col)
+chromatic = cross(1 / sqrt(3), col) = 0.577 * (col.zxy - col.yzx)
+
+// hue = 90deg => gray + chromatic. 
+//                gray preserves intensity, while chromatic preserves chromatic length
+// hue =  0deg => col (same intensity/chromaticity)
+// cos(hue)/sin(hue) interpolate between unrotated and rotated color, preserving length
+mix(gray, col, cos(hue)) + chromatic * sin(hue);
 ```
+### [[Oklch]]

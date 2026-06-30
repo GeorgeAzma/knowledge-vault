@@ -16,7 +16,4 @@ When [[Eigenvector]][[s]] are multiplied by matrix they only scale `no rotation`
 > > - There are infinite such vectors, but usually normalized eigen vector is chosen
 > > - We solved it directly, but you could use a [[Matrix Decomposition]] method
 > > - Do this for the other eigen value $3$ to get 2nd eigen vector
-### Power Iteration
-repeatedly multiplying vector with a matrix aligns it to matrix's largest [[Eigenvalue]] [[Eigenvector]]
-- $v_1\approx\vec{x}_{n+1}=\dfrac{A\vec{x}_n}{||A\vec{x}_n||}$ where $\vec{x}\neq0$
-- $\lambda_1\approx v_1^TAv_1$ `it's exact for symmetric matrices (like covariance matrix)`
+### [[Power Iteration]]

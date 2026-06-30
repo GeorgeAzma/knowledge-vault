@@ -4,7 +4,9 @@ sudo systemctl start ssh
 sudo systemctl enable ssh
 sudo systemctl status ssh
 
-ssh user@<ipv4>
+ssh user@<ipv4> # -p port -vvv verbose
+ssh -i ssh-key.priv user@host # login via ssh-key.priv. must have strict permissions: "chmod 600 ssh-key.priv" 
+
 ssh-keygen -t ed25519 # saved [public: ~/.ssh/id_ed25519.pub, private: ~/.ssh/id_ed25519]
 ssh-copy-id user@<ipv4> # copy key, avoids passwords everytime
 # or add edit ~/.ssh/id_ed25519.pub => user@<ipv4>:~/.ssh/authorized_keys

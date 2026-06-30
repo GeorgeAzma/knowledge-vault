@@ -1,0 +1,11 @@
+### Conversion Types
+- **Relative Colorimetric**
+    - does not scale source colors
+    - clips colors outside destination gamut to nearest color
+    - moves white point to destination white point `along with source colors`
+- **Absolute Colorimetric** same as relative, but does not move white point
+- **Perceptual** compresses gamut into destination gamut `avoids clipping`
+- **Saturation** 
+    - preserves hue
+    - scales chroma towards saturated edge of the gamut
+    - 

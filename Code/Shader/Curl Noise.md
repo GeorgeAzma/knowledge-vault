@@ -21,26 +21,12 @@ float noise(vec2 p) {
 }
 
 vec2 curl(vec2 p) {
-    vec2 e = vec2(0.001, 0);
-    float x0 = noise(p + e.xy);
-    float x1 = noise(p - e.xy);
-    float y0 = noise(p + e.yx);
-    float y1 = noise(p - e.yx);
-    return vec2(y0 - y1, x1 - x0) / e.x * 0.08 + 0.5;
-}
-
-// Gives interesting paper texture, better with perlin noise
-vec2 fbm(vec2 p, int octaves) {
-	vec2 s = vec2(0.0);
-    float m = 0.0, a = 1.0;
-	for(int i = 0; i < octaves; i++) {
-		s += a * curl(p);
-		m += a;
-		a *= 0.7;
-		p *= 2.0;
-	}
-	return s / m;
+    vec2 e = vec2(0.01, 0);
+    vec2 a = vec2(noise(p + e.xy), noise(p + e.yx));
+    vec2 b = vec2(noise(p - e.xy), noise(p - e.yx));
+    return (a - b) / e.x * 0.5;
 }
 ```
-`curl fbm`
-![[Curl FBM.webp]]
+### [[Wool Noise]]
+![[Curl FBM.webp#rounded]]
+### [[Paper Noise]]
