@@ -1,11 +1,12 @@
 ### Noises
 - [[FBM]]
-- [[1D Noise]]
-- [[2D Noise]]
-- [[3D Noise]]
+- [[Basic Noise 1D]]
+- [[Value Noise 2D]]
+- [[Simplex Noise 2D]]
+- [[Worley Noise 2D]]
+- [[Perlin Noise 2D]]
 - [[Blue Noise]]
 - [[Voronoi Noise]]
-- [[Worley Noise]]
 ### Hashes
 - [[Sine Hash]]
 - [[Hash Without Sine]]
@@ -82,6 +83,7 @@ float perlin12(vec2 p) {
     return mix(mix(a, b, u.x), mix(c, d, u.x), u.y) * 0.7 + 0.5;
 }
 
+// From: https://iquilezles.org/articles/gradientnoise/
 vec3 perlin12d(vec2 p) {
     vec2 i = floor(p);
     vec2 f = fract(p);
@@ -116,13 +118,31 @@ float simplex12(vec2 p) {
 float worley12(vec2 p) {    
     vec2 i = floor(p);
     p -= i;
-    float w = 1e9;
+    float w = 1e6;
     for (float x = -1.0; x <= 1.0; ++x)
     for (float y = -1.0; y <= 1.0; ++y) {
         vec2 c = p - vec2(x, y) - hash12(i + vec2(x, y));
        	w = min(w, dot(c, c));
     }
     return 1.0 - sqrt(w);
+}
+
+vec3 worley12d(vec2 p) {    
+    vec2 i = floor(p);
+    p -= i;
+    float w = 1e6;
+    vec2 cmin = vec2(0);
+    for (float x = -1.0; x <= 1.0; ++x)
+    for (float y = -1.0; y <= 1.0; ++y) {
+        vec2 c = p - vec2(x, y) - hash12(i + vec2(x, y));
+        float l2 = dot(c, c);
+        if (l2 < w) {
+            w = l2;
+            cmin = c;
+        }
+    }
+    w = sqrt(w);
+    return vec3(1.0 - w, -cmin / w);
 }
 
 // s: edge smoothness
@@ -143,6 +163,7 @@ float voronoi12(vec2 x, float s) {
     return va / wt;
 }
 
+// From: https://www.shadertoy.com/view/tllcR2
 float blue12(vec2 p) {
     float v = 0.0;
     for (int k = 0; k < 9; k++)
@@ -161,10 +182,12 @@ int hilbert_encode(int n, ivec2 p) {
     return i;
 }
 
+// Modified From: https://www.shadertoy.com/view/3tB3z3
 float hilbert_blue12(vec2 p) {
     return fract(0.6180339887498948482 * float(hilbert_encode(512, ivec2(p)) % 262144));
 }
 
+// Modified from: https://www.shadertoy.com/view/XsGBDt
 float crater12(vec2 p) {    
     vec2 f = fract(p);
     p = floor(p);
@@ -193,6 +216,7 @@ float gabor12(vec2 p) {
                	   sin(kF * dot(p, hash22(i + vec2(1, 1)))), f.x), f.y);
 }
 
+// Same as perlin12d(p).yz, but can be applied to other noises to get their derivative, useful when you don't have analytic noise derivative 
 vec2 curl22(vec2 p) {
     vec2 e = vec2(0.1, 0);
     vec2 a = vec2(perlin12(p + e.xy), perlin12(p + e.yx));
@@ -200,46 +224,47 @@ vec2 curl22(vec2 p) {
     return (a - b) / e.x * 0.5;
 }
 
-float scratch(vec2 uv, float f) {
-    vec2 seed = floor(uv);
-    uv -= seed;
-    seed.x = floor(sin(seed.x * 51024.0) * 3104.0);
-    seed.y = floor(sin(seed.y * 1324.0) * 554.0);
- 
-    uv = uv * 2.0 - 1.0;
-    uv = uv * cos(seed.x + seed.y) + vec2(-uv.y, uv.x) * sin(seed.x + seed.y);
-    uv += sin(seed.x - seed.y);
-    uv = uv * 0.5 + 0.5;
+// Inspired from: https://www.shadertoy.com/view/4syXRD
+float scratch(vec2 p, float f) {
+    const float THICKNESS = 0.02;
+    const float WAVYNESS = 0.5;
+
+    vec2 i = floor(p);
+    vec2 h = hash22(i) * vec2(3104, 554);
     
-    const float WAVYNESS = 0.2;
-    float s = (sin(seed.x + uv.y * 3.1415) + sin(seed.y + uv.y * 3.1415)) * WAVYNESS;
+    p = (p - i) * 2.0 - 1.0;
+    p = p * cos(h.x + h.y) + vec2(-p.y, p.x) * sin(h.x + h.y);
+    p += sin(h.x - h.y);
     
-    float x = abs(uv.x - 0.5 + s);
-    x = 0.5 - x * f;
-    x = smoothstep(-2.0, fwidth(x) * 1.5 + 16.0, x) * 12.0;
-    x *= uv.y;
+    float x = abs(p.x - cos(h.x + p.y * 1.57) * WAVYNESS);
+    x = smoothstep(THICKNESS + f, THICKNESS - f, x);
+    x *= p.y * 0.5 + 0.5;
     
     return x;
 }
 
 float scratches12(vec2 uv) {
+    const float SOFTNESS = 1.5;
+
     float scratches = 0.0;
-    float f = 1.0 / length(fwidth(uv));
+    float w = length(fwidth(uv)) * SOFTNESS;
     for(int i = 0; i < 8; ++i) {
-        float x = scratch(uv, f);
+        float x = scratch(uv, w);
     	scratches = max(scratches, x);
         uv = uv * mat2(1.0, 0.7, -0.7, 1.0) - 12.31;
+        w *= 1.22;
     }
     return scratches;
 }
 
 // https://www.shadertoy.com/view/wsBfzK
+// use scale = 1.24 for best results
 float wavelet12(vec2 p, float phase, float scale) {
     float d = 0.0, s = 1.0, m = 0.0, a;
     for (float i = 0.0; i < 4.0; ++i) {
         vec2 q = p * s, g = fract(floor(q) * vec2(123.34, 233.53));
     	g += dot(g, g + 23.234);
-		a = fract(g.x * g.y) * 1e3;// +z*(mod(g.x+g.y, 2.)-1.); // add vorticity
+		a = fract(g.x * g.y) * 1e3; // + z * (mod(g.x + g.y, 2.0) - 1.0); // add vorticity
         q = (fract(q) - 0.5) * mat2(cos(a), -sin(a), sin(a), cos(a));
         d += sin(q.x * 10.0 + phase) * smoothstep(0.25, 0.0, dot(q, q)) / s;
         p = p * mat2(0.54, -0.84, 0.84, 0.54) + i;
@@ -269,6 +294,7 @@ vec3 gullies(vec2 p, vec2 slope) {
     return vec3(height_slope.x, height_slope.y * side_dir) / w_sum;
 }
 
+// modified & simplified from: https://www.shadertoy.com/view/sf23W1
 vec3 erosion12(vec2 p) {
     vec3 nd = perlin12d(p);
     float strength = 0.25, freq = 8.0, total = 1.0;
@@ -286,7 +312,7 @@ vec2 fbm_paper(vec2 p, int octaves) {
 	vec2 s = vec2(0);
     float m = 0.0, a = 1.0;
 	for(int i = 0; i < octaves; i++) {
-		s += a * clamp(curl22(p) * 0.5 + 0.5, vec2(0),  vec2(1));
+		s += a * clamp(perlin12d(p).yz * 0.5 + 0.5, vec2(0),  vec2(1));
 		m += a;
         a *= 0.8;
         p *= 2.0;
@@ -310,7 +336,7 @@ float fbm12(vec2 p, int octaves) {
 	return s / m;
 }
 
-vec3 fbm12_deriv(vec2 p, int octaves) {
+vec3 fbm12d(vec2 p, int octaves) {
     vec3 s = vec3(0);
     float m = 0.0, a = 1.0, f = 1.0;
 	for (int i = 0; i < octaves; i++) {
@@ -321,6 +347,49 @@ vec3 fbm12_deriv(vec2 p, int octaves) {
 		f *= 2.0;
 	}
 	return s / vec3(m, 1, 1);
+}
+
+vec3 fbm_stone(vec2 p, int octaves) {
+    vec3 s = vec3(0);
+    float a = 1.0;
+    for(int i = 0; i < 6; ++i) {
+        s += a * perlin12d(p);
+        a *= 0.5;
+        p *= 2.0;
+    }
+    return s;
+}
+
+float stone12(vec2 p) {
+    return fbm12(p + fbm_stone(p, 6).yz * 0.4, 6);
+}
+
+vec2 fbm_wool(vec2 p, int octaves) {
+	vec2 s = vec2(0.0);
+    float m = 0.0, a = 1.0;
+	for(int i = 0; i < octaves; i++) {
+        vec2 n = perlin12d(p).yz;
+		s += a * n;
+		m += a;
+		a *= 0.5;
+		p *= 2.0;
+	}
+	return s / m;
+}
+
+float wool12(vec2 p) {
+    vec2 n = fbm_wool(p, 6);
+    return max(abs(n.x), abs(n.y));
+}
+
+// Interleaved Gradient Noise
+// Cool Property: per pixel values when scrolling IGN linearly each frame is also low-discrepency, so it's low-discrepancy over space and time
+float ign12(vec2 p) {
+    return fract(52.9829189 * fract(dot(p, vec2(0.06711056, 0.00583715))));
+}
+
+float golden_ign12(vec2 p) {
+    return float(uint(p.x) * 3242174889u + uint(p.y) * 2447445413u) * exp2(-32.0);
 }
 
 /////////// 3D NOISE ///////////
@@ -358,6 +427,33 @@ float perlin13(vec3 p) {
     return mix(z0, z1, u.z) * 0.7 + 0.5;
 }
 
+// From: https://iquilezles.org/articles/gradientnoise/
+vec4 perlin13d(vec3 p) {
+    vec3 i = floor(p);
+    vec3 f = p - i;
+    vec3 u = f * f * f * (f * (f * 6.0 - 15.0) + 10.0);
+    vec3 du = 30.0 * f * f * (f * (f - 2.0) + 1.0);
+    vec3 ga = hash33(p + vec3(0, 0, 0));
+    vec3 gb = hash33(p + vec3(1, 0, 0));
+    vec3 gc = hash33(p + vec3(0, 1, 0));
+    vec3 gd = hash33(p + vec3(1, 1, 0));
+    vec3 ge = hash33(p + vec3(0, 0, 1));
+    vec3 gf = hash33(p + vec3(1, 0, 1));
+    vec3 gg = hash33(p + vec3(0, 1, 1));
+    vec3 gh = hash33(p + vec3(1, 1, 1));
+    float va = dot(ga, f - vec3(0, 0, 0));
+    float vb = dot(gb, f - vec3(1, 0, 0));
+    float vc = dot(gc, f - vec3(0, 1, 0));
+    float vd = dot(gd, f - vec3(1, 1, 0));
+    float ve = dot(ge, f - vec3(0, 0, 1));
+    float vf = dot(gf, f - vec3(1, 0, 1));
+    float vg = dot(gg, f - vec3(0, 1, 1));
+    float vh = dot(gh, f - vec3(1, 1, 1));
+    return vec4(va + u.x*(vb-va) + u.y*(vc-va) + u.z*(ve-va) + u.x*u.y*(va-vb-vc+vd) + u.y*u.z*(va-vc-ve+vg) + u.z*u.x*(va-vb-ve+vf) + (-va+vb+vc-vd+ve-vf-vg+vh)*u.x*u.y*u.z,
+                ga + u.x*(gb-ga) + u.y*(gc-ga) + u.z*(ge-ga) + u.x*u.y*(ga-gb-gc+gd) + u.y*u.z*(ga-gc-ge+gg) + u.z*u.x*(ga-gb-ge+gf) + (-ga+gb+gc-gd+ge-gf-gg+gh)*u.x*u.y*u.z +
+                du * (vec3(vb,vc,ve) - va + u.yzx*vec3(va-vb-vc+vd,va-vc-ve+vg,va-vb-ve+vf) + u.zxy*vec3(va-vb-ve+vf,va-vb-vc+vd,va-vc-ve+vg) + u.yzx*u.zxy*(-va+vb+vc-vd+ve-vf-vg+vh)));
+}
+
 float simplex13(vec3 p) {
 	 vec3 s = floor(p + dot(p, vec3(1.0 / 3.0)));
 	 vec3 x = p - s + dot(s, vec3(1.0 / 6.0));
@@ -382,7 +478,7 @@ float simplex13(vec3 p) {
 float worley13(vec3 p) {    
     vec3 i = floor(p);
     p -= i;
-    float w = 1e9;
+    float w = 1e6;
     for (float x = -1.0; x <= 1.0; ++x)
     for (float y = -1.0; y <= 1.0; ++y)
     for (float z = -1.0; z <= 1.0; ++z) {
@@ -392,80 +488,26 @@ float worley13(vec3 p) {
     return 1.0 - sqrt(w);
 }
 
-
-/////////// Visualization Helpers ///////////
-#define fbm12(uv, noise_fn) do {\
-    vec2 p = uv;\
-    float s = 0.0, m = 0.0, a = 1.0;\
-	for (int i = 0; i < 6; i++) {\
-        float n = noise_fn(p);\
-		s += a * n;\
-		m += a;\
-		a *= 0.5;\
-		p *= 2.0;\
-	}\
-	c += s / m;\
-} while(false)
-
-#define fbm12_deriv(uv, noise_fn) do {\
-    vec2 p = uv;\
-    vec3 s = vec3(0);\
-    float m = 0.0, a = 1.0, f = 1.0;\
-	for (int i = 0; i < 6; i++) {\
-        vec3 n = noise_fn(p * f);\
-		s += a * vec3(1, f, f) * n;\
-		m += a;\
-		a *= 0.25;\
-		f *= 2.0;\
-	}\
-	c += s / vec3(m, 1, 1);\
-} while(false)
+vec4 worley13d(vec3 p) {    
+    vec3 i = floor(p);
+    p -= i;
+    float w = 1e6;
+    vec3 cmin = vec3(0);
+    for (float x = -1.0; x <= 1.0; ++x)
+    for (float y = -1.0; y <= 1.0; ++y)
+    for (float z = -1.0; z <= 1.0; ++z) {
+        vec3 c = p - vec3(x, y, z) - hash13(i + vec3(x, y, z));
+        float l2 = dot(c, c);
+        if (l2 < w) {
+            w = l2;
+            cmin = c;
+        }
+    }
+    w = sqrt(w);
+    return vec4(1.0 - w, -cmin / w);
+}
 
 float wavelet12_helper(vec2 p) {
-    return wavelet12(p, iTime, 1.24) * 0.5 + 0.5;
-}
-
-float text(vec2 p, float glyph) {
-	p = abs(p.x - 0.5) > 0.5 || abs(p.y - 0.5) > 0.5 ? vec2(0) : p;
-	return 2.0 * (texture(iChannel0, p / 16.0 + fract(vec2(glyph, 15.0 - floor(glyph / 16.0)) / 16.0)).w - 127.0 / 255.0);
-}
-
-#define C(ch) c = mix(c, vec3(0, 0.05, 0.3), smoothstep(w, 0.0, text(f * 7.5 - vec2(x, 0), float(ch)) / 7.5 + w * 0.25)); x += 0.45;
-
-void mainImage(out vec4 fragColor, vec2 fragCoord) {
-    float mr = min(iResolution.x, iResolution.y);
-    vec2 uv = (fragCoord * 2.0 - iResolution.xy) / mr;
-    
-    vec2 grid = vec2(6, 4);
-    int id = int(fragCoord.x / iResolution.x * grid.x) + int(fragCoord.y / iResolution.y * grid.y) * int(grid.x);
-    vec2 f = fract(fragCoord / iResolution.xy * grid);
-    float w = max(abs(dFdx(f.x)), abs(dFdy(f.y))) * 1.5;
-    vec2 p = uv * 6.0;
-    float x = 0.0;
-    vec3 c;
-    switch (id) { // 2D noises
-        case 0: c += value12(p); C(48)C(46)C(32)C(86)C(65)C(76)C(85)C(69) break; 
-        case 1: fbm12(p, value12); C(49)C(46)C(32)C(86)C(65)C(76)C(85)C(69)C(32)C(70)C(66)C(77) break;
-        case 2: c += perlin12(p); C(50)C(46)C(32)C(80)C(69)C(82)C(76)C(73)C(78) break; 
-        case 3: fbm12(p, perlin12); C(51)C(46)C(32)C(80)C(69)C(82)C(76)C(73)C(78)C(32)C(70)C(66)C(77) break;
-        case 4: c += simplex12(p); C(52)C(46)C(32)C(83)C(73)C(77)C(80)C(76)C(69)C(88) break; 
-        case 5: fbm12(p, simplex12); C(53)C(46)C(32)C(83)C(73)C(77)C(80)C(76)C(69)C(88)C(32)C(70)C(66)C(77) break;
-        case 6: c += worley12(p); C(54)C(46)C(32)C(87)C(79)C(82)C(76)C(69)C(89) break; 
-        case 7: fbm12(p, worley12); C(55)C(46)C(32)C(87)C(79)C(82)C(76)C(69)C(89)C(32)C(70)C(66)C(77) break;
-        case 8: c += blue12(floor(fragCoord)); C(56)C(46)C(32)C(66)C(76)C(85)C(69) break; 
-        case 9: c += hilbert_blue12(floor(fragCoord)); C(57)C(46)C(32)C(72)C(73)C(76)C(66)C(69)C(82)C(84)C(32)C(66)C(76)C(85)C(69) break;
-        case 10: c += crater12(p); C(49)C(48)C(46)C(32)C(67)C(82)C(65)C(84)C(69)C(82) break; 
-        case 11: fbm12(p, crater12); C(49)C(49)C(46)C(32)C(67)C(82)C(65)C(84)C(69)C(82)C(32)C(70)C(66)C(77) break;
-        case 12: c += gabor12(p)*.5+.5; C(49)C(50)C(46)C(32)C(71)C(65)C(66)C(79)C(82) break; 
-        case 13: fbm12(p, gabor12); c=c*.5+.5; C(49)C(50)C(46)C(32)C(71)C(65)C(66)C(79)C(82)C(32)C(70)C(66)C(77)  break;
-        case 14: c += scratches12(p); C(49)C(52)C(46)C(32)C(83)C(67)C(82)C(65)C(84)C(67)C(72) break; 
-        case 15: fbm12(p, scratches12); C(49)C(52)C(46)C(32)C(83)C(67)C(82)C(65)C(84)C(67)C(72)C(32)C(70)C(66)C(77) break;
-        case 16: c += wavelet12_helper(p); C(49)C(54)C(46)C(32)C(87)C(65)C(86)C(69)C(76)C(69)C(84) break; 
-        case 17: fbm12(p, wavelet12_helper); C(49)C(54)C(46)C(32)C(87)C(65)C(86)C(69)C(76)C(69)C(84)C(32)C(70)C(66)C(77) break;
-        case 18: c += erosion12(p).x*.5+.5; C(49)C(56)C(46)C(32)C(69)C(82)C(79)C(83)C(73)C(79)C(78) break; 
-        case 19: c += length(curl22(p)) / 1.414; C(49)C(57)C(46)C(32)C(67)C(85)C(82)C(76) break;
-        case 20: c += paper12(uv * 4.0); C(50)C(48)C(46)C(32)C(80)C(65)C(80)C(69)C(82) break;
-    }
-    fragColor = vec4(c, 1);
+    return wavelet12(p, u_time, 1.24) * 0.5 + 0.5;
 }
 ```

@@ -67,7 +67,7 @@ void main() {
     fragColor = vec4(vec3(x), 1);
 }
 ```
-Glistening Orb
+glistening Orb
 ``` c
 float hash12(vec2 p) {
 	vec3 p3 = fract(p.xyx / 0.1031);

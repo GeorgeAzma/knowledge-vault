@@ -13,3 +13,5 @@
 > $\ln(x)=(x-1)-{\large\frac{1}{2}}(x-1)^2+{\large\frac{1}{3}}(x-1)^3\dots$
 
 > [!note] Taylor series is a [[power series]] with $a_n=\dfrac{f^{(n)}(a)}{n!}$
+##### $f(x\pm h)=f(x)\pm hf'(x)+\dfrac{h^2}{2}f''(x)\pm\dfrac{h^3}{6}f'''(x)+\dots$
+useful for discretizing things, like [[Finite Difference]], [[Laplacian]], [[Derivative]]

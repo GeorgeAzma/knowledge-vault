@@ -12,8 +12,8 @@ float voronoi(vec2 x, float s) {
     vec2 f = x - p;
 	float va = 0.0;
 	float wt = 0.0;
-    for(float x = -1.0; x <= 1.0; x++)
-    for(float y = -1.0; y <= 1.0; y++) {
+    for (float x = -1.0; x <= 1.0; x++)
+    for (float y = -1.0; y <= 1.0; y++) {
 		vec3 o = hash32(p + vec2(x, y));
 		float d = length(vec2(x, y) - f + o.xy);
 		float ww = pow(smoothstep(1.414, 0.0, d), s);
@@ -23,9 +23,9 @@ float voronoi(vec2 x, float s) {
     return va / wt;
 }
 ```
-### Smooth Edges `Fast`
+### Simplification `s = 1`
 ``` c
-float voronoi(vec2 x, float s) {
+float voronoi(vec2 x) {
     vec2 p = floor(x);
     vec2 f = x - p;
 	float va = 0.0;
@@ -38,6 +38,6 @@ float voronoi(vec2 x, float s) {
 		va += o.z * ww;
 		wt += ww;
     }
-    return va / (0.01 + wt);
+    return va / (1e-3 + wt);
 }
 ```

@@ -1,4 +1,4 @@
-alanzucconi.com/2017/07/15/the-mathematics-of-diffraction-grating/
+https://alanzucconi.com/2017/07/15/the-mathematics-of-diffraction-grating/
 ```c
 // w = 400-700nm (0-1)
 vec3 zucconi6(float w) {

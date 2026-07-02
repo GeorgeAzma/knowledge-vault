@@ -31,8 +31,8 @@ vec3 gullies(vec2 p, vec2 slope) {
     p -= id;
     vec2 height_slope = vec2(0);
     float w_sum = 0.0;
-    for(int x = -1; x <= 2; x++) {
-        for(int y = -1; y <= 2; y++) {
+    for (int x = -1; x <= 2; x++) {
+        for (int y = -1; y <= 2; y++) {
             vec2 off = vec2(x, y);
             vec2 c = p - off - hash22(id + off) + 0.5;
             float dist2 = dot(c, c);
