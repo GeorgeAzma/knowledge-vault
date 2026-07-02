@@ -3,7 +3,7 @@
 | --------------------------- | ---------------------------------------------------------------------------- |
 | [[Atomic Number]]           | 6                                                                            |
 | Symbol                      | **C**                                                                        |
-| [[Orbital]][[s]]            | 1s² 2s² 2p²<br>                                                              |
+| [[Orbital|orbitals]]        | 1s² 2s² 2p²<br>                                                              |
 | [[Orbital\|Orbital View]]   | 1s ↑↓<br>2s ↑↓<br>2p ↑↑  `px, py` [[Filling order\|half-filled]], `pz` empty |
 | [[Atomic Mass]]             | 12.011 [[Atomic Mass\|u]]                                                    |
 | Group                       | 14                                                                           |

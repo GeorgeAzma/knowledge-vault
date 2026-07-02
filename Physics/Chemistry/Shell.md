@@ -1,6 +1,6 @@
-Shells have energy levels and contain [[Subshell]][[s]] `SubshellCount = EnergyLevel ^ 2`
+Shells have energy levels and contain [[Subshell|subshells]] `SubshellCount = EnergyLevel ^ 2`
 $(s,p,d,f)$ are [[Subshell]] types each of them have different orientations $(1,3,5,7)$
-and each orientation can hold 2 [[Electron]][[s]] because of [[Pauli Exclusion Principle]]
+and each orientation can hold 2 [[Electron|electrons]] because of [[Pauli Exclusion Principle]]
 
 | Energy Level |  s  |  p  |  d  |  f  | Shell [[Electron]] Capacity |
 | :----------: | :-: | :-: | :-: | :-: | :-------------------------: |

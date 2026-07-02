@@ -11,6 +11,6 @@ $$\begin{bmatrix}
 - Hermitian is same as [[Adjoint|Self-Adjoint]]
 - [[Inner Product]] has property $(Ax,x)=(x,A^*x)$
      if $A$ is hermitian matrix then $(Ax,x)=(x,Ax)$
-     which implies [[Eigenvalue]][[s]] are real since $Ax=\lambda x$
+     which implies [[Eigenvalue|eigenvalues]] are real since $Ax=\lambda x$
      $(\lambda x,x)=(x,\lambda x)\implies(\lambda x,x)=\overline{\lambda}(x,x)\implies\lambda=\overline{\lambda}$ 
      so no imaginary part, assuming $x\neq0$ 

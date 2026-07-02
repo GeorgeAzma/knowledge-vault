@@ -18,4 +18,4 @@
 |          **Destination IP Address**           |     32     |           Receiver’s IPv4 address            |
 32 bit device address `251.31.159.3 (IPv4)` used for device to device `End to End` delivery
 each device/host `meaning PC/Mobile but not routers/switches` has IP address
-which is like home address, to assist [[Switch|Switches]]/[[Router]][[s]] to deliver data to correct destination
+which is like home address, to assist [[Switch|Switches]]/[[Router|routers]] to deliver data to correct destination

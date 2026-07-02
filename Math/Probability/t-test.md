@@ -1,4 +1,4 @@
-Compares [[Mean]][[s]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] testing
+Compares [[Mean|means]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] testing
 - **one-tailed** tests if $\mu_1<or>\mu_2$
 - **two-tailed** tests if $\mu_1\neq\mu_2$
 ### One-sample/Student's $t=\frac{\sqrt{n}(\bar{x}-\mu_0)}{s}$
@@ -17,7 +17,7 @@ Compares [[Mean]][[s]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] test
 > $p=2(1-\text{CDF})\approx0.741$ [[p-value]] using [[#t-distribution $f(t,v)= frac{ Gamma( frac{v+1}{2})}{ sqrt{ pi v} Gamma( frac{v}{2})}(1+ frac{t {2}}{v}) {- frac{(v+1)}{2}}$|t_distribution]] [[Cumulative Distribution Function|CDF]] with $5-1$ [[Physics/Mechanics/Degrees of Freedom|Degrees of Freedom]]
 ### Two-sample/Independent $t=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{n_1^{-1}+n_2^{-1}}}=\frac{\bar{x}_1-\bar{x}_2}{s\sqrt{\frac{2}{n}}}$
 > [!note] Assumes variances are equal between groups
-- $\bar{x}_1,\bar{x}_2$ sample [[Mean]][[s]] for each group
+- $\bar{x}_1,\bar{x}_2$ sample [[Mean|means]] for each group
 - $s$ [[Standard Deviation#Pooled|Pooled Standard Deviation]]
 - $n_1,n_2$ number of samples for each group
 > [!example] Comparing grades of 2 groups of students
@@ -27,8 +27,8 @@ Compares [[Mean]][[s]] of 2 groups, used for [[Null Hypothesis|Hypothesis]] test
 > $t=\frac{87-80}{4.27\sqrt{1/5+1/5}}=\frac{7}{4.27\sqrt{0.4}}\approx\frac{7}{4.27*0.63}\approx\frac{7}{2.7}\approx2.59$
 ### Welch's $t=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$
 > [!note] Independent t-test that doesn't assume equal variances
-- $\bar{x}_1,\bar{x}_2$ sample [[Mean]][[s]] for each group
-- $s_1,s_2$ sample [[Standard Deviation]][[s]] for each group
+- $\bar{x}_1,\bar{x}_2$ sample [[Mean|means]] for each group
+- $s_1,s_2$ sample [[Standard Deviation|standard deviations]] for each group
 - $n_1,n_2$ number of samples for each group
 ### Paired/Related $t=\frac{\sum d}{\sqrt{\frac{n(\sum d^2) - (\sum d)^2}{n-1}}}$
 - $d$ differences between same sample pairs seperated by time

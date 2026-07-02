@@ -1,7 +1,7 @@
 Sum of atomic masses of atoms in a molecule
 ### Formula $M=m/n$
 - $m$ mass in grams
-- $n$ [[Mole]][[s]] of substance
+- $n$ [[Mole|moles]] of substance
 > [!note] Measured in [[Atomic Mass]] 
 ### $M$ For Materials
 - **Water** 18.01528

@@ -7,11 +7,11 @@ just like $x^2\geq0$ for multiple dimensions $v^TAv\geq0$ where $v\neq0$
 - just as $v\cdot v=||v||$ is always positive $v^TAv=v\cdot(Av)$ will always be positive, 
   assuming $A$ does not flip any signs in $v$ which means $A$ is positive definite matrix
 ### Properties
-- All [[Eigenvalue]][[s]] $\lambda_i>0$
+- All [[Eigenvalue|eigenvalues]] $\lambda_i>0$
 - [[Symmetric Matrix|Symmetric]] `usually, but not strictly`
 ### Positive Semi-Definite Matrix Properties
 - $v^TAv\geq0$ `any vector v`
-- All [[Eigenvalue]][[s]] $\lambda_i\geq0$
+- All [[Eigenvalue|eigenvalues]] $\lambda_i\geq0$
 ### Uses
 - [[Convex Optimization]] $f(v)=v^TAv$ is convex function
   [[Hessian Matrix]] must be [[Positive Definite Matrix|Positive Semi-Definite]] `ensuring f curves upwards`

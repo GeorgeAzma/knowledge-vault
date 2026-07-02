@@ -6,7 +6,7 @@
 - **Wave Speed** $s=f\lambda$ [[#Speed of Sound]]
 - **Power/Amplitude** $P=(\Delta p)^2$  
 	- $\Delta p=\text{Pressure Variation}$ 
-	- Measured in [[Decibel]][[s]]
+	- Measured in [[Decibel|decibels]]
 - **Intensity** $I=\large\frac{P^2}{2\rho s}$
 	- According to [[Kinetic Energy|Kinetic Energy Formula]] $\frac{1}{2} mv^2$
 	- $\rho$ Air [[Density]]

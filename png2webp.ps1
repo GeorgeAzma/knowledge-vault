@@ -46,12 +46,20 @@ Convert-Images -Extension "jpeg"
 # - shorten links
 #   - replace youtube.com/watch?v= with youtu.be/
 #   - remove https:// and www.
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 Get-ChildItem -Recurse -Filter *.md | ForEach-Object {
-    (Get-Content $_.FullName) `
+    $filePath = $_.FullName
+    $originalContent = [System.IO.File]::ReadAllText($filePath)
+    
+    $newContent = $originalContent `
         -replace '\.(?:png|jpg|jpeg)', '.webp' `
         -replace '\.(?:PNG|JPG|JPEG)', '.webp' `
-        -replace 'youtube\.com/watch\?v=', 'youtu.be/' |
-    Set-Content $_.FullName
+        -replace 'youtube\.com/watch\?v=', 'youtu.be/'
+    
+    if ($originalContent -ne $newContent) {
+        [System.IO.File]::WriteAllText($filePath, $newContent, $utf8NoBom)
+        Write-Output "Updated: $($_.Name)"
+    }
 }
 
 # Compress .svg

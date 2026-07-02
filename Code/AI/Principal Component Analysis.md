@@ -1,13 +1,13 @@
 Lowers dimensionality of data
 ### How to Calculate
 - Standardize data `subtract mean, divide by standard deviation`
-- Calculate [[Covariance Matrix]]
-- Compute [[Eigenvector]][[s]] and [[Eigenvalue]][[s]]
-- Rank Principal Components by importance a.k.a [[Eigenvalue]][[s]]
+- Calculate [[covariance matrix]]
+- Compute [[Eigenvector|eigenvectors]] and [[Eigenvalue|eigenvalues]]
+- Rank Principal Components by importance a.k.a [[Eigenvalue|eigenvalue]]
 - Retain only Top $N$ most important PCs
 - Project data onto Principal Components
 ### Intuition
-- [[Eigenvector]][[s]] of [[Covariance Matrix]] is just directions of data variance
+- [[eigenvector|eigenvectors]] of [[covariance matrix]] is just directions of data variance
 - More varying the directions, more they tell about the data, so keep most varying directions
 - Project data onto these most varying directions to reduce dimensionality
 ### Code
@@ -53,7 +53,7 @@ projected_data = project_onto_components(standardized_data, principal_comps)
 
 ```
 ### Resource youtu.be/FgakZw6K1QQ
-This also gives better intuition for [[Eigenvector]][[s]] at 12:30
+This also gives better intuition for [[Eigenvector|eigenvectors]] at 12:30
 #### Related [[Singular Value Decomposition]]
 
 > [!example] Can be used in machine learning, to reduce dimensionality of input data, e.g. if it has 2D points as an input,

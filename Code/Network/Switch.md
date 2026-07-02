@@ -1,4 +1,4 @@
-Connects [[Data Link]][[s]] together 
+Connects [[Data Link|data links]] together 
 exists so that each [[Data Link]] doesn't have to connect to every 
 other [[Data Link]] and they can just connect to a single switch
 ### [[Media Access Control (MAC) Address|MAC Address]] Table

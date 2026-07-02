@@ -24,5 +24,5 @@ youtu.be/p7bzE1E5PMY
 > [!example] Coin Flip Quantum State $\frac{1}{\sqrt2}\ket0+\frac{1}{\sqrt2}\ket1$
 > - $\frac{\sqrt2}{2}$ instead of $\frac{1}{2}$ because probabilities make a normalized vector
 > - $\ket0$ short for first state $(1,0)$ which is heads
-> - quantum states use [[complex number]][[s]]
+> - quantum states use [[complex number|complex numbers]]
 >   - ${\color{gray}(\frac{\sqrt2}{2}+0i)}~\ket{0}+{\color{gray}(\frac{\sqrt2}{2}+0i)}~\ket{1}$

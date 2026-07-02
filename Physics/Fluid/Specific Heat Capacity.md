@@ -1,4 +1,4 @@
-how many [[Joule]][[s]] it takes to heat up `1kg` air by `1C`
+how many [[Joule|joules]] it takes to heat up `1kg` air by `1C`
 ### Formula $C=\large\frac{Q}{m\Delta T}\ \small J\cdot kg^{-1}\cdot K^{-1}$
 ### $C$ For Materials
 - **Water** $4.186$

@@ -1,4 +1,4 @@
-[[Matrix Decomposition]] method using [[Elementary Operation]][[s]] 
+[[Matrix Decomposition]] method using [[Elementary Operation|elementary operations]] 
 ``` python
  x +  y +  z = 6
 2x + 2y + 3z = 14

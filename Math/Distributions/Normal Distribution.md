@@ -8,7 +8,7 @@ aliases:
 ### Standard $\huge\sqrt{\frac{e^{-x^2}}{2\pi}}\normalsize=(2\pi e^{x^2})^{-0.5}$ where $\mu=0,\quad\sigma=1$
 `rng.standard_gaussian() * stdev + mean`
 ### [[Cumulative Distribution Function|CDF]] $\Phi(\dfrac{x-\mu}{\sigma})=\dfrac{1+\operatorname{erf}(\dfrac{x-\mu}{\sigma\sqrt2})}{2}$
-- $\operatorname{erf}(x)$ [[Error Function]] Used to find probability that sample is within range of $[-n;n]$ [[Standard Deviation]][[s]]
+- $\operatorname{erf}(x)$ [[Error Function]] Used to find probability that sample is within range of $[-n;n]$ [[Standard Deviation|standard deviations]]
 - $\Phi(\dfrac{x-\mu}{\sigma})=P(x\in[-\infty;n]) \text{ where } x\sim\mathcal{N}(\mu,\sigma)$ 
     - [[Cumulative Distribution Function|CDF]] of standard normal distribution is probability sample is withing range $[-\infty;n]$ 
     - lets try to convert $\text{erf}$ into $\Phi$, 

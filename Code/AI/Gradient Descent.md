@@ -1,5 +1,5 @@
 Minimizes a function by iteratively moving towards direction of steepest descent
-Used for minimizing [[Loss Function]] in [[Neural Network]][[s]]
+Used for minimizing [[loss function]] in [[Neural Network|neural networks]]
 ### Problem $\min_X f(X)$
 - $X$ [[Matrix]] `like weight matrix`
 - $X_{k+1}=X_k-\eta\nabla_Xf$ basic gradient descent

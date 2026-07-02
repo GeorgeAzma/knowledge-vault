@@ -20,7 +20,7 @@
 ### Derivation
 $\vec{u}=a_1\hat{x}+b_1\hat{y}+c_1\hat{z}$
 $\vec{v}=a_2\hat{x}+b_2\hat{y}+c_2\hat{z}$
-$(\hat{x},\hat{y},\hat{z})$ are [[Standard Basis Vector]][[s]]
+$(\hat{x},\hat{y},\hat{z})$ are [[Standard Basis Vector|standard basis vectors]]
 $$
 \begin{array}{}
 

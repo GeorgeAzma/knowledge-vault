@@ -3,5 +3,5 @@
 > [!note] In Machine Learning, Convolution is usually equivalent to [[Cross-Correlation]]
 
 > [!tip] Convolution of 2 signals $a(x)*b(x)=IFFT(A(x)B(x))$
-> $A(x)B(x)$ are [[Fourier Transform]][[s]] product
-> Also works other way around $a(x)b(x)=IFFT(A(x)*B(x))$
+> $A(x)B(x)$ are product of [[Fourier Transform|fourier transforms]]
+> works other way around too $a(x)b(x)=IFFT(A(x)*B(x))$

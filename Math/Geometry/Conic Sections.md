@@ -4,7 +4,7 @@
 ## [[3D Conic Sections]]
 ## General Matrix Form $\textbf{x}\mathbf{Q}\textbf{x}^T+\mathbf{P}\textbf{x}+F$
 - centered $\textbf{x}\mathbf{Q}\textbf{x}^T$
-- [[Eigenvector]][[s]] of $Q$ point towards principal axes
+- [[Eigenvector|eigenvectors]] of $Q$ point towards principal axes
 - [[Eigenvalue]] 
     - [[Ellipse]] $\dfrac{1}{\sqrt{\lambda_i}}$ is length of semi-axes
     - [[Parabola]] if any $\lambda_i=0$

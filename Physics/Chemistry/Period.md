@@ -1,1 +1,1 @@
-Number of [[Shell]][[s]] in an atom, used in [[Periodic Table]]
+Number of [[Shell|shells]] in an atom, used in [[Periodic Table]]

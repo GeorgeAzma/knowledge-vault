@@ -1,1 +1,1 @@
-[[Decibel]][[s]] at $1000hz$
+[[Decibel|decibels]] at $1000hz$

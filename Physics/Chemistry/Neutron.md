@@ -1,3 +1,3 @@
 ### Mass $1.674927471\times10^{-27}kg$
-- In [[Atomic Mass]][[s]] $1.00866491588u$
-- In [[Electron Volt]][[s]] $939.5654133MeV$
+- $1.00866491588u$ [[Atomic Mass|atomic mass units]]
+- $939.5654133MeV$ [[Electron Volt|electron volts]]

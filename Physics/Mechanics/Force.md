@@ -1,2 +1,2 @@
 ### Formula $F=ma$ 
-in [[Joule]][[s]]
+in [[Joule|joules]]

@@ -37,7 +37,7 @@ Create a packet
 	- Store Destination [[IP|IP]] to [[Address Resolution Protocol|ARP]] response MAC address mapping 
 	  in ARP Cache of source device `192.168.0.1 -> 31:88:F1:3C:5A:CF`
 - Fill data `0101011`
-- Fill source/destination [[Port]][[s]] `TCP/25565 (Minecraft)`
+- Fill source/destination [[Port|ports]] `TCP/25565 (Minecraft)`
   typically source [[Port]] is random and client 
   listens on it for response on this request
 - Fill source/destination [[IP|IP]] addresses `192.168.100.3 | 192.168.100.6` ``

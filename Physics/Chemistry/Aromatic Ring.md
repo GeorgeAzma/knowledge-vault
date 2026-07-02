@@ -4,7 +4,7 @@
 - **High stability** compared to non-aromatic rings
 ### Examples 
 benzene `C₆H₆`, written as `Ph`
-        phenyl `C₆H₅-`, similar principle as [[Alkyl]][[s]] but for benzene instead of carbon
+        phenyl `C₆H₅-`, similar principle as [[Alkyl|alkyls]] but for benzene instead of carbon
 ![[Aromatic Rings.webp|600]]
 ### Hückel’s Aromaticity rules
 1. **Cyclic** molecule must form a ring

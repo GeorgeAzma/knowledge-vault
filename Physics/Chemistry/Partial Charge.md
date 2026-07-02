@@ -1,4 +1,4 @@
-In covalent [[Bond]][[s]] electrons are shared, but atoms may have uneven [[Electronegativity]] `electron greed`
+In covalent [[Bond|bonds]] electrons are shared, but atoms may have uneven [[Electronegativity]] `electron greed`
 so more electronegative atom pull electrons stronger making them **partially negative (δ–)**
 while making less electronegative atom **partially positive (δ+)**
 **partial** meaning fraction of the electron is pulled towards more electronegative atom `not full ±1`

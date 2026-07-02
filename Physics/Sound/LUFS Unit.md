@@ -1,9 +1,9 @@
-Human perceived loudness depends on [[Sound]] amplitude/frequency
-So you can't measure loudness using [[Decibel]][[s]], since it doesn't consider wave frequency 
+Human perceived loudness depends on [[sound]] amplitude/frequency
+So you can't measure loudness using [[Decibel|decibels]], since it doesn't consider wave frequency 
 **LUFS** unit does and it's used for measuring sound loudness
 ### Amplitude/Frequency Relation To Loudness
 Red curve is where perceived loudness is the same
 ![[Sound Perception.webp|300]]
-> [!note] Lines are $[0,20,40,60,80,100]$ [[Phon]]
+> [!note] Lines are $[0,20,40,60,80,100]$ [[phon]]
 
 > [!tip] Humans perceive 2000-5000hz the loudest

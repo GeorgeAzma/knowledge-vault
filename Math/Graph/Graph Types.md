@@ -4,7 +4,7 @@
 - **Cyclic** has cycle
 - **Acyclic** has no cycle
 - **Weighted** edges `could represent road length`
-- [[Tree]][[s]] connected + acyclic, removing any edge disconnects graph
+- [[Tree|trees]] connected + acyclic, removing any edge disconnects graph
   adding any edge creates cycle
 - [[Hypercube]] $Q_n$
 - **Multigraph** allows double edges and loops

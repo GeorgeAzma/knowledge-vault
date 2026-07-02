@@ -3,8 +3,8 @@
 - $I$ [[Identity Matrix]]
 - $\lambda$ [[Eigenvalue]]
 - $\vec x$ [[Eigenvector]]
-When [[Eigenvector]][[s]] are multiplied by matrix they only scale `no rotation`
-> [!example] Find Eigen Vectors using [[Eigenvalue]][[s]]
+When [[Eigenvector|eigenvectors]] are multiplied by matrix they only scale `no rotation`
+> [!example] Find Eigen Vectors using [[Eigenvalue|eigenvalues]]
 > $A=\begin{bmatrix}1&1\\4&1\end{bmatrix}$
 > $\lambda=3,-1$ `Eigen Values`
 > $A\vec x=\lambda\vec x$ so $(A-\lambda I)\vec x=0$ assuming $\vec x\neq \vec0$ then $A-\lambda I=0$

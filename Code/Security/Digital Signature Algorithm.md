@@ -1,4 +1,4 @@
-Used for [[Signature]][[s]]
+Used for [[Signature|signatures]]
 ### How It Works
 - **Signature Generation** with
 	- Message

@@ -10,7 +10,7 @@ How strongly an atom pulls electrons in a [[Bond]] `electron greed, also called 
 | 0.4–1.7 |  Polar covalent   |   H–O   |
 |  > 1.7  |       Ionic       |  Na–Cl  |
 - **Electronegativity difference** $\Delta\text{EN}=|\text{EN}_A−\text{EN}_B|$
-- Big difference → electron density shifts → [[Partial Charge]][[s]] δ+ / δ–
+- Big difference → electron density shifts → [[Partial Charge|partial charges]] δ+ / δ–
 - Small difference → electrons shared evenly → nonpolar
 
 |     Name      | Symbol |  EN  |

@@ -1,16 +1,16 @@
 **Analysis of Variance** tests if means of 2+ groups are significantly different
 compares **variance between groups** to **variance within groups**
 if between-group variance is significantly larger than within-group variance
-then means are not equal ([[Null Hypothesis]] is rejected)
+then means are not equal ([[null hypothesis]] is rejected)
 
-> [!note] ANOVA assumes [[Normal Distribution]] and equal [[Variance]][[s]] across groups
+> [!note] ANOVA assumes [[normal distribution]] and equal [[Variance|variances]] across groups
 
 > [!example] Compare working efficiency of $3$ teams
 > Time taken to complete task over $5$ days
 > - **Team A** $5,7,6,8,5$
 > - **Team B** $8,9,7,10,9$
 > - **Team C** $6,5,6,7,6$
->  1. Calculate [[Mean]][[s]] $[\mu_A,\mu_B,\mu_C]=[6.2,8.6,6.0]$
+>  1. Calculate [[Mean|means]] $[\mu_A,\mu_B,\mu_C]=[6.2,8.6,6.0]$
 >  2. Calculate overall [[Mean]] $\mu=\dfrac{\sum A+\sum B+\sum C}{5+5+5}=7$
 >  3. Calculate sum of squares between groups `SSB`
 >  $\text{SSB}=5\cdot((6.2-7)^2+(8.6-7)^2+(6.0-7)^2)=21$

@@ -32,7 +32,7 @@ word_embedding = embedding.forward(token_idx) # >> [0.3, 0.1, -0.5, 0.9]
 ```
 #### Encode Token Positions
 ##### [[Positional Encoding]] 
-is added to [[Word Embedding]][[s]]
+is added to [[Word Embedding|word embeddings]]
 ``` python
 for pos, embed in enumerate(tok_embed): # ignore batches
     embed += encode_position(pos, d_model)

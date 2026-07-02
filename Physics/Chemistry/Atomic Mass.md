@@ -1,7 +1,7 @@
 ### $\text{amu}=u={}^{12}C/12=1.6605390666\times10^{−27}kg$
 - ${}^{12}C$ mass of carbon-12 $^{12}C=1.9926468799\times10^{−26}kg$
 > [!note] 
-> - $^{12}C$ means it has 12 [[Neutron]][[s]]
+> - $^{12}C$ means it has 12 [[Neutron|neutrons]]
 > - $\text{amu}$ is also called as dalton $Da$
 ### Particle Masses
 - [[Electron#Mass $9.1093837015 times10 {-31}kg$|Electron Mass]]

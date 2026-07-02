@@ -23,7 +23,7 @@ Measures volume scaling after linear transformation with a matrix
 - $\det(x,y,z)=\det(x+y,y,z)=\det(x,y,z+2x)$
 - $A_x\cdot A^*_x=\det(A)$ `A* = Cofactor`
 - $A_x\cdot A^*_y=0$ 
-- determinant is length of [[Eigenvalue]][[s]] $\det(A)=\sqrt{\lambda_1^2+\lambda_2^2+\dots+\lambda_n^2}$
+- determinant is length of [[Eigenvalue|eigenvalues]] $\det(A)=\sqrt{\lambda_1^2+\lambda_2^2+\dots+\lambda_n^2}$
 ### Calculate Determinant
 ![[Determinant.webp|150]]![[Wedge vs Determinant.webp]]
 > [!tip] Used to solve system of equations via [[Creamer's Law]]

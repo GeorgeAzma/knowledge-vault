@@ -17,7 +17,7 @@ Protocol for safe communication over the network
 ### How It Works
 - At first uses [[Encryption#Asymmetric Encryption|Asymmetric Encryption]] with limited message length and slow encryption, which handles
 	- [[Confidentiality]] using [[Encryption#Asymmetric Encryption|Asymmetric Encryption]] algorithms
-	- [[Integrity]]/[[Authentication]]/[[Non-Repudiation]] using [[Signature]][[s]]
+	- [[Integrity]]/[[Authentication]]/[[Non-Repudiation]] using [[Signature|signatures]]
 	- [[Encryption#Symmetric Encryption|Symmetric Key Exchange]]
 > [!note] Anyone can generate asymmetric keys
 > to know for sure that asymmetric keys belong to server you are interested in, 

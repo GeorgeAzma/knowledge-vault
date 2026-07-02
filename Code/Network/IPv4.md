@@ -8,7 +8,7 @@
 |   D   | `224.0.0.0` | `239.255.255.255` |                 | `255.0.0.0`     | `/8`  | `1110`  | multicast       |
 |   E   | `240.0.0.0` | `255.255.255.255` |                 | `255.255.0.0`   | `/16` | `1111`  | reserved        |
 - **Public Ranges** never reused or changed, they are assigned by Internet Service Providers (ISP) and cost money
-- **Private Ranges** pings from the internet are not routed. free to change/reuse in different [[Local Area Network (LAN)|LAN]] [[Network]][[s]]
+- **Private Ranges** pings from the internet are not routed. free to change/reuse in different [[Local Area Network (LAN)|LAN]] [[Network|networks]]
 ### Quirks
 - **loobpack address** `127.0.0.1 or localhost` used for computer to refer to itself
 - **all host bits = 1** `192.168.1.255/24` is broadcast address, which forwards packet to all hosts

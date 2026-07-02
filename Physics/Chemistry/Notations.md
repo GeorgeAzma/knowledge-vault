@@ -1,7 +1,7 @@
 ### [[Skeletal Structure]]
 ### ASCII
 - **Molecular formula** `C2H6O`
-- **Condensed structural** `CH3CH2OH` shows groups, but omits [[Bond]][[s]]
+- **Condensed structural** `CH3CH2OH` shows groups, but omits [[Bond|bonds]]
 - **ASCII bond art** `H-C=C-H`
     - **Placeholders**
         - `R` any generic organic group

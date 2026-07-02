@@ -1,4 +1,4 @@
-Add's position to [[Word Embedding]][[s]] 
+Add's position to [[Word Embedding|word embeddings]] 
 ```Rust
 fn encode_position(pos: usize, n: usize) -> Vec<f32> {
     let mut encoding = vec![0.0; n];

@@ -1,4 +1,4 @@
-Useful for calculating [[Derivative]][[s]]
+Useful for calculating [[Derivative|derivatives]]
 ### $x+y\epsilon$ where $\epsilon^2=0$ and $\epsilon\neq0$
 Dual parts cancel out when multiplied
 - $\epsilon^2,\epsilon^3,\dots=0$ 
@@ -15,7 +15,7 @@ Dual parts cancel out when multiplied
 - $f^{(n)}(x+y\epsilon_n)$  where $\epsilon_n^n=0$
 - **Comparison** unordered, but practically ignore dual part and compare, proof $0<\epsilon\implies0<\epsilon^2\implies0<0$
 > [!tip] Think of $x+y\epsilon$ as 2D vector, where 1st dimension is real and 2nd is slope dimension ([[derivative]])
-> slope can be any direction, you can move along it using $y$, for [[complex number]][[s]] you think of them as a 2D circle
+> slope can be any direction, you can move along it using $y$, for [[complex number|complex numbers]] you think of them as a 2D circle
 ##### Calcualting [[Derivative]] Using Dual Number and [[Taylor Series]] 
 $f(x+\epsilon)=f(x)+\epsilon f'(x)+\dfrac{\epsilon^2}{2}f''(x)+\dots$
 $f(x+\epsilon)=f(x)+\epsilon f'(x)$ uses property $\epsilon^2=0$

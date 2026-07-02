@@ -1,4 +1,4 @@
-Connects [[Switch|Switches]], [[Data Link]][[s]] and other [[Router]][[s]] together
+Connects [[Switch|switches]], [[Data Link|data links]] and other [[Router|routers]] together
 chooses best route for information, decides which devices
 get priority, manages security and bandwidth limit etc
 

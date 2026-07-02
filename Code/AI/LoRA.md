@@ -17,6 +17,6 @@ a = 1.0 # hyper-parameter (LoRA strength)
 s = a / rank.sqrt() # scaling factor
 W'' =  xW + s * x(A@B)
 ```
-Similar to how 2. reduces parameter count in [[Neural Network]][[s]]
+Similar to how 2. reduces parameter count in [[Neural Network|neural networks]]
 1. `big_layer` => `big_layer`
 2. `big_layer` => `small_layer` => `big_layer`

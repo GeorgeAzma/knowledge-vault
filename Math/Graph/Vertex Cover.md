@@ -1,6 +1,6 @@
 Set of vertices that contains every edge `at least one endpoint of every edge`
 ### König's Theorem for Vertex Count
-- For [[Bipartite Graph]][[s]] smallest vertex cover `==` [[Maximum Matching]]
+- For [[Bipartite Graph|bipartite graphs]] smallest vertex cover `==` [[Maximum Matching]]
   assuming only 1 endpoint of vertex cover is included
 - For non-bipartite, smallest vertex cover `>=` [[Maximum Matching]]
 

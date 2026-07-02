@@ -2,7 +2,7 @@
 aliases:
   - Dual
 ---
-Used for converting [[bivector]][[s]] `which are like oriented planes`, to 3D [[vector]][[s]] perpendicular to it and vice-versa
+Used for converting [[Bivector|bivectors]] `which are like oriented planes`, to 3D [[Vector|vectors]] perpendicular to it and vice-versa
 
 but it is more general and can convert any $k$-dimensional oriented quantity 
 into $(n-k)$-dimensional quantity in $n$-dimensional space
