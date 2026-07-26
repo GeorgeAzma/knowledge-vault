@@ -58,7 +58,7 @@ aliases:
 - [[Optimal Matching]]
 - [[Tree]]
 - [[Spanning Tree]]
-- [[Minimal Spanning Tree]]
+- [[Minimum Spanning Tree]]
 - [[Spanning Forest]]
 - [[Circuit]]
 - [[Clique]]

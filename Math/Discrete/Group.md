@@ -6,7 +6,6 @@ aliases:
 - Commutative Monoid
 - Abelian Group
 ---
-
 ``` mermaid
 graph TD
 

@@ -13,6 +13,9 @@
     - $A$ [[Symmetric Matrix|Symmetric]] [[Positive Definite Matrix]]
         - symmetric to satisfy `2. conjugate symmetry` (keep $a\to b=b\to a$ distances symmetric)
         - positive definite to satisfy `3. positive definite` $\braket{Ax,Ay}\geq0$
+- $\braket{X,Y}=E[X\cdot Y]$ inner product of random variables = [[expectation]] of their dot product
+    - $\braket{X,Y}=0\implies\text{Uncorrelated}$ `similarity = 0`
+    - $|X|\implies\text{Random variable length}$ ` = standard deviation`
 ### Coolness
 If all above properties are satisfied, these will work
 - $\braket{a,b}=0$ orthogonal, even works for $\int_a^b f(x)g(x)dx$

@@ -1,7 +1,7 @@
 Like pressure of water and height in gravitational [[Potential Energy]]
 ### Formula $V=IR$
-- $I$ [[Current]]
-- $R$ [[Resistance]]
+- $I$ [[current]]
+- $R$ [[resistance]]
 > [!tip] 
 > $I$ is how many electrons pass in a second
 > and $V$ is like pressure, if there is a lot of resistance,

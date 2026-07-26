@@ -10,3 +10,7 @@
 - $y(t)=Ce^{3t}$ where $C=\pm e^C$
 - $y(0)=Ce^{0}=2\implies C=2$
 - $y(t)=2e^{3t}$
+
+### [[Force]] $F(x,t)=m\dfrac{d^2x}{dt}$
+- ##### [[Pendulum]] $-g\sin\theta=L\dfrac{d^2\theta}{dt^2}$
+- ##### [[Gravity]] $m\dfrac{d^2x}{dt^2}=-mg$ `m cancells out` 

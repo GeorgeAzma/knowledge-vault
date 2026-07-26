@@ -1,3 +1,9 @@
+---
+aliases:
+  - Relative Colorimetric
+  - Absolute Colorimetric
+  - Perceptual
+---
 ### Conversion Types
 - **Relative Colorimetric**
     - does not scale source colors
@@ -8,4 +14,3 @@
 - **Saturation** 
     - preserves hue
     - scales chroma towards saturated edge of the gamut
-    - 

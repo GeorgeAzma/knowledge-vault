@@ -8,7 +8,7 @@
 - [[Bipartite Graph]]
 ### Types
 - [[Spanning Tree]]
-- [[Minimal Spanning Tree]]
+- [[Minimum Spanning Tree]]
 - [[Spanning Forest]]
 ### Terms
 - **Rank** tree height/depth

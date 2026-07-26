@@ -11,11 +11,7 @@ float blackbody(float w) {
     return 1.0 / (pow(w * 0.221 + 0.2954, 5.0) * (exp(8.3 / (w + 1.33)) - 1.0));
 }
 ```
-##### Boltzmann Constant $k_B=\dfrac{PV}{TN}=1.380649\times10^{-23}m^2kgs^{-2}K^{-1}$
-- $P$ pressure
-- $V$ volume
-- $T$ temperature
-- $N$ molecules
+##### [[Boltzmann Constant]]
 ### Inverse $T(\lambda)=\dfrac{hc}{\lambda k_B \ln(\dfrac{2hc}{\lambda^5L(\lambda)}+1)}$
 - $L(\lambda)$ radiance at $\lambda$ wavelength
 ### Wien's Displacement Law $\lambda_{max}\approx\dfrac{0.002897}{T}$

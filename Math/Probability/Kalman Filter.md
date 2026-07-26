@@ -2,7 +2,7 @@ When given a noisy live measurement of a changing variable, kalman filter tries 
 ### How It Works
 ``` python
 x = 0.0 # best guess of current state
-p = 1.0 # uncertainty in best guess
+p = 1.0 # uncertainty/variance in best guess
 
 # called when measurement comes in (after some delta time)
 def kalman_step(x, p, x_measured):
@@ -21,7 +21,5 @@ def kalman_step(x, p, x_measured):
 
     x = x + k * innovation # blend prediction & measurement
     p = (1.0 - k) * p # reduce uncertainty
-
-# Intuition
-
 ```
+https://youtu.be/lIYYJMHAwMU

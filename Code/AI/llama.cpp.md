@@ -1,10 +1,15 @@
 ``` bash
 git clone https://github.com/ggml-org/llama.cpp.git
 
-cmake -B build -DGGML_CUDA=ON -DGGML_NATIVE=ON -DCMAKE_BUILD_TYPE=Release
+# "--config Release -j" not necessary for Ninja
+cmake -B build -G Ninja -DGGML_CUDA=ON -DGGML_NATIVE=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release -j
 
 ./build/bin/llama-server -m model.gguf -c 8192
+
+# optionally: add ./build/bin/ to path
+
+llama-cli -m "model.gguf" -ngl all -fa on -c 8192 -ub 2048 -b 8192 -t 8 -ctk q8_0 -ctv q8_0
 ```
 #### Parameters
 ``` bash

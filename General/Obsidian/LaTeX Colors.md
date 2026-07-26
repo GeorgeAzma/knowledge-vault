@@ -5,12 +5,15 @@
 - $\color{Periwinkle}\text{Periwinkle}$
 - $\color{BlueViolet}\text{BlueViolet}$
 - $\color{cornflowerblue}\text{cornflowerblue}$
+- $\color{CornflowerBlue}\text{CornflowerBlue}$
+- $\color{SkyBlue}\text{SkyBlue}$
 - $\color{Lavender}\text{Lavender}$
 - $\color{CarnationPink}\text{CarnationPink}$
 - $\color{violet}\text{violet}$
 - $\color{WildStrawberry}\text{WildStrawberry}$
 - $\color{orange}\text{orange}$
 - $\color{Dandelion}\text{Dandelion}$
+- $\color{Goldenrod}\text{Goldenrod}$
 - $\color{Apricot}\text{Apricot}$
 - $\color{LimeGreen}\text{LimeGreen}$
 - $\color{forestgreen}\text{forestgreen}$

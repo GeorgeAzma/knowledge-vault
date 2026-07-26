@@ -1,3 +1,3 @@
 connects all vertices together without cycles
-- [[Minimal Spanning Tree]]
+- [[Minimum Spanning Tree]]
 - [[Spanning Forest]]

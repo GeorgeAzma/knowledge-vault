@@ -23,15 +23,23 @@ then means are not equal ([[null hypothesis]] is rejected)
 >  6. Calculate [[Mean]] squares 
 >   - [[Mean]] square between $\text{MSB}=\dfrac{\text{SSB}}{\text{df}_\text{between}}=\dfrac{21}{2}=10.5$
 >   - [[Mean]] square within $\text{MSW}=\dfrac{\text{SSW}}{\text{df}_\text{within}}=\dfrac{14}{12}=1.16$
->  - $\text{df}_\text{between}=n_\text{groups}-1$
+>  - $\text{df}_\text{between}=n_\text{groups}-1$ [[Math/Probability/Degrees of Freedom|degrees of freedom]]
 >  - $\text{df}_\text{within}=n_\text{observations}-n_\text{groups}$
 >  7. Calculate F-ratio $F=\dfrac{\text{MSB}}{\text{MSW}}=\dfrac{10.5}{1.16}=9$
 >  8. Plug F-value in [[F-Distribution]] [[Cumulative Distribution Function|CDF]] with
 >    $\text{df}_\text{between}=2,\text{df}_\text{within}=12$ or $d_1=2,d_2=12$
 >    to get $p=1-F_\text{CDF}$ [[p-value]]
->    $F=\dfrac{B_2(\dfrac{d_1}{2},\dfrac{d_2}{2},\dfrac{d_1x}{d_1x+d_2})}{B(\dfrac{d_1}{2},\dfrac{d_2}{2})}=\dfrac{B_2(\dfrac{2}{2},\dfrac{12}{2},\dfrac{2x}{2x+12})}{B(\dfrac{2}{2},\dfrac{12}{2})}=\dfrac{B_2(1,6,\dfrac{2x}{2x+12})}{B(1,6)}$
->    substitute $x=9$ to get $\dfrac{B_2(1,6,0.6)}{B(1,6)}=0.995904$
->    $1-F_\text{CDF}=1-0.995904=0.04096=4.096\%$ 
->    which is statistically significant so [[Null Hypothesis]] is rejected
->    `Mean is significantly different between teams`
->    `meaning some of them are more efficient then others`
+>    $F=\dfrac{B_2(\dfrac{d_1}{2},\dfrac{d_2}{2},\dfrac{d_1F}{d_1F+d_2})}{B(\dfrac{d_1}{2},\dfrac{d_2}{2})}=\dfrac{B_2(\dfrac{2}{2},\dfrac{12}{2},\dfrac{2F}{2F+12})}{B(\dfrac{2}{2},\dfrac{12}{2})}=\dfrac{B_2(1,6,\dfrac{2F}{2F+12})}{B(1,6)}$
+>    substitute $F=9$ to get $\dfrac{B_2(1,6,0.6)}{B(1,6)}=0.995904$
+>    $p=1-F_\text{CDF}=1-0.995904=0.04096=4.096\%$ 
+>    which is statistically significant ($p<0.05$) so [[null hypothesis]] is **rejected**
+>    so there is evidence that atleast 1 team has significantly different mean from others
+>    meaning atleast 1 team is significantly more efficient than others
+##### Post-Hoc Test
+ANOVA tells that atleast 1 group's mean is different, but does not tell which
+post-hoc tests groups to determine which ones are different
+- **Tukey's HSD** most common; compare all pairs while controlling family-wise error
+- **Bonferroni correction** simple; divide significance level by number of tests
+- **Holm-Bonferroni** improved version of bonferroni
+- **Scheffe's test** very conservative
+- **Dunett's test** compare every group against one control group

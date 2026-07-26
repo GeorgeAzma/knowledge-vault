@@ -14,7 +14,7 @@
 > - Mode is $\max(\alpha-1,0)\beta$ `time when you are most likely to get a call`
 > - $f(x;\alpha,\beta)$ will return [[Probability|Probability Distribution]]
 
-> [!note] [[Chi-Squared Test#Chi-Distribution $ chi 2(x,k)= huge frac{x { frac{k}{2}-1}e {- frac{x}{2}}}{2 frac{k}{2} Gamma( frac{k}{2})}$|Chi-Distribution]] is gamma distribution with $\alpha=\dfrac{k}{2}$ and $\beta=2$
+> [!note] [[Chi-Square Distribution]] is gamma distribution with $\alpha=\dfrac{k}{2}$ and $\beta=2$
 ### [[Cumulative Distribution Function|CDF]] $F(x;\alpha,\beta)=\dfrac{\gamma(\alpha,\dfrac{x}{\beta})}{\Gamma(\alpha)}$
 - $\gamma$ [[Gamma Function#Incomplete Gamma Function $ gamma(x,s)= int_0 s t {x-1}e {-t} dt$|Incomplete Gamma Function]]
 > [!example] Probability that you'd get a call if you waited $x$ minutes

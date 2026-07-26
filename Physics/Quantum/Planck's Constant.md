@@ -1,2 +1,2 @@
 ### $h=6.62607015\times10^{-34}Js$
-##### Reduced Planck's Constant $\hbar=\huge\frac{h}{2\pi}$
+### $\hbar=\dfrac{h}{2\pi}\approx1.05457181765\times 10^{-34}Js$ `Reduced Planck's Constant`

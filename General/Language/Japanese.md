@@ -8,4 +8,4 @@ tofugu.com/learn-japanese
 - **Furigana** [[Kanji]] readings using [[Hiragana]]
 - **Kana** [[Hiragana]] and [[Katakana]]
 - **Mora** like syllable but `Moo` is 2 Moras
-  it determines speed/rythm of speech
+  it determines speed/rhythm of speech

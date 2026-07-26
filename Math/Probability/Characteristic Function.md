@@ -1,0 +1,1 @@
+[[fourier transform]] of [[probability density function]]

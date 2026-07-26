@@ -23,11 +23,15 @@ aliases:
 - $\mu\in\mathbb{R}^n$ 
 - $\Sigma\in\mathbb{R}^{n\times n}$ [[Covariance Matrix]]
 youtu.be/wc7oZB15rYQ relates to [[Bayes' Theorem]]
-### Normal Distribution Algebra
-- $aX+b\sim\mathcal{N}(a\mu+b,~a^2\sigma^2)$ `linear transformation` multivariate $Ax+b\sim\mathcal{N}(A\mu+b,~A\Sigma A^T)$
-- $X\pm Y\sim\mathcal{N}(\mu_X\pm\mu_Y,~\sigma_X^2\pm\sigma_Y^2)$  `addition` multivariate $x\pm y\sim\mathcal{N}(\mu_X\pm \mu_Y,~\Sigma_X\pm \Sigma_Y)$
-- $XY\sim\mathcal{N}\left(\dfrac{\mu_X\sigma_Y^2+\mu_Y\sigma_X^2}{\sigma_X^2+\sigma_Y^2},~\dfrac{\sigma_X^2\sigma_Y^2}{\sigma_X^2+\sigma_Y^2}\right)$ `multiplication`
-- $XY\sim\mathcal{N}\left(\dfrac{\mu_X+\mu_Y}{2},~\dfrac{\sigma^2}{2}\right)$ `same stdev`
+### Algebra
+- $\mathcal{N}(x;\mu_1,\sigma_1^2)\cdot\mathcal{N}(x;\mu_2,\sigma_2^2)\propto\mathcal{N}\left(x;\dfrac{\mu_1\sigma_2^2+\mu_2\sigma_1^2}{\sigma_1^2+\sigma_2^2},~~\dfrac{\sigma_1^2\sigma_2^2}{\sigma_1^2+\sigma_2^2}\right)$ `Gaussian density product`
+    - $\sigma_1=\sigma_2\implies\propto\mathcal{N}\left(x;~~\dfrac{\mu_1+\mu_2}{2},~~\dfrac{\sigma^2}{2}\right)$
+##### Multivariate
+- $A\mathbf{x}+B\mathbf{y}+\mathbf{c}\sim\mathcal{N}(A\mathbf{μ}_x+B\mathbf{μ}_y+\mathbf{c},~~A\Sigma_x A^T+B\Sigma_y B^T+A\Sigma_{xy} B^T+B\Sigma_{xy}^T A^T)$ `general form`
+- $A\mathbf{x}+\mathbf{b}\sim\mathcal{N}(A\mathbf{μ}_x+\mathbf{b},~~A\Sigma_x A^T)$ `affine transformation`
+
+- $\mathbf{x}\pm\mathbf{y}\sim\mathcal{N}(\mathbf{μ}_x\pm\mathbf{μ}_y,~~\Sigma_x+\Sigma_y\pm(\Sigma_{xy}​+\Sigma_{xy}^T​))$ `addition`
+- $\mathbf{x}\mid\mathbf{y}\sim\mathcal{N}(\mathbf{μ}_x+\Sigma_{xy}\Sigma_y^{-1}(\mathbf{y}-\mathbf{μ}_y),~~\Sigma_x-\Sigma_{xy}\Sigma_y^{-1}\Sigma_{xy}^T)$
 ### [[Box-Muller Transform]]
 ### Code
 ``` c

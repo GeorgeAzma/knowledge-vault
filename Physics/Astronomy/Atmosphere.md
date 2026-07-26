@@ -1,3 +1,4 @@
+https://blog.maximeheckel.com/posts/on-rendering-the-sky-sunsets-and-planets/
 ### Pressure $101.325kPa$
 $1bar \approx 100kPa \approx \text{Atmospheric pressure}$
 ### Heights

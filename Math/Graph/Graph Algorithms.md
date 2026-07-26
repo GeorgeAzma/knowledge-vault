@@ -1,0 +1,50 @@
+| Algorithm                              | Purpose                                             | Real-world use                                                                                     |
+| -------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **BFS** `Breadth-First Search`         | Explore [[graph]] level-by-level                    | Social network distance ("friends of friends"), web crawling, shortest path in unweighted networks |
+| **DFS** `Depth-First Search`           | Explore deeply before backtracking                  | File system traversal, maze solving, cycle detection, dependency analysis                          |
+| **Dijkstra's Algorithm**               | Shortest path with non-negative weights             | GPS navigation, network routing, delivery optimization                                             |
+| **A***                                 | Faster shortest path using heuristics               | Game pathfinding, robotics navigation, maps                                                        |
+| **Bellman-Ford**                       | Shortest paths with negative weights                | Financial networks, routing protocols, detecting negative cycles                                   |
+| **Floyd-Warshall**                     | All-pairs shortest paths                            | Finding distances between every city/server/user                                                   |
+| **Johnson's Algorithm**                | Efficient all-pairs shortest paths on sparse graphs | Large network analysis                                                                             |
+| **Kruskal's Algorithm**                | [[Minimum spanning tree]]                           | Cheapest infrastructure wiring, road/telecom planning                                              |
+| **Prim's Algorithm**                   | [[Minimum spanning tree]]                           | Network design, electrical grids, cable layouts                                                    |
+| **Topological Sort**                   | Order DAG dependencies                              | Build systems, package managers, task scheduling                                                   |
+| **Cycle Detection**                    | Find loops in graphs                                | Deadlock detection, dependency validation                                                          |
+| [[Union Find]] `Disjoint Set`          | Track connected components `islands`                | Network connectivity, image segmentation, clustering                                               |
+| **Tarjan's Algorithm**                 | Find strongly connected components                  | Analyzing web links, software dependency cycles                                                    |
+| **Kosaraju's Algorithm**               | Find strongly connected components                  | Same as Tarjan, simpler implementation                                                             |
+| **PageRank**                           | Rank nodes by importance                            | Google search ranking, influence analysis                                                          |
+| **HITS Algorithm**                     | Find hubs and authorities                           | Search engines, citation networks                                                                  |
+| **Kahn's Algorithm**                   | Topological sorting using indegrees                 | Scheduling and dependency resolution                                                               |
+| **Ford-Fulkerson**                     | Maximum flow                                        | Traffic planning, network bandwidth, supply chains                                                 |
+| **Edmonds-Karp**                       | Max flow using BFS                                  | Optimizing resource movement                                                                       |
+| **Dinic's Algorithm**                  | Faster max flow                                     | Large transportation and communication networks                                                    |
+| **Minimum Cut**                        | Find weakest connection points                      | Network security, dividing communities                                                             |
+| **Bipartite Matching** `Hopcroft-Karp` | Match two groups optimally                          | Job assignment, dating apps, organ donation matching                                               |
+| **Hungarian Algorithm** `Kuhn-Munkres` | Optimal assignment                                  | Worker-task assignment, scheduling                                                                 |
+| **K-Shortest Paths**                   | Find multiple best routes                           | Alternative GPS routes, logistics                                                                  |
+| **Aho-Corasick**                       | Graph-based string matching                         | Antivirus scanning, search engines                                                                 |
+| **Trie** `Prefix Tree`                 | Tree graph for prefixes                             | Autocomplete, spell checking                                                                       |
+| **Suffix Tree/Array**                  | Fast substring search                               | DNA analysis, text search                                                                          |
+| **Binary Search Tree**                 | Ordered data graph                                  | Databases, indexing                                                                                |
+| **AVL Tree / Red-Black Tree**          | Balanced search trees                               | Operating systems, databases                                                                       |
+| **B-Trees**                            | Disk-friendly trees                                 | File systems, SQL databases                                                                        |
+| **R-Trees**                            | Spatial indexing                                    | Maps, GIS, collision detection                                                                     |
+| **KD-Trees**                           | Multidimensional search                             | Nearest neighbor search, ML                                                                        |
+| **Quadtrees / Octrees**                | Spatial subdivision                                 | Games, graphics, physics simulations                                                               |
+| **Nearest Neighbor Graph**             | Connect similar points                              | Machine learning, recommendation systems                                                           |
+| **Graph Clustering**                   | Find communities/groups                             | Social networks, customer segmentation                                                             |
+| **Louvain Algorithm**                  | Community detection                                 | Social network analysis                                                                            |
+| **Spectral Clustering**                | Cluster using graph eigenvectors                    | Image segmentation, ML                                                                             |
+| **Graph Neural Networks**              | Learn from graph structure                          | Drug discovery, fraud detection, recommendation systems                                            |
+| **Random Walks**                       | Simulate movement through graphs                    | PageRank, diffusion models, search algorithms                                                      |
+| **Monte Carlo Tree Search**            | Explore decision trees                              | Chess/Go AI, game planning                                                                         |
+| **Minimax + Alpha-Beta Pruning**       | Optimal decisions in game trees                     | Board game AI                                                                                      |
+| **Beam Search**                        | Limited graph exploration                           | Machine translation, AI generation                                                                 |
+| **Viterbi Algorithm**                  | Best path through state graph                       | Speech recognition, hidden Markov models                                                           |
+| **AFL / symbolic execution graphs**    | Explore program states                              | Security testing, bug finding                                                                      |
+| **Dependency Graph Analysis**          | Analyze relationships                               | Software build systems, package managers                                                           |
+| **Control Flow Graphs**                | Represent program execution                         | Compilers, optimization, static analysis                                                           |
+| **Call Graph Analysis**                | Function relationships                              | Debugging, malware analysis                                                                        |
+| **Knowledge Graph Algorithms**         | Entity relationships                                | Search engines, AI assistants                                                                      |

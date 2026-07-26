@@ -5,6 +5,12 @@ youtu.be/HZGCoVF3YvM
 - $P(B\mid A)$ likelihood `probability of B given A`
 - $P(A)$ prior
 - $P(B)$ [[Joint, Marginal, Conditional Distribution|Marginal]]
+``` python
+for observation in observations: # camera says door is open, laser says door is closed
+    for hypothesis in hypotheses: # door is open, door is closed
+        belief[hypothesis] *= likelihood(observation, hypothesis) # P(A) * P(B|A)
+    belief.normalize() # / P(B)
+```
 ![[Bayes.webp#rounded|500]]
 > [!example] Rain
 > $P(A)=\text{Probability of rain}$

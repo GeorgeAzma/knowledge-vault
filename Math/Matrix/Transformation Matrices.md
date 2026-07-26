@@ -41,6 +41,6 @@ n, f & \text{(near, far clipping planes)}
 $$
 
 ##### Remarks
-- $\text{FOV}_x=2\arctan(\tan(0.5\text{FOV}_y)\cdot\text{aspect}), \text{aspect}=\frac wh$
+- $\text{FOV}_x=2\arctan(\tan(0.5\text{FOV}_y)\cdot\text{aspect}),~~\text{aspect}=\dfrac wh$
 - horizontal $\text{FOV}$ is vertical $\text{FOV}$ but accounting for aspect ratio
 - $\tan(\text{FOV}_y)=\large\frac{\text{near plane height}}{\text{near plane distance}}$

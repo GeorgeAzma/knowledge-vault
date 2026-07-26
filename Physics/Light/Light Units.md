@@ -22,7 +22,6 @@ aliases:
   - Luminous Energy Density
   - Luminous Efficacy
 ---
-
 ### Energetic
 uses $I_e$ suffix `energetic`
 

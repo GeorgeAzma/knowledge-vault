@@ -12,7 +12,7 @@ for scattering of air particles see [[Rayleigh Scattering]]
 - $\mu$ `dot(to_light, eye_dir)`
 ``` c
 float mie_phase(float g, float mu) {
-    float p = (8.0 * 3.142 * (2.0 + g * g) * (1.0 + g * g - 2.0 * g * mu));
+    float p = (8.0 * 3.14159 * (2.0 + g * g) * (1.0 + g * g - 2.0 * g * mu));
     return (1.0 - g) * (1.0 - g) * (1.0 + mu * mu) * 3.0 / sqrt(p * p * p);
 }
 

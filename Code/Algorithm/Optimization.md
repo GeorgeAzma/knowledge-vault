@@ -98,7 +98,7 @@ enum ColoredCloth {
 }
 ```
 ### Patterns
-- [[Parallel Prefix Sum]]
+- [[Summing Ranges]]
 - **Two Pointers** sorted list, have 2 pointers at start/end, if `sum < target` 
   increase start pointer otherwise increase end pointer untill target is reached
 - **Sliding Window** only window edges matter, others are duplicate info

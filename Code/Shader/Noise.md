@@ -511,3 +511,30 @@ float wavelet12_helper(vec2 p) {
     return wavelet12(p, u_time, 1.24) * 0.5 + 0.5;
 }
 ```
+### Other
+``` c
+// https://www.shadertoy.com/view/dlKyWw
+float shard_noise(in vec3 p, in float sharpness) {
+    vec3 ip = floor(p);
+    vec3 fp = fract(p);
+
+    float v = 0., t = 0.;
+    for (int z = -1; z <= 1; z++) {
+        for (int y = -1; y <= 1; y++) {
+            for (int x = -1; x <= 1; x++) {
+                vec3 o = vec3(x, y, z);
+                vec3 io = ip + o;
+                vec3 h = hash(io);
+                vec3 r = fp - (o + h);
+
+                float w = exp2(-tau*dot(r, r));
+                // tanh deconstruction and optimization by @Xor
+                float s = sharpness * dot(r, hash(io + vec3(11, 31, 47)) - 0.5);
+                v += w * s*inversesqrt(1.0+s*s);
+                t += w;
+            }
+        }
+    }
+    return ((v / t) * .5) + .5;
+}
+```

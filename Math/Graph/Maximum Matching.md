@@ -10,7 +10,7 @@ let $M$ be maximal matching
 - $M$-alternating path $P$ is uses alternately edges from $M$ and non-$M$ edge set
   where both end vertices of $P$ are unsaturated
 ### Finding Maximum Matching $O(VE)$
-find [[#Augmenting Path]] that has first/last vertices unsaturated and edges alternate between matched/unmatched
+Find [[#augmenting path]] that has first/last vertices unsaturated and edges alternate between matched/unmatched
 start from first and match it's edge that is connected to next vertex in path
 since edge is now matched, unmatch next edge in path
 since edge is now unmatched, match next edge in path,
@@ -21,8 +21,8 @@ repeat for all $M$-alternating paths until you get maximum matching
   then try find augmented path again until there is none
 **Hopcroft-Karp Algorithm** improves this to $O(\sqrt{V}E)$
 ### Berge's Theorem
-Does [[#Finding Maximum Matching $O(VE)$|Finding Maximum Matching]] algorithm always find maximum matchings?
-Berge's Theorem says **Yes**, if there is no more [[#Augmenting Path]] in graph
+Does [[#Finding Maximum Matching $O(VE)$|finding maximum matching]] algorithm always find maximum matchings?
+Berge's Theorem says **Yes**, if there is no more [[#augmenting path]] in the [[graph]]
 then it is maximum matching
 ### Maximum Weighted Matching
 - **Hungarian / Kuhn-Munkres Algorithm** for [[Bipartite Graph]]

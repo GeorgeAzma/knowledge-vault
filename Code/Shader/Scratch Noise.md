@@ -19,15 +19,15 @@ float scratch(vec2 p, float f) {
     return x;
 }
 
-float scratches(vec2 uv) {
+float scratches(vec2 p) {
     const float SOFTNESS = 3.0;
 
     float scratches = 0.0;
-    float w = length(fwidth(uv)) * SOFTNESS;
+    float w = length(fwidth(p)) * SOFTNESS;
     for(int i = 0; i < 8; ++i) {
-        float x = scratch(uv, w);
+        float x = scratch(p, w);
     	scratches = max(scratches, x);
-        uv = uv * mat2(1.0, 0.7, -0.7, 1.0) - 12.31;
+        p = p * mat2(1.0, 0.7, -0.7, 1.0) - 12.31;
         w *= 1.22;
     }
     return scratches;

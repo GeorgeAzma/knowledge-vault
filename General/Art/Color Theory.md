@@ -6,7 +6,7 @@ vec3 orange = vec3(1, 0.68, 0.4);
 vec3 red = vec3(0.98, 0.38, 0.35);
 ```
 - [[Color Correction]]
-- [[Color Blending]]
+- [[Blend Modes]]
 - ![[Color Harmony.webp|400]]
 - ![[Color Emotions.webp|400]]
 - Focal point is area of picture that catches attention

@@ -1,4 +1,4 @@
-Used for measuring mass of electrons
+Used for measuring mass/energy of electrons
 ### Conversions $1eV$
 - $1.602176634\times10^{−19}J$ [[Joule]]
 - $1.0735441023\times10^{−9}u$ [[Atomic Mass]]

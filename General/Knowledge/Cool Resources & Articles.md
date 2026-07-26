@@ -6,6 +6,7 @@
 ### Other
 - https://synonym.wordhippo.com/
 - https://kalmanfilter.net/
+- https://huggingface.co/spaces/nineninesix/diamond `restore degraded audio`
 ### Assets
 - https://blenderkit.com/
 - https://everytexture.com/
