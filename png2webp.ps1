@@ -51,7 +51,6 @@ Get-ChildItem -Recurse -Filter *.md | ForEach-Object {
     
     $newContent = $originalContent `
         -replace '\.(?:png|jpg|jpeg)', '.webp' `
-        -replace '\.(?:PNG|JPG|JPEG)', '.webp' `
         -replace 'youtube\.com/watch\?v=', 'youtu.be/'
     
     if ($originalContent -ne $newContent) {

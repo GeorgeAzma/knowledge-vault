@@ -14,7 +14,7 @@
 - $0$ all bits 0
 - $\infty$ all exponent bits 1, all mantissa bits 0 `sign 0 or 1`
 - $\text{NaN}$ all exponent bits 1 `and not infinity`
-
+**Tricks**
+- random to `[0; 1]` using `uintBitsToFloat(rng & 0x3FFFFFFF | 0x3F800000) - 1.0`
+- Values between 1 to 2 start with `001111111`, randomizing mantissa gives $\mathcal{U}(1,2)$
 > [!example] $0.5=(-1)^0(1+0)2^{126-127}=\dfrac{1}{2}=0\ 0111 1110\ 000 0000 0000 0000 0000 0000$
-
-> [!note] Values between -1 to 1 start with `S01` `S for sign`
