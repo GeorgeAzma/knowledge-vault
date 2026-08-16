@@ -60,14 +60,14 @@ from fastapi.responses import PlainTextResponse, HTMLResponse, FileResponse
 
 return PlainTextResponse("hello")
 return HTMLResponse("<h1>Hello</h1>")
-return FileResponse("image.png")
+return FileResponse("image.webp")
 ```
 ##### Serve
 ``` python
 from fastapi.staticfiles import StaticFiles
 
 # /static/style.css
-# /static/image.png
+# /static/image.webp
 app.mount(
     "/static",
     StaticFiles(directory="static"),
