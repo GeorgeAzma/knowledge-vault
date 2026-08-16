@@ -85,3 +85,5 @@ fn rand() -> Self {
     x
 }
 ```
+### Extra
+- `0x45d9f3bu` most random multiplier

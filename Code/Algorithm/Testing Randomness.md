@@ -28,3 +28,5 @@ single bit-flip should cause all other bits to have 50% chance of also flipping
 4. measure RMSE or [[Standard Deviation]] of $m_{ij}$ relative to ideal $0.5$ $\text{Bias}=\dfrac{1}{N}\sqrt{\sum_{i,j}(m_{ij}-0.5)^2}$
 - $\text{Bias}<0.2$ passable
 - $\text{Bias}<0.02$ theoritical limit of 3 round xor-shift
+### Other
+- Strict Avalanche Test
