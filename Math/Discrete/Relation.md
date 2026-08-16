@@ -9,7 +9,7 @@ aliases:
   - Divisibility Relation
 ---
 ### $R\subseteq A\times B$
-relation is subset of $A$ [[Set#Operators|Cartesian Product]] with $B$
+Relation is subset of $A$ [[Set#Operators|Cartesian Product]] with $B$
 > [!example] $xRy$, here $R$ is relation operator, might also be $x\sim y$
 ### Equivalence Relations
 - **Reflexive** $\forall a\in A, aRa$ `1 = 1`

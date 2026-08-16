@@ -1,4 +1,4 @@
-### $\dfrac{dy}{dt}=\lim_{\Delta t\to0}\dfrac{y(t+\Delta t)-y(t)}{\Delta t}$
+### $\dfrac{dy}{dt}=\lim_\limits{\Delta t\to0}\dfrac{y(t+\Delta t)-y(t)}{\Delta t}$
 - so it's basically a ratio, meaning we can do regular ratio simplifications
 - `note: with dy/dt we are assuming y is a function of time y(t)` 
 ### Examples

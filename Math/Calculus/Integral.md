@@ -29,5 +29,5 @@
 ### Examples
 - **Improper Integral** evaluation using [[Limit|limits]] $\int_1^\infty\dfrac{1}{x^2}dx$
     - compute definite antiderivative $-\large\frac{1}{x}$
-    - apply limits $\lim_{b\to\infty}\int_1^b \dfrac{1}{x^2}dx=[-\dfrac{1}{x}]^b_1=\lim_{b\to\infty}(-\dfrac{1}{b}+\dfrac{1}{1})=0+1=1$
+    - apply limits $\lim_\limits{b\to\infty}\int_1^b \dfrac{1}{x^2}dx=[-\dfrac{1}{x}]^b_1=\lim_\limits{b\to\infty}(-\dfrac{1}{b}+\dfrac{1}{1})=0+1=1$
     - result $\int_1^\infty\dfrac{1}{x^2}dx=1$

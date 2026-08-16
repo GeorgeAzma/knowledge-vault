@@ -4,7 +4,7 @@ aliases:
 ---
 For calculating [[Derivative|derivatives]] in a discrete space
 ### $\dfrac{f(x+h)-f(x-h)}{2h}$ `central difference
- more accurate than forward difference $\lim_{h\to0}\dfrac{f(x+h)-f(h)}{h}$ (accuracy is $\mathcal{O}(h^2)$ instead of $\mathcal{O}(h)$)
+ more accurate than forward difference $\lim_\limits{h\to0}\dfrac{f(x+h)-f(h)}{h}$ (accuracy is $\mathcal{O}(h^2)$ instead of $\mathcal{O}(h)$)
 #### Derive Finite Difference Method Using [[Taylor Series]]
 $f(x\pm h)=\sum_{n=0}^{\infty}{\dfrac{f^{(n)}(x)}{n!}(\pm h)^n}$ `taylor series when a = x, evaluated at x + h or x - h`
 $f(x\pm h)$ **Expanded** $f(x)\pm hf'(x)+\dfrac{h^2}{2}f''(x)\pm\dfrac{h^3}{6}f'''(x)+\dots$

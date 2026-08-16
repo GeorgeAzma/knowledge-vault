@@ -3,5 +3,5 @@ both converge/diverge if
 - $f$ is positive, continuous, decreasing for $x\geq N$
 > [!example] $\sum_{n=1}^\infty\dfrac{1}{n^2}$
 > - $N=1$ and $f(x)=\dfrac{1}{n^2}$ is positive, continuous, decreasing for $x\geq1$
-> - $\int_1^\infty\dfrac{1}{x^2}dx=\lim_{t\to\infty}[-\dfrac{1}{x}]^t_1=1$
+> - $\int_1^\infty\dfrac{1}{x^2}dx=\lim_\limits{t\to\infty}[-\dfrac{1}{x}]^t_1=1$
 > - **converges** so $\sum^\infty_{n=1}\dfrac{1}{n^2}$ also converges

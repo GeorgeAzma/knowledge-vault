@@ -9,17 +9,14 @@ def kalman_step(x, p, x_measured):
     # predict new state by extrapolating current guess of the true state
     x_pred = x + v * dt
     # since prediction is not perfect, it has prediction/process noise
-    q = 0.001
+    q = 0.01
     # add prediction noise to uncertainty in current best guess
     p_pred = p + q
 
     measurement_noise = 0.1
+    k = p_pred / (p_pred + measurement_noise) # kalman gain, how much to trust sensor compared to prediction
 
-    k = p_pred / (p_pred + measurement_noise) # kalman gain
-
-    innovation = x_measured - x_pred
-
-    x = x + k * innovation # blend prediction & measurement
-    p = (1.0 - k) * p # reduce uncertainty
+    x = x_pred + k * (x_measured - x_pred) # lerp(predicted, measured, kalman gain)
+    p = (1.0 - k) * p_pred # reduce current state uncertainty (since we have more measurement data)
 ```
 https://youtu.be/lIYYJMHAwMU

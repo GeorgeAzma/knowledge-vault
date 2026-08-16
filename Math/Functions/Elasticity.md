@@ -1,6 +1,6 @@
 
 ### $E f(a)=\dfrac{a}{f(a)}f'(a)$
-$=\lim_{x\to a}\dfrac{f(x)-f(a)}{x-a}\dfrac{a}{f(a)}=\lim_{x\to a}\dfrac{f(x)-f(a)}{f(a)}\dfrac{a}{x-a}=\lim_{x\to a}\dfrac{\dfrac{f(x)}{f(a)}-1}{\dfrac{x}{a}-1}\approx \dfrac{\%\Delta f(a)}{\%\Delta a}=\dfrac{d \log f(x)}{d \log x}$
+$=\lim_\limits{x\to a}\dfrac{f(x)-f(a)}{x-a}\dfrac{a}{f(a)}=\lim_\limits{x\to a}\dfrac{f(x)-f(a)}{f(a)}\dfrac{a}{x-a}=\lim_\limits{x\to a}\dfrac{\dfrac{f(x)}{f(a)}-1}{\dfrac{x}{a}-1}\approx \dfrac{\%\Delta f(a)}{\%\Delta a}=\dfrac{d \log f(x)}{d \log x}$
 ### Properties
 - $E(f(x)\cdot g(x))=Ef(x)+Eg(x)$
 - $E\dfrac{f(x)}{g(x)}=Ef(x)-Eg(x)$

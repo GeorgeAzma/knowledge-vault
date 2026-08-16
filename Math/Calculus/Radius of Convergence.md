@@ -1,12 +1,12 @@
 ### $R=\dfrac{1}{L}$
 which values of $x$ does power series converge
-- **Ratio Test**  $L=\lim_{n\to\infty}|\dfrac{a_{n+1}}{a_n}|$
-- **Root Test** $L=\lim_{n\to\infty}\sqrt[n]{|a_n|}$
+- **Ratio Test**  $L=\lim_\limits{n\to\infty}|\dfrac{a_{n+1}}{a_n}|$
+- **Root Test** $L=\lim_\limits{n\to\infty}\sqrt[n]{|a_n|}$
 > [!example] $\sum_{n=0}^\infty 5^n x^n$ so $a_n=5^n$
 > - Using **Ratio Test**
->   $L=\lim_{n\to\infty}\dfrac{5^{n+1}}{5^n}=5\implies R=\dfrac{1}{5}$
+>   $L=\lim_\limits{n\to\infty}\dfrac{5^{n+1}}{5^n}=5\implies R=\dfrac{1}{5}$
 > - Using **Root Test**
-> $L=\lim_{n\to\infty}\sqrt[n]{|5^n|}=5\implies R=\dfrac{1}{5}$
+> $L=\lim_\limits{n\to\infty}\sqrt[n]{|5^n|}=5\implies R=\dfrac{1}{5}$
 > - Convert to [[Geometric Series]] $\sum_{n=0}^\infty (5x)^n$ 
 >   which only converges if $|r|<1$ where $r=5x\implies|5x|<1\implies|x|<\dfrac{1}{5}$
 > 

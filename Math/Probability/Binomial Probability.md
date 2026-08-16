@@ -14,8 +14,8 @@ multiplied by number of ways you could've flipped that
 > Chance of success after $n$ tries and success probability $p=n^{-1}$ 
 > with this formula works out to be $F(n,1,n^{-1})=1-(1-n^{-1})^n$
 > Which converges to $1-e^{-1}=0.632120558829$
-> This is because $e=\lim_{x\to\infty}(1+x^{-1})^x$
-> and $e^{-1}=\lim_{x\to\infty}(1-x^{-1})^x$
+> This is because $e=\lim_\limits{x\to\infty}(1+x^{-1})^x$
+> and $e^{-1}=\lim_\limits{x\to\infty}(1-x^{-1})^x$
 ### Properties
 - [[Support]] $r\in\set{0\dots n}$
 - $\mu=np$

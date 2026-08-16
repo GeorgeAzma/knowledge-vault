@@ -1,6 +1,7 @@
 ``` rust
 // amp = sound pressure level (SPL)
 // amp_ref = can be lowest pressure difference human ear can hear at 1000 hz = ~2e-5
+//           alternatively can be highest amplitude from the sample
 // note: (amp / amp_ref).log10() = amp.log10() - amp_ref
 fn amp_to_db(amp: f32, amp_ref: f32):
     20.0 * (amp / amp_ref).log10()

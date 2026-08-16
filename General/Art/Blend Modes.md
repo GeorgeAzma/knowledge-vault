@@ -64,7 +64,7 @@ https://github.com/KDE/krita/blob/master/libs/pigment/compositeops/KoCompositeOp
         'overlay' lerp(2ab, 1 - 2(1 - a)(1 - b), step(0.5, a)) # multiply/screen based on base color brightness; = 2 * lerp(ab, a + b - ab - 0.5, step(0.5, a))
      'hard_light' lerp(2ab, 1 - 2(1 - b)(1 - a), step(0.5, b)) # multiply/screen based on blend color brightness
      'soft_light' lerp(lerp(a, a * a, 1 - 2b), lerp(a, sqrt(a), 2b - 1), step(0.5, b)) # like overlay, but lerps towards a^2/sqrt(a)
-    'vivid_light' lerp(a / (1 - 2b), 1 - (1 - a) / (2b - 1), step(0.5, b))
+    'vivid_light' lerp(a / (1 - 2b), 1 - (1 - a) / (2b - 1), step(0.5, b)) # like overlay, uses color_dodge
    'linear_light' a + 2b - 1 # additive overlay, uses linear_burn/linear_dodge
       'pin_light' if (b < 0.5) min(a, 2b) else max(a, 2(b - 0.5)) # darken/lighten based on blend color brightness
        'hard_mix' lerp(color_burn(a, b), color_dodge(a, b), step(0.5, a)) # like overlay, but uses color_burn/color_dodge

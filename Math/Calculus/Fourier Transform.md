@@ -21,6 +21,8 @@ How much $\omega$ frequency is present in signal
 - [[Complex Number]] $e^{-i\omega t}$ acts as $(\sin(\omega t),\cos(\omega t))$ multiplication
 - `fft(real[:N])[:N/2] = fft(real[:N])[N/2:] # mirrored`
 - `len(rfft(real[:N]))= N/2+1 # +1 for DC component`
+- duplicating a sample $N$ times acts as a boxcar low-pass filter, 
+     which in frequency domain is equivalent to multiplication by $\left|\dfrac{\sin(\pi Nf)}{\pi Nf}\right|$
 - 1D fft of projection of 2D image = 1D slice through 2D fft of that image `projection slice theorem`
       this is used to reconstruct images/slices from CT scans from different angles, more angles = better quality
 ### Tips

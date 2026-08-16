@@ -19,11 +19,11 @@ while True:
 ##### $f(x)=(x-r)^mg(x),\quad g(r)\neq0$
 - $g(x)$ what is left after removing root factor
 - must be non-zero at the root
-- compute at or near zero $g(0)=\lim_{x\to0}\dots$ 
+- compute at or near zero $g(0)=\lim_\limits{x\to0}\dots$ 
 > [!example] $f(x)=\sin^2(x)$, find root $r=0$
 > $\sin x\approx x$ according to [[Taylor Series]] expansion
 > $f(x)=(x-0)^2g(x)$ with $g(x)=\dfrac{\sin^2 x}{x^2}=\left(\dfrac{\sin x}{x}\right)^2$
-> $g(0)=\dfrac{\sin^2(0)}{0^2}=\text{undefined}$ so $g(0)=\lim_{x\to0}\left(\dfrac{\sin(x)}{x}\right)^2=1$
+> $g(0)=\dfrac{\sin^2(0)}{0^2}=\text{undefined}$ so $g(0)=\lim_\limits{x\to0}\left(\dfrac{\sin(x)}{x}\right)^2=1$
 > $m=2$
 ### [[Newton's Method]]
 converges quadratically when $m=1$ otherwise converges linearly

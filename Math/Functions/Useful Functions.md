@@ -47,7 +47,6 @@ highest point `x = 1/k`
 ![[Smooth Floor.svg]]
 #### fract $\dfrac{\operatorname{mod}(x,1)\operatorname{smoothstep}(1,k,\operatorname{mod}(x,1))}{k}$ `k = 0.9`
 `fract(x) * smoothstep(1.0, k, fract(x)) / k`
-#### [[Sound#Sound Wave Types|Waves]]
 #### Bump $e^{\dfrac{1}{x^2-1}}$
 ![[exp(1 over (x^2 - 1)).svg]]
 #### $\dfrac{x}{1+|x|}$
@@ -58,13 +57,4 @@ even more like `tan`
 inverse of above, like `atan`
 #### $\sqrt{x^{2}+a}-x$
 similar to $e^{-x}$ but with much longer tail and linear-like decay
-
-### Sound Wave Types
-##### Triangle $|\operatorname{fract}(x-0.25)-0.5|4-1$
-##### Smooth-Tri $\large\frac{\arcsin(k\sin(2\pi x))}{\arcsin(k)}$ `k=0.9`
-
-##### Saw $|\operatorname{fract}(x)|2-1$
-##### Smooth-Saw `TODO`
-
-##### Square $\operatorname{sign}(0.5-\operatorname{fract}(x))$
-##### Smooth-Square $\dfrac{\sin(2\pi x)}{\sqrt{1-k\cos^2(2\pi x)}}$ `k=0.99`
+#### [[Waveforms]]

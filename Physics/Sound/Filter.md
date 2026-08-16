@@ -1,0 +1,2 @@
+- **Low/High Pass Filter** passes low/high frequencies
+- **Band Pass Filter** multiplies frequencies by $\text{sinc}(x)$

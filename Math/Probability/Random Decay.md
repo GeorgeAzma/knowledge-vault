@@ -11,7 +11,7 @@ update():
 Useful for calculating half-life, which is how long it takes
 for half of the particles to decay, all elements eventually
 decay so they all have a half-life based on decay speed
-### Temperature Decay $A-(A-B)(\frac{C}{A-B})^{\frac{60}{m}}$
+##### Temperature Decay $A-(A-B)\left(\dfrac{C}{A-B}\right)^{\dfrac{60}{m}}$
 - $A$ initial temperature `85`
 - $B$ ambient temperature `22`
 - $C$ cooled temperature in one hour `20C`

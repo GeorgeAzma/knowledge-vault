@@ -1,6 +1,6 @@
 $\frac{\frac{1}{2}+3}{4}+\tfrac{\tfrac{1}{2}+3}{4}+\dfrac{\dfrac{1}{2}+3}{4}+\cfrac{\cfrac{1}{2}+3}{4}$
 $0,1_\dotsb\infty$, $a \mid b$
-$\iiint_{0}^{\infty}{f(x)dx}$, $\lim_0^1{x}$
+$\iiint_{0}^{\infty}{f(x)dx}$, $\lim_\limits{a\to b}x$
 $\binom{a}{b}$, $\vec{a}$, $\vert x \vert \Vert y \Vert$, $\angle \triangle \measuredangle$
 $\begin{bmatrix}1&2&3\\4&5&6\end{bmatrix}$$\begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$$\begin{vmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \end{vmatrix}$$\left|\begin{array}{r} 1 & -22 & 333 \\ 4 & 5 & 6 \end{array}\right|$$\matrix{3&2\\1&4}$
 $\bra{111} \quad \ket{111}$

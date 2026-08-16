@@ -14,8 +14,13 @@
 "][" fn start
 "%"  matching brackets
 
+# Symbols
 "gs" symbol map (current file)
 "gS" symbol map (whole project)
+"ga" select all occurences
+"gd" jump to definition
+"gR" find references
+"Ctrl+w gd" definition in split
 
 # Line Navigation
 "o,O" insert to next/prev line
@@ -30,6 +35,29 @@
 # Copy
 "+y" copy to clipboard 
 "ggyG" copy entire file
+
+# Pane
+"Ctrl+w h/j/k/l" move to
+"Ctrl+\ " split
+"Ctrl h/j/k/l" focus to
+"gt gT" next/prev pane
+
+# Search
+ "/" search
+"g/" project search
+"g " open search result
+"Ctrl+w <space>" split search result
+
+# Panels
+"Ctrl+`" toggle terminal
+"Ctrl+Shift+`" new terminal
+"Ctrl+shift+g" git
+
+# Other
+"Shift+Alt+f" format document
+"Ctrl+Shift+Space" parameter hints
+"]c" next diff
+"]d" next error
 ```
 ### Global
 - `:h` Help
